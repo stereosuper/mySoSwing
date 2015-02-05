@@ -1,0 +1,372 @@
+/* @group import */
+/* @end */
+/* @group global var */
+/* @end */
+/* @group Boilerplate */
+html,
+button,
+input,
+select,
+textarea {
+  color: #232323;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
+}
+/* @end */
+/* @group Fonts */
+@font-face {
+  font-family: 'motiva_sansbold_italic';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.eot');
+  src: url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.woff') format('woff'), url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.ttf') format('truetype'), url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.svg#motiva_sansbold_italic') format('svg');
+}
+@font-face {
+  font-family: 'motiva_sansbold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/niramekko_-_motiva_sans_bold-webfont.eot');
+  src: url('../fonts/niramekko_-_motiva_sans_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/niramekko_-_motiva_sans_bold-webfont.woff') format('woff'), url('../fonts/niramekko_-_motiva_sans_bold-webfont.ttf') format('truetype'), url('../fonts/niramekko_-_motiva_sans_bold-webfont.svg#motiva_sansbold') format('svg');
+}
+@font-face {
+  font-family: 'motiva_sanslight_italic';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.eot');
+  src: url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.woff') format('woff'), url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.ttf') format('truetype'), url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.svg#motiva_sanslight_italic') format('svg');
+}
+@font-face {
+  font-family: 'motiva_sanslight';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/niramekko_-_motiva_sans_light-webfont.eot');
+  src: url('../fonts/niramekko_-_motiva_sans_light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/niramekko_-_motiva_sans_light-webfont.woff') format('woff'), url('../fonts/niramekko_-_motiva_sans_light-webfont.ttf') format('truetype'), url('../fonts/niramekko_-_motiva_sans_light-webfont.svg#motiva_sanslight') format('svg');
+}
+@font-face {
+  font-family: 'motiva_sansitalic';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.eot');
+  src: url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.woff') format('woff'), url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.ttf') format('truetype'), url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.svg#motiva_sansitalic') format('svg');
+}
+@font-face {
+  font-family: 'motiva_sans';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/niramekko_-_motiva_sans-webfont.eot');
+  src: url('../fonts/niramekko_-_motiva_sans-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/niramekko_-_motiva_sans-webfont.woff') format('woff'), url('../fonts/niramekko_-_motiva_sans-webfont.ttf') format('truetype'), url('../fonts/niramekko_-_motiva_sans-webfont.svg#motiva_sansregular') format('svg');
+}
+@font-face {
+  font-family: 'mysoswing';
+  src: url('../fonts/mysoswing.eot?-3vu893');
+  src: url('../fonts/mysoswing.eot?#iefix-3vu893') format('embedded-opentype'), url('../fonts/mysoswing.woff?-3vu893') format('woff'), url('../fonts/mysoswing.ttf?-3vu893') format('truetype'), url('../fonts/mysoswing.svg?-3vu893#mysoswing') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'mysoswing';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-lock:before {
+  content: "\e600";
+}
+/* @end */
+/* @group Mes styles */
+/* @group General */
+/* selection */
+::-moz-selection {
+  background: #000000;
+  color: #ffffff;
+  text-shadow: none;
+}
+::selection {
+  background: #000000;
+  color: #ffffff;
+  text-shadow: none;
+}
+/* @end */
+html,
+body {
+  display: block;
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+}
+.container {
+  display: block;
+  position: relative;
+  width: 1100px;
+  height: auto;
+  margin: 0 auto;
+}
+/* @end */
+/* @group btn */
+a.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 44px;
+  background-color: #ff6300;
+  color: #ffffff;
+  font-family: 'motiva_sansitalic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+}
+/* @end */
+/* @group Header */
+header #top-header {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-color: #ff6300;
+  border-bottom: 1px solid #993b00;
+}
+header ul#menu-langues {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 9px 0 0 0;
+  float: left;
+}
+header ul#menu-langues li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px 0 0;
+}
+header ul#menu-langues li:last-of-type {
+  margin: 0;
+}
+header ul#menu-langues li.active a {
+  color: #ffffff;
+  font-family: 'motiva_sanslight_italic', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-bottom-width: 0px;
+}
+header ul#menu-langues li a {
+  font-family: 'motiva_sans', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 0.9em;
+  color: #000000;
+  display: inline-block;
+  border-bottom: 1px solid #993b00;
+  text-decoration: none;
+}
+header a#btn-connexion {
+  float: right;
+  font-family: 'motiva_sans', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 0.9em;
+  color: #000000;
+  display: inline-block;
+  text-decoration: none;
+  padding: 11px 0 0 0;
+  position: relative;
+}
+header a#btn-connexion .icon-lock {
+  font-size: 11px;
+  display: block;
+  width: 9px;
+  height: 11px;
+  position: absolute;
+  top: 9px;
+  left: -13px;
+}
+header a#btn-connexion .txt-btn {
+  display: inline-block;
+  border-bottom: 1px solid #993b00;
+}
+header #bottom-header {
+  display: block;
+  width: 100%;
+  height: 110px;
+  background-color: #000000;
+}
+header a#logo-mysoswing {
+  display: block;
+  float: left;
+  width: 206px;
+  height: 85px;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url("../layoutImg/logo-mysoswing.png") no-repeat 50% 50%;
+  overflow: hidden;
+  margin: 11px 0 0 0;
+}
+header #bloc-right-bottom-header {
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+}
+header #bloc-right-bottom-header ul#menu-header {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 47px 0 0 0;
+  list-style-type: none;
+}
+header #bloc-right-bottom-header ul#menu-header li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 44px 0 0;
+  padding: 0;
+}
+header #bloc-right-bottom-header ul#menu-header li a {
+  font-family: 'motiva_sansitalic', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* @end */
+/* @group Non semantic Boilerplate */
+/* remplacement image */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+/* masquage de texte, alternative (buggé?) */
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* masqué */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/* masqué juste sur l'écran (pas sur RSS ou moteurs) */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* clearfix */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+/* @end */
+/* ==|== media queries ======================================================
+   ========================================================================== */
+/* mes resolutions responsives "classiques" */
+/* retina */
+/* ==|== print styles =======================================================
+   ========================================================================== */
+@media print {
+  /* Black prints faster: h5bp.com/s */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  /* Don't show links for images, or javascript/internal links */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  /* h5bp.com/t */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
