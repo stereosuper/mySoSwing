@@ -10,6 +10,7 @@
 @noir: #000;
 @orangeMSW: #ff6300;
 @orangeMSW-dark: darken(@orangeMSW, 20%);
+@grisMSW: #9d9d9d;
 
 /* @end */
 
@@ -151,6 +152,7 @@ textarea {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .motiva-italic(@size){
@@ -160,6 +162,7 @@ textarea {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .motiva-light(@size){
@@ -169,6 +172,7 @@ textarea {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .motiva-light-italic(@size){
@@ -178,6 +182,7 @@ textarea {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .motiva-bold(@size){
@@ -187,6 +192,7 @@ textarea {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .motiva-bold-italic(@size){
@@ -196,6 +202,7 @@ textarea {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* @end */
@@ -233,6 +240,14 @@ html, body{
   margin: 0 auto;
 }
 
+.align-left{
+  float: left;
+}
+
+.align-right{
+  float: right;
+}
+
 /* @end */
 
 /* @group btn */
@@ -246,6 +261,21 @@ a.btn{
   .motiva-italic(1em);
   text-decoration: none;
   .border-radius(5px);
+  .box-shadow(0 3px 0 @orangeMSW-dark);
+  //border-bottom: 3px solid #B65112;
+  &:focus{
+    outline: none;
+  }
+}
+
+a.btn-inline{
+  color: @orangeMSW;
+  display: inline-block;
+  vertical-align: top;
+  border-bottom: 1px solid @orangeMSW;
+  text-decoration: none;
+  padding: 2px 0 0 0;
+  line-height: 0.9em;
 }
 
 /* @end */
@@ -253,6 +283,12 @@ a.btn{
 /* @group Header */
 
 header{
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
   #top-header{
     display: block;
     width: 100%;
@@ -339,7 +375,7 @@ header{
       display: inline-block;
       vertical-align: top;
       margin: 0;
-      padding: 47px 0 0 0;
+      padding: 44px 0 0 0;
       list-style-type: none;
       li{
         display: inline-block;
@@ -355,7 +391,162 @@ header{
     }
   }
   a#btn-contact{
-    
+    margin: 34px 0 0 0;
+  }
+}
+
+/* @end */
+
+/* @group Bloc home */
+
+#bloc-home{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 768px;
+  /*max-height: 1000px;*/
+  .box-sizing(border-box);
+  padding: 141px 0 96px 0;
+}
+
+#bloc-bg-home{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("../layoutImg/home/bg.jpg") no-repeat 50% 50%;
+  background-size: auto 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#zone-gant{
+  display: block;
+  width: 607px;
+  height: 691px;
+  .box-sizing(border-box);
+  padding: 0;
+  margin: 0 0 0 -647px;
+  position: absolute;
+  bottom: 96px;
+  left: 50%;
+  //.transform(translateY(60px), rotate(40deg));
+  .transform-style(preserve-3d);
+  .backface-visibility(hidden);
+  .transform(translate(200px, 600px), rotate(40deg));
+  #gant{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../layoutImg/home/gant.png") no-repeat 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+  }
+  #telephone{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../layoutImg/home/telephone.png") no-repeat 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+  }
+  #sur-gant{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../layoutImg/home/sur-gant.png") no-repeat 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+  }
+}
+
+#bloc-right-home{
+  display: block;
+  width: 100%;
+  .box-sizing(border-box);
+  padding: 100px 0 0 570px;
+  height: auto;
+}
+
+h1{
+  .motiva-bold(4.063em);
+  line-height: 1em;
+  color: @noir;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -2px;
+  .opacity(0);
+}
+
+a#lien-app-store{
+  display: block;
+  width: 135px;
+  height: 40px;
+  background: url("../layoutImg/app-store.png") no-repeat 50% 50%;
+  margin: 60px 0 0 0;
+  padding: 0;
+  .opacity(0);
+  .transform(translate(0, 20px));
+}
+
+/* @end */
+
+/* @group Footer */
+
+footer{
+  display: block;
+  width: 100%;
+  height: 96px;
+  position: relative;
+  z-index: 2;
+  margin: -96px 0 0 0;
+  #top-footer{
+    display: block;
+    width: 100%;
+    height: 85px;
+    background-color: @noir;
+    color: @grisMSW;
+    .align-left{
+      p{
+        .motiva(0.813em);
+        line-height: 1.2em;
+        margin: 27px 0 0 0;
+        padding: 0;
+      }
+    }
+    ul#menu-footer{
+      margin: 34px 0 0 0;
+      padding: 0;
+      list-style-type: none;
+      li{
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        a{
+          color: @grisMSW;
+          text-decoration: none;
+          margin: 0 0 0 30px;
+          .motiva(0.938em);
+        }
+      }
+    }
+  }
+  #bottom-footer{
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: @orangeMSW;
+    border-top: 1px solid @orangeMSW-dark;
   }
 }
 
@@ -420,8 +611,8 @@ header{
 /* ==|== media queries ======================================================
    ========================================================================== */
 
+/* @group Responsive horizontal */
 
-/* mes resolutions responsives "classiques" */
 @media (max-width: 1150px) {
 
 }
@@ -437,9 +628,27 @@ header{
 
 }
 
+/* @end */
 
+/* @group Responsive vertical */
 
+@media (max-height: 950px) {
+  #zone-gant{
+    width: 520px;
+    height: 592px;
+    margin: 0 0 0 -567px;
+  }
+}
 
+@media (max-height: 850px) {
+  #zone-gant{
+    width: 440px;
+    height: 501px;
+    margin: 0 0 0 -487px;
+  }
+}
+
+/* @end */
 
 /* retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
