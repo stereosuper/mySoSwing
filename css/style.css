@@ -1,73 +1,41 @@
 /* @group import */
-/* @end */
-/* @group global var */
-/* @end */
-/* @group Boilerplate */
-html,
-button,
-input,
-select,
-textarea {
-  color: #232323;
-}
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-img {
-  vertical-align: middle;
-}
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-textarea {
-  resize: vertical;
-}
-/* @end */
-/* @group Fonts */
 @font-face {
-  font-family: 'motiva_sansbold_italic';
+  font-family: 'motivaBoldIt';
   font-weight: normal;
   font-style: normal;
   src: url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.eot');
   src: url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.woff') format('woff'), url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.ttf') format('truetype'), url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.svg#motiva_sansbold_italic') format('svg');
 }
 @font-face {
-  font-family: 'motiva_sansbold';
+  font-family: 'motivaBold';
   font-weight: normal;
   font-style: normal;
   src: url('../fonts/niramekko_-_motiva_sans_bold-webfont.eot');
   src: url('../fonts/niramekko_-_motiva_sans_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/niramekko_-_motiva_sans_bold-webfont.woff') format('woff'), url('../fonts/niramekko_-_motiva_sans_bold-webfont.ttf') format('truetype'), url('../fonts/niramekko_-_motiva_sans_bold-webfont.svg#motiva_sansbold') format('svg');
 }
 @font-face {
-  font-family: 'motiva_sanslight_italic';
+  font-family: 'motivaLtIt';
   font-weight: normal;
   font-style: normal;
   src: url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.eot');
   src: url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.woff') format('woff'), url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.ttf') format('truetype'), url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.svg#motiva_sanslight_italic') format('svg');
 }
 @font-face {
-  font-family: 'motiva_sanslight';
+  font-family: 'motivaLt';
   font-weight: normal;
   font-style: normal;
   src: url('../fonts/niramekko_-_motiva_sans_light-webfont.eot');
   src: url('../fonts/niramekko_-_motiva_sans_light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/niramekko_-_motiva_sans_light-webfont.woff') format('woff'), url('../fonts/niramekko_-_motiva_sans_light-webfont.ttf') format('truetype'), url('../fonts/niramekko_-_motiva_sans_light-webfont.svg#motiva_sanslight') format('svg');
 }
 @font-face {
-  font-family: 'motiva_sansitalic';
+  font-family: 'motivaIt';
   font-weight: normal;
   font-style: normal;
   src: url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.eot');
   src: url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.woff') format('woff'), url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.ttf') format('truetype'), url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.svg#motiva_sansitalic') format('svg');
 }
 @font-face {
-  font-family: 'motiva_sans';
+  font-family: 'motiva';
   font-weight: normal;
   font-style: normal;
   src: url('../fonts/niramekko_-_motiva_sans-webfont.eot');
@@ -89,12 +57,33 @@ textarea {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .icon-lock:before {
   content: "\e600";
+}
+/* @end */
+/* @group global var */
+/* @end */
+/* @group Boilerplate */
+html,
+button,
+input,
+select,
+textarea {
+  color: #000000;
+}
+img {
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
 }
 /* @end */
 /* @group Mes styles */
@@ -113,17 +102,66 @@ textarea {
 /* @end */
 html,
 body {
-  display: block;
   position: relative;
   min-height: 100%;
   height: 100%;
 }
+html {
+  font-size: 100%;
+}
+body {
+  font-family: 'motiva', sans-serif;
+  font-weight: normal;
+  font-size: 0.9em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+h1,
+h2,
+h3,
+strong,
+b,
+em,
+i {
+  font-weight: normal;
+}
+h1 {
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 2.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  border-bottom: 1px dotted #a0a0a0;
+  padding: 0 0 0 20px;
+  line-height: 1.3em;
+  margin: 50px 0;
+}
+h2 {
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+a {
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #ff6300;
+}
 .container {
-  display: block;
   position: relative;
   width: 1100px;
-  height: auto;
   margin: 0 auto;
+}
+.content {
+  padding: 0 20px;
 }
 .align-left {
   float: left;
@@ -133,16 +171,15 @@ body {
 }
 /* @end */
 /* @group btn */
-a.btn {
+.btn {
   display: inline-block;
   vertical-align: top;
   padding: 10px 44px;
   background-color: #ff6300;
   color: #ffffff;
-  font-family: 'motiva_sansitalic', sans-serif;
+  font-family: 'motivaIt', sans-serif;
   font-weight: normal;
   font-size: 1em;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -157,10 +194,10 @@ a.btn {
   -moz-box-shadow: 0 3px 0 #993b00;
   box-shadow: 0 3px 0 #993b00;
 }
-a.btn:focus {
+.btn:focus {
   outline: none;
 }
-a.btn-inline {
+.btn-inline {
   color: #ff6300;
   display: inline-block;
   vertical-align: top;
@@ -172,53 +209,43 @@ a.btn-inline {
 /* @end */
 /* @group Header */
 header {
-  display: block;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 2;
 }
-header #top-header {
-  display: block;
-  width: 100%;
+#top-header {
   height: 30px;
-  background-color: #ff6300;
+  background: #ff6300;
   border-bottom: 1px solid #993b00;
 }
-header ul#menu-langues {
+#menu-langues {
   display: inline-block;
   vertical-align: top;
-  width: auto;
-  height: auto;
   margin: 0;
   padding: 9px 0 0 0;
   float: left;
 }
-header ul#menu-langues li {
+#menu-langues li {
   display: inline-block;
   vertical-align: top;
   margin: 0 10px 0 0;
 }
-header ul#menu-langues li:last-of-type {
+#menu-langues li:last-of-type {
   margin: 0;
 }
-header ul#menu-langues li.active a {
+#menu-langues li.active a {
   color: #ffffff;
-  font-family: 'motiva_sanslight_italic', sans-serif;
+  font-family: 'motivaLtIt', sans-serif;
   font-weight: normal;
   font-size: 0.875em;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   border-bottom-width: 0px;
 }
-header ul#menu-langues li a {
-  font-family: 'motiva_sans', sans-serif;
+#menu-langues li a {
+  font-family: 'motiva', sans-serif;
   font-weight: normal;
   font-size: 0.875em;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -228,12 +255,15 @@ header ul#menu-langues li a {
   border-bottom: 1px solid #993b00;
   text-decoration: none;
 }
-header a#btn-connexion {
+#bottom-header {
+  height: 110px;
+  background-color: #000000;
+}
+#btn-connexion {
   float: right;
-  font-family: 'motiva_sans', sans-serif;
+  font-family: 'motiva', sans-serif;
   font-weight: normal;
   font-size: 0.875em;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -244,7 +274,7 @@ header a#btn-connexion {
   padding: 11px 0 0 0;
   position: relative;
 }
-header a#btn-connexion .icon-lock {
+#btn-connexion .icon-lock {
   font-size: 11px;
   display: block;
   width: 9px;
@@ -253,17 +283,11 @@ header a#btn-connexion .icon-lock {
   top: 9px;
   left: -13px;
 }
-header a#btn-connexion .txt-btn {
+#btn-connexion .txt-btn {
   display: inline-block;
   border-bottom: 1px solid #993b00;
 }
-header #bottom-header {
-  display: block;
-  width: 100%;
-  height: 110px;
-  background-color: #000000;
-}
-header a#logo-mysoswing {
+#logo-mysoswing {
   display: block;
   float: left;
   width: 206px;
@@ -274,54 +298,121 @@ header a#logo-mysoswing {
   overflow: hidden;
   margin: 11px 0 0 0;
 }
-header #bloc-right-bottom-header {
+#bloc-right-bottom-header {
   display: inline-block;
   vertical-align: top;
   float: right;
 }
-header #bloc-right-bottom-header ul#menu-header {
+#menu-header {
   display: inline-block;
   vertical-align: top;
   margin: 0;
   padding: 44px 0 0 0;
   list-style-type: none;
 }
-header #bloc-right-bottom-header ul#menu-header li {
+#menu-header li {
   display: inline-block;
   vertical-align: top;
   margin: 0 44px 0 0;
   padding: 0;
 }
-header #bloc-right-bottom-header ul#menu-header li a {
-  font-family: 'motiva_sansitalic', sans-serif;
+#menu-header li a {
+  font-family: 'motivaIt', sans-serif;
   font-weight: normal;
-  font-size: 1em;
-  /* Better Font Rendering =========== */
+  font-size: 1.1em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   color: #ffffff;
   text-decoration: none;
 }
-header a#btn-contact {
+#btn-contact {
   margin: 34px 0 0 0;
 }
 /* @end */
-/* @group Bloc home */
-#bloc-home {
-  display: block;
+/* @group Footer */
+footer {
+  height: 96px;
   position: relative;
-  width: 100%;
+  z-index: 2;
+}
+#top-footer {
+  height: 85px;
+  background: #000000;
+  color: #9d9d9d;
+}
+#top-footer .align-left p {
+  font-family: 'motiva', sans-serif;
+  font-weight: normal;
+  font-size: 0.813em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 1.2em;
+  margin: 27px 0 0 0;
+  padding: 0;
+}
+#menu-footer {
+  margin: 34px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+#menu-footer li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+}
+#menu-footer li a {
+  color: #9d9d9d;
+  text-decoration: none;
+  margin: 0 0 0 30px;
+  font-family: 'motiva', sans-serif;
+  font-weight: normal;
+  font-size: 0.938em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+#bottom-footer {
+  height: 10px;
+  background: #ff6300;
+  border-top: 1px solid #993b00;
+}
+/* @end */
+/* @group Home */
+.home header {
+  position: absolute;
+}
+.home footer {
+  margin: -96px 0 0 0;
+}
+.home h1 {
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 4.063em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 1em;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -2px;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+#bloc-home {
+  position: relative;
   height: 100%;
   min-height: 768px;
-  /*max-height: 1000px;*/
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 141px 0 96px 0;
 }
 #bloc-bg-home {
-  display: block;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -333,7 +424,6 @@ header a#btn-contact {
   overflow: hidden;
 }
 #zone-gant {
-  display: block;
   width: 607px;
   height: 691px;
   -webkit-box-sizing: border-box;
@@ -360,38 +450,24 @@ header a#btn-contact {
   -ms-transform: translate(200px, 600px) rotate(40deg);
   transform: translate(200px, 600px) rotate(40deg);
 }
-#zone-gant #gant {
-  display: block;
+#zone-gant > div {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 100% 100%;
+}
+#gant {
   background: url("../layoutImg/home/gant.png") no-repeat 50% 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: 100% 100%;
 }
-#zone-gant #telephone {
-  display: block;
-  width: 100%;
-  height: 100%;
+#telephone {
   background: url("../layoutImg/home/telephone.png") no-repeat 50% 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: 100% 100%;
 }
-#zone-gant #sur-gant {
-  display: block;
-  width: 100%;
-  height: 100%;
+#sur-gant {
   background: url("../layoutImg/home/sur-gant.png") no-repeat 50% 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: 100% 100%;
 }
 #bloc-right-home {
-  display: block;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -399,24 +475,7 @@ header a#btn-contact {
   padding: 100px 0 0 570px;
   height: auto;
 }
-h1 {
-  font-family: 'motiva_sansbold', sans-serif;
-  font-weight: normal;
-  font-size: 4.063em;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  line-height: 1em;
-  color: #000000;
-  margin: 0;
-  padding: 0;
-  letter-spacing: -2px;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-}
-a#lien-app-store {
+#lien-app-store {
   display: block;
   width: 135px;
   height: 40px;
@@ -433,72 +492,12 @@ a#lien-app-store {
   transform: translate(0px, 20px);
 }
 /* @end */
-/* @group Footer */
-footer {
-  display: block;
-  width: 100%;
-  height: 96px;
-  position: relative;
-  z-index: 2;
-  margin: -96px 0 0 0;
-}
-footer #top-footer {
-  display: block;
-  width: 100%;
-  height: 85px;
-  background-color: #000000;
-  color: #9d9d9d;
-}
-footer #top-footer .align-left p {
-  font-family: 'motiva_sans', sans-serif;
-  font-weight: normal;
-  font-size: 0.813em;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  line-height: 1.2em;
-  margin: 27px 0 0 0;
-  padding: 0;
-}
-footer #top-footer ul#menu-footer {
-  margin: 34px 0 0 0;
-  padding: 0;
-  list-style-type: none;
-}
-footer #top-footer ul#menu-footer li {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0;
-  padding: 0;
-}
-footer #top-footer ul#menu-footer li a {
-  color: #9d9d9d;
-  text-decoration: none;
-  margin: 0 0 0 30px;
-  font-family: 'motiva_sans', sans-serif;
-  font-weight: normal;
-  font-size: 0.938em;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-footer #bottom-footer {
-  display: block;
-  width: 100%;
-  height: 10px;
-  background-color: #ff6300;
-  border-top: 1px solid #993b00;
-}
-/* @end */
 /* @group Non semantic Boilerplate */
 /* remplacement image */
 .ir {
   background-color: transparent;
   border: 0;
   overflow: hidden;
-  /* IE 6/7 fallback */
   *text-indent: -9999px;
 }
 .ir:before {
@@ -565,7 +564,6 @@ footer #bottom-footer {
 /* ==|== print styles =======================================================
    ========================================================================== */
 @media print {
-  /* Black prints faster: h5bp.com/s */
   a,
   a:visited {
     text-decoration: underline;
@@ -578,7 +576,6 @@ footer #bottom-footer {
   a[href^="#"]:after {
     content: "";
   }
-  /* Don't show links for images, or javascript/internal links */
   pre,
   blockquote {
     border: 1px solid #999;
@@ -587,7 +584,6 @@ footer #bottom-footer {
   thead {
     display: table-header-group;
   }
-  /* h5bp.com/t */
   tr,
   img {
     page-break-inside: avoid;

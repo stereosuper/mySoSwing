@@ -1,6 +1,7 @@
 /* @group import */
 
 @import "lesshat.less";
+@import "fonts.less";
 
 /* @end */
 
@@ -11,10 +12,9 @@
 @orangeMSW: #ff6300;
 @orangeMSW-dark: darken(@orangeMSW, 20%);
 @grisMSW: #9d9d9d;
+@border: #a0a0a0;
 
 /* @end */
-
-
 
 /* @group Boilerplate */
 
@@ -23,15 +23,7 @@ button,
 input,
 select,
 textarea {
-    color: rgb(35,35,35);
-}
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+    color: @noir;
 }
 img {
     vertical-align: middle;
@@ -43,166 +35,6 @@ fieldset {
 }
 textarea {
     resize: vertical;
-}
-
-/* @end */
-
-/* @group Fonts */
-
-@font-face {
-    font-family: 'motiva_sansbold_italic';
-    font-weight: normal;
-    font-style: normal;
-    src: url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.eot');
-    src: url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.woff') format('woff'),
-         url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.ttf') format('truetype'),
-         url('../fonts/niramekko_-_motiva_sans_bold_italic-webfont.svg#motiva_sansbold_italic') format('svg');
-}
-
-@font-face {
-    font-family: 'motiva_sansbold';
-    font-weight: normal;
-    font-style: normal;
-    src: url('../fonts/niramekko_-_motiva_sans_bold-webfont.eot');
-    src: url('../fonts/niramekko_-_motiva_sans_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/niramekko_-_motiva_sans_bold-webfont.woff') format('woff'),
-         url('../fonts/niramekko_-_motiva_sans_bold-webfont.ttf') format('truetype'),
-         url('../fonts/niramekko_-_motiva_sans_bold-webfont.svg#motiva_sansbold') format('svg');
-}
-
-@font-face {
-    font-family: 'motiva_sanslight_italic';
-    font-weight: normal;
-    font-style: normal;
-    src: url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.eot');
-    src: url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.woff') format('woff'),
-         url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.ttf') format('truetype'),
-         url('../fonts/niramekko_-_motiva_sans_light_italic-webfont.svg#motiva_sanslight_italic') format('svg');
-
-}
-
-@font-face {
-    font-family: 'motiva_sanslight';
-    font-weight: normal;
-    font-style: normal;
-    src: url('../fonts/niramekko_-_motiva_sans_light-webfont.eot');
-    src: url('../fonts/niramekko_-_motiva_sans_light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/niramekko_-_motiva_sans_light-webfont.woff') format('woff'),
-         url('../fonts/niramekko_-_motiva_sans_light-webfont.ttf') format('truetype'),
-         url('../fonts/niramekko_-_motiva_sans_light-webfont.svg#motiva_sanslight') format('svg');
-}
-
-@font-face {
-    font-family: 'motiva_sansitalic';
-    font-weight: normal;
-    font-style: normal;
-    src: url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.eot');
-    src: url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.woff') format('woff'),
-         url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.ttf') format('truetype'),
-         url('../fonts/niramekko_-_motiva_sans_regular_italic-webfont.svg#motiva_sansitalic') format('svg');
-}
-
-@font-face {
-    font-family: 'motiva_sans';
-    font-weight: normal;
-    font-style: normal;
-    src: url('../fonts/niramekko_-_motiva_sans-webfont.eot');
-    src: url('../fonts/niramekko_-_motiva_sans-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/niramekko_-_motiva_sans-webfont.woff') format('woff'),
-         url('../fonts/niramekko_-_motiva_sans-webfont.ttf') format('truetype'),
-         url('../fonts/niramekko_-_motiva_sans-webfont.svg#motiva_sansregular') format('svg');
-}
-
-@font-face {
-  font-family: 'mysoswing';
-  src:url('../fonts/mysoswing.eot?-3vu893');
-  src:url('../fonts/mysoswing.eot?#iefix-3vu893') format('embedded-opentype'),
-    url('../fonts/mysoswing.woff?-3vu893') format('woff'),
-    url('../fonts/mysoswing.ttf?-3vu893') format('truetype'),
-    url('../fonts/mysoswing.svg?-3vu893#mysoswing') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'mysoswing';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-lock:before {
-  content: "\e600";
-}
-
-.motiva(@size){
-  font-family: 'motiva_sans', sans-serif;
-  font-weight: normal;
-  font-size: @size;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-.motiva-italic(@size){
-  font-family: 'motiva_sansitalic', sans-serif;
-  font-weight: normal;
-  font-size: @size;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-.motiva-light(@size){
-  font-family: 'motiva_sanslight', sans-serif;
-  font-weight: normal;
-  font-size: @size;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-.motiva-light-italic(@size){
-  font-family: 'motiva_sanslight_italic', sans-serif;
-  font-weight: normal;
-  font-size: @size;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-.motiva-bold(@size){
-  font-family: 'motiva_sansbold', sans-serif;
-  font-weight: normal;
-  font-size: @size;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-.motiva-bold-italic(@size){
-  font-family: 'motiva_sansbold_italic', sans-serif;
-  font-weight: normal;
-  font-size: @size;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
 /* @end */
@@ -226,18 +58,49 @@ textarea {
 /* @end */
 
 html, body{
-  display: block;
   position: relative;
   min-height: 100%;
   height: 100%;
 }
 
+html{
+  font-size: 100%;
+}
+
+body{
+  .motiva(0.9em);
+}
+
+h1, h2, h3, strong, b, em, i{
+  font-weight: normal;
+}
+
+h1{
+  .motivaBold(2.2em);
+  border-bottom: 1px dotted @border;
+  padding: 0 0 0 20px;
+  line-height: 1.3em;
+  margin: 50px 0;
+}
+
+h2{
+  .motivaBold(1.6em);
+}
+
+a{
+  .motivaBold(1em);
+  color: @orangeMSW;
+}
+
+
+
 .container{
-  display: block;
   position: relative;
   width: 1100px;
-  height: auto;
   margin: 0 auto;
+}
+.content{
+  padding: 0 20px;
 }
 
 .align-left{
@@ -252,23 +115,22 @@ html, body{
 
 /* @group btn */
 
-a.btn{
+.btn{
   display: inline-block;
   vertical-align: top;
   padding: 10px 44px;
   background-color: @orangeMSW;
   color: @blanc;
-  .motiva-italic(1em);
+  .motivaIt(1em);
   text-decoration: none;
   .border-radius(5px);
   .box-shadow(0 3px 0 @orangeMSW-dark);
-  //border-bottom: 3px solid #B65112;
   &:focus{
     outline: none;
   }
 }
 
-a.btn-inline{
+.btn-inline{
   color: @orangeMSW;
   display: inline-block;
   vertical-align: top;
@@ -283,135 +145,192 @@ a.btn-inline{
 /* @group Header */
 
 header{
-  display: block;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 2;
-  #top-header{
-    display: block;
-    width: 100%;
-    height: 30px;
-    background-color: @orangeMSW;
-    border-bottom: 1px solid @orangeMSW-dark;
-  }
-  ul#menu-langues{
+}
+
+#top-header{
+  height: 30px;
+  background: @orangeMSW;
+  border-bottom: 1px solid @orangeMSW-dark;
+}
+
+#menu-langues{
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 9px 0 0 0;
+  float: left;
+  li{
     display: inline-block;
     vertical-align: top;
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 9px 0 0 0;
-    float: left;
-    li{
-      display: inline-block;
-      vertical-align: top;
-      margin: 0 10px 0 0;
-      &:last-of-type{
-        margin: 0;
-      }
-      &.active{
-        a{
-          color: @blanc;
-          .motiva-light-italic(0.875em);
-          border-bottom-width: 0px;
-        }
-      }
+    margin: 0 10px 0 0;
+    &:last-of-type{
+      margin: 0;
+    }
+    &.active{
       a{
-        .motiva(0.875em);
-        line-height: 0.9em;
-        color: @noir;
-        display: inline-block;
-        border-bottom: 1px solid @orangeMSW-dark;
-        text-decoration: none;
+        color: @blanc;
+        .motivaLtIt(0.875em);
+        border-bottom-width: 0px;
       }
     }
-  }
-  a#btn-connexion{
-    float: right;
-    .motiva(0.875em);
-    line-height: 0.9em;
-    color: @noir;
-    display: inline-block;
-    text-decoration: none;
-    padding: 11px 0 0 0;
-    position: relative;
-    .icon-lock{
-      font-size: 11px;
-      display: block;
-      width: 9px;
-      height: 11px;
-      position: absolute;
-      top: 9px;
-      left: -13px;
-    }
-    .txt-btn{
+    a{
+      .motiva(0.875em);
+      line-height: 0.9em;
+      color: @noir;
       display: inline-block;
       border-bottom: 1px solid @orangeMSW-dark;
+      text-decoration: none;
     }
   }
-  #bottom-header{
+}
+
+#bottom-header{
+  height: 110px;
+  background-color: @noir;
+}
+
+#btn-connexion{
+  float: right;
+  .motiva(0.875em);
+  line-height: 0.9em;
+  color: @noir;
+  display: inline-block;
+  text-decoration: none;
+  padding: 11px 0 0 0;
+  position: relative;
+  .icon-lock{
+    font-size: 11px;
     display: block;
-    width: 100%;
-    height: 110px;
-    background-color: @noir;
+    width: 9px;
+    height: 11px;
+    position: absolute;
+    top: 9px;
+    left: -13px;
   }
-  a#logo-mysoswing{
-    display: block;
-    float: left;
-    .size(206px, 85px);
-    text-indent: 100%;
-    white-space: nowrap;
-    background: url("../layoutImg/logo-mysoswing.png") no-repeat 50% 50%;
-    overflow: hidden;
-    margin: 11px 0 0 0;
+  .txt-btn{
+    display: inline-block;
+    border-bottom: 1px solid @orangeMSW-dark;
   }
-  #bloc-right-bottom-header{
+}
+
+#logo-mysoswing{
+  display: block;
+  float: left;
+  .size(206px, 85px);
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url("../layoutImg/logo-mysoswing.png") no-repeat 50% 50%;
+  overflow: hidden;
+  margin: 11px 0 0 0;
+}
+
+#bloc-right-bottom-header{
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+}
+
+#menu-header{
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 44px 0 0 0;
+  list-style-type: none;
+  li{
     display: inline-block;
     vertical-align: top;
-    float: right;
-    ul#menu-header{
-      display: inline-block;
-      vertical-align: top;
-      margin: 0;
-      padding: 44px 0 0 0;
-      list-style-type: none;
-      li{
-        display: inline-block;
-        vertical-align: top;
-        margin: 0 44px 0 0;
-        padding: 0;
-        a{
-          .motiva-italic(1em);
-          color: @blanc;
-          text-decoration: none;
-        }
-      }
+    margin: 0 44px 0 0;
+    padding: 0;
+    a{
+      .motivaIt(1.1em);
+      color: @blanc;
+      text-decoration: none;
     }
   }
-  a#btn-contact{
-    margin: 34px 0 0 0;
-  }
+}
+
+#btn-contact{
+  margin: 34px 0 0 0;
 }
 
 /* @end */
 
-/* @group Bloc home */
+/* @group Footer */
+
+footer{
+  height: 96px;
+  position: relative;
+  z-index: 2;
+}
+#top-footer{
+  height: 85px;
+  background: @noir;
+  color: @grisMSW;
+  .align-left{
+    p{
+      .motiva(0.813em);
+      line-height: 1.2em;
+      margin: 27px 0 0 0;
+      padding: 0;
+    }
+  }
+}
+#menu-footer{
+  margin: 34px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+  li{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    a{
+      color: @grisMSW;
+      text-decoration: none;
+      margin: 0 0 0 30px;
+      .motiva(0.938em);
+    }
+  }
+}
+#bottom-footer{
+  height: 10px;
+  background: @orangeMSW;
+  border-top: 1px solid @orangeMSW-dark;
+}
+
+/* @end */
+
+/* @group Home */
+
+.home header{
+  position: absolute;
+}
+
+.home footer{
+  margin: -96px 0 0 0;
+}
+
+.home h1{
+  .motivaBold(4.063em);
+  line-height: 1em;
+  color: @noir;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -2px;
+  .opacity(0);
+}
 
 #bloc-home{
-  display: block;
   position: relative;
-  width: 100%;
   height: 100%;
   min-height: 768px;
-  /*max-height: 1000px;*/
   .box-sizing(border-box);
   padding: 141px 0 96px 0;
 }
 
 #bloc-bg-home{
-  display: block;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -424,7 +343,6 @@ header{
 }
 
 #zone-gant{
-  display: block;
   width: 607px;
   height: 691px;
   .box-sizing(border-box);
@@ -433,61 +351,36 @@ header{
   position: absolute;
   bottom: 96px;
   left: 50%;
-  //.transform(translateY(60px), rotate(40deg));
   .transform-style(preserve-3d);
   .backface-visibility(hidden);
   .transform(translate(200px, 600px), rotate(40deg));
-  #gant{
-    display: block;
+  > div{
     width: 100%;
     height: 100%;
-    background: url("../layoutImg/home/gant.png") no-repeat 50% 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: 100% 100%;
-  }
-  #telephone{
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: url("../layoutImg/home/telephone.png") no-repeat 50% 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: 100% 100%;
-  }
-  #sur-gant{
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: url("../layoutImg/home/sur-gant.png") no-repeat 50% 50%;
     position: absolute;
     top: 0;
     left: 0;
     background-size: 100% 100%;
   }
 }
+#gant{
+  background: url("../layoutImg/home/gant.png") no-repeat 50% 50%;
+}
+#telephone{
+  background: url("../layoutImg/home/telephone.png") no-repeat 50% 50%;
+}
+#sur-gant{
+  background: url("../layoutImg/home/sur-gant.png") no-repeat 50% 50%;
+}
 
 #bloc-right-home{
-  display: block;
   width: 100%;
   .box-sizing(border-box);
   padding: 100px 0 0 570px;
   height: auto;
 }
 
-h1{
-  .motiva-bold(4.063em);
-  line-height: 1em;
-  color: @noir;
-  margin: 0;
-  padding: 0;
-  letter-spacing: -2px;
-  .opacity(0);
-}
-
-a#lien-app-store{
+#lien-app-store{
   display: block;
   width: 135px;
   height: 40px;
@@ -500,58 +393,6 @@ a#lien-app-store{
 
 /* @end */
 
-/* @group Footer */
-
-footer{
-  display: block;
-  width: 100%;
-  height: 96px;
-  position: relative;
-  z-index: 2;
-  margin: -96px 0 0 0;
-  #top-footer{
-    display: block;
-    width: 100%;
-    height: 85px;
-    background-color: @noir;
-    color: @grisMSW;
-    .align-left{
-      p{
-        .motiva(0.813em);
-        line-height: 1.2em;
-        margin: 27px 0 0 0;
-        padding: 0;
-      }
-    }
-    ul#menu-footer{
-      margin: 34px 0 0 0;
-      padding: 0;
-      list-style-type: none;
-      li{
-        display: inline-block;
-        vertical-align: top;
-        margin: 0;
-        padding: 0;
-        a{
-          color: @grisMSW;
-          text-decoration: none;
-          margin: 0 0 0 30px;
-          .motiva(0.938em);
-        }
-      }
-    }
-  }
-  #bottom-footer{
-    display: block;
-    width: 100%;
-    height: 10px;
-    background-color: @orangeMSW;
-    border-top: 1px solid @orangeMSW-dark;
-  }
-}
-
-/* @end */
-
 /* @group Non semantic Boilerplate */
 
 /* remplacement image */
@@ -559,7 +400,6 @@ footer{
     background-color: transparent;
     border: 0;
     overflow: hidden;
-    /* IE 6/7 fallback */
     *text-indent: -9999px;
 }
 .ir:before {
@@ -661,21 +501,15 @@ footer{
    ========================================================================== */
  
 @media print {
-  * {} /* Black prints faster: h5bp.com/s */
+  * {} 
   a, a:visited { text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* h5bp.com/t */
+  thead { display: table-header-group; }
   tr, img { page-break-inside: avoid; }
   img { max-width: 100% !important; }
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
