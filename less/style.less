@@ -121,7 +121,7 @@ a{
   padding: 10px 44px;
   background-color: @orangeMSW;
   color: @blanc;
-  .motivaIt(1em);
+  .motivaIt(1.1em);
   text-decoration: none;
   .border-radius(5px);
   .box-shadow(0 3px 0 @orangeMSW-dark);
@@ -159,7 +159,7 @@ header{
   display: inline-block;
   vertical-align: top;
   margin: 0;
-  padding: 9px 0 0 0;
+  padding: 7px 0 0 0;
   float: left;
   li{
     display: inline-block;
@@ -171,12 +171,12 @@ header{
     &.active{
       a{
         color: @blanc;
-        .motivaLtIt(0.875em);
+        .motivaLtIt(1em);
         border-bottom-width: 0px;
       }
     }
     a{
-      .motiva(0.875em);
+      .motiva(1em);
       line-height: 0.9em;
       color: @noir;
       display: inline-block;
@@ -193,8 +193,8 @@ header{
 
 #btn-connexion{
   float: right;
-  .motiva(0.875em);
-  line-height: 0.9em;
+  .motiva(1em);
+  line-height: 0.7em;
   color: @noir;
   display: inline-block;
   text-decoration: none;
@@ -269,29 +269,27 @@ footer{
   background: @noir;
   color: @grisMSW;
   .align-left{
-    p{
-      .motiva(0.813em);
-      line-height: 1.2em;
-      margin: 27px 0 0 0;
-      padding: 0;
-    }
+    .motiva(0.9em);
+    line-height: 1.2em;
+    margin: 27px 0 0 0;
+    padding: 0;
   }
 }
 #menu-footer{
   margin: 34px 0 0 0;
   padding: 0;
-  list-style-type: none;
+  list-style: none;
   li{
     display: inline-block;
     vertical-align: top;
     margin: 0;
     padding: 0;
-    a{
-      color: @grisMSW;
-      text-decoration: none;
-      margin: 0 0 0 30px;
-      .motiva(0.938em);
-    }
+  }
+  a{
+    color: @grisMSW;
+    text-decoration: none;
+    margin: 0 0 0 30px;
+    .motiva(1.05em);
   }
 }
 #bottom-footer{
@@ -313,13 +311,14 @@ footer{
 }
 
 .home h1{
-  .motivaBold(4.063em);
+  font-size: 4.063em;
   line-height: 1em;
   color: @noir;
   margin: 0;
   padding: 0;
   letter-spacing: -2px;
   .opacity(0);
+  border: 0;
 }
 
 #bloc-home{
@@ -361,16 +360,18 @@ footer{
     top: 0;
     left: 0;
     background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
   }
 }
 #gant{
-  background: url("../layoutImg/home/gant.png") no-repeat 50% 50%;
+  background: url("../layoutImg/home/gant.png");
 }
 #telephone{
-  background: url("../layoutImg/home/telephone.png") no-repeat 50% 50%;
+  background: url("../layoutImg/home/telephone.png");
 }
 #sur-gant{
-  background: url("../layoutImg/home/sur-gant.png") no-repeat 50% 50%;
+  background: url("../layoutImg/home/sur-gant.png");
 }
 
 #bloc-right-home{
