@@ -3,7 +3,8 @@ var body = $('body'),
 	menu = $('#menu'),
 	tlLinks = [],
 	theseLinks = [],
-	gant = $("#zone-gant");
+	gant = $("#zone-gant"),
+	html = $('html');
 
 function animHome(){
 	var h1 = $('h1');
@@ -55,10 +56,43 @@ function animLinks(){
 	});
 }
 
+function replacePlaceholder(){
+	var input = $('#mdp');
+	input.attr('value', 'Mot de passe');
+	if(!html.hasClass('lt-ie9')){
+		input.attr('type', 'text');
+	}
+	input.on('click', function(){
+		input.attr('value', '');
+		if(!html.hasClass('lt-ie9')){
+			input.attr('type', 'password');
+		}
+	});
+}
+
+function appearFormAcces(){
+	$(this).animate({opacity: 0}, 250, 'easeOutBack', function(){
+		$(this).css('display', 'none');
+		$('#formAcces').animate({ marginTop: 0, opacity: 1}, 300, 'easeOutBack');
+	});
+}
+
+function animPage(){
+	$('h1').fadeOut(200);
+	$('p').fadeOut(200);
+}
+
 $(function(){
 
-	burger.on('click', openOrCloseMenu);
 	animLinks();
+	burger.on('click', openOrCloseMenu);
+
+	$('#acces').on('click', appearFormAcces);
+	$('#connect').on('click', animPage);
+
+	if(html.hasClass('lt-ie10')){
+		replacePlaceholder();
+	}
 
 	$(window).load(function() {
 		if(gant.length){ animHome(); }
