@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 36.2 13.5" enable-background="new 0 0 36.2 13.5" xml:space="preserve">
+<g display="none">
+	<g>
+		<defs>
+			<path id="SVGID_1_" d="M-83.6,203.2l-17.9-231.3l303.3-23.4l17.9,231.3L-83.6,203.2L-83.6,203.2z M-1121.5,537.8l-113-549.1
+				l1766.3-93.6l32.2,398L-1121.5,537.8L-1121.5,537.8z"/>
+		</defs>
+		<defs>
+			<path id="SVGID_2_" d="M-84.8,230.2v-232h304.2v232H-84.8L-84.8,230.2z M-1145.3,483.9l-70.4-556.2L552.6-29.6l1.5,399.3
+				L-1145.3,483.9L-1145.3,483.9z"/>
+		</defs>
+		<defs>
+			<rect id="SVGID_3_" x="-282.8" y="-706.3" width="612" height="792"/>
+		</defs>
+		<clipPath id="SVGID_4_" display="inline">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<clipPath id="SVGID_5_" display="inline" clip-path="url(#SVGID_4_)">
+			<use xlink:href="#SVGID_2_"  overflow="visible"/>
+		</clipPath>
+		<clipPath id="SVGID_6_" display="inline" clip-path="url(#SVGID_5_)">
+			<use xlink:href="#SVGID_3_"  overflow="visible"/>
+		</clipPath>
+		<g display="inline" clip-path="url(#SVGID_6_)">
+			
+				<image overflow="visible" width="37" height="13" xlink:href="BAB246AD70131FA.jpg"  transform="matrix(1 0 0 1 -282.8192 72.6505)">
+			</image>
+		</g>
+	</g>
+	<g display="inline">
+		<defs>
+			<rect id="SVGID_7_" x="-282.8" y="-706.3" width="612" height="792"/>
+		</defs>
+		<clipPath id="SVGID_8_">
+			<use xlink:href="#SVGID_7_"  display="none" overflow="visible"/>
+		</clipPath>
+		<g display="none" clip-path="url(#SVGID_8_)">
+			
+				<image display="inline" overflow="visible" width="37" height="13" xlink:href="BAB246AD70131FE.jpg"  transform="matrix(1 0 0 1 -282.8192 72.6505)">
+			</image>
+		</g>
+	</g>
+</g>
+<polygon fill-rule="evenodd" clip-rule="evenodd" points="36.2,6.8 24.7,13.5 24.7,9.2 0,9.2 0,4.2 24.7,4.2 24.7,0 36.2,6.8 "/>
+</svg>

@@ -1,19 +1,20 @@
 var body = $('body'),
 	burger = $('#burger'),
 	menu = $('#menu'),
-	links = menu.find('#menu-header').find('a'),
 	tlLinks = [],
-	theseLinks = [];
-
-
-function completeAnimGant(){
-	TweenMax.set($("h1"), {opacity: "1"})
-}
+	theseLinks = [],
+	gant = $("#zone-gant");
 
 function animHome(){
-	var mySplitText = new SplitText("h1", {type:"lines"});
-	var tlHome = new TimelineMax;
-	tlHome.to($("#zone-gant"), 0.8, {x: "0px", y: "0px", rotation:"0deg", delay:0.2, ease:Quart.easeOut, onComplete:completeAnimGant});
+	var h1 = $('h1');
+	var mySplitText = new SplitText(h1, {type:"lines"});
+	var tlHome = new TimelineMax();
+
+	function completeAnimGant(){
+		TweenMax.set(h1, {opacity: "1"})
+	}
+
+	tlHome.to(gant, 0.8, {x: "0px", y: "0px", rotation:"0deg", delay:0.2, ease:Quart.easeOut, onComplete:completeAnimGant});
 	tlHome.staggerFrom(mySplitText.lines, 0.9, {opacity: "0", y:"20px", ease:Quart.easeOut}, 0.2);
 	tlHome.to($("#lien-app-store"), 0.9, {opacity: "1", y:"0px", ease:Quart.easeOut});
 }
@@ -36,32 +37,31 @@ function openOrCloseMenu(){
 	return false;
 }
 
-function animMenuLink(){
-	var index = links.index($(this));
-	tlLinks[index].restart();
-}
-function reverseMenuLink(){
-	var index = links.index($(this));
-	tlLinks[index].reverse();
-}
-
-$(function(){
-
-	burger.on('click', openOrCloseMenu);
-
+function animLinks(){
+	var links = menu.find('#menu-header').find('a');
 	var linksLength = links.length;
 	var i;
+
 	for(i=0; i<linksLength; i++){
 		tlLinks[i] = new TimelineMax({paused:true});
 		theseLinks[i] = new SplitText(links.eq(i), {type: 'chars'});
 		tlLinks[i].staggerTo(theseLinks[i].chars, 0.015, {color: '#ff6300', ease:Quart.easeOut}, 0.015);
 	}
-	links.hover(animMenuLink, reverseMenuLink);
+
+	links.hover(function(){
+		tlLinks[links.index($(this))].restart();
+	}, function(){
+		tlLinks[links.index($(this))].reverse();
+	});
+}
+
+$(function(){
+
+	burger.on('click', openOrCloseMenu);
+	animLinks();
 
 	$(window).load(function() {
-		if(body.hasClass('home')){
-			animHome();
-		}
+		if(gant.length){ animHome(); }
 	});
 
 	$(window).resize(function() {
