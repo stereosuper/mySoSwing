@@ -8,6 +8,7 @@
 @orangeDark: darken(@orange, 20%);
 @gris: #9d9d9d;
 @border: #a0a0a0;
+@grisInput: #6d6d6d;
 
 html,
 button,
@@ -91,7 +92,7 @@ input, textarea{
   display: inline-block;
   vertical-align: middle;
   .box-shadow(inset 0 2px 3px rgba(0, 4, 10, 0.2));
-  border: 1px solid #6d6d6d;
+  border: 1px solid @grisInput;
   border-radius: 4px;
   padding: 9px 13px;
   .motivaIt(1.15em);
@@ -839,12 +840,21 @@ textarea{
 
 .live{
   width: 70%;
+  h2{
+    span{
+      .motivaIt(1em);
+    }
+  }
+  .btnIt{
+    margin: 30px 0 0;
+  }
 }
 
 .rdvNow{
   background: @noir;
   padding: 30px 20px;
   position: relative;
+  margin: 0 0 20px;
   h2, p{
     color: @blanc;
   }
@@ -875,6 +885,37 @@ textarea{
       width: 12px;
       height: 18px;
       margin: 0 7px 0 0;
+    }
+  }
+}
+
+.rdv{
+  display: inline-block;
+  width: 49%;
+  border-top: 1px dotted @border;
+  border-bottom: 1px dotted @border;
+  margin: 15px 1% 0 0;
+  padding: 30px 20px 15px;
+  .box-sizing(border-box);
+  &:nth-child(even){
+    margin-right: 0;
+    margin-left: 1%;
+  }
+  .lt-ie9 &{
+    width: 48%;
+    margin: 15px 1% 0;
+  }
+  .time{
+    color: @orange;
+    .motivaIt(1em);
+  }
+  h2{
+    font-size: 0.98em;
+    margin: 10px 0;
+    height: 30px;
+    overflow: hidden;
+    span{
+      color: @grisInput;
     }
   }
 }
@@ -1031,6 +1072,7 @@ textarea{
     width: 100%;
     margin: 0 0 10px;
     height: auto;
+    text-align: center;
   }
 }
 
@@ -1056,6 +1098,12 @@ textarea{
     p{
       margin-bottom: 15px;
     }
+  }
+
+  .rdv{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -1131,6 +1179,20 @@ textarea{
     .btn{
       margin: 0;
     }
+  }
+
+  .categories{
+    width: 100%;
+    .h1{
+      margin-bottom: 20px;
+    }
+    li{
+      display: inline;
+      padding-right: 15px;
+    }
+  }
+  .live{
+    width: 100%;
   }
 }
 

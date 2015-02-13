@@ -1240,10 +1240,22 @@ textarea {
 .live {
   width: 70%;
 }
+.live h2 span {
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.live .btnIt {
+  margin: 30px 0 0;
+}
 .rdvNow {
   background: #000000;
   padding: 30px 20px;
   position: relative;
+  margin: 0 0 20px;
 }
 .rdvNow h2,
 .rdvNow p {
@@ -1287,6 +1299,43 @@ textarea {
   width: 12px;
   height: 18px;
   margin: 0 7px 0 0;
+}
+.rdv {
+  display: inline-block;
+  width: 49%;
+  border-top: 1px dotted #a0a0a0;
+  border-bottom: 1px dotted #a0a0a0;
+  margin: 15px 1% 0 0;
+  padding: 30px 20px 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rdv:nth-child(even) {
+  margin-right: 0;
+  margin-left: 1%;
+}
+.lt-ie9 .rdv {
+  width: 48%;
+  margin: 15px 1% 0;
+}
+.rdv .time {
+  color: #ff6300;
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.rdv h2 {
+  font-size: 0.98em;
+  margin: 10px 0;
+  height: 30px;
+  overflow: hidden;
+}
+.rdv h2 span {
+  color: #6d6d6d;
 }
 /* @end */
 /* @group Non semantic Boilerplate */
@@ -1404,6 +1453,7 @@ textarea {
     width: 100%;
     margin: 0 0 10px;
     height: auto;
+    text-align: center;
   }
 }
 @media (max-width: 979px) {
@@ -1424,6 +1474,11 @@ textarea {
   }
   .infoContact p {
     margin-bottom: 15px;
+  }
+  .rdv {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media (max-width: 880px) {
@@ -1485,6 +1540,19 @@ textarea {
   }
   .formContainer .btn {
     margin: 0;
+  }
+  .categories {
+    width: 100%;
+  }
+  .categories .h1 {
+    margin-bottom: 20px;
+  }
+  .categories li {
+    display: inline;
+    padding-right: 15px;
+  }
+  .live {
+    width: 100%;
   }
 }
 @media (max-width: 450px) {
