@@ -4,7 +4,8 @@ var body = $('body'),
 	tlLinks = [],
 	theseLinks = [],
 	gant = $("#zone-gant"),
-	html = $('html');
+	html = $('html'),
+	formAcces = $('#formAcces');
 
 function animHome(){
 	var h1 = $('h1');
@@ -12,7 +13,7 @@ function animHome(){
 	var tlHome = new TimelineMax();
 
 	function completeAnimGant(){
-		TweenMax.set(h1, {opacity: "1"})
+		TweenMax.set(h1, {opacity: "1"});
 	}
 
 	tlHome.to(gant, 0.8, {x: "0px", y: "0px", rotation:"0deg", delay:0.2, ease:Quart.easeOut, onComplete:completeAnimGant});
@@ -73,13 +74,18 @@ function replacePlaceholder(){
 function appearFormAcces(){
 	$(this).animate({opacity: 0}, 250, 'easeOutBack', function(){
 		$(this).css('display', 'none');
-		$('#formAcces').animate({ marginTop: 0, opacity: 1}, 300, 'easeOutBack');
+		formAcces.animate({ marginTop: 0, opacity: 1}, 300, 'easeOutBack');
 	});
 }
 
-function animPage(){
-	$('h1').fadeOut(200);
-	$('p').fadeOut(200);
+function animPage(e){
+	e.preventDefault();
+	$('h1').fadeOut(250);
+	$('p').fadeOut(250);
+	formAcces.animate({opacity: 0}, 250, 'easeOutBack');
+	$('#bloc-bg-home').animate({'background-position': '50% 50%'}, 400, 'easeOutQuad', function(){
+		formAcces.submit();
+	});
 }
 
 $(function(){
@@ -95,7 +101,9 @@ $(function(){
 	}
 
 	$(window).load(function() {
-		if(gant.length){ animHome(); }
+		if(gant.length){ 
+			animHome(); 
+		}
 	});
 
 	$(window).resize(function() {
