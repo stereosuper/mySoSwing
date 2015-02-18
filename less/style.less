@@ -9,6 +9,7 @@
 @gris: #9d9d9d;
 @border: #a0a0a0;
 @grisInput: #6d6d6d;
+@error: #da2c13;
 
 html,
 button,
@@ -44,6 +45,9 @@ html, body.home{
 
 html{
   background: @noir;
+  &.white{
+    background: @blanc;
+  }
 }
 
 body{
@@ -86,6 +90,26 @@ a{
 p{
   margin: 10px 0 35px;
   line-height: 20px;
+}
+
+blockquote{
+  position: relative;
+  background: @noir;
+  margin: 35px 0;
+  color: @blanc;
+  padding: 20px 35px;
+  border-radius: 4px;
+  .motivaIt(1.1em);
+  p{
+    margin: 0;
+  }
+  &:before{
+    font-size: 11px;
+    position: absolute;
+    left: 11px;
+    top: 23px;
+    color: @orange;
+  }
 }
 
 input, textarea{
@@ -204,14 +228,25 @@ strong, b{
   }
 }
 
-.btnItExt{
-  .motivaBoldIt(1.1em);
+.btnItExt, .btnItPrev{
   padding: 0 0 0 7px;
   position: relative;
   &:before{
-    content: '›';
     position: absolute;
     left: 0;
+  }
+}
+.btnItPrev{
+  .motivaIt(1.1em);
+  float: left;
+  &:before{
+    content: '‹';
+  }
+}
+.btnItExt{
+  .motivaBoldIt(1.1em);
+  &:before{
+    content: '›';
   }
 }
 
@@ -349,6 +384,10 @@ header{
     vertical-align: top;
     margin: 0 44px 0 0;
     padding: 0;
+    &.current-menu-item a, &.current_page_parent a{
+      color: @orange;
+      border-bottom: 1px solid; 
+    }
     a{
       .motivaIt(1.1em);
       color: @blanc;
@@ -438,6 +477,11 @@ footer{
   position: relative;
   z-index: 2;
   margin: 65px 0 0;
+  &.bottom{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
   .lt-ie9 &{
     br{
       display: none;
@@ -602,39 +646,10 @@ footer{
     background-position: 50% 90px;
   }
 
-  h1{
-    opacity: 1;
-    .motivaBoldIt(3.2em);
-    text-align: center;
-    width: 640px;
-    margin: 50px auto 30px;
-    + p{
-      font-size: 1.15em;
-      text-align: center;
-    }
-  }
-
   button{
     .no-js &{
       display: none;
     }
-  }
-
-  form{
-    width: 305px;
-    margin: 200px auto 0;
-    opacity: 0;
-    .no-js &{
-      margin: 0 auto;
-      opacity: 1;
-    }
-  }
-
-  input[type=submit]{
-    padding: 10px 24px;
-  }
-  input{
-    max-width: 144px;
   }
 
   .lt-ie9 &{
@@ -642,11 +657,45 @@ footer{
       margin: 34px 0 31px;
     }
   }
-}
 
-#menu{
-  .contactTemp{
-    margin: 0;
+  #menu{
+    .current-menu-item + .current-menu-item a{
+      color: @blanc;
+      border: 0; 
+    }
+    li + li{
+      margin: 0;
+    }
+  }
+
+  &.home{
+    h1{
+      opacity: 1;
+      .motivaBoldIt(3.2em);
+      text-align: center;
+      width: 640px;
+      margin: 50px auto 30px;
+      + p{
+        font-size: 1.15em;
+        text-align: center;
+      }
+    }
+    form{
+      width: 305px;
+      margin: 200px auto 0;
+      opacity: 0;
+      .no-js &{
+        margin: 0 auto;
+        opacity: 1;
+      }
+    }
+
+    input[type=submit]{
+      padding: 10px 24px;
+    }
+    input{
+      max-width: 144px;
+    }
   }
 }
 
@@ -654,7 +703,7 @@ footer{
 
 /* @group Solution */
 
-.solution{
+.page-template-solution{
   header{
     background: url(../layoutImg/bannerSolution.jpg) no-repeat 50% 100%;
     background-size: 100% auto;
@@ -762,6 +811,10 @@ footer{
 .formContainer{
   width: 75%;
   padding: 30px 40px;
+  position: relative;
+  &.error{
+    margin-top: 100px;
+  }
   input[type=text], input[type=email]{
     padding: 9px 13px 7px;
     width: 230px;
@@ -789,6 +842,14 @@ label{
 
 fieldset{
   margin: 0 0 20px;
+  &.error{
+    label{
+      color: @error;
+    }
+    input, textarea{
+      border-color: @error;
+    }
+  }
 }
 
 textarea, #objet{
@@ -799,6 +860,26 @@ textarea{
   height: 175px;
   vertical-align: top;
   .box-sizing(border-box);
+}
+
+.blocError{
+  position: absolute;
+  margin: 0;
+  padding: 25px 40px 22px;
+  border: 5px solid @error;
+  width: 100.5%;
+  top: -101px;
+  left: -1px;
+  .motivaBoldIt(1.1em);
+  .box-sizing(border-box);
+}
+
+.succes{
+  padding-left: 20px;
+  font-size: 1.1em;
+  b{
+    .motivaBoldIt(1.1em);
+  }
 }
 
 /* @end */
@@ -836,17 +917,46 @@ textarea{
       .motiva(1em);
     }
   }
+  li{
+    &.current-cat a{
+      text-decoration: none;
+      color: #898989;
+      .motiva(1em);
+    }
+  }
 }
 
 .live{
   width: 70%;
-  h2{
+  h2, h1{
     span{
       .motivaIt(1em);
+      line-height: 35px;
     }
   }
-  .btnIt{
+  .btnIt, .btnItPrev{
     margin: 30px 0 0;
+  }
+  .h1{
+    padding: 0;
+    .btnItPrev{
+      font-size: 0.45em;
+      margin: 0;
+    }
+  }
+  .content{
+    h1{
+      padding: 0;
+      border: 0;
+      margin-bottom: 20px;
+      span{
+        .motivaIt(1em);
+      }
+    }
+    img{
+      float: left;
+      padding: 0 20px 10px 0;
+    }
   }
 }
 
@@ -862,7 +972,6 @@ textarea{
     margin: 0 0 20px;
   }
   p{
-    .motivaIt(1em);
     margin-bottom: 10px;
   }
   .time{
@@ -878,6 +987,7 @@ textarea{
   .btn{
     position: absolute;
     right: 40px;
+    bottom: -15px;
     &:before{
       content: '';
       display: inline-block;
@@ -887,8 +997,26 @@ textarea{
       margin: 0 7px 0 0;
     }
   }
+  .btnIt{
+    margin: 0;
+    .motivaBoldIt(1.1em);
+    &:after{
+      content: '';
+    }
+  }
+  img{
+    float: left;
+    padding-right: 20px;
+  }
 }
 
+h1{
+  + .rdv, + .rdv + .rdv{
+    padding-top: 0;
+    border-top: 0;
+    margin-top: -20px;
+  }
+} 
 .rdv{
   display: inline-block;
   width: 49%;
@@ -917,6 +1045,45 @@ textarea{
     span{
       color: @grisInput;
     }
+  }
+  a{
+    .motivaBoldIt(1em);
+  }
+}
+
+.searchform{
+  text-align: center;
+  margin: 45px 0 0;
+  padding: 20px 0;
+  border-top: 1px dotted @border;
+  border-bottom: 1px dotted @border;
+  fieldset{
+    display: inline-block;
+    margin: 0;
+  }
+}
+.searchInput{
+  min-width: 122px;
+  width: 59%;
+  margin: 0 3% 0 0;
+}
+.searchSubmit{
+  padding: 10px 12px;
+  font-size: 24px;
+}
+
+.rss{
+  width: 19px;
+  height: 19px;
+  display: block;
+  position: absolute;
+  top: 45px;
+  right: 20px;
+  text-indent: -999em;
+  background: url(../layoutImg/rss.png) no-repeat;
+  &:hover, &:focus{
+    top: 47px;
+    opacity: 0.8;
   }
 }
 
@@ -993,7 +1160,7 @@ textarea{
 }
 
 @media (max-width: 1120px){
-  .solution{
+  .page-template-solution{
     h1{
       width: 100%;
       float: none;
@@ -1078,7 +1245,7 @@ textarea{
 
 
 @media (max-width: 979px) {
-  .solution{
+  .page-template-solution{
     header{
       padding: 0 0 300px;
       background-size: 979px auto;
@@ -1114,6 +1281,7 @@ textarea{
 
   #menu{
     position: fixed;
+    overflow: hidden;
     height: 100%;
     background: #000;
     right: -185px;
@@ -1123,6 +1291,10 @@ textarea{
       display: block;
       margin: 0 0 20px;
     }
+  }
+
+  #menu-header{
+    margin-left: -150px;
   }
   
   #btn-contact{
@@ -1150,6 +1322,13 @@ textarea{
     .icon-fleche{
       display: inline-block;
       .transform(rotate(90deg));
+    }
+  }
+
+  .rdvNow{
+    img{
+      float: none;
+      padding-bottom: 20px;
     }
   }
 }
@@ -1194,6 +1373,13 @@ textarea{
   .live{
     width: 100%;
   }
+
+  .searchform{
+    margin: 0;
+    border-top: 0;
+    text-align: left;
+    padding-left: 20px;
+  }
 }
 
 @media (max-width: 450px){
@@ -1220,6 +1406,14 @@ textarea{
 
   .partenaire, .devenir{
     padding: 30px;
+  }
+
+  .blocError{
+    text-align: center;
+    top: -115px;
+  }
+  .succes{
+    padding-left: 0;
   }
 }
 

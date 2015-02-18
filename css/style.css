@@ -275,7 +275,9 @@ table {
   font-style: normal;
 }
 [class^="icon-"],
-[class*=" icon-"] {
+[class*=" icon-"],
+input.searchSubmit,
+blockquote:before {
   font-family: 'mysoswing';
   speak: none;
   font-style: normal;
@@ -289,8 +291,12 @@ table {
 .icon-lock:before {
   content: "\e600";
 }
-.icon-fleche:before {
+.icon-search:before {
   content: "\e601";
+}
+.icon-quote:before,
+blockquote:before {
+  content: "\e602";
 }
 html,
 button,
@@ -321,6 +327,9 @@ body.home {
 }
 html {
   background: #000000;
+}
+html.white {
+  background: #ffffff;
 }
 body {
   font-family: 'motiva', sans-serif;
@@ -392,6 +401,30 @@ a:active {
 p {
   margin: 10px 0 35px;
   line-height: 20px;
+}
+blockquote {
+  position: relative;
+  background: #000000;
+  margin: 35px 0;
+  color: #ffffff;
+  padding: 20px 35px;
+  border-radius: 4px;
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1.1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+blockquote p {
+  margin: 0;
+}
+blockquote:before {
+  font-size: 11px;
+  position: absolute;
+  left: 11px;
+  top: 23px;
+  color: #ff6300;
 }
 input,
 textarea {
@@ -551,6 +584,28 @@ b {
   position: absolute;
   padding: 0 0 0 5px;
 }
+.btnItExt,
+.btnItPrev {
+  padding: 0 0 0 7px;
+  position: relative;
+}
+.btnItExt:before,
+.btnItPrev:before {
+  position: absolute;
+  left: 0;
+}
+.btnItPrev {
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1.1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  float: left;
+}
+.btnItPrev:before {
+  content: '‹';
+}
 .btnItExt {
   font-family: 'motivaBoldIt', sans-serif;
   font-weight: normal;
@@ -558,13 +613,9 @@ b {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  padding: 0 0 0 7px;
-  position: relative;
 }
 .btnItExt:before {
   content: '›';
-  position: absolute;
-  left: 0;
 }
 .plus {
   width: 125px;
@@ -724,6 +775,11 @@ header {
   margin: 0 44px 0 0;
   padding: 0;
 }
+#menu li.current-menu-item a,
+#menu li.current_page_parent a {
+  color: #ff6300;
+  border-bottom: 1px solid;
+}
 #menu li a {
   font-family: 'motivaIt', sans-serif;
   font-weight: normal;
@@ -821,6 +877,11 @@ footer {
   position: relative;
   z-index: 2;
   margin: 65px 0 0;
+}
+footer.bottom {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 .lt-ie9 footer br {
   display: none;
@@ -1004,7 +1065,20 @@ footer {
 .homeTemp #bloc-bg-home {
   background-position: 50% 90px;
 }
-.homeTemp h1 {
+.no-js .homeTemp button {
+  display: none;
+}
+.lt-ie9 .homeTemp #menu-footer {
+  margin: 34px 0 31px;
+}
+.homeTemp #menu .current-menu-item + .current-menu-item a {
+  color: #ffffff;
+  border: 0;
+}
+.homeTemp #menu li + li {
+  margin: 0;
+}
+.homeTemp.home h1 {
   opacity: 1;
   font-family: 'motivaBoldIt', sans-serif;
   font-weight: normal;
@@ -1016,51 +1090,42 @@ footer {
   width: 640px;
   margin: 50px auto 30px;
 }
-.homeTemp h1 + p {
+.homeTemp.home h1 + p {
   font-size: 1.15em;
   text-align: center;
 }
-.no-js .homeTemp button {
-  display: none;
-}
-.homeTemp form {
+.homeTemp.home form {
   width: 305px;
   margin: 200px auto 0;
   opacity: 0;
 }
-.no-js .homeTemp form {
+.no-js .homeTemp.home form {
   margin: 0 auto;
   opacity: 1;
 }
-.homeTemp input[type=submit] {
+.homeTemp.home input[type=submit] {
   padding: 10px 24px;
 }
-.homeTemp input {
+.homeTemp.home input {
   max-width: 144px;
-}
-.lt-ie9 .homeTemp #menu-footer {
-  margin: 34px 0 31px;
-}
-#menu .contactTemp {
-  margin: 0;
 }
 /* @end */
 /* @group Solution */
-.solution header {
+.page-template-solution header {
   background: url(../layoutImg/bannerSolution.jpg) no-repeat 50% 100%;
   background-size: 100% auto;
   padding: 0 0 30%;
 }
-.solution header + .container {
+.page-template-solution header + .container {
   margin: 30px auto 0;
 }
-.lt-ie9 .solution header + .container {
+.lt-ie9 .page-template-solution header + .container {
   text-align: center;
 }
-.lt-ie9 .solution header + .container .clearfix {
+.lt-ie9 .page-template-solution header + .container .clearfix {
   margin: 0 0 30px;
 }
-.solution h1 {
+.page-template-solution h1 {
   width: 300px;
   font-family: 'motivaIt', sans-serif;
   font-weight: normal;
@@ -1072,11 +1137,11 @@ footer {
   padding: 0;
   float: left;
 }
-.lt-ie9 .solution h1 {
+.lt-ie9 .page-template-solution h1 {
   float: none;
   width: 100%;
 }
-.lt-ie9 .solution .btnIt {
+.lt-ie9 .page-template-solution .btnIt {
   float: none;
 }
 .videoContainer {
@@ -1152,6 +1217,10 @@ footer {
 .formContainer {
   width: 75%;
   padding: 30px 40px;
+  position: relative;
+}
+.formContainer.error {
+  margin-top: 100px;
 }
 .formContainer input[type=text],
 .formContainer input[type=email] {
@@ -1188,6 +1257,13 @@ label.required {
 fieldset {
   margin: 0 0 20px;
 }
+fieldset.error label {
+  color: #da2c13;
+}
+fieldset.error input,
+fieldset.error textarea {
+  border-color: #da2c13;
+}
 textarea,
 #objet {
   width: 81%;
@@ -1198,6 +1274,36 @@ textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+.blocError {
+  position: absolute;
+  margin: 0;
+  padding: 25px 40px 22px;
+  border: 5px solid #da2c13;
+  width: 100.5%;
+  top: -101px;
+  left: -1px;
+  font-family: 'motivaBoldIt', sans-serif;
+  font-weight: normal;
+  font-size: 1.1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.succes {
+  padding-left: 20px;
+  font-size: 1.1em;
+}
+.succes b {
+  font-family: 'motivaBoldIt', sans-serif;
+  font-weight: normal;
+  font-size: 1.1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 /* @end */
 /* @group Rdv Live */
@@ -1237,10 +1343,46 @@ textarea {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+.categories li.current-cat a {
+  text-decoration: none;
+  color: #898989;
+  font-family: 'motiva', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
 .live {
   width: 70%;
 }
-.live h2 span {
+.live h2 span,
+.live h1 span {
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 35px;
+}
+.live .btnIt,
+.live .btnItPrev {
+  margin: 30px 0 0;
+}
+.live .h1 {
+  padding: 0;
+}
+.live .h1 .btnItPrev {
+  font-size: 0.45em;
+  margin: 0;
+}
+.live .content h1 {
+  padding: 0;
+  border: 0;
+  margin-bottom: 20px;
+}
+.live .content h1 span {
   font-family: 'motivaIt', sans-serif;
   font-weight: normal;
   font-size: 1em;
@@ -1248,8 +1390,9 @@ textarea {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-.live .btnIt {
-  margin: 30px 0 0;
+.live .content img {
+  float: left;
+  padding: 0 20px 10px 0;
 }
 .rdvNow {
   background: #000000;
@@ -1265,12 +1408,6 @@ textarea {
   margin: 0 0 20px;
 }
 .rdvNow p {
-  font-family: 'motivaIt', sans-serif;
-  font-weight: normal;
-  font-size: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
   margin-bottom: 10px;
 }
 .rdvNow .time {
@@ -1291,6 +1428,7 @@ textarea {
 .rdvNow .btn {
   position: absolute;
   right: 40px;
+  bottom: -15px;
 }
 .rdvNow .btn:before {
   content: '';
@@ -1299,6 +1437,28 @@ textarea {
   width: 12px;
   height: 18px;
   margin: 0 7px 0 0;
+}
+.rdvNow .btnIt {
+  margin: 0;
+  font-family: 'motivaBoldIt', sans-serif;
+  font-weight: normal;
+  font-size: 1.1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.rdvNow .btnIt:after {
+  content: '';
+}
+.rdvNow img {
+  float: left;
+  padding-right: 20px;
+}
+h1 + .rdv,
+h1 + .rdv + .rdv {
+  padding-top: 0;
+  border-top: 0;
+  margin-top: -20px;
 }
 .rdv {
   display: inline-block;
@@ -1336,6 +1496,49 @@ textarea {
 }
 .rdv h2 span {
   color: #6d6d6d;
+}
+.rdv a {
+  font-family: 'motivaBoldIt', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.searchform {
+  text-align: center;
+  margin: 45px 0 0;
+  padding: 20px 0;
+  border-top: 1px dotted #a0a0a0;
+  border-bottom: 1px dotted #a0a0a0;
+}
+.searchform fieldset {
+  display: inline-block;
+  margin: 0;
+}
+.searchInput {
+  min-width: 122px;
+  width: 59%;
+  margin: 0 3% 0 0;
+}
+.searchSubmit {
+  padding: 10px 12px;
+  font-size: 24px;
+}
+.rss {
+  width: 19px;
+  height: 19px;
+  display: block;
+  position: absolute;
+  top: 45px;
+  right: 20px;
+  text-indent: -999em;
+  background: url(../layoutImg/rss.png) no-repeat;
+}
+.rss:hover,
+.rss:focus {
+  top: 47px;
+  opacity: 0.8;
 }
 /* @end */
 /* @group Non semantic Boilerplate */
@@ -1397,17 +1600,17 @@ textarea {
   }
 }
 @media (max-width: 1120px) {
-  .solution h1 {
+  .page-template-solution h1 {
     width: 100%;
     float: none;
   }
-  .solution header + .container {
+  .page-template-solution header + .container {
     text-align: center;
   }
-  .solution header + .container .clearfix {
+  .page-template-solution header + .container .clearfix {
     margin: 0 0 30px;
   }
-  .solution .btnIt {
+  .page-template-solution .btnIt {
     float: none;
   }
   .schema {
@@ -1457,7 +1660,7 @@ textarea {
   }
 }
 @media (max-width: 979px) {
-  .solution header {
+  .page-template-solution header {
     padding: 0 0 300px;
     background-size: 979px auto;
   }
@@ -1487,6 +1690,7 @@ textarea {
   }
   #menu {
     position: fixed;
+    overflow: hidden;
     height: 100%;
     background: #000;
     right: -185px;
@@ -1496,6 +1700,9 @@ textarea {
   #menu li {
     display: block;
     margin: 0 0 20px;
+  }
+  #menu-header {
+    margin-left: -150px;
   }
   #btn-contact {
     display: block;
@@ -1518,6 +1725,10 @@ textarea {
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+  }
+  .rdvNow img {
+    float: none;
+    padding-bottom: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -1554,6 +1765,12 @@ textarea {
   .live {
     width: 100%;
   }
+  .searchform {
+    margin: 0;
+    border-top: 0;
+    text-align: left;
+    padding-left: 20px;
+  }
 }
 @media (max-width: 450px) {
   h1 {
@@ -1575,6 +1792,13 @@ textarea {
   .partenaire,
   .devenir {
     padding: 30px;
+  }
+  .blocError {
+    text-align: center;
+    top: -115px;
+  }
+  .succes {
+    padding-left: 0;
   }
 }
 @media (max-width: 400px) {

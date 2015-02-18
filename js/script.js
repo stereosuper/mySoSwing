@@ -25,15 +25,18 @@ function openOrCloseMenu(){
 	var d = 250;
 	var effect = 'easeOutBack';
 	var bodyEffect = 'easeOutQuad';
+	var ul = $('#menu-header');
 
 	if($(this).hasClass('on')){
 		$(this).removeClass('on');
 		menu.animate({ right: '-185px'}, d, bodyEffect);
 		body.delay(100).animate({ marginLeft: 0, marginRight: 0}, d, effect);
+		ul.animate({ marginLeft: '-150px'}, d, effect);
 	}else{
 		$(this).addClass('on');
 		menu.delay(100).animate({ right: 0}, d, effect);
 		body.animate({ marginLeft: '-185px', marginRight: '185px'}, d, bodyEffect);
+		ul.delay(120).animate({ marginLeft: 0}, d, effect);
 	}
 
 	return false;
@@ -88,6 +91,34 @@ function animPage(e){
 	});
 }
 
+function stickyFooter(){
+	var docHeight = body.height();
+	var windowHeight = $(window).height();
+	var footer = $('footer');
+
+	if(footer.hasClass('bottom')){
+		docHeight += footer.height();
+		if (docHeight >= windowHeight) {
+			footer.removeClass('bottom');
+			html.removeClass('white');
+		}
+	}
+	if(docHeight < windowHeight) { 
+		footer.addClass('bottom');
+		html.addClass('white');
+	}
+}
+
+function preventEmptySearch(e){
+	e.preventDefault();
+
+	var input = $('#searchInput'),
+		query = input.val(),
+		queryLength = query.length;
+
+	queryLength === 0 ? input.focus() : $('#searchform').submit();
+}
+
 $(function(){
 
 	animLinks();
@@ -95,6 +126,9 @@ $(function(){
 
 	$('#acces').on('click', appearFormAcces);
 	$('#connect').on('click', animPage);
+	$('#search').on('click', preventEmptySearch);
+
+	stickyFooter();
 
 	if(html.hasClass('lt-ie10')){
 		replacePlaceholder();
@@ -107,7 +141,7 @@ $(function(){
 	});
 
 	$(window).resize(function() {
-
+		stickyFooter();
 	});
 
 });

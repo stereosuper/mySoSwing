@@ -76,7 +76,7 @@
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"]{
+[class^="icon-"], [class*=" icon-"], input.searchSubmit, blockquote:before{
   font-family: 'mysoswing';
   speak: none;
   font-style: normal;
@@ -91,8 +91,11 @@
 .icon-lock:before {
   content: "\e600";
 }
-.icon-fleche:before {
+.icon-search:before {
   content: "\e601";
+}
+.icon-quote:before, blockquote:before{
+  content: "\e602";
 }
 
 .motiva(@size){
