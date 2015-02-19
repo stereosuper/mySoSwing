@@ -689,6 +689,7 @@ header {
   display: inline-block;
   border-bottom: 1px solid #993b00;
   text-decoration: none;
+  text-transform: uppercase;
 }
 #menu-langues li a:hover,
 #menu-langues li a:focus,
@@ -1194,6 +1195,10 @@ footer.bottom {
   margin: 0 1% 0 0;
   padding: 50px 60px;
 }
+.partenaire img {
+  max-width: 100%;
+  height: auto;
+}
 .devenir {
   width: 34%;
   padding: 40px 30px;
@@ -1380,7 +1385,8 @@ textarea {
 .live .content h1 {
   padding: 0;
   border: 0;
-  margin-bottom: 20px;
+  margin: 15px 0 20px;
+  line-height: 1.1em;
 }
 .live .content h1 span {
   font-family: 'motivaIt', sans-serif;
@@ -1390,9 +1396,22 @@ textarea {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-.live .content img {
+.live .content .wp-post-image {
   float: left;
   padding: 0 20px 10px 0;
+}
+.live .content img {
+  max-width: 100%;
+  height: auto;
+}
+.time {
+  color: #ff6300;
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 .rdvNow {
   background: #000000;
@@ -1415,15 +1434,8 @@ textarea {
   top: -17px;
   left: 20px;
   background: #000000;
-  color: #ff6300;
   border-radius: 5px;
   padding: 6px 12px;
-  font-family: 'motivaIt', sans-serif;
-  font-weight: normal;
-  font-size: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 .rdvNow .btn {
   position: absolute;
@@ -1471,22 +1483,13 @@ h1 + .rdv + .rdv {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.rdv:nth-child(even) {
+.rdv:nth-of-type(even) {
   margin-right: 0;
   margin-left: 1%;
 }
 .lt-ie9 .rdv {
   width: 48%;
   margin: 15px 1% 0;
-}
-.rdv .time {
-  color: #ff6300;
-  font-family: 'motivaIt', sans-serif;
-  font-weight: normal;
-  font-size: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 .rdv h2 {
   font-size: 0.98em;

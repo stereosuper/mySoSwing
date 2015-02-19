@@ -316,6 +316,7 @@ header{
       display: inline-block;
       border-bottom: 1px solid @orangeDark;
       text-decoration: none;
+      text-transform: uppercase;
       &:hover, &:focus, &:active{
         color: @blanc;
         border-color: @blanc;
@@ -784,6 +785,10 @@ footer{
   width: 65%;
   margin: 0 1% 0 0;
   padding: 50px 60px;
+  img{
+    max-width: 100%;
+    height: auto;
+  }
 }
 .devenir{
   width: 34%;
@@ -948,16 +953,26 @@ textarea{
     h1{
       padding: 0;
       border: 0;
-      margin-bottom: 20px;
+      margin: 15px 0 20px;
+      line-height: 1.1em;
       span{
         .motivaIt(1em);
       }
     }
-    img{
+    .wp-post-image{
       float: left;
       padding: 0 20px 10px 0;
     }
+    img{
+      max-width: 100%;
+      height: auto;
+    }
   }
+}
+
+.time{
+  color: @orange;
+  .motivaIt(1em);
 }
 
 .rdvNow{
@@ -979,10 +994,8 @@ textarea{
     top: -17px;
     left: 20px;
     background: @noir;
-    color: @orange;
     border-radius: 5px;
     padding: 6px 12px;
-    .motivaIt(1em);
   }
   .btn{
     position: absolute;
@@ -1025,17 +1038,13 @@ h1{
   margin: 15px 1% 0 0;
   padding: 30px 20px 15px;
   .box-sizing(border-box);
-  &:nth-child(even){
+  &:nth-of-type(even){
     margin-right: 0;
     margin-left: 1%;
   }
   .lt-ie9 &{
     width: 48%;
     margin: 15px 1% 0;
-  }
-  .time{
-    color: @orange;
-    .motivaIt(1em);
   }
   h2{
     font-size: 0.98em;

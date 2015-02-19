@@ -78,6 +78,7 @@ function appearFormAcces(){
 	$(this).animate({opacity: 0}, 250, 'easeOutBack', function(){
 		$(this).css('display', 'none');
 		formAcces.animate({ marginTop: 0, opacity: 1}, 300, 'easeOutBack');
+		$('#mdp').focus();
 	});
 }
 
