@@ -95,23 +95,21 @@ function animPage(e){
 }
 
 function stickyFooter(){
-	//if(!body.hasClass('home')){
-		var docHeight = body.height(),
-			windowHeight = $(window).height(),
-			footer = $('footer');
+	var docHeight = body.height(),
+		windowHeight = $(window).height(),
+		footer = $('footer');
 
-		if(footer.hasClass('bottom')){
-			docHeight += footer.height();
-			if (docHeight >= windowHeight) {
-				footer.removeClass('bottom');
-				html.removeClass('white');
-			}
+	if(footer.hasClass('bottom')){
+		docHeight += footer.height();
+		if (docHeight >= windowHeight) {
+			footer.removeClass('bottom');
+			html.removeClass('white');
 		}
-		if(docHeight < windowHeight) { 
-			footer.addClass('bottom');
-			html.addClass('white');
-		}
-	//}
+	}
+	if(docHeight < windowHeight) { 
+		footer.addClass('bottom');
+		html.addClass('white');
+	}
 }
 
 function letSlide(id){
@@ -129,10 +127,6 @@ function letSlide(id){
 		steppedEaseEnd = new SteppedEase(col-nb-end),
 		tlaze = new TimelineMax();
 
-		/*if($(window).width() < 768){
-			frameWidth = 353; frameHeight = 401;
-		}*/
-
 		for(i; i<row; i++){
 			if(i === col){
 				steppedEase = steppedEaseEnd;
@@ -144,7 +138,9 @@ function letSlide(id){
 
 	function animSlide(){
 		slide.find('.slidesTxt').css('display', 'block').animate({right: '20px', opacity: 1}, 600, 'easeInOutBack', function(){
-			animSprite(id, col, row, end);
+			if($(window).width() > 500){
+				animSprite(id, col, row, end);
+			}
 		});
 	}
 
