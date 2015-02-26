@@ -80,7 +80,7 @@ function appearFormAcces(){
 	$(this).animate({opacity: 0}, 250, 'easeOutBack', function(){
 		$(this).css('display', 'none');
 		formAcces.animate({ marginTop: 0, opacity: 1}, 300, 'easeOutBack');
-		$('#mdp').focus();
+		if(!html.hasClass('lt-ie10')){ $('#mdp').focus(); }
 	});
 }
 
@@ -95,7 +95,7 @@ function animPage(e){
 }
 
 function stickyFooter(){
-	if(!body.hasClass('home')){
+	//if(!body.hasClass('home')){
 		var docHeight = body.height(),
 			windowHeight = $(window).height(),
 			footer = $('footer');
@@ -111,7 +111,7 @@ function stickyFooter(){
 			footer.addClass('bottom');
 			html.addClass('white');
 		}
-	}
+	//}
 }
 
 function letSlide(id){

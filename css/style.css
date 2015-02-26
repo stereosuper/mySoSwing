@@ -979,6 +979,9 @@ footer.bottom {
   box-sizing: border-box;
   padding: 141px 0 96px 0;
 }
+.homeTemp #bloc-home {
+  min-height: 900px;
+}
 #bloc-bg-home {
   position: absolute;
   width: 100%;
