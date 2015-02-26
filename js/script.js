@@ -45,9 +45,9 @@ function openOrCloseMenu(){
 function animLinks(){
 	var links = menu.find('#menu-header').find('a'),
 		linksLength = links.length,
-		i;
+		i = 0;
 
-	for(i=0; i<linksLength; i++){
+	for(i; i<linksLength; i++){
 		tlLinks[i] = new TimelineMax({paused:true});
 		theseLinks[i] = new SplitText(links.eq(i), {type: 'chars'});
 		tlLinks[i].staggerTo(theseLinks[i].chars, 0.015, {color: '#ff6300', ease:Quart.easeOut}, 0.015);
