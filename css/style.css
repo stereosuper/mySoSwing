@@ -640,7 +640,8 @@ b {
 header {
   width: 100%;
   z-index: 2;
-  background: url(../layoutImg/banner.jpg) no-repeat 50% 100%;
+  position: relative;
+  background: url(../layoutImg/banner.png) no-repeat 50% 100%;
   background-size: 100% auto;
   padding: 0 0 13%;
 }
@@ -760,10 +761,9 @@ header {
   width: 206px;
   height: 85px;
   text-indent: 100%;
-  white-space: nowrap;
-  background: url("../layoutImg/logo-mysoswing.png") no-repeat 50% 50%;
+  background: url(../layoutImg/logo-mysoswing.png) no-repeat;
+  margin: 11px 0 0;
   overflow: hidden;
-  margin: 11px 0 0 0;
 }
 #menu {
   display: inline-block;
@@ -985,7 +985,7 @@ footer.bottom {
   height: 100%;
   top: 0;
   left: 0;
-  background: url("../layoutImg/home/bg.jpg") no-repeat 50% 50%;
+  background: url(../layoutImg/home/bg.jpg) no-repeat 50% 50%;
   background-size: auto 100%;
   background-size: cover;
   overflow: hidden;
@@ -1028,13 +1028,13 @@ footer.bottom {
   background-repeat: no-repeat;
 }
 #gant {
-  background: url("../layoutImg/home/gant.png");
+  background: url(../layoutImg/home/gant.png);
 }
 #telephone {
-  background: url("../layoutImg/home/telephone.png");
+  background: url(../layoutImg/home/telephone.png);
 }
 #sur-gant {
-  background: url("../layoutImg/home/sur-gant.png");
+  background: url(../layoutImg/home/sur-gant.png);
 }
 #bloc-right-home {
   width: 100%;
@@ -1066,7 +1066,9 @@ footer.bottom {
 .homeTemp #bloc-bg-home {
   background-position: 50% 90px;
 }
-.no-js .homeTemp button {
+.no-js .homeTemp button,
+.homeTemp button.hidden,
+.lt-ie9 .homeTemp button {
   display: none;
 }
 .lt-ie9 .homeTemp #menu-footer {
@@ -1100,7 +1102,9 @@ footer.bottom {
   margin: 200px auto 0;
   opacity: 0;
 }
-.no-js .homeTemp.home form {
+.no-js .homeTemp.home form,
+.homeTemp.home form.here,
+.lt-ie9 .homeTemp.home form {
   margin: 0 auto;
   opacity: 1;
 }
@@ -1109,6 +1113,16 @@ footer.bottom {
 }
 .homeTemp.home input {
   max-width: 144px;
+}
+.fail {
+  text-align: center;
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 1.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin-bottom: 5px;
 }
 /* @end */
 /* @group Solution */
@@ -1311,7 +1325,7 @@ textarea {
   text-rendering: optimizeLegibility;
 }
 /* @end */
-/* @group Rdv Live */
+/* @group Rdv Live + Blog */
 .categories,
 .live {
   display: inline-block;
@@ -1465,6 +1479,8 @@ textarea {
 .rdvNow img {
   float: left;
   padding-right: 20px;
+  max-width: 100%;
+  height: auto;
 }
 h1 + .rdv,
 h1 + .rdv + .rdv {
@@ -1544,6 +1560,120 @@ h1 + .rdv + .rdv {
   opacity: 0.8;
 }
 /* @end */
+/* @group Fonctionnalites */
+.fonctionnalites aside {
+  width: 28%;
+  display: inline-block;
+  vertical-align: top;
+}
+.fonctionnalites aside a.actif {
+  font-family: 'motiva', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #898989;
+}
+.fonctionnalites aside a.actif span {
+  text-decoration: none;
+}
+.fonctionnalites ul {
+  list-style: none;
+  padding: 0 0 0 20px;
+}
+.fonctionnalites h2 {
+  margin-bottom: 15px;
+}
+.fonctionnalites h2 span {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  background: #ff6300;
+  color: #ffffff;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 8px 0 0;
+}
+.fonctionnalites h2 + p {
+  margin: 10px 0 20px 10px;
+}
+.fonctionnalites a {
+  text-decoration: none;
+}
+.fonctionnalites a span {
+  text-decoration: underline;
+}
+.fonctionnalites .btnIt {
+  margin-right: 10px;
+}
+.fonctionnalites + footer {
+  margin: 0;
+}
+#slider {
+  width: 72%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: -50px;
+}
+.slider {
+  margin: 0;
+  height: 460px;
+  position: relative;
+  padding: 0;
+}
+.no-js .slider {
+  height: auto;
+}
+.slider li {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+}
+.lt-ie9 .slider li {
+  display: none;
+}
+.lt-ie9 .slider li.on {
+  display: block;
+}
+.slider li.on {
+  opacity: 1;
+}
+.no-js .slider li {
+  position: relative;
+  height: 600px;
+  opacity: 1;
+}
+.slidesTxt {
+  width: 45%;
+  position: absolute;
+  top: 70px;
+  display: none;
+}
+.no-js .slidesTxt {
+  display: block;
+  right: 20px !important;
+  opacity: 1 !important;
+}
+.slides {
+  position: absolute;
+  width: 459px;
+  height: 521px;
+}
+#demande .slides {
+  background: url(../layoutImg/demande.png) no-repeat;
+}
+#probleme .slides {
+  background: url(../layoutImg/probleme.png) no-repeat;
+}
+#video .slides {
+  background: url(../layoutImg/video.png) no-repeat;
+}
+#reponse .slides {
+  background: url(../layoutImg/reponse.png) no-repeat;
+}
+/* @end */
 /* @group Non semantic Boilerplate */
 /* remplacement image */
 .ir {
@@ -1553,7 +1683,7 @@ h1 + .rdv + .rdv {
   *text-indent: -9999px;
 }
 .ir:before {
-  content: "";
+  content: '';
   display: block;
   width: 0;
   height: 100%;
@@ -1583,10 +1713,8 @@ h1 + .rdv + .rdv {
 /* clearfix */
 .clearfix:before,
 .clearfix:after {
-  content: " ";
-  /* 1 */
+  content: ' ';
   display: table;
-  /* 2 */
 }
 .clearfix:after {
   clear: both;
@@ -1660,6 +1788,16 @@ h1 + .rdv + .rdv {
     margin: 0 0 10px;
     height: auto;
     text-align: center;
+  }
+  .fonctionnalites aside {
+    width: 100%;
+  }
+  .fonctionnalites + footer {
+    margin: 65px 0 0;
+  }
+  #slider {
+    width: 100%;
+    margin: 20px 0 0;
   }
 }
 @media (max-width: 979px) {
@@ -1739,7 +1877,7 @@ h1 + .rdv + .rdv {
     padding: 0 0 100px;
     background-size: 790px auto;
   }
-  .homeTemp h1 {
+  .homeTemp.home h1 {
     width: 100%;
   }
   label {
@@ -1774,6 +1912,25 @@ h1 + .rdv + .rdv {
     text-align: left;
     padding-left: 20px;
   }
+  .fonctionnalites {
+    overflow: hidden;
+  }
+  .fonctionnalites aside {
+    margin: 50px 0 0;
+  }
+  .fonctionnalites + footer {
+    margin: 0;
+  }
+  .slider {
+    height: 710px;
+  }
+  .slidesTxt {
+    top: 0;
+    width: 100%;
+  }
+  .slides {
+    top: 190px;
+  }
 }
 @media (max-width: 450px) {
   h1 {
@@ -1803,6 +1960,10 @@ h1 + .rdv + .rdv {
   .succes {
     padding-left: 0;
   }
+  .slides {
+    left: -85px;
+    top: 240px;
+  }
 }
 @media (max-width: 400px) {
   .formContainer input[type=text],
@@ -1817,6 +1978,13 @@ h1 + .rdv + .rdv {
   }
   #lien-app-store {
     margin-top: 30px;
+  }
+  .categories ul,
+  .searchform {
+    padding-left: 0;
+  }
+  .devenir .btn {
+    font-size: 1.05em;
   }
 }
 /* @end */
@@ -1837,6 +2005,12 @@ h1 + .rdv + .rdv {
 }
 /* @end */
 /* retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  #logo {
+    background: url('../layoutImg/logo-mysoswing@2x.png') no-repeat;
+    background-size: 100%;
+  }
+}
 /* ==|== print styles =======================================================
    ========================================================================== */
 @media print {

@@ -10,6 +10,7 @@
 @border: #a0a0a0;
 @grisInput: #6d6d6d;
 @error: #da2c13;
+@actif: #898989;
 
 html,
 button,
@@ -273,7 +274,8 @@ strong, b{
 header{
   width: 100%;
   z-index: 2;
-  background: url(../layoutImg/banner.jpg) no-repeat 50% 100%;
+  position: relative;
+  background: url(../layoutImg/banner.png) no-repeat 50% 100%;
   background-size: 100% auto;
   padding: 0 0 13%;
   .lt-ie9 &{
@@ -370,10 +372,9 @@ header{
   float: left;
   .size(206px, 85px);
   text-indent: 100%;
-  white-space: nowrap;
-  background: url("../layoutImg/logo-mysoswing.png") no-repeat 50% 50%;
+  background: url(../layoutImg/logo-mysoswing.png) no-repeat;
+  margin: 11px 0 0;
   overflow: hidden;
-  margin: 11px 0 0 0;
 }
 
 #menu{
@@ -580,7 +581,7 @@ footer{
   height: 100%;
   top: 0;
   left: 0;
-  background: url("../layoutImg/home/bg.jpg") no-repeat 50% 50%;
+  background: url(../layoutImg/home/bg.jpg) no-repeat 50% 50%;
   background-size: auto 100%;
   background-size: cover;
   overflow: hidden;
@@ -610,13 +611,13 @@ footer{
   }
 }
 #gant{
-  background: url("../layoutImg/home/gant.png");
+  background: url(../layoutImg/home/gant.png);
 }
 #telephone{
-  background: url("../layoutImg/home/telephone.png");
+  background: url(../layoutImg/home/telephone.png);
 }
 #sur-gant{
-  background: url("../layoutImg/home/sur-gant.png");
+  background: url(../layoutImg/home/sur-gant.png);
 }
 
 #bloc-right-home{
@@ -648,7 +649,7 @@ footer{
   }
 
   button{
-    .no-js &{
+    .no-js &, &.hidden, .lt-ie9 &{
       display: none;
     }
   }
@@ -685,7 +686,7 @@ footer{
       width: 305px;
       margin: 200px auto 0;
       opacity: 0;
-      .no-js &{
+      .no-js &, &.here, .lt-ie9 &{
         margin: 0 auto;
         opacity: 1;
       }
@@ -698,6 +699,12 @@ footer{
       max-width: 144px;
     }
   }
+}
+
+.fail{
+  text-align: center;
+  .motivaBold(1.2em);
+  margin-bottom: 5px;
 }
 
 /* @end */
@@ -890,7 +897,7 @@ textarea{
 /* @end */
 
 
-/* @group Rdv Live */
+/* @group Rdv Live + Blog */
 
 .categories, .live{
   display: inline-block;
@@ -918,14 +925,14 @@ textarea{
     }
     &.actif{
       text-decoration: none;
-      color: #898989;
+      color: @actif;
       .motiva(1em);
     }
   }
   li{
     &.current-cat a{
       text-decoration: none;
-      color: #898989;
+      color: @actif;
       .motiva(1em);
     }
   }
@@ -1020,6 +1027,8 @@ textarea{
   img{
     float: left;
     padding-right: 20px;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -1099,6 +1108,126 @@ h1{
 /* @end */
 
 
+/* @group Fonctionnalites */
+
+.fonctionnalites{
+  aside{
+    width: 28%;
+    display: inline-block;
+    vertical-align: top;
+    a{
+      &.actif{
+        .motiva(1em);
+        color: @actif;
+        span{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  ul{
+    list-style: none;
+    padding: 0 0 0 20px;
+  }
+  h2{
+    margin-bottom: 15px;
+    span{
+      display: inline-block;
+      .size(33px);
+      background: @orange;
+      color: @blanc;
+      border-radius: 50px;
+      text-align: center;
+      line-height: 40px;
+      margin: 0 8px 0 0;
+    }
+    + p{
+      margin: 10px 0 20px 10px;
+    }
+  }
+  a{
+    text-decoration: none;
+    span{
+      text-decoration: underline;
+    }
+  }
+  .btnIt{
+    margin-right: 10px;
+  }
+  + footer{
+    margin: 0;
+  }
+}
+
+#slider{
+  width: 72%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: -50px;
+}
+
+.slider{
+  margin: 0;
+  height: 460px;
+  position: relative;
+  padding: 0;
+  .no-js &{
+    height: auto;
+  }
+  li{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    .lt-ie9 &{
+      display: none;
+      &.on{
+        display: block;
+      }
+    }
+    &.on{
+      opacity: 1;
+    }
+    .no-js &{
+      position: relative;
+      height: 600px;
+      opacity: 1;
+    }
+  }
+}
+
+.slidesTxt{
+  width: 45%;
+  position: absolute;
+  top: 70px;
+  display: none;
+  .no-js &{
+    display: block;
+    right: 20px !important;
+    opacity: 1 !important;
+  }
+}
+
+.slides{
+  position: absolute;
+  width: 459px;
+  height: 521px;
+}
+#demande .slides{
+  background: url(../layoutImg/demande.png) no-repeat;
+}
+#probleme .slides{
+  background: url(../layoutImg/probleme.png) no-repeat;
+}
+#video .slides{
+  background: url(../layoutImg/video.png) no-repeat;
+}
+#reponse .slides{
+  background: url(../layoutImg/reponse.png) no-repeat;
+}
+
+/* @end */
+
+
 /* @group Non semantic Boilerplate */
 
 /* remplacement image */
@@ -1109,7 +1238,7 @@ h1{
     *text-indent: -9999px;
 }
 .ir:before {
-    content: "";
+    content: '';
     display: block;
     width: 0;
     height: 100%;
@@ -1144,8 +1273,8 @@ h1{
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: ' ';
+    display: table;
 }
 .clearfix:after {
     clear: both;
@@ -1250,6 +1379,20 @@ h1{
     height: auto;
     text-align: center;
   }
+
+  .fonctionnalites{
+    aside{
+      width: 100%;
+    }
+    + footer{
+      margin: 65px 0 0;
+    }
+  }
+
+  #slider{
+    width: 100%;
+    margin: 20px 0 0;
+  }
 }
 
 
@@ -1348,7 +1491,7 @@ h1{
     background-size: 790px auto;
   }
 
-  .homeTemp{
+  .homeTemp.home{
     h1{
       width: 100%;
     }
@@ -1389,6 +1532,29 @@ h1{
     text-align: left;
     padding-left: 20px;
   }
+
+  .fonctionnalites{
+    overflow: hidden;
+    aside{
+      margin: 50px 0 0;
+    }
+    + footer {
+      margin: 0;
+    }
+  }
+
+  .slider{
+    height: 710px;
+  }
+
+  .slidesTxt{
+    top: 0;
+    width: 100%;
+  }
+
+  .slides{
+    top: 190px;
+  }
 }
 
 @media (max-width: 450px){
@@ -1424,6 +1590,11 @@ h1{
   .succes{
     padding-left: 0;
   }
+
+  .slides{
+    left: -85px;
+    top: 240px;
+  }
 }
 
 @media (max-width: 400px){
@@ -1442,6 +1613,14 @@ h1{
 
   #lien-app-store{
     margin-top: 30px;
+  }
+
+  .categories ul, .searchform{
+    padding-left: 0;
+  }
+
+  .devenir .btn{
+    font-size: 1.05em;
   }
 }
 
@@ -1469,7 +1648,10 @@ h1{
 
 /* retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
-    
+    #logo{
+      background: url('../layoutImg/logo-mysoswing@2x.png') no-repeat;
+      background-size: 100%;
+    }
 }
 
 
