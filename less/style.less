@@ -980,6 +980,22 @@ textarea{
   }
 }
 
+.hang{
+  text-indent: -999em;
+  display: block;
+  max-width: 260px;
+  height: 135px;
+  width: 100%;
+  background: url(../layoutImg/hangouts.png) no-repeat;
+  background-size: 100%;
+  margin: 50px 0 0;
+  padding: 0;
+  &:hover, &:focus{
+    opacity: 0.8;
+    margin-top: 55px;
+  }
+}
+
 .time{
   color: @orange;
   .motivaIt(1em);
@@ -1050,9 +1066,17 @@ h1{
   margin: 15px 1% 0 0;
   padding: 30px 20px 15px;
   .box-sizing(border-box);
+  .search &{
+    margin-right: 0;
+    margin-left: 1%;
+  }
   &:nth-of-type(2n+1){
     margin-right: 0;
     margin-left: 1%;
+    .search &{
+      margin-right: 1%;
+      margin-left: 0;
+    }
   }
   .lt-ie9 &{
     width: 48%;
@@ -1527,6 +1551,13 @@ h1{
   }
   .live{
     width: 100%;
+  }
+
+  .hang{
+    margin: 20px 0;
+    &:hover, &:focus{
+      margin: 20px 0 20px 5px;
+    }
   }
 
   .searchform{
