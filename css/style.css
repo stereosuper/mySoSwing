@@ -1048,7 +1048,7 @@ footer.bottom {
   height: auto;
 }
 #lien-app-store {
-  display: block;
+  display: none;
   width: 135px;
   height: 40px;
   background: url(../layoutImg/app-store.png) no-repeat 50% 50%;
@@ -1920,6 +1920,9 @@ h1 + .rdv + .rdv {
   .formContainer .btn {
     margin: 0;
   }
+  .page-template-solution header {
+    padding: 0 0 265px;
+  }
   .categories {
     width: 100%;
   }
@@ -1948,9 +1951,6 @@ h1 + .rdv + .rdv {
   }
   .fonctionnalites {
     overflow: hidden;
-  }
-  .fonctionnalites aside {
-    margin: 50px 0 0;
   }
   .fonctionnalites + footer {
     margin: 0;
@@ -1984,6 +1984,13 @@ h1 + .rdv + .rdv {
   h1 {
     padding-left: 0;
     font-size: 2em;
+    margin-top: 15px;
+  }
+  .page-template-solution h1 {
+    margin-top: 0;
+  }
+  .homeTemp.home h1 {
+    font-size: 2.1em;
   }
   h2 {
     font-size: 1.3em;
@@ -1992,7 +1999,7 @@ h1 + .rdv + .rdv {
     padding: 0;
   }
   #bloc-right-home {
-    padding-left: 47%;
+    padding: 50px 0 0 47%;
   }
   .videoContainer {
     left: 40px;
@@ -2000,6 +2007,9 @@ h1 + .rdv + .rdv {
   .partenaire,
   .devenir {
     padding: 30px;
+  }
+  .infoContact {
+    padding-top: 0;
   }
   .blocError {
     text-align: center;
@@ -2032,7 +2042,7 @@ h1 + .rdv + .rdv {
     padding-left: 0;
   }
   .devenir .btn {
-    font-size: 1.05em;
+    padding: 10px 37px;
   }
 }
 /* @end */
