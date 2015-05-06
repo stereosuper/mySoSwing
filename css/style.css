@@ -667,6 +667,28 @@ header {
   background: #ff6300;
   border-bottom: 1px solid #993b00;
 }
+#top-header p.topMentions {
+  float: right;
+  margin: 0;
+  font-family: 'motivaBoldIt', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 30px;
+  height: 30px;
+  display: block;
+}
+#top-header p.topMentions a {
+  font-family: 'motivaBoldIt', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+}
 #menu-langues {
   display: inline-block;
   vertical-align: top;
@@ -1062,8 +1084,41 @@ footer.bottom {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 100px 0 0 52%;
+  padding: 100px 0 280px 52%;
   height: auto;
+  position: relative;
+  overflow: hidden;
+}
+#bloc-right-home a#pastilleNGF {
+  position: absolute;
+  display: block;
+  width: 278px;
+  height: 270px;
+  background: url(../layoutImg/pastilleNGF.png) no-repeat 0 0;
+  right: 25%;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  text-indent: -9000px;
+  overflow: hidden;
+  -webkit-transition: bottom 0.1s ease-in-out;
+  -moz-transition: bottom 0.1s ease-in-out;
+  -o-transition: bottom 0.1s ease-in-out;
+  transition: bottom 0.1s ease-in-out;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+#bloc-right-home a#pastilleNGF:hover {
+  bottom: 5px;
+}
+#bloc-right-home a#pastilleNGF:active {
+  margin-bottom: -5px;
+}
+#bloc-right-home a#pastilleNGF.no-js {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
 }
 #lien-app-store {
   display: none;
@@ -1344,6 +1399,82 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+/* @end */
+/* @group NGF */
+.infoNgf {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  padding: 0px 45px 0 20px;
+  font-size: 1.1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.infoNgf img {
+  margin-bottom: 1em;
+}
+#golf-list {
+  display: inline-block;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+#golf-list li {
+  margin: 1em 4% 1em 0;
+  padding: 2em 1em;
+  border-top: 1px dotted #a0a0a0;
+  border-bottom: 1px dotted #a0a0a0;
+  display: inline-block;
+  width: 29%;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#golf-list li h2 {
+  margin: 0 0 0.4em 0;
+  font-family: 'motivaBoldIt', sans-serif;
+  font-weight: normal;
+  font-size: 1.3em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+#golf-list li p {
+  margin: 0;
+}
+#golf-list li p.tel-golf {
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 0.2em 0;
+}
+#golf-list li a {
+  font-size: 1em;
+  margin: 0.2em 0 0 0;
+}
+#golf-list li#temporary {
+  display: inline-block;
+  text-align: center;
+  vertical-align: center;
+  border: 0 none;
+  color: #9d9d9d;
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  padding-top: 150px;
+  padding-left: 30px;
+  float: right;
 }
 /* @end */
 /* @group Rdv Live + Blog */
@@ -1812,6 +1943,10 @@ h1 + .rdv + .rdv {
   }
 }
 @media (max-width: 1050px) {
+  #bloc-right-home a#pastilleNGF {
+    right: auto;
+    left: 50%;
+  }
   #menu-footer {
     float: none;
     display: block;
@@ -1872,14 +2007,17 @@ h1 + .rdv + .rdv {
     margin: 30px 0 0;
   }
   .formContainer,
-  .infoContact {
+  .infoContact,
+  .infoNgf {
     width: 100%;
   }
-  .infoContact {
+  .infoContact,
+  .infoNgf {
     padding-right: 20px;
     margin: 0 0 30px;
   }
-  .infoContact p {
+  .infoContact p,
+  .infoNgf p {
     margin-bottom: 15px;
   }
   .rdv {
@@ -1887,8 +2025,17 @@ h1 + .rdv + .rdv {
     margin-left: 0;
     margin-right: 0;
   }
+  #golf-list li {
+    width: 100%;
+  }
+  #golf-list li#temporary {
+    display: none;
+  }
 }
 @media (max-width: 880px) {
+  #top-header p.topMentions span {
+    display: none;
+  }
   #burger {
     display: block;
   }
@@ -2047,7 +2194,11 @@ h1 + .rdv + .rdv {
     padding: 0;
   }
   #bloc-right-home {
-    padding: 50px 0 0 47%;
+    padding: 50px 0 270px 47%;
+    overflow: hidden;
+  }
+  #bloc-right-home a#pastilleNGF {
+    margin-left: -80px;
   }
   .videoContainer {
     left: 40px;
@@ -2069,6 +2220,12 @@ h1 + .rdv + .rdv {
   .slides {
     left: -85px;
     top: 240px;
+  }
+  #golf-list li {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media (max-width: 400px) {

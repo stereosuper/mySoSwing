@@ -14,6 +14,7 @@ function animHome(){
 
 	function completeAnimGant(){
 		TweenMax.set(h1, {opacity: "1"});
+		TweenMax.to($('#pastilleNGF'),1, {opacity: "1", delay:1});
 	}
 
 	tlHome.to(gant, 0.8, {x: "0px", y: "0px", rotation:"0deg", delay:0.2, ease:Quart.easeOut, onComplete:completeAnimGant});

@@ -289,6 +289,18 @@ header{
   height: 30px;
   background: @orange;
   border-bottom: 1px solid @orangeDark;
+  p.topMentions {
+	float: right;
+	margin: 0;
+	.motivaBoldIt(1em);
+	line-height: 30px;
+	height: 30px;
+	display: block;
+	a {
+		.motivaBoldIt(1em);
+		color: @blanc;
+	}
+  }
 }
 
 #menu-langues{
@@ -630,8 +642,34 @@ footer{
 #bloc-right-home{
   width: 100%;
   .box-sizing(border-box);
-  padding: 100px 0 0 52%;
+  padding: 100px 0 280px 52%;
   height: auto;
+  position: relative;
+  overflow: hidden;
+  a#pastilleNGF {
+  	position: absolute;
+  	display: block;
+  	width: 278px;
+  	height: 270px;
+  	background: url(../layoutImg/pastilleNGF.png) no-repeat 0 0;
+  	right: 25%;
+  	bottom: 0;
+  	margin: 0;
+  	padding: 0;
+  	text-indent: -9000px;
+  	overflow: hidden;
+  	.transition(bottom 0.1s ease-in-out);
+  	.opacity(0);
+  	&:hover {
+  		bottom: 5px;
+  	}
+  	&:active {
+  		margin-bottom: -5px;
+  	}
+  	&.no-js {
+  		.opacity(1);
+  	}
+  }
 }
 
 #lien-app-store{
@@ -903,6 +941,66 @@ textarea{
 
 /* @end */
 
+/* @group NGF */
+
+.infoNgf {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  padding: 0px 45px 0 20px;
+  font-size: 1.1em;
+  .box-sizing(border-box);
+  img {
+  	margin-bottom: 1em;
+  }
+}
+
+#golf-list {
+	display: inline-block;
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
+	li {
+		margin: 1em 4% 1em 0;
+		padding: 2em 1em;
+		border-top: 1px dotted @border;
+		border-bottom: 1px dotted @border;
+		display: inline-block;
+		width: 29%;
+		vertical-align: top;
+		.box-sizing(border-box);
+		h2 {
+			margin: 0 0 0.4em 0;
+			.motivaBoldIt(1.3em);
+		}
+		p {
+			margin: 0;
+			&.tel-golf {
+				.motivaBold(1em);
+				margin: 0.2em 0;
+			}
+		}	
+		a {
+			font-size: 1em;
+			margin: 0.2em 0 0 0;
+		}
+		&#temporary {
+			display: inline-block;
+			text-align: center;
+			vertical-align: center;
+			border: 0 none;
+			color: @gris;
+			.motivaIt(1em);
+			padding-top: 150px;
+			padding-left: 30px;
+			float: right;
+		}
+	}
+}
+
+/* @end */
 
 /* @group Rdv Live + Blog */
 
@@ -1373,6 +1471,12 @@ h1{
 }
 
 @media (max-width: 1050px){
+	#bloc-right-home{
+	  a#pastilleNGF {
+	  	right: auto;
+	  	left: 50%;
+	  }
+	}
   #menu-footer{
     float: none;
     display: block;
@@ -1452,15 +1556,15 @@ h1{
       background-size: 979px auto;
     }
   }
-
+  
   .videoContainer{
     margin: 30px 0 0;
   }
 
-  .formContainer, .infoContact{
+  .formContainer, .infoContact, .infoNgf{
     width: 100%;
   }
-  .infoContact{
+  .infoContact, .infoNgf{
     padding-right: 20px;
     margin: 0 0 30px;
     p{
@@ -1473,9 +1577,23 @@ h1{
     margin-left: 0;
     margin-right: 0;
   }
+  
+  #golf-list {
+  	li {
+  		width: 100%;
+  		&#temporary {
+  			display: none;
+  		}
+  	}
+  }
 }
 
 @media (max-width: 880px){
+  #top-header{
+	p.topMentions span {
+		display: none;
+	}
+  }
   #burger{
     display: block;
   }
@@ -1665,9 +1783,12 @@ h1{
   }
 
   #bloc-right-home{
-    padding: 50px 0 0 47%;
+    padding: 50px 0 270px 47%;
+    overflow: hidden;
+     a#pastilleNGF {
+     	margin-left: -80px;
+     }
   }
-
   .videoContainer{
     left: 40px;
   }
@@ -1691,6 +1812,14 @@ h1{
   .slides{
     left: -85px;
     top: 240px;
+  }
+  #golf-list {
+  	li {
+  		padding-left: 0;
+  		padding-right: 0;
+  		margin-left: 0;
+  		margin-right: 0;
+  	}
   }
 }
 
