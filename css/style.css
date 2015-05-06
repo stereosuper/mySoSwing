@@ -226,32 +226,46 @@ table {
   border-spacing: 0;
 }
 @font-face {
-  font-family: 'motivaBoldIt';
+  font-family: 'motiva';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/motiva_sans_bold_italic-webfont.eot');
-  src: url('../fonts/motiva_sans_bold_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/motiva_sans_bold_italic-webfont.woff') format('woff'), url('../fonts/motiva_sans_bold_italic-webfont.ttf') format('truetype'), url('../fonts/motiva_sans_bold_italic-webfont.svg#motiva_sansbold_italic') format('svg');
+  src: url('../fonts/motiva_sans-webfont.eot');
+  src: url('../fonts/motiva_sans-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/motiva_sans-webfont.woff') format('woff'), url('../fonts/motiva_sans-webfont.ttf') format('truetype'), url('../fonts/motiva_sans-webfont.svg#motiva_sansregular') format('svg');
 }
+/*@font-face {
+    font-family: 'motivaBold';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/motiva_sans_bold-webfont.eot');
+    src: url('../fonts/motiva_sans_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/motiva_sans_bold-webfont.woff') format('woff'),
+         url('../fonts/motiva_sans_bold-webfont.ttf') format('truetype'),
+         url('../fonts/motiva_sans_bold-webfont.svg#motiva_sansbold') format('svg');
+}
+
+@font-face {
+    font-family: 'motivaBoldIt';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/motiva_sans_bold_italic-webfont.eot');
+    src: url('../fonts/motiva_sans_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/motiva_sans_bold_italic-webfont.woff') format('woff'),
+         url('../fonts/motiva_sans_bold_italic-webfont.ttf') format('truetype'),
+         url('../fonts/motiva_sans_bold_italic-webfont.svg#motiva_sansbold_italic') format('svg');
+}*/
 @font-face {
   font-family: 'motivaBold';
+  src: url('../fonts/motiva_sans_medium-webfont.eot');
+  src: url('../fonts/motiva_sans_medium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/motiva_sans_medium-webfont.woff2') format('woff2'), url('../fonts/motiva_sans_medium-webfont.woff') format('woff'), url('../fonts/motiva_sans_medium-webfont.ttf') format('truetype'), url('../fonts/motiva_sans_medium-webfont.svg#motiva_sansmedium') format('svg');
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/motiva_sans_bold-webfont.eot');
-  src: url('../fonts/motiva_sans_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/motiva_sans_bold-webfont.woff') format('woff'), url('../fonts/motiva_sans_bold-webfont.ttf') format('truetype'), url('../fonts/motiva_sans_bold-webfont.svg#motiva_sansbold') format('svg');
 }
 @font-face {
-  font-family: 'motivaLtIt';
+  font-family: 'motivaBoldIt';
+  src: url('../fonts/motiva_sans_medium_italic-webfont.eot');
+  src: url('../fonts/motiva_sans_medium_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/motiva_sans_medium_italic-webfont.woff2') format('woff2'), url('../fonts/motiva_sans_medium_italic-webfont.woff') format('woff'), url('../fonts/motiva_sans_medium_italic-webfont.ttf') format('truetype'), url('../fonts/motiva_sans_medium_italic-webfont.svg#motiva_sansmedium_italic') format('svg');
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/motiva_sans_light_italic-webfont.eot');
-  src: url('../fonts/motiva_sans_light_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/motiva_sans_light_italic-webfont.woff') format('woff'), url('../fonts/motiva_sans_light_italic-webfont.ttf') format('truetype'), url('../fonts/motiva_sans_light_italic-webfont.svg#motiva_sanslight_italic') format('svg');
-}
-@font-face {
-  font-family: 'motivaLt';
-  font-weight: normal;
-  font-style: normal;
-  src: url('../fonts/motiva_sans_light-webfont.eot');
-  src: url('../fonts/motiva_sans_light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/motiva_sans_light-webfont.woff') format('woff'), url('../fonts/motiva_sans_light-webfont.ttf') format('truetype'), url('../fonts/motiva_sans_light-webfont.svg#motiva_sanslight') format('svg');
 }
 @font-face {
   font-family: 'motivaIt';
@@ -261,11 +275,11 @@ table {
   src: url('../fonts/motiva_sans_regular_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/motiva_sans_regular_italic-webfont.woff') format('woff'), url('../fonts/motiva_sans_regular_italic-webfont.ttf') format('truetype'), url('../fonts/motiva_sans_regular_italic-webfont.svg#motiva_sansitalic') format('svg');
 }
 @font-face {
-  font-family: 'motiva';
+  font-family: 'motivaLtIt';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/motiva_sans-webfont.eot');
-  src: url('../fonts/motiva_sans-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/motiva_sans-webfont.woff') format('woff'), url('../fonts/motiva_sans-webfont.ttf') format('truetype'), url('../fonts/motiva_sans-webfont.svg#motiva_sansregular') format('svg');
+  src: url('../fonts/motiva_sans_light_italic-webfont.eot');
+  src: url('../fonts/motiva_sans_light_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/motiva_sans_light_italic-webfont.woff') format('woff'), url('../fonts/motiva_sans_light_italic-webfont.ttf') format('truetype'), url('../fonts/motiva_sans_light_italic-webfont.svg#motiva_sanslight_italic') format('svg');
 }
 @font-face {
   font-family: 'mysoswing';
@@ -1036,6 +1050,10 @@ footer.bottom {
 #telephone {
   background: url(../layoutImg/home/telephone.png);
 }
+.uk #telephone {
+  background: url(../layoutImg/uk/telephone.png);
+  background-size: 100% 100%;
+}
 #sur-gant {
   background: url(../layoutImg/home/sur-gant.png);
 }
@@ -1551,6 +1569,12 @@ h1 + .rdv + .rdv {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+.rdv img {
+  display: block;
+  padding: 0 0 15px;
+  max-width: 100%;
+  height: auto !important;
+}
 .searchform {
   text-align: center;
   margin: 45px 0 0;
@@ -1620,7 +1644,7 @@ h1 + .rdv + .rdv {
   color: #ffffff;
   border-radius: 50px;
   text-align: center;
-  line-height: 40px;
+  line-height: 35px;
   margin: 0 8px 0 0;
 }
 .fonctionnalites h2 + p {
@@ -1691,14 +1715,26 @@ h1 + .rdv + .rdv {
 #demande .slides {
   background: url(../layoutImg/demande.png) no-repeat;
 }
+.uk #demande .slides {
+  background: url(../layoutImg/uk/demande.png) no-repeat;
+}
 #probleme .slides {
   background: url(../layoutImg/probleme.png) no-repeat;
+}
+.uk #probleme .slides {
+  background: url(../layoutImg/uk/probleme.png) no-repeat;
 }
 #video .slides {
   background: url(../layoutImg/video.png) no-repeat;
 }
+.uk #video .slides {
+  background: url(../layoutImg/uk/video.png) no-repeat;
+}
 #reponse .slides {
   background: url(../layoutImg/reponse.png) no-repeat;
+}
+.uk #reponse .slides {
+  background: url(../layoutImg/uk/reponse.png) no-repeat;
 }
 /* @end */
 /* @group Non semantic Boilerplate */
@@ -1970,14 +2006,26 @@ h1 + .rdv + .rdv {
   #demande .slides {
     background: url(../layoutImg/demandeSmall.png) no-repeat;
   }
+  .uk #demande .slides {
+    background: url(../layoutImg/uk/demandeSmall.png) no-repeat;
+  }
   #probleme .slides {
     background: url(../layoutImg/problemeSmall.png) no-repeat;
+  }
+  .uk #probleme .slides {
+    background: url(../layoutImg/uk/problemeSmall.png) no-repeat;
   }
   #video .slides {
     background: url(../layoutImg/videoSmall.png) no-repeat;
   }
+  .uk #video .slides {
+    background: url(../layoutImg/uk/videoSmall.png) no-repeat;
+  }
   #reponse .slides {
     background: url(../layoutImg/reponseSmall.png) no-repeat;
+  }
+  .uk #reponse .slides {
+    background: url(../layoutImg/uk/reponseSmall.png) no-repeat;
   }
 }
 @media (max-width: 450px) {

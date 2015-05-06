@@ -618,6 +618,10 @@ footer{
 }
 #telephone{
   background: url(../layoutImg/home/telephone.png);
+  .uk &{
+    background: url(../layoutImg/uk/telephone.png);
+    background-size: 100% 100%;
+  }
 }
 #sur-gant{
   background: url(../layoutImg/home/sur-gant.png);
@@ -1094,6 +1098,12 @@ h1{
   a{
     .motivaBoldIt(1em);
   }
+  img{
+    display: block;
+    padding: 0 0 15px;
+    max-width: 100%;
+    height: auto !important;
+  }
 }
 
 .searchform{
@@ -1165,7 +1175,7 @@ h1{
       color: @blanc;
       border-radius: 50px;
       text-align: center;
-      line-height: 40px;
+      line-height: 35px;
       margin: 0 8px 0 0;
     }
     + p{
@@ -1241,15 +1251,27 @@ h1{
 }
 #demande .slides{
   background: url(../layoutImg/demande.png) no-repeat;
+  .uk &{
+    background: url(../layoutImg/uk/demande.png) no-repeat;
+  }
 }
 #probleme .slides{
   background: url(../layoutImg/probleme.png) no-repeat;
+  .uk &{
+    background: url(../layoutImg/uk/probleme.png) no-repeat;
+  }
 }
 #video .slides{
   background: url(../layoutImg/video.png) no-repeat;
+  .uk &{
+    background: url(../layoutImg/uk/video.png) no-repeat;
+  }
 }
 #reponse .slides{
   background: url(../layoutImg/reponse.png) no-repeat;
+  .uk &{
+    background: url(../layoutImg/uk/reponse.png) no-repeat;
+  }
 }
 
 /* @end */
@@ -1595,15 +1617,27 @@ h1{
 @media (max-width: 500px){
   #demande .slides{
     background: url(../layoutImg/demandeSmall.png) no-repeat;
+    .uk &{
+      background: url(../layoutImg/uk/demandeSmall.png) no-repeat;
+    }
   }
   #probleme .slides{
     background: url(../layoutImg/problemeSmall.png) no-repeat;
+    .uk &{
+      background: url(../layoutImg/uk/problemeSmall.png) no-repeat;
+    }
   }
   #video .slides{
     background: url(../layoutImg/videoSmall.png) no-repeat;
+    .uk &{
+      background: url(../layoutImg/uk/videoSmall.png) no-repeat;
+    }
   }
   #reponse .slides{
     background: url(../layoutImg/reponseSmall.png) no-repeat;
+    .uk &{
+      background: url(../layoutImg/uk/reponseSmall.png) no-repeat;
+    }
   }
 }
 
