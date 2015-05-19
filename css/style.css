@@ -456,6 +456,7 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-size: 1.15em !important;
   -webkit-transition: 0.2s ease-in-out;
   -moz-transition: 0.2s ease-in-out;
   -o-transition: 0.2s ease-in-out;
@@ -486,7 +487,8 @@ input[type=submit]:active,
 button:active {
   opacity: 0.8;
 }
-button.btn {
+button.btn,
+buttonbody .gform_wrapper .gform_footer input[type=submit] {
   display: block;
   margin: 0 auto;
 }
@@ -532,7 +534,8 @@ b {
 }
 /* @end */
 /* @group btn */
-.btn {
+.btn,
+body .gform_wrapper .gform_footer input[type=submit] {
   display: inline-block;
   vertical-align: top;
   padding: 10px 44px;
@@ -562,7 +565,11 @@ b {
 .btn:hover,
 .btn:focus,
 .btn:active,
-.btn.actif {
+.btn.actif,
+body .gform_wrapper .gform_footer input[type=submit]:hover,
+body .gform_wrapper .gform_footer input[type=submit]:focus,
+body .gform_wrapper .gform_footer input[type=submit]:active,
+body .gform_wrapper .gform_footer input[type=submit].actif {
   color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #993b00;
   -moz-box-shadow: 0 1px 3px #993b00;
@@ -571,7 +578,8 @@ b {
   padding-top: 12px;
   padding-bottom: 8px;
 }
-.btn.actif {
+.btn.actif,
+body .gform_wrapper .gform_footer input[type=submit].actif {
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -659,7 +667,8 @@ header {
   background-size: 100% auto;
   padding: 0 0 13%;
 }
-.lt-ie9 header .btn {
+.lt-ie9 header .btn,
+.lt-ie9 header body .gform_wrapper .gform_footer input[type=submit] {
   padding: 10px 30px;
 }
 #top-header {
@@ -1320,12 +1329,13 @@ footer.bottom {
 .formContainer input[type=text],
 .formContainer input[type=email] {
   padding: 9px 13px 7px;
-  width: 230px;
+  width: 230px !important;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.formContainer .btn {
+.formContainer .btn,
+.formContainer body .gform_wrapper .gform_footer input[type=submit] {
   margin: 0 0 0 19%;
 }
 label {
@@ -1337,6 +1347,7 @@ label {
   display: inline-block;
   padding: 0 20px 0 0;
   font-size: 1.1em;
+  margin: 0 !important;
 }
 label.required {
   font-family: 'motivaBold', sans-serif;
@@ -1370,7 +1381,8 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.blocError {
+.blocError,
+body .gform_wrapper div.validation_error {
   position: absolute;
   margin: 0;
   padding: 25px 40px 22px;
@@ -1619,12 +1631,14 @@ textarea {
   border-radius: 5px;
   padding: 6px 12px;
 }
-.rdvNow .btn {
+.rdvNow .btn,
+.rdvNow body .gform_wrapper .gform_footer input[type=submit] {
   position: absolute;
   right: 40px;
   bottom: -15px;
 }
-.rdvNow .btn:before {
+.rdvNow .btn:before,
+.rdvNow body .gform_wrapper .gform_footer input[type=submit]:before {
   content: '';
   display: inline-block;
   background: url(../layoutImg/btnLive.png) no-repeat;
@@ -1868,6 +1882,157 @@ h1 + .rdv + .rdv {
   background: url(../layoutImg/uk/reponse.png) no-repeat;
 }
 /* @end */
+/* GRAVITY */
+.formContainer.gravity {
+  padding: 30px 20px;
+}
+.formContainer.gravity p {
+  margin: 20px 0 0;
+}
+.formContainer.gravity p span {
+  margin: 0 0 0 19%;
+}
+.formContainer.gravity .col2 p {
+  width: 49%;
+}
+.formContainer.gravity .col2 p span {
+  margin: 0 0 0 35%;
+}
+.star {
+  color: #ff6300;
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+body .gform_wrapper {
+  margin: 0;
+  max-width: 100%;
+}
+body .gform_wrapper label.gfield_label + div.ginput_container {
+  display: inline-block;
+}
+body .gform_wrapper .gfield_required {
+  margin: 0;
+  color: #ff6300;
+}
+body .gform_wrapper input[type=email],
+body .gform_wrapper input[type=number],
+body .gform_wrapper input[type=password],
+body .gform_wrapper input[type=tel],
+body .gform_wrapper input[type=text],
+body .gform_wrapper input[type=url] {
+  text-indent: 0;
+  padding: 7px 13px 5px;
+}
+body .gform_wrapper .gform_footer input[type=submit] {
+  margin: 15px 0 0 19%;
+}
+body .gform_wrapper .top_label li.gfield {
+  margin: 0 0 20px !important;
+}
+body .gform_wrapper div.validation_error {
+  color: #000;
+  position: relative;
+  margin-bottom: 1.6em;
+  top: 0;
+  left: 0;
+}
+body .gform_wrapper .ginput_container + .gfield_description.validation_message {
+  display: none;
+}
+body .gform_wrapper li.gfield.gfield_error,
+body .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  background: none;
+  border: 0;
+}
+body .gform_wrapper .gfield_error .gfield_required,
+body .gform_wrapper .gfield_error .gfield_label {
+  color: #da2c13;
+}
+body .gform_wrapper li.gfield_error input[type=email],
+body .gform_wrapper li.gfield_error input[type=number],
+body .gform_wrapper li.gfield_error input[type=password],
+body .gform_wrapper li.gfield_error input[type=tel],
+body .gform_wrapper li.gfield_error input[type=text],
+body .gform_wrapper li.gfield_error input[type=url],
+body .gform_wrapper li.gfield_error textarea {
+  border-color: #da2c13;
+}
+.col2 .gfield_label {
+  width: 35%;
+}
+.col2 .gform_wrapper .gform_footer {
+  width: 49%;
+}
+.col2 .gform_wrapper .gform_footer input[type=submit] {
+  margin: 15px 0 0 35%;
+}
+.gfield_label {
+  vertical-align: middle;
+  font-weight: normal !important;
+  font-family: 'motiva', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.gfield_contains_required .gfield_label {
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+#field_1_11,
+#field_1_12 {
+  margin: 0 0 10px !important;
+}
+#field_1_6 {
+  margin-top: 30px !important;
+}
+#field_1_15 {
+  background: #fff;
+  border: 1px dotted #cfcfcf;
+  padding: 18px 0;
+  float: right;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 31px !important;
+}
+#input_1_5 {
+  width: 170px !important;
+}
+#input_1_9,
+#input_7_1 {
+  width: 200px !important;
+}
+#input_1_14,
+#input_4_3 {
+  width: 110px !important;
+}
+select {
+  border: 1px solid #b3b3b3;
+  width: 120px !important;
+  cursor: pointer;
+  height: 27px;
+  outline: 0;
+  font-family: 'motiva', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background: #ededed;
+}
+.gform_confirmation_wrapper + p {
+  display: none;
+}
 /* @group Non semantic Boilerplate */
 /* remplacement image */
 .ir {
@@ -1941,6 +2106,9 @@ h1 + .rdv + .rdv {
   .schema {
     float: none;
   }
+  .col2 .gfield_label {
+    width: 28%;
+  }
 }
 @media (max-width: 1050px) {
   #bloc-right-home a#pastilleNGF {
@@ -1971,7 +2139,8 @@ h1 + .rdv + .rdv {
   }
 }
 @media (max-width: 1020px) {
-  header .btn {
+  header .btn,
+  header body .gform_wrapper .gform_footer input[type=submit] {
     padding: 10px 30px;
   }
   #menu li {
@@ -2100,7 +2269,8 @@ h1 + .rdv + .rdv {
   #objet {
     width: 100%;
   }
-  .formContainer .btn {
+  .formContainer .btn,
+  .formContainer body .gform_wrapper .gform_footer input[type=submit] {
     margin: 0;
   }
   .page-template-solution header {
@@ -2148,6 +2318,17 @@ h1 + .rdv + .rdv {
   .slides {
     top: 190px;
   }
+  body .gform_wrapper .top_label li.gfield.gf_left_half,
+  body .gform_wrapper .top_label li.gfield.gf_right_half {
+    display: block;
+    width: 100%;
+  }
+  #field_1_6 {
+    margin-top: 40px !important;
+  }
+  #field_1_15 {
+    margin-top: 0 !important;
+  }
 }
 @media (max-width: 500px) {
   #demande .slides {
@@ -2173,6 +2354,10 @@ h1 + .rdv + .rdv {
   }
   .uk #reponse .slides {
     background: url(../layoutImg/uk/reponseSmall.png) no-repeat;
+  }
+  .gfield_label,
+  .col2 .gfield_label {
+    width: 100%;
   }
 }
 @media (max-width: 450px) {
@@ -2210,7 +2395,8 @@ h1 + .rdv + .rdv {
   .infoContact {
     padding-top: 0;
   }
-  .blocError {
+  .blocError,
+  body .gform_wrapper div.validation_error {
     text-align: center;
     top: -115px;
   }
@@ -2246,7 +2432,8 @@ h1 + .rdv + .rdv {
   .searchform {
     padding-left: 0;
   }
-  .devenir .btn {
+  .devenir .btn,
+  .devenir body .gform_wrapper .gform_footer input[type=submit] {
     padding: 10px 37px;
   }
 }

@@ -121,6 +121,7 @@ input, textarea{
   border-radius: 4px;
   padding: 9px 13px;
   .motivaIt(1.15em);
+  font-size: 1.15em !important;
   .transition(.2s ease-in-out);
   &:focus{
     outline: 0;
@@ -874,7 +875,7 @@ footer{
   }
   input[type=text], input[type=email]{
     padding: 9px 13px 7px;
-    width: 230px;
+    width: 230px !important;
     .box-sizing(border-box);
   }
   .btn{
@@ -889,6 +890,7 @@ label{
   display: inline-block;
   padding: 0 20px 0 0;
   font-size: 1.1em;
+  margin: 0 !important;
   &.required{
     .motivaBold(1.1em);
   }
@@ -1375,6 +1377,154 @@ h1{
 /* @end */
 
 
+/* GRAVITY */
+
+.formContainer.gravity{
+  padding: 30px 20px;
+  p{
+    margin: 20px 0 0;
+    span{
+      margin: 0 0 0 19%;
+    }
+  }
+  .col2{
+    p{
+      width: 49%;
+      span{
+        margin: 0 0 0 35%;
+      }
+    }
+  }
+}
+
+.star{
+  color: @orange;
+  .motivaBold(1em);
+}
+
+body{
+  .gform_wrapper{
+    margin: 0;
+    max-width: 100%;
+    label.gfield_label+div.ginput_container{
+      display: inline-block;
+    }
+    .gfield_required{
+      margin: 0;
+      color: @orange;
+    }
+    input{
+      &[type=email], &[type=number], &[type=password], &[type=tel], &[type=text], &[type=url]{
+        text-indent: 0;
+        padding: 7px 13px 5px;
+      }
+    }
+    .gform_footer{
+      input[type=submit]{
+        &:extend(.btn all);
+        margin: 15px 0 0 19%;
+      }
+    }
+    .top_label{
+      li.gfield{
+        margin: 0 0 20px !important;
+      }
+    }
+
+    div.validation_error{
+      &:extend(.blocError);
+      color: #000;
+      position: relative;
+      margin-bottom: 1.6em;
+      top: 0;
+      left: 0;
+    }
+    .ginput_container+.gfield_description.validation_message{
+      display: none;
+    }
+    li.gfield.gfield_error, li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning{
+      background: none;
+      border: 0;
+    }
+    .gfield_error{
+      .gfield_required, .gfield_label{
+        color: @error;
+      }
+    }
+    li.gfield_error input[type=email], li.gfield_error input[type=number], li.gfield_error input[type=password], li.gfield_error input[type=tel], li.gfield_error input[type=text], li.gfield_error input[type=url], li.gfield_error textarea{
+      border-color: @error;
+    }
+  }
+}
+
+.col2{
+  .gfield_label{
+    width: 35%;
+  }
+  .gform_wrapper{
+    .gform_footer{
+      width: 49%;
+      input[type=submit]{
+        margin: 15px 0 0 35%;
+      }
+    }
+  }
+}
+
+.gfield_label{
+  vertical-align: middle;
+  font-weight: normal !important;
+  .motiva(1em);
+}
+.gfield_contains_required{
+  .gfield_label{
+    .motivaBold(1em);
+  }
+}
+
+#field_1_11, #field_1_12{
+  margin: 0 0 10px !important;
+}
+
+#field_1_6{
+  margin-top: 30px !important;
+}
+#field_1_15{
+  background: #fff;
+  border: 1px dotted #cfcfcf;
+  padding: 18px 0;
+  float: right;
+  .box-sizing(border-box);
+  margin-top: 31px !important;
+}
+
+#input_1_5{ //tel
+  width: 170px !important;
+}
+#input_1_9, #input_7_1{ //nom
+  width: 200px !important;
+}
+#input_1_14, #input_4_3{ //cp
+  width: 110px !important;
+}
+
+select{
+  border: 1px solid #b3b3b3;
+  width: 120px !important;
+  cursor: pointer;
+  height: 27px;
+  outline: 0;
+  .motiva(1em);
+  background: #ededed;
+}
+
+.gform_confirmation_wrapper{
+  + p{
+    display: none;
+  }
+}
+
+
 /* @group Non semantic Boilerplate */
 
 /* remplacement image */
@@ -1467,6 +1617,12 @@ h1{
 
   .schema{
     float: none;
+  }
+
+  .col2{
+    .gfield_label{
+      width: 28%;
+    }
   }
 }
 
@@ -1730,6 +1886,21 @@ h1{
   .slides{
     top: 190px;
   }
+  
+  body{
+    .gform_wrapper .top_label li.gfield.gf_left_half, .gform_wrapper .top_label li.gfield.gf_right_half{
+      display: block;
+      width: 100%;
+    }
+  }
+
+  #field_1_6 {
+    margin-top: 40px !important;
+  }
+  #field_1_15{
+    margin-top: 0 !important;
+  }
+  
 }
 
 @media (max-width: 500px){
@@ -1756,6 +1927,10 @@ h1{
     .uk &{
       background: url(../layoutImg/uk/reponseSmall.png) no-repeat;
     }
+  }
+
+  .gfield_label, .col2 .gfield_label{
+    width: 100%;
   }
 }
 
