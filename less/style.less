@@ -185,28 +185,43 @@ strong, b{
 
 /* @group btn */
 
-.btn{
+.btn, .btnReverse{
   display: inline-block;
   vertical-align: top;
   padding: 10px 44px;
-  background: @orange;
-  color: @blanc;
   .motivaIt(1.1em);
   text-decoration: none;
   .border-radius(5px);
-  .box-shadow(0 3px 0 @orangeDark);
   height: 42px;
   .box-sizing(border-box);
   &:hover, &:focus, &:active, &.actif{
-    color: @blanc;
     .box-shadow(0 1px 3px @orangeDark);
-    background: darken(@orange, 5%);
     padding-top: 12px;
     padding-bottom: 8px;
   }
   &.actif{
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+}
+
+.btn{
+  background: @orange;
+  color: @blanc;
+  .box-shadow(0 3px 0 @orangeDark);
+  &:hover, &:focus, &:active, &.actif{
+    color: @blanc;
+    background: darken(@orange, 5%);
+  }
+}
+
+.btnReverse{
+  background: #fff;
+  color: @orange;
+  border: 1px solid @orange;
+  .box-shadow(0 3px 0 darken(@orange, 5%));
+  &:hover, &:focus, &:active, &.actif{
+    border-color: @orangeDark;
   }
 }
 
@@ -276,9 +291,14 @@ header{
   width: 100%;
   z-index: 2;
   position: relative;
-  background: url(../layoutImg/banner.png) no-repeat 50% 100%;
+  background-image: url(../layoutImg/banner.png);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
   background-size: 100% auto;
   padding: 0 0 13%;
+  &.pro{
+    background-image: url(../layoutImg/bannerPro.png);
+  }
   .lt-ie9 &{
     .btn{
       padding: 10px 30px
@@ -388,6 +408,14 @@ header{
   background: url(../layoutImg/logo-mysoswing.png) no-repeat;
   margin: 11px 0 0;
   overflow: hidden;
+  position: relative;
+  span{
+    position: absolute;
+    bottom: 7px;
+    right: 71px;
+    font-size: 19px;
+    color: @orange;
+  }
 }
 
 #menu{
@@ -428,6 +456,11 @@ header{
   }
 }
 
+.contact-en{
+  &:extend(#menu li);
+  &:extend(#menu li a all);
+}
+
 #menu-header{
   display: inline-block;
   vertical-align: top;
@@ -437,6 +470,12 @@ header{
 
 #btn-contact{
   margin: 34px 0 0;
+  &.contact-en{
+    margin: 43px 0 0;
+  }
+}
+#btn-pro{
+  margin: 34px 37px 0 0;
 }
 
 #burger{
@@ -759,8 +798,7 @@ footer{
 
 .page-template-solution{
   header{
-    background: url(../layoutImg/bannerSolution.jpg) no-repeat 50% 100%;
-    background-size: 100% auto;
+    background-image: url(../layoutImg/bannerSolution.jpg);
     padding: 0 0 30%;
     + .container{
       margin: 30px auto 0;
@@ -1247,7 +1285,7 @@ h1{
 
 /* @group Fonctionnalites */
 
-.fonctionnalites{
+.fonctionnalites, .pagePro{
   aside{
     width: 28%;
     display: inline-block;
@@ -1293,6 +1331,44 @@ h1{
   }
   + footer{
     margin: 0;
+  }
+}
+
+.pagePro{
+  aside{
+    margin: 30px 0 0;
+  }
+}
+
+#gf_page_steps_3{
+  padding: 0 0 15px;
+  .gf_step{
+    &:not(.gf_step_last){
+      &:after{
+        content: '›';
+        display: inline-block;
+        vertical-align: middle;
+        margin: -7px 15px 0 30px;
+        font-size: 15px;
+      }
+    }
+    &.gf_step_pending{
+      opacity: .35;
+      .gf_step_number{
+        background: #808080;
+      }
+    }
+  }
+  span{
+    &:extend(h2);
+  }
+  .gf_step_label{
+    font-size: 1.4em;
+  }
+  .gf_step_number{
+    &:extend(.pagePro h2 span);
+    float: none;
+    margin: 30px 0;
   }
 }
 
@@ -1350,7 +1426,7 @@ h1{
   height: 521px;
 }
 #demande .slides{
-  background: url(../layoutImg/demande.png) no-repeat;
+  background: url(../layoutImg/demande.png);
   .uk &{
     background: url(../layoutImg/uk/demande.png) no-repeat;
   }
@@ -1371,6 +1447,32 @@ h1{
   background: url(../layoutImg/reponse.png) no-repeat;
   .uk &{
     background: url(../layoutImg/uk/reponse.png) no-repeat;
+  }
+}
+#offre .slides{
+  background: url(../layoutImg/offre.png) no-repeat 50% 65%;
+}
+
+.blocPlayer{
+  padding: 0 20px 15px;
+  text-align: center;
+  margin: 40px 0;
+  background: #f8f8f8;
+  border: 1px solid #a0a0a0; 
+  max-width: 250px;
+  h3{
+    .motivaBold(1.5em);
+    margin: .7em 0 0;
+  }
+}
+
+.demandeInfo{
+  position: absolute;
+  right: 20px;
+  bottom: 80px;
+  .btn{
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -1492,10 +1594,13 @@ body{
 #field_1_15{
   background: #fff;
   border: 1px dotted #cfcfcf;
-  padding: 18px 0;
+  padding: 24px;
   float: right;
   .box-sizing(border-box);
-  margin-top: 31px !important;
+  margin-top: 34px !important;
+  .gfield_label{
+    min-width: 95px;
+  }
 }
 
 #input_1_5{ //tel
@@ -1522,6 +1627,30 @@ select{
   + p{
     display: none;
   }
+}
+
+#field_8_4{ //textarea
+  .ginput_container{
+    width: 81%;
+    vertical-align: top;
+  }
+  textarea{
+    width: 100%;
+    height: 175px;
+  }
+  .gfield_label{
+    padding-top: 15px;
+  }
+}
+
+#field_3_13{
+  display: inline-block;
+  width: 40%;
+}
+#field_3_11{
+  display: inline-block;
+  width: 60%;
+  vertical-align: top;
 }
 
 
@@ -1623,7 +1752,23 @@ select{
     .gfield_label{
       width: 28%;
     }
+    .gform_wrapper{
+      .gform_footer{
+        input[type=submit]{
+          margin: 15px 0 0 28%;
+        }
+      }
+    }
   }
+
+  .formContainer.gravity{
+    .col2 p{
+      span{
+        margin: 0 0 0 28%;
+      }
+    }
+  }
+
 }
 
 @media (max-width: 1050px){
@@ -1689,7 +1834,7 @@ select{
     text-align: center;
   }
 
-  .fonctionnalites{
+  .fonctionnalites, .pagePro{
     aside{
       width: 100%;
     }
@@ -1746,9 +1891,9 @@ select{
 
 @media (max-width: 880px){
   #top-header{
-	p.topMentions span {
-		display: none;
-	}
+  	p.topMentions span {
+  		display: none;
+  	}
   }
   #burger{
     display: block;
@@ -1766,6 +1911,9 @@ select{
       display: block;
       margin: 0 0 20px;
     }
+    .uk &{
+      padding: 0 50px;
+    }
   }
 
   #menu-header{
@@ -1775,6 +1923,13 @@ select{
   #btn-contact{
     display: block;
     margin: 0;
+    &.contact-en{
+      margin: 22px 0 0;
+    }
+  }
+
+  #btn-pro{
+    &:extend(#btn-contact);
   }
 
   .home{
@@ -1867,7 +2022,7 @@ select{
     padding-left: 20px;
   }
 
-  .fonctionnalites{
+  .fonctionnalites, .pagePro{
     overflow: hidden;
     + footer {
       margin: 0;
@@ -1886,11 +2041,25 @@ select{
   .slides{
     top: 190px;
   }
+
+  .demandeInfo{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin: 20px 0;
+  }
   
   body{
-    .gform_wrapper .top_label li.gfield.gf_left_half, .gform_wrapper .top_label li.gfield.gf_right_half{
-      display: block;
-      width: 100%;
+    .gform_wrapper{
+      .top_label li.gfield.gf_left_half, .gform_wrapper .top_label li.gfield.gf_right_half{
+        display: block;
+        width: 100%;
+      }
+      .gform_footer{
+        input[type=submit]{
+          margin: 15px 0 0 0;
+        }
+      }
     }
   }
 
@@ -1900,7 +2069,29 @@ select{
   #field_1_15{
     margin-top: 0 !important;
   }
-  
+
+  #field_1_13{
+    margin: 0 0 10px !important;
+  }
+
+  .col2{
+    .gform_wrapper{
+      .gform_footer{
+        input[type=submit]{
+          &:extend(body .gform_wrapper .gform_footer input[type=submit]);
+        }
+      }
+    }
+  }
+
+  .formContainer.gravity{
+    .col2 p, p{
+      span{
+        margin: 0;
+      }
+    }
+  }
+
 }
 
 @media (max-width: 500px){
@@ -1929,9 +2120,14 @@ select{
     }
   }
 
+  .demandeInfo{
+    margin: 55px 0 20px;
+  }
+
   .gfield_label, .col2 .gfield_label{
     width: 100%;
   }
+
 }
 
 @media (max-width: 450px){

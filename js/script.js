@@ -61,6 +61,18 @@ function animLinks(){
 	});
 }
 
+function animContactEn(link){
+	tlLinkContact = new TimelineMax({paused:true});
+	thisLinkContact = new SplitText(link, {type: 'chars'});
+	tlLinkContact.staggerTo(thisLinkContact.chars, 0.015, {color: '#ff6300', ease:Quart.easeOut}, 0.015);
+
+	link.hover(function(){
+		tlLinkContact.restart();
+	}, function(){
+		tlLinkContact.reverse();
+	});
+}
+
 function replacePlaceholder(){
 	var input = $('#mdp');
 
@@ -87,8 +99,7 @@ function appearFormAcces(){
 
 function animPage(e){
 	e.preventDefault();
-	$('h1').fadeOut(250);
-	$('p').fadeOut(250);
+	$('h1, p').fadeOut(250);
 	formAcces.animate({opacity: 0}, 250, 'easeOutBack');
 	$('#bloc-bg-home').animate({'background-position': '50% 50%'}, 400, 'easeOutQuad', function(){
 		formAcces.submit();
@@ -114,7 +125,7 @@ function stickyFooter(){
 }
 
 function letSlide(id){
-	var col = 6, row = 7, end = 1, slide = $(id), id = slide.find('.slides');
+	var col = 6, row = 7, end = 1, slide = $(id);
 	if(id === '#demande'){
 		row = 8; end = 3;
 	}
@@ -139,7 +150,8 @@ function letSlide(id){
 
 	function animSlide(){
 		slide.find('.slidesTxt').css('display', 'block').animate({right: '20px', opacity: 1}, 600, 'easeInOutBack', function(){
-			if($(window).width() > 500){
+			if($(window).width() > 500 && id !== '#offre'){
+				id = slide.find('.slides');
 				animSprite(id, col, row, end);
 			}
 		});
@@ -165,6 +177,11 @@ function preventEmptySearch(e){
 $(function(){
 
 	animLinks();
+
+	if($('#btn-contact.contact-en').length){
+		animContactEn($('#btn-contact.contact-en'));
+	}
+
 	burger.on('click', openOrCloseMenu);
 
 	$('#acces').on('click', appearFormAcces);
@@ -174,8 +191,11 @@ $(function(){
 	stickyFooter();
 
 	$('.fonctionnalites').find('a').on('click', function(){
-		var id = $(this).attr('href');
-		letSlide(id);
+		letSlide($(this).attr('href'));
+	});
+
+	$('.pagePro').find('.slideLink').on('click', function(){
+		letSlide($(this).attr('href'));
 	});
 
 	if(html.hasClass('lt-ie10')){
@@ -187,8 +207,12 @@ $(function(){
 			animHome(); 
 		}
 
-		if($('#slider').length){
+		if($('.fonctionnalites').find('#slider').length){
 			letSlide('#demande');
+		}
+
+		if($('.pagePro').find('#slider').length){
+			letSlide('#probleme');
 		}
 	});
 
