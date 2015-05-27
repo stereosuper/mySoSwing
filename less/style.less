@@ -12,6 +12,13 @@
 @error: #da2c13;
 @actif: #898989;
 
+// ID des formulaires Gravity //
+@choixAbonnement: 11;
+@modifAbonnement: 13;
+@information: 9;
+@coordonees: 12;
+@addPlayer: 14;
+
 html,
 button,
 input,
@@ -141,9 +148,11 @@ input[type=submit], button{
     opacity: 0.8;
   }
 }
-button.btn{
-  display: block;
-  margin: 0 auto;
+button{
+  &.btn{
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 strong, b{
@@ -179,6 +188,10 @@ strong, b{
 
 .align-right{
   float: right;
+}
+
+.caps{
+  text-transform: uppercase;
 }
 
 /* @end */
@@ -280,6 +293,9 @@ strong, b{
     color: #fff;
     border-color: #fff;
     background: #ccc;
+  }
+  .lt-ie9 &{
+    line-height: 135px;
   }
 }
 
@@ -476,6 +492,9 @@ header{
 }
 #btn-pro{
   margin: 34px 37px 0 0;
+  .lt-ie9 &{
+    margin-right: 20px;
+  }
 }
 
 #burger{
@@ -895,7 +914,7 @@ footer{
 
 /* @group Contact */
 
-.infoContact{
+.infoContact, .infoContact.sidebarFormCol2{
   display: inline-block;
   vertical-align: top;
   width: 25%;
@@ -916,8 +935,8 @@ footer{
     width: 230px !important;
     .box-sizing(border-box);
   }
-  .btn{
-    margin: 0 0 0 19%;
+  .btn, form +p{
+    margin: 20px 0 0 19%;
   }
 }
 
@@ -1205,24 +1224,25 @@ h1{
   width: 49%;
   border-top: 1px dotted @border;
   border-bottom: 1px dotted @border;
-  margin: 15px 1% 0 0;
+  margin: 15px .5% 0 0;
   padding: 30px 20px 15px;
   .box-sizing(border-box);
+  vertical-align: top;
   .search &{
     margin-right: 0;
-    margin-left: 1%;
+    margin-left: .5%;
   }
   &:nth-of-type(2n+1){
     margin-right: 0;
-    margin-left: 1%;
+    margin-left: .5%;
     .search &{
-      margin-right: 1%;
+      margin-right: .5%;
       margin-left: 0;
     }
   }
   .lt-ie9 &{
     width: 48%;
-    margin: 15px 1% 0;
+    margin: 15px .5% 0;
   }
   h2{
     font-size: 0.98em;
@@ -1340,9 +1360,10 @@ h1{
   }
 }
 
-#gf_page_steps_3{
-  padding: 0 0 15px;
+body .gform_wrapper .gf_page_steps{
+  margin: 35px 0 45px;
   .gf_step{
+    height: auto;
     &:not(.gf_step_last){
       &:after{
         content: '›';
@@ -1359,16 +1380,16 @@ h1{
       }
     }
   }
-  span{
+  span, span.gf_step_number{
     &:extend(h2);
   }
   .gf_step_label{
     font-size: 1.4em;
   }
-  .gf_step_number{
+  span.gf_step_number{
     &:extend(.pagePro h2 span);
     float: none;
-    margin: 30px 0;
+    margin: 0;
   }
 }
 
@@ -1464,6 +1485,12 @@ h1{
     .motivaBold(1.5em);
     margin: .7em 0 0;
   }
+  .btnReverse{
+    .lt-ie9 &{
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
 }
 
 .demandeInfo{
@@ -1474,6 +1501,108 @@ h1{
     padding-left: 30px;
     padding-right: 30px;
   }
+}
+
+/* @end */
+
+
+/* Compte */
+
+.menu-compte, .compte{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.menu-compte{
+  width: 23%;
+  margin: 0 3% 0 0;
+  ul{
+    &:extend(.categories ul);
+  }
+  a{
+    &:extend(.categories a all);
+  }
+}
+.compte{
+  width: 74%;
+  h2{
+    border-bottom: 1px dotted #a0a0a0;
+    padding: 0 0 8px;
+    margin: 43px 0 45px;
+  }
+  h3{
+    margin: 0 0 5px;
+    .motivaBold(1em);
+  }
+  .formContainer{
+    width: 100%;
+  }
+}
+
+.bordered{
+  border-top: 1px dotted #a0a0a0;
+  border-bottom: 1px dotted #a0a0a0;
+  display: inline-block;
+  padding: 20px 0;
+  margin: 0 0 20px;
+  .old{
+    padding: 0 0 12px;
+    opacity: .5;
+    display: block;
+  }
+  > span{
+    span{
+      padding: 0 25px 0 0;
+    }
+  }
+}
+
+#gform_wrapper_@{addPlayer}{
+  ul, .gform_body, .gform_footer{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+  }
+  .ginput_container{
+    margin: 0;
+  }
+}
+
+#gform_fields_@{addPlayer}{
+  label{
+    text-align: left;
+    width: auto;
+    max-width: 125px;
+  }
+  li.gfield{
+    display: inline-block;
+  }
+  input{
+    background: #f8f8f8;
+    .box-shadow(none);
+    border-color: #b5b5b5;
+    border-radius: 10px;
+    padding: 11px 13px 8px;
+    &:focus{
+      border-color: @orange;
+      background: #fefefe;
+    }
+  }
+}
+
+#gform_submit_button_@{addPlayer}{
+  margin: 0;
+}
+
+#input_@{addPlayer}_4{
+  width: 60px;
+  .motivaIt(1em);
+  margin: 0 80px 0 0;
+}
+#input_@{addPlayer}_3{
+  width: 250px;
+  margin: 0 40px 0 0;
 }
 
 /* @end */
@@ -1490,10 +1619,14 @@ h1{
     }
   }
   .col2{
+    padding: 0;
     p{
       width: 49%;
       span{
         margin: 0 0 0 35%;
+        .lt-ie9 &{
+          margin-left: 0;
+        }
       }
     }
   }
@@ -1523,8 +1656,11 @@ body{
     }
     .gform_footer{
       input[type=submit]{
-        &:extend(.btn all);
+        &:extend(.btn);
         margin: 15px 0 0 19%;
+        &:hover, &:focus, &:active{
+          &:extend(.btn:hover);
+        }
       }
     }
     .top_label{
@@ -1552,9 +1688,51 @@ body{
       .gfield_required, .gfield_label{
         color: @error;
       }
+      &.gfield_contains_required div.ginput_container{
+        margin-left: 0 !important;
+      }
     }
     li.gfield_error input[type=email], li.gfield_error input[type=number], li.gfield_error input[type=password], li.gfield_error input[type=tel], li.gfield_error input[type=text], li.gfield_error input[type=url], li.gfield_error textarea{
       border-color: @error;
+    }
+    .gform_page_footer{
+      border: 0;
+      text-align: right;
+      width: 100%;
+      input[type=button], input[type=submit]{
+        &:extend(.btn);
+        &:hover, &:focus, &:active{
+          &:extend(.btn:hover);
+        }
+        border: 0;
+        margin-right: 5px !important;
+        &.gform_previous_button{
+          background: none;
+          border: 0;
+          color: @orange;
+          text-decoration: underline;
+          float: left;
+          padding: 0;
+          .box-shadow(none);
+          &:hover, &:focus{
+            color: @orangeDark;
+          }
+        }
+      }
+    }
+    &.gf_browser_ie{
+      input[type=button], input[type=submit]{
+        padding: 10px 44px !important;
+        &:hover, &:focus, &:active{
+          padding-top: 12px !important;
+          padding-bottom: 8px !important;
+        }
+      }
+      .lt-ie9 &{
+        label.gfield_label+div.ginput_container{
+          display: block;
+        }
+      }
     }
   }
 }
@@ -1562,12 +1740,20 @@ body{
 .col2{
   .gfield_label{
     width: 35%;
+    .lt-ie9 &{
+      width: 100%;
+      display: block;
+      text-align: left;
+    }
   }
   .gform_wrapper{
     .gform_footer{
       width: 49%;
       input[type=submit]{
         margin: 15px 0 0 35%;
+        .lt-ie9 &{
+          margin-left: 0;
+        }
       }
     }
   }
@@ -1584,14 +1770,35 @@ body{
   }
 }
 
-#field_1_11, #field_1_12{
-  margin: 0 0 10px !important;
+#field_@{choixAbonnement}_21, #field_@{modifAbonnement}_14{
+  &:extend(.infoContact.sidebarFormCol2);
 }
 
-#field_1_6{
+#field_@{information}_11, #field_@{information}_12, 
+#field_@{choixAbonnement}_15, #field_@{choixAbonnement}_7, 
+#field_@{coordonees}_1, #field_@{coordonees}_2,
+#field_@{modifAbonnement}_5, #field_@{modifAbonnement}_7{
+  margin: 0 0 10px !important;
+}
+#field_@{information}_18, #field_@{information}_14, 
+#field_@{choixAbonnement}_15, #field_@{choixAbonnement}_8, 
+#field_@{coordonees}_8, #field_@{coordonees}_3,
+#field_@{modifAbonnement}_17, #field_@{modifAbonnement}_8{
+  margin: 0 !important;
+}
+#field_@{information}_18, #field_@{information}_16, 
+#field_@{choixAbonnement}_15, #field_@{choixAbonnement}_16, 
+#field_@{coordonees}_8, #field_@{coordonees}_9,
+#field_@{modifAbonnement}_17, #field_@{modifAbonnement}_16{
+  select{
+    width: 229px !important;
+  }
+}
+
+#field_@{information}_6{
   margin-top: 30px !important;
 }
-#field_1_15{
+#field_@{information}_15{
   background: #fff;
   border: 1px dotted #cfcfcf;
   padding: 24px;
@@ -1603,13 +1810,13 @@ body{
   }
 }
 
-#input_1_5{ //tel
+#input_@{information}_5, #input_@{choixAbonnement}_14, #input_@{coordonees}_7, #input_@{modifAbonnement}_15{ //tel
   width: 170px !important;
 }
-#input_1_9, #input_7_1{ //nom
+#input_@{information}_9, #input_@{choixAbonnement}_3, #input_@{modifAbonnement}_3{ //nom
   width: 200px !important;
 }
-#input_1_14, #input_4_3{ //cp
+#input_@{information}_14, #input_@{choixAbonnement}_8, #input_@{coordonees}_3, #input_@{modifAbonnement}_8{ //cp
   width: 110px !important;
 }
 
@@ -1629,28 +1836,197 @@ select{
   }
 }
 
-#field_8_4{ //textarea
+.gform_wrapper .textarea_container{ //textarea
   .ginput_container{
     width: 81%;
     vertical-align: top;
   }
   textarea{
-    width: 100%;
-    height: 175px;
+    width: 100% !important;
+    height: 175px !important;
   }
   .gfield_label{
     padding-top: 15px;
   }
 }
 
-#field_3_13{
+#field_@{choixAbonnement}_13, #field_@{modifAbonnement}_13{
   display: inline-block;
-  width: 40%;
+  width: 36%;
+  margin: 0 4% 0 0 !important;
+  padding: 220px 0 0;
+  background: url(../layoutImg/offreSmall.png) no-repeat 40px 30px;
+  ul{
+    list-style-type: none !important;
+  }
+  li{
+    list-style-type: none !important;
+    padding: 0 0 0 15px;
+    font-size: .9em;
+    &:before{
+      content: '•';
+      color: @orange;
+      font-size: 25px;
+      line-height: 0;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 5px 0 -15px;
+    }
+  }
 }
-#field_3_11{
+#field_@{choixAbonnement}_11, #field_@{modifAbonnement}_11{
   display: inline-block;
   width: 60%;
   vertical-align: top;
+  .gfield_label{
+    display: none;
+  }
+  .ginput_container{
+    display: block;
+  }
+  .gfield_radio{
+    margin: 40px 0 0 !important;
+    li{
+      width: 200px;
+      display: inline-block;
+      margin-left: 18px !important;
+      .lt-ie9 &{
+        width: 250px;
+        margin-left: 32px !important;
+      }
+      label{
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+      }
+      input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100% !important;
+        margin: 0;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        border: 0;
+        .box-shadow(none);
+        z-index: -1;
+        &:checked{
+          +label{
+            .btn{
+              &:extend(.btn.actif);
+            }
+            .pack-orange{
+              .btn{
+                background: rgba(255, 255, 255, .8);
+                color: @orangeDark;
+              }
+            }
+          }
+        }
+      }
+      &:hover{
+        .btn{
+          &:extend(.btn:hover);
+        }
+        .pack-orange{
+          .btn{
+            &:extend(.btnReverse:hover);
+            background: #fff;
+            color: @orangeDark;
+          }
+        }
+      }
+    }
+  }
+  .btn{
+    padding: 10px 17px;
+    .transition(.3s ease-in-out);
+  }
+}
+.pack{
+  padding: 20px 10px 10px;
+  background: #afafaf;
+  .pack-title{
+    color: #afafaf;
+  }
+  .pack-player{
+    color: #4c4c4c;
+  }
+  &.pack-gris2{
+    background: #808080;
+    .pack-title{
+      background: #afafaf;
+      color: #fff;
+    }
+    .pack-player{
+      color: #d2d2d2;
+    }
+  }
+  &.pack-orange{
+    background: #ff864b;
+    .pack-title{
+      color: @orange;
+    }
+    .pack-player{
+      color: #ffd0b9;
+    }
+    .btn{
+      &:extend(.btnReverse);
+      &:hover, &:focus, &:active{
+        &:extend(.btnReverse:hover);
+      }
+    }
+  }
+}
+.pack-title{
+  text-transform: uppercase;
+  background: #fff;
+  border-radius: 4px;
+  width: 120px;
+  margin: 0 auto 15px;
+  .motivaBold(.8em);
+  padding: 2px 0 0;
+  .lt-ie9 &{
+    width: 140px;
+  }
+}
+.pack-player{
+  .motivaBold(1.1em);
+}
+.pack-price{
+  width: 95px;
+  margin: 15px auto;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 7px 0;
+  strong{
+    font-size: 4em;
+    line-height: 1em;
+    letter-spacing: -4px;
+  }
+  span{
+    .motivaBold(1.5em);
+  }
+  small{
+    .motivaBold(.9em);
+    width: 80px;
+    display: block;
+    margin: -7px auto 3px;
+    line-height: 1.2em;
+    .lt-ie9 &{
+      width: 100px;
+    }
+  }
+  .lt-ie9 &{
+    width: 100px;
+  }
+}
+
+.gform_wrapper h3{
+  .motivaBold(1.45em);
+  margin: 13px;
 }
 
 
@@ -1720,6 +2096,19 @@ select{
       width: 350px;
       height: 200px;
     }
+  }
+}
+
+@media (max-width: 1155px){
+  #gform_wrapper_@{addPlayer}{
+    .gform_footer{
+      display: block;
+      margin: 20px 0 0;
+    }
+  }
+
+  #input_@{addPlayer}_4{
+    margin: 0;
   }
 }
 
@@ -1809,6 +2198,29 @@ select{
       text-align: left;
     }
   }
+
+  .infoContact.sidebarFormCol2 + .formContainer, .infoContact.sidebarFormCol2{
+    width: 100%;
+  }
+  .infoContact.sidebarFormCol2{
+    padding-right: 20px;
+    margin: 0 0 30px;
+    p{
+      margin-bottom: 15px;
+    }
+  }
+
+  .menu-compte, .compte{
+    display: block;
+    width: 100%;
+  }
+
+  .menu-compte{
+    li{
+      display: inline-block;
+      padding-right: 15px;
+    }
+  }
 }
 
 @media (max-width: 1020px) {
@@ -1846,6 +2258,10 @@ select{
   #slider{
     width: 100%;
     margin: 20px 0 0;
+  }
+
+  #btn-pro{
+    margin: 34px 20px 0 0;
   }
 }
 
@@ -1961,6 +2377,29 @@ select{
       padding-bottom: 20px;
     }
   }
+
+  body .gform_wrapper .gf_page_steps{
+    .gf_step{
+      margin: 0 .5em 15px 0;
+    }
+    .gf_step_label{
+      font-size: 1em;
+    }
+    span.gf_step_number{
+      font-size: 1.2em;
+      .size(25px);
+      line-height: 27px;
+    }
+  }
+
+  #field_@{choixAbonnement}_13, #field_@{choixAbonnement}_11, 
+  #field_@{modifAbonnement}_13, #field_@{modifAbonnement}_11{
+    display: block;
+    width: 100%;
+  }
+  #field_@{choixAbonnement}_13, #field_@{modifAbonnement}_13{
+    margin: 0 !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1987,6 +2426,9 @@ select{
   .formContainer{
     .btn{
       margin: 0;
+    }
+    form + p{
+      margin: 20px 0 0;
     }
   }
 
@@ -2051,7 +2493,7 @@ select{
   
   body{
     .gform_wrapper{
-      .top_label li.gfield.gf_left_half, .gform_wrapper .top_label li.gfield.gf_right_half{
+      .top_label li.gfield.gf_left_half, .top_label li.gfield.gf_right_half{
         display: block;
         width: 100%;
       }
@@ -2063,14 +2505,14 @@ select{
     }
   }
 
-  #field_1_6 {
+  #field_@{information}_6{
     margin-top: 40px !important;
   }
-  #field_1_15{
+  #field_@{information}_15{
     margin-top: 0 !important;
   }
 
-  #field_1_13{
+  #field_@{information}_18, #field_@{information}_14, #field_@{choixAbonnement}_15, #field_@{choixAbonnement}_8, #field_@{coordonees}_8, #field_@{coordonees}_3{
     margin: 0 0 10px !important;
   }
 
@@ -2126,6 +2568,10 @@ select{
 
   .gfield_label, .col2 .gfield_label{
     width: 100%;
+  }
+
+  .gform_wrapper .textarea_container .ginput_container{
+    width: 100%
   }
 
 }
