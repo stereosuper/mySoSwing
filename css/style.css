@@ -1361,7 +1361,7 @@ footer.bottom {
 /* @group Contact */
 .infoContact,
 .infoContact.sidebarFormCol2,
-#field_11_21,
+#field_11_27,
 #field_13_14 {
   display: inline-block;
   vertical-align: top;
@@ -2257,7 +2257,7 @@ body .gform_wrapper.gf_browser_ie input[type=submit]:active {
 }
 #field_9_11,
 #field_9_12,
-#field_11_15,
+#field_11_5,
 #field_11_7,
 #field_12_1,
 #field_12_2,
@@ -2277,18 +2277,22 @@ body .gform_wrapper.gf_browser_ie input[type=submit]:active {
 }
 #field_9_18 select,
 #field_9_16 select,
+#field_11_24 select,
 #field_11_15 select,
-#field_11_16 select,
 #field_12_8 select,
-#field_12_9 select,
+#field_12_18 select,
 #field_13_17 select,
 #field_13_16 select {
   width: 229px !important;
 }
-#field_9_6 {
+#field_9_6,
+#field_11_17,
+#field_12_10 {
   margin-top: 30px !important;
 }
-#field_9_15 {
+#field_9_15,
+#field_11_25,
+#field_12_15 {
   background: #fff;
   border: 1px dotted #cfcfcf;
   padding: 24px;
@@ -2296,17 +2300,20 @@ body .gform_wrapper.gf_browser_ie input[type=submit]:active {
   box-sizing: border-box;
   margin-top: 34px !important;
 }
-#field_9_15 .gfield_label {
+#field_9_15 .gfield_label,
+#field_11_25 .gfield_label,
+#field_12_15 .gfield_label {
   min-width: 95px;
 }
 #input_9_5,
 #input_11_14,
-#input_12_7,
+#input_12_17,
 #input_13_15 {
   width: 170px !important;
 }
 #input_9_9,
 #input_11_3,
+#input_12_12,
 #input_13_3 {
   width: 200px !important;
 }
@@ -2660,12 +2667,12 @@ select {
   }
   .infoContact.sidebarFormCol2 + .formContainer,
   .infoContact.sidebarFormCol2,
-  #field_11_21,
+  #field_11_27,
   #field_13_14 {
     width: 100%;
   }
   .infoContact.sidebarFormCol2,
-  #field_11_21,
+  #field_11_27,
   #field_13_14 {
     padding-right: 20px;
     margin: 0 0 30px;
