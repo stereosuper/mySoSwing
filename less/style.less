@@ -159,6 +159,24 @@ strong, b{
   .motivaBold(1em);
 }
 
+.liste-orange{
+  list-style: none;
+  padding: 0 0 0 20px;
+  li{
+    padding: 0 0 10px 15px;
+    font-size: .9em;
+    &:before{
+      content: '•';
+      color: @orange;
+      font-size: 25px;
+      line-height: 0;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 5px 0 -15px;
+    }
+  }
+}
+
 .container{
   position: relative;
   width: 100%;
@@ -192,6 +210,11 @@ strong, b{
 
 .caps{
   text-transform: uppercase;
+}
+
+.small-title{
+  margin: 40px 0 0 20px;
+  display: block;
 }
 
 /* @end */
@@ -1516,7 +1539,7 @@ body .gform_wrapper .gf_page_steps{
 .menu-compte{
   width: 23%;
   margin: 0 3% 0 0;
-  ul{
+  .submenu{
     &:extend(.categories ul);
   }
   a{
@@ -1861,17 +1884,7 @@ select{
   }
   li{
     list-style-type: none !important;
-    padding: 0 0 0 15px;
-    font-size: .9em;
-    &:before{
-      content: '•';
-      color: @orange;
-      font-size: 25px;
-      line-height: 0;
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0 5px 0 -15px;
-    }
+    &:extend(.liste-orange li all);
   }
 }
 #field_@{choixAbonnement}_11, #field_@{modifAbonnement}_11{
@@ -1889,10 +1902,11 @@ select{
     li{
       width: 200px;
       display: inline-block;
-      margin-left: 18px !important;
+      margin: 0 0 25px 18px !important;
+      .box-shadow(0 75px 65px -75px #9b9b9b);
       .lt-ie9 &{
         width: 250px;
-        margin-left: 32px !important;
+        margin: 0 0 25px 32px !important;
       }
       label{
         text-align: center;
@@ -1954,7 +1968,7 @@ select{
   .pack-player{
     color: #4c4c4c;
   }
-  &.pack-gris2{
+  &.pack-gris-fonce{
     background: #808080;
     .pack-title{
       background: #afafaf;
@@ -2216,7 +2230,7 @@ select{
   }
 
   .menu-compte{
-    li{
+    .submenu li{
       display: inline-block;
       padding-right: 15px;
     }

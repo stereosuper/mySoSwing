@@ -495,6 +495,27 @@ b {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+.liste-orange {
+  list-style: none;
+  padding: 0 0 0 20px;
+}
+.liste-orange li,
+#field_11_13 li,
+#field_13_13 li {
+  padding: 0 0 10px 15px;
+  font-size: .9em;
+}
+.liste-orange li:before,
+#field_11_13 li:before,
+#field_13_13 li:before {
+  content: '•';
+  color: #ff6300;
+  font-size: 25px;
+  line-height: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px 0 -15px;
+}
 .container {
   position: relative;
   width: 100%;
@@ -524,6 +545,10 @@ b {
 }
 .caps {
   text-transform: uppercase;
+}
+.small-title {
+  margin: 40px 0 0 20px;
+  display: block;
 }
 /* @end */
 /* @group btn */
@@ -1544,7 +1569,7 @@ body .gform_wrapper div.validation_error {
   padding-bottom: 12px;
 }
 .categories ul,
-.menu-compte ul {
+.menu-compte .submenu {
   list-style: none;
   padding: 0 0 0 20px;
 }
@@ -2366,18 +2391,6 @@ select {
 #field_11_13 li,
 #field_13_13 li {
   list-style-type: none !important;
-  padding: 0 0 0 15px;
-  font-size: .9em;
-}
-#field_11_13 li:before,
-#field_13_13 li:before {
-  content: '•';
-  color: #ff6300;
-  font-size: 25px;
-  line-height: 0;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 5px 0 -15px;
 }
 #field_11_11,
 #field_13_11 {
@@ -2401,12 +2414,13 @@ select {
 #field_13_11 .gfield_radio li {
   width: 200px;
   display: inline-block;
-  margin-left: 18px !important;
+  margin: 0 0 25px 18px !important;
+  box-shadow: 0 75px 65px -75px #9b9b9b;
 }
 .lt-ie9 #field_11_11 .gfield_radio li,
 .lt-ie9 #field_13_11 .gfield_radio li {
   width: 250px;
-  margin-left: 32px !important;
+  margin: 0 0 25px 32px !important;
 }
 #field_11_11 .gfield_radio li label,
 #field_13_11 .gfield_radio li label {
@@ -2455,14 +2469,14 @@ select {
 .pack .pack-player {
   color: #4c4c4c;
 }
-.pack.pack-gris2 {
+.pack.pack-gris-fonce {
   background: #808080;
 }
-.pack.pack-gris2 .pack-title {
+.pack.pack-gris-fonce .pack-title {
   background: #afafaf;
   color: #fff;
 }
-.pack.pack-gris2 .pack-player {
+.pack.pack-gris-fonce .pack-player {
   color: #d2d2d2;
 }
 .pack.pack-orange {
@@ -2685,7 +2699,7 @@ select {
     display: block;
     width: 100%;
   }
-  .menu-compte li {
+  .menu-compte .submenu li {
     display: inline-block;
     padding-right: 15px;
   }
@@ -3050,7 +3064,7 @@ select {
   }
   .categories ul,
   .searchform,
-  .menu-compte ul {
+  .menu-compte .submenu {
     padding-left: 0;
   }
   .devenir .btn {
