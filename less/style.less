@@ -32,15 +32,15 @@ textarea {
 /* @group General */
 
 /* selection */
-::-moz-selection { 
-	background: @noir;  
+::-moz-selection {
+	background: @noir;
 	color: @blanc;
-	text-shadow: none; 
+	text-shadow: none;
 }
-::selection { 
-	background: @noir;  
-	color: @blanc; 
-	text-shadow: none; 
+::selection {
+	background: @noir;
+	color: @blanc;
+	text-shadow: none;
 }
 
 /* @end */
@@ -185,7 +185,7 @@ strong, b{
   margin: 0 auto;
   .box-sizing(border-box);
   .lt-ie9 &{
-    max-width: 960px;
+    width: 960px;
   }
 }
 .content{
@@ -281,7 +281,7 @@ strong, b{
   }
 }
 
-.btnItExt, .btnItPrev{
+.btnItExt, .btnItPrev, .btnArrow{
   padding: 0 0 0 7px;
   position: relative;
   &:before{
@@ -296,11 +296,16 @@ strong, b{
     content: '‹';
   }
 }
-.btnItExt{
-  .motivaBoldIt(1.1em);
+.btnArrow, .btnItExt{
   &:before{
     content: '›';
   }
+  &.rouge{
+    color: #ff0000;
+  }
+}
+.btnItExt{
+  .motivaBoldIt(1.1em);
 }
 
 .plus{
@@ -468,7 +473,7 @@ header{
     padding: 0;
     &.current-menu-item a, &.current_page_parent a{
       color: @orange;
-      border-bottom: 1px solid; 
+      border-bottom: 1px solid;
     }
     a{
       .motivaIt(1.1em);
@@ -479,7 +484,7 @@ header{
       }
       &.actif{
         color: @orange;
-        border-bottom: 1px solid; 
+        border-bottom: 1px solid;
       }
       .no-js &{
         &:hover{
@@ -770,7 +775,7 @@ footer{
   #top-header{
     height: 10px;
   }
-  
+
   #bloc-bg-home{
     background-position: 50% 90px;
   }
@@ -790,7 +795,7 @@ footer{
   #menu{
     .current-menu-item + .current-menu-item a{
       color: @blanc;
-      border: 0; 
+      border: 0;
     }
     li + li{
       margin: 0;
@@ -1063,7 +1068,7 @@ textarea{
 				.motivaBold(1em);
 				margin: 0.2em 0;
 			}
-		}	
+		}
 		a {
 			font-size: 1em;
 			margin: 0.2em 0 0 0;
@@ -1241,7 +1246,7 @@ h1{
     border-top: 0;
     margin-top: -20px;
   }
-} 
+}
 .rdv{
   display: inline-block;
   width: 49%;
@@ -1502,7 +1507,7 @@ body .gform_wrapper .gf_page_steps{
   text-align: center;
   margin: 40px 0;
   background: #f8f8f8;
-  border: 1px solid #a0a0a0; 
+  border: 1px solid #a0a0a0;
   max-width: 250px;
   h3{
     .motivaBold(1.5em);
@@ -1622,6 +1627,9 @@ body .gform_wrapper .gf_page_steps{
   width: 60px;
   .motivaIt(1em);
   margin: 0 80px 0 0;
+  .lt-ie10 &{
+    margin: 0 60px 0 0;
+  }
 }
 #input_@{addPlayer}_3{
   width: 250px;
@@ -1797,20 +1805,20 @@ body{
   &:extend(.infoContact.sidebarFormCol2);
 }
 
-#field_@{information}_11, #field_@{information}_12, 
-#field_@{choixAbonnement}_5, #field_@{choixAbonnement}_7, 
+#field_@{information}_11, #field_@{information}_12,
+#field_@{choixAbonnement}_5, #field_@{choixAbonnement}_7,
 #field_@{coordonees}_1, #field_@{coordonees}_2,
 #field_@{modifAbonnement}_5, #field_@{modifAbonnement}_7{
   margin: 0 0 10px !important;
 }
-#field_@{information}_18, #field_@{information}_14, 
-#field_@{choixAbonnement}_15, #field_@{choixAbonnement}_8, 
+#field_@{information}_18, #field_@{information}_14,
+#field_@{choixAbonnement}_15, #field_@{choixAbonnement}_8,
 #field_@{coordonees}_8, #field_@{coordonees}_3,
 #field_@{modifAbonnement}_17, #field_@{modifAbonnement}_8{
   margin: 0 !important;
 }
-#field_@{information}_18, #field_@{information}_16, 
-#field_@{choixAbonnement}_24, #field_@{choixAbonnement}_15, 
+#field_@{information}_18, #field_@{information}_16,
+#field_@{choixAbonnement}_24, #field_@{choixAbonnement}_15,
 #field_@{coordonees}_8, #field_@{coordonees}_18,
 #field_@{modifAbonnement}_17, #field_@{modifAbonnement}_16{
   select{
@@ -1968,6 +1976,22 @@ select{
   .pack-player{
     color: #4c4c4c;
   }
+  &.pack-blanc{
+    background: #fff;
+    padding: 19px 10px 9px;
+    border: 1px solid #afafaf;
+    .pack-title{
+      background: #afafaf;
+      color: #fff;
+    }
+    .pack-player{
+      color: #afafaf;
+    }
+    .pack-price{
+      color: #808080;
+      border-color: @orange;
+    }
+  }
   &.pack-gris-fonce{
     background: #808080;
     .pack-title{
@@ -2005,37 +2029,58 @@ select{
   .lt-ie9 &{
     width: 140px;
   }
+  &.alone{
+    margin-bottom: 2px;
+    color: #fff;
+    background: #afafaf;
+    padding: 2px 0;
+    font-size: 1em;
+  }
 }
 .pack-player{
   .motivaBold(1.1em);
 }
 .pack-price{
   width: 95px;
+  height: 120px;
+  line-height: 120px;
   margin: 15px auto;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  padding: 7px 0;
-  strong{
-    font-size: 4em;
-    line-height: 1em;
-    letter-spacing: -4px;
-  }
-  span{
-    .motivaBold(1.5em);
-  }
-  small{
-    .motivaBold(.9em);
-    width: 80px;
-    display: block;
-    margin: -7px auto 3px;
-    line-height: 1.2em;
-    .lt-ie9 &{
-      width: 100px;
-    }
-  }
   .lt-ie9 &{
     width: 100px;
   }
+}
+.pack-price-wrapper {
+  line-height: 1;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 -40px;
+}
+.pack-price-price{
+  font-size: 4em;
+  line-height: 1;
+  letter-spacing: -4px;
+  span{
+    .motivaBold(0.375em);
+  }
+}
+.pack-price-subprice{
+  .motivaBold(.9em);
+  width: 80px;
+  display: block;
+  margin: -7px auto 3px;
+  line-height: 1.2em;
+  .lt-ie9 &{
+    width: 100px;
+  }
+}
+.pack-price-discount {
+    font-size: 1.5em;
+    text-decoration: line-through;
+    span{
+      .motivaBold(0.375em);
+    }
 }
 
 .gform_wrapper h3{
@@ -2043,6 +2088,154 @@ select{
   margin: 13px;
 }
 
+#field_@{coordonees}_16{
+  .ginput_complex{
+    span{
+      display: block;
+      margin: 0;
+    }
+    label{
+      font-size: 1em;
+      letter-spacing: 0;
+      white-space: normal;
+      width: 100%;
+      text-align: left;
+      margin: 5px 0 15px !important;
+    }
+    input{
+      width: 90%;
+    }
+  }
+}
+
+/* PLAYERS */
+
+.myPlayers{
+  text-align: center;
+  > div{
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.nbPlayers{
+  position: relative;
+  float: left;
+  width: 315px;
+  > div{
+    width: 140px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #afafaf;
+    border-radius: 4px;
+    padding: 15px 10px 10px;
+    .box-sizing(border-box);
+  }
+  .legend{
+    color: #898989;
+    font-size: 12px;
+    display: inline-block;
+    width: 80px;
+    vertical-align: middle;
+  }
+  .nb{
+    .motivaBold(50px);
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .invite{
+    margin: 0 35px 0 0;
+    .legend{
+      text-align: right;
+      margin: 0 4px 0 0;
+    }
+    .nb{
+      color: @orange;
+    }
+    &:after{
+      content: '/';
+      color: #b5b5b5;
+      font-size: 30px;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 10px;
+      height: 30px;
+    }
+  }
+  .total{
+    .nb{
+      margin: 0 2px 0 0;
+      color: #afafaf;
+    }
+    .legend{
+      text-align: left;
+    }
+  }
+}
+
+.abonnementActuel{
+  width: 140px;
+  text-align: center;
+  span{
+    font-size: 13px;
+    color: #afafaf;
+    &:first-child{
+      .motivaIt(13px);
+    }
+  }
+  strong{
+    display: block;
+  }
+}
+
+.sup{
+  width: 210px;
+  text-align: center;
+  float: right;
+  p{
+    margin: 0;
+  }
+}
+
+.player{
+  position: relative;
+  background: #f8f8f8;
+  border: 1px solid #e7e7e7;
+  padding: 20px 15px;
+  .box-sizing(border-box);
+  .numPlayer{
+    .motivaBold(1em);
+    text-transform: uppercase;
+    display: inline-block;
+    text-transform: uppercase;
+    width: 100px;
+  }
+  .openPlayer{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+  .detail{
+    margin: 40px 0 0 100px;
+    display: none;
+    p{
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    span{
+      display: block;
+      font-size: .8em;
+      margin: 5px 0 0;
+    }
+  }
+}
 
 /* @group Non semantic Boilerplate */
 
@@ -2287,7 +2480,7 @@ select{
       background-size: 979px auto;
     }
   }
-  
+
   .videoContainer{
     margin: 30px 0 0;
   }
@@ -2308,7 +2501,7 @@ select{
     margin-left: 0;
     margin-right: 0;
   }
-  
+
   #golf-list {
   	li {
   		width: 100%;
@@ -2349,7 +2542,7 @@ select{
   #menu-header{
     margin-left: -150px;
   }
-  
+
   #btn-contact{
     display: block;
     margin: 0;
@@ -2406,7 +2599,7 @@ select{
     }
   }
 
-  #field_@{choixAbonnement}_13, #field_@{choixAbonnement}_11, 
+  #field_@{choixAbonnement}_13, #field_@{choixAbonnement}_11,
   #field_@{modifAbonnement}_13, #field_@{modifAbonnement}_11{
     display: block;
     width: 100%;
@@ -2504,7 +2697,7 @@ select{
     right: 0;
     margin: 20px 0;
   }
-  
+
   body{
     .gform_wrapper{
       .top_label li.gfield.gf_left_half, .top_label li.gfield.gf_right_half{
@@ -2545,6 +2738,34 @@ select{
       span{
         margin: 0;
       }
+    }
+  }
+
+  .myPlayers{
+    text-align: left;
+    > div{
+      display: block;
+      float: none !important;
+    }
+  }
+  .abonnementActuel{
+    margin: 30px 0;
+  }
+  .player{
+    .numPlayer + span{
+      display: block;
+    }
+    .detail{
+      margin-left: 0;
+      p{
+        width: 100%;
+      }
+    }
+  }
+
+  #gform_fields_@{addPlayer}{
+    label{
+      padding-right: 5px;
     }
   }
 
@@ -2660,6 +2881,19 @@ select{
       width: 100%;
     }
   }
+
+  .nbPlayers{
+    width: 265px;
+    > div{
+      width: 125px
+    }
+    .invite{
+      margin: 0 15px 0 0;
+    }
+    .legend{
+      width: 65px;
+    }
+  }
 }
 
 @media (max-width: 375px){
@@ -2715,9 +2949,9 @@ select{
 
 /* ==|== print styles =======================================================
    ========================================================================== */
- 
+
 @media print {
-  * {} 
+  * {}
   a, a:visited { text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
