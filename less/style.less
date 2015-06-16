@@ -409,7 +409,7 @@ header{
   background-color: @noir;
 }
 
-#btn-connexion{
+#btn-connexion, #btn-account{
   float: right;
   .motiva(1em);
   line-height: 0.7em;
@@ -418,8 +418,7 @@ header{
   text-decoration: none;
   padding: 11px 0 0 0;
   position: relative;
-  .icon-lock{
-    font-size: 11px;
+  span:first-child{
     display: block;
     width: 9px;
     height: 11px;
@@ -434,13 +433,24 @@ header{
     .transition(.2s ease-in-out);
   }
   &:hover, &:focus, &:active{
-    .icon-lock, .txt-btn{
+    span:first-child, .txt-btn{
       color: @blanc;
       .transition(.2s ease-in-out);
     }
     .txt-btn{
       border-color: @blanc;
     }
+  }
+}
+#btn-connexion{
+  .icon-lock{
+    font-size: 11px;
+  }
+}
+#btn-account{
+  margin: 0 0 0 30px;
+  .icon-account{
+    font-size: 12px;
   }
 }
 
@@ -2233,6 +2243,23 @@ select{
       display: block;
       font-size: .8em;
       margin: 5px 0 0;
+    }
+  }
+}
+
+.loginForm{
+  max-width: 500px;
+  .blocError{
+    position: relative;
+    margin: 0 0 40px;
+    top: 0;
+    left: 0;
+  }
+  input{
+    display: block;
+    margin: 0 0 10px;
+    &[type=submit]{
+      margin: 20px 0 0;
     }
   }
 }

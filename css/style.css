@@ -302,6 +302,9 @@ blockquote:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-account:before {
+  content: "\e604";
+}
 .icon-pro:before {
   content: "\e603";
 }
@@ -838,7 +841,8 @@ header.pro {
   height: 110px;
   background-color: #000000;
 }
-#btn-connexion {
+#btn-connexion,
+#btn-account {
   float: right;
   font-family: 'motiva', sans-serif;
   font-weight: normal;
@@ -853,8 +857,8 @@ header.pro {
   padding: 11px 0 0 0;
   position: relative;
 }
-#btn-connexion .icon-lock {
-  font-size: 11px;
+#btn-connexion span:first-child,
+#btn-account span:first-child {
   display: block;
   width: 9px;
   height: 11px;
@@ -864,26 +868,45 @@ header.pro {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
-#btn-connexion .txt-btn {
+#btn-connexion .txt-btn,
+#btn-account .txt-btn {
   display: inline-block;
   border-bottom: 1px solid #993b00;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
-#btn-connexion:hover .icon-lock,
-#btn-connexion:focus .icon-lock,
-#btn-connexion:active .icon-lock,
+#btn-connexion:hover span:first-child,
+#btn-account:hover span:first-child,
+#btn-connexion:focus span:first-child,
+#btn-account:focus span:first-child,
+#btn-connexion:active span:first-child,
+#btn-account:active span:first-child,
 #btn-connexion:hover .txt-btn,
+#btn-account:hover .txt-btn,
 #btn-connexion:focus .txt-btn,
-#btn-connexion:active .txt-btn {
+#btn-account:focus .txt-btn,
+#btn-connexion:active .txt-btn,
+#btn-account:active .txt-btn {
   color: #ffffff;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 #btn-connexion:hover .txt-btn,
+#btn-account:hover .txt-btn,
 #btn-connexion:focus .txt-btn,
-#btn-connexion:active .txt-btn {
+#btn-account:focus .txt-btn,
+#btn-connexion:active .txt-btn,
+#btn-account:active .txt-btn {
   border-color: #ffffff;
+}
+#btn-connexion .icon-lock {
+  font-size: 11px;
+}
+#btn-account {
+  margin: 0 0 0 30px;
+}
+#btn-account .icon-account {
+  font-size: 12px;
 }
 #logo {
   display: block;
@@ -2761,6 +2784,22 @@ select {
   display: block;
   font-size: .8em;
   margin: 5px 0 0;
+}
+.loginForm {
+  max-width: 500px;
+}
+.loginForm .blocError {
+  position: relative;
+  margin: 0 0 40px;
+  top: 0;
+  left: 0;
+}
+.loginForm input {
+  display: block;
+  margin: 0 0 10px;
+}
+.loginForm input[type=submit] {
+  margin: 20px 0 0;
 }
 /* @group Non semantic Boilerplate */
 /* remplacement image */
