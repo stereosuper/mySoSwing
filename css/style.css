@@ -503,14 +503,12 @@ b {
   padding: 0 0 0 20px;
 }
 .liste-orange li,
-#field_11_13 li,
-#field_13_13 li {
+#field_11_13 li {
   padding: 0 0 10px 15px;
   font-size: .9em;
 }
 .liste-orange li:before,
-#field_11_13 li:before,
-#field_13_13 li:before {
+#field_11_13 li:before {
   content: '•';
   color: #ff6300;
   font-size: 25px;
@@ -598,11 +596,11 @@ body .gform_wrapper .gform_page_footer input[type=submit]:focus,
 body .gform_wrapper .gform_page_footer input[type=button]:active,
 body .gform_wrapper .gform_page_footer input[type=submit]:active,
 #field_11_11 .gfield_radio li input:checked + label .btn,
-#field_13_11 .gfield_radio li input:checked + label .btn,
+#field_19_11 .gfield_radio li input:checked + label .btn,
 #field_11_11 .gfield_radio li:hover .btn,
-#field_13_11 .gfield_radio li:hover .btn,
+#field_19_11 .gfield_radio li:hover .btn,
 #field_11_11 .gfield_radio li:hover .pack-orange .btn,
-#field_13_11 .gfield_radio li:hover .pack-orange .btn,
+#field_19_11 .gfield_radio li:hover .pack-orange .btn,
 .pack.pack-orange .btn:hover,
 .pack.pack-orange .btn:focus,
 .pack.pack-orange .btn:active {
@@ -613,7 +611,7 @@ body .gform_wrapper .gform_page_footer input[type=submit]:active,
 .btn.actif,
 .btnReverse.actif,
 #field_11_11 .gfield_radio li input:checked + label .btn,
-#field_13_11 .gfield_radio li input:checked + label .btn {
+#field_19_11 .gfield_radio li input:checked + label .btn {
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -639,9 +637,9 @@ body .gform_wrapper .gform_page_footer input[type=submit]:focus,
 body .gform_wrapper .gform_page_footer input[type=button]:active,
 body .gform_wrapper .gform_page_footer input[type=submit]:active,
 #field_11_11 .gfield_radio li input:checked + label .btn,
-#field_13_11 .gfield_radio li input:checked + label .btn,
+#field_19_11 .gfield_radio li input:checked + label .btn,
 #field_11_11 .gfield_radio li:hover .btn,
-#field_13_11 .gfield_radio li:hover .btn {
+#field_19_11 .gfield_radio li:hover .btn {
   color: #ffffff;
   background: #e65900;
 }
@@ -657,7 +655,7 @@ body .gform_wrapper .gform_page_footer input[type=submit]:active,
 .btnReverse:active,
 .btnReverse.actif,
 #field_11_11 .gfield_radio li:hover .pack-orange .btn,
-#field_13_11 .gfield_radio li:hover .pack-orange .btn,
+#field_19_11 .gfield_radio li:hover .pack-orange .btn,
 .pack.pack-orange .btn:hover,
 .pack.pack-orange .btn:focus,
 .pack.pack-orange .btn:active {
@@ -1416,8 +1414,7 @@ footer.bottom {
 /* @group Contact */
 .infoContact,
 .infoContact.sidebarFormCol2,
-#field_11_27,
-#field_13_14 {
+#field_11_27 {
   display: inline-block;
   vertical-align: top;
   width: 25%;
@@ -2085,16 +2082,14 @@ body .gform_wrapper .gf_page_steps span.gf_step_number {
 .bordered {
   border-top: 1px dotted #a0a0a0;
   border-bottom: 1px dotted #a0a0a0;
-  display: inline-block;
   padding: 20px 0;
   margin: 0 0 20px;
 }
 .bordered .old {
   padding: 0 0 12px;
   opacity: .5;
-  display: block;
 }
-.bordered > span span {
+.bordered > div span {
   padding: 0 25px 0 0;
 }
 #gform_wrapper_14 ul,
@@ -2313,14 +2308,21 @@ body .gform_wrapper.gf_browser_ie input[type=submit]:active {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+.ginput_product_price_label {
+  display: none;
+}
+body .gform_wrapper span.ginput_product_price,
+body .gform_wrapper span.ginput_total {
+  color: inherit;
+}
 #field_9_11,
 #field_9_12,
 #field_11_5,
 #field_11_7,
 #field_12_1,
 #field_12_2,
-#field_13_5,
-#field_13_7 {
+#field_19_5,
+#field_19_7 {
   margin: 0 0 10px !important;
 }
 #field_9_18,
@@ -2329,8 +2331,8 @@ body .gform_wrapper.gf_browser_ie input[type=submit]:active {
 #field_11_8,
 #field_12_8,
 #field_12_3,
-#field_13_17,
-#field_13_8 {
+#field_19_17,
+#field_19_8 {
   margin: 0 !important;
 }
 #field_9_18 select,
@@ -2339,8 +2341,8 @@ body .gform_wrapper.gf_browser_ie input[type=submit]:active {
 #field_11_15 select,
 #field_12_8 select,
 #field_12_18 select,
-#field_13_17 select,
-#field_13_16 select {
+#field_19_17 select,
+#field_19_16 select {
   width: 229px !important;
 }
 #field_9_6,
@@ -2366,19 +2368,19 @@ body .gform_wrapper.gf_browser_ie input[type=submit]:active {
 #input_9_5,
 #input_11_14,
 #input_12_17,
-#input_13_15 {
+#input_19_15 {
   width: 170px !important;
 }
 #input_9_9,
 #input_11_3,
 #input_12_12,
-#input_13_3 {
+#input_19_3 {
   width: 200px !important;
 }
 #input_9_14,
 #input_11_8,
 #input_12_3,
-#input_13_8 {
+#input_19_8 {
   width: 110px !important;
 }
 select {
@@ -2409,60 +2411,56 @@ select {
 .gform_wrapper .textarea_container .gfield_label {
   padding-top: 15px;
 }
-#field_11_13,
-#field_13_13 {
+#field_11_13 {
   display: inline-block;
   width: 36%;
   margin: 0 4% 0 0 !important;
   padding: 220px 0 0;
   background: url(../layoutImg/offreSmall.png) no-repeat 40px 30px;
 }
-#field_11_13 ul,
-#field_13_13 ul {
+#field_11_13 ul {
   list-style-type: none !important;
 }
-#field_11_13 li,
-#field_13_13 li {
+#field_11_13 li {
   list-style-type: none !important;
 }
 #field_11_11,
-#field_13_11 {
+#field_19_11 {
   display: inline-block;
   width: 60%;
   vertical-align: top;
 }
 #field_11_11 .gfield_label,
-#field_13_11 .gfield_label {
+#field_19_11 .gfield_label {
   display: none;
 }
 #field_11_11 .ginput_container,
-#field_13_11 .ginput_container {
+#field_19_11 .ginput_container {
   display: block;
 }
 #field_11_11 .gfield_radio,
-#field_13_11 .gfield_radio {
+#field_19_11 .gfield_radio {
   margin: 40px 0 0 !important;
 }
 #field_11_11 .gfield_radio li,
-#field_13_11 .gfield_radio li {
+#field_19_11 .gfield_radio li {
   width: 200px;
   display: inline-block;
   margin: 0 0 25px 18px !important;
   box-shadow: 0 75px 65px -75px #9b9b9b;
 }
 .lt-ie9 #field_11_11 .gfield_radio li,
-.lt-ie9 #field_13_11 .gfield_radio li {
+.lt-ie9 #field_19_11 .gfield_radio li {
   width: 250px;
   margin: 0 0 25px 32px !important;
 }
 #field_11_11 .gfield_radio li label,
-#field_13_11 .gfield_radio li label {
+#field_19_11 .gfield_radio li label {
   text-align: center;
   color: #fff;
-  cursor: pointer;
 }
 #field_11_11 .gfield_radio li input,
-#field_13_11 .gfield_radio li input {
+#field_19_11 .gfield_radio li input {
   position: absolute;
   top: 0;
   left: 0;
@@ -2477,30 +2475,39 @@ select {
   z-index: -1;
 }
 #field_11_11 .gfield_radio li input:checked + label .pack-orange .btn,
-#field_13_11 .gfield_radio li input:checked + label .pack-orange .btn {
+#field_19_11 .gfield_radio li input:checked + label .pack-orange .btn {
   background: rgba(255, 255, 255, 0.8);
   color: #993b00;
 }
 #field_11_11 .gfield_radio li:hover .pack-orange .btn,
-#field_13_11 .gfield_radio li:hover .pack-orange .btn {
+#field_19_11 .gfield_radio li:hover .pack-orange .btn {
   background: #fff;
   color: #993b00;
 }
 #field_11_11 .btn,
-#field_13_11 .btn {
+#field_19_11 .btn {
   padding: 10px 17px;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
+#field_19_11 {
+  width: auto;
+}
 .pack {
   padding: 20px 10px 10px;
   background: #afafaf;
+  cursor: pointer;
 }
 .pack .pack-title {
   color: #afafaf;
 }
 .pack .pack-player {
   color: #4c4c4c;
+}
+.pack.pack-current,
+.pack.pack-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 .pack.pack-blanc {
   background: #fff;
@@ -2536,6 +2543,32 @@ select {
 }
 .pack.pack-orange .pack-player {
   color: #ffd0b9;
+}
+.btn-disabled,
+.btn-current {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  height: 42px;
+  padding: 10px 17px;
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1.1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.btn-disabled {
+  color: transparent;
+}
+.btn-disabled:hover {
+  color: transparent;
+}
+.btn-current {
+  color: gray;
+}
+.btn-current:hover {
+  color: gray;
 }
 .pack-title {
   text-transform: uppercase;
@@ -2650,6 +2683,36 @@ select {
 #field_12_16 .ginput_complex input {
   width: 90%;
 }
+.gform_wrapper .bill,
+.gform_wrapper .bill + li {
+  width: 46%;
+  display: inline-block;
+  vertical-align: top;
+}
+.gform_wrapper .bill {
+  margin-right: 7%;
+}
+.gform_wrapper .bill ul:first-child {
+  border-top: 1px dotted #a0a0a0;
+  border-bottom: 1px dotted #a0a0a0;
+}
+.gform_wrapper .bill ul:first-child li {
+  margin: 10px 0 !important;
+}
+.gform_wrapper .bill ul li .gfield_label {
+  width: 200px;
+  padding-right: 40px;
+}
+.gform_wrapper .bill .bill-total li .gfield_label {
+  font-weight: bold !important;
+}
+.gform_wrapper .bill ul.bill-total li {
+  font-weight: bold;
+  margin: 10px 0 !important;
+}
+.gform_wrapper .bill span.ginput_total {
+  font-size: 1em;
+}
 /* PLAYERS */
 .myPlayers {
   text-align: center;
@@ -2661,10 +2724,10 @@ select {
 .nbPlayers {
   position: relative;
   float: left;
-  width: 315px;
+  width: 340px;
 }
 .nbPlayers > div {
-  width: 140px;
+  width: 150px;
   display: inline-block;
   vertical-align: top;
   border: 1px solid #afafaf;
@@ -2922,13 +2985,11 @@ select {
   }
   .infoContact.sidebarFormCol2 + .formContainer,
   .infoContact.sidebarFormCol2,
-  #field_11_27,
-  #field_13_14 {
+  #field_11_27 {
     width: 100%;
   }
   .infoContact.sidebarFormCol2,
-  #field_11_27,
-  #field_13_14 {
+  #field_11_27 {
     padding-right: 20px;
     margin: 0 0 30px;
   }
@@ -3082,13 +3143,13 @@ select {
   }
   #field_11_13,
   #field_11_11,
-  #field_13_13,
-  #field_13_11 {
+  #field_19_13,
+  #field_19_11 {
     display: block;
     width: 100%;
   }
   #field_11_13,
-  #field_13_13 {
+  #field_19_13 {
     margin: 0 !important;
   }
 }
