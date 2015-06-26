@@ -195,6 +195,11 @@ $(function(){
 	//$('#connect').on('click', animPage);
 	$('#search').on('click', preventEmptySearch);
 
+	$('#goBack').on('click', function(e){
+		e.preventDefault();
+		history.go(-1);
+	});
+
 	stickyFooter();
 
 	$('.fonctionnalites').find('a').on('click', function(){

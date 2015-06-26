@@ -2332,7 +2332,9 @@ body .gform_wrapper span.ginput_total {
 #field_12_8,
 #field_12_3,
 #field_19_17,
-#field_19_8 {
+#field_19_8,
+#field_22_7,
+#field_22_8 {
   margin: 0 !important;
 }
 #field_9_18 select,
@@ -2342,7 +2344,9 @@ body .gform_wrapper span.ginput_total {
 #field_12_8 select,
 #field_12_18 select,
 #field_19_17 select,
-#field_19_16 select {
+#field_19_16 select,
+#field_22_7 select,
+#field_22_9 select {
   width: 229px !important;
 }
 #field_9_6,
@@ -2368,19 +2372,22 @@ body .gform_wrapper span.ginput_total {
 #input_9_5,
 #input_11_14,
 #input_12_17,
-#input_19_15 {
+#input_19_15,
+#input_22_4 {
   width: 170px !important;
 }
 #input_9_9,
 #input_11_3,
 #input_12_12,
-#input_19_3 {
+#input_19_3,
+#input_22_1 {
   width: 200px !important;
 }
 #input_9_14,
 #input_11_8,
 #input_12_3,
-#input_19_8 {
+#input_19_8,
+#input_22_8 {
   width: 110px !important;
 }
 select {
@@ -2493,6 +2500,9 @@ select {
 #field_19_11 {
   width: auto;
 }
+#field_19_11 .gfield_radio li {
+  margin: 0 18px 25px 0 !important;
+}
 .pack {
   padding: 20px 10px 10px;
   background: #afafaf;
@@ -2524,6 +2534,13 @@ select {
 .pack.pack-blanc .pack-price {
   color: #808080;
   border-color: #ff6300;
+}
+.pack.pack-blanc .btn-current {
+  color: gray;
+}
+.pack.pack-blanc .btn-current:hover,
+.pack.pack-blanc .btn-current:focus {
+  color: gray;
 }
 .pack.pack-gris-fonce {
   background: #808080;
@@ -2561,14 +2578,16 @@ select {
 .btn-disabled {
   color: transparent;
 }
-.btn-disabled:hover {
+.btn-disabled:hover,
+.btn-disabled:focus {
   color: transparent;
 }
 .btn-current {
-  color: gray;
+  color: #fff;
 }
-.btn-current:hover {
-  color: gray;
+.btn-current:hover,
+.btn-current:focus {
+  color: #fff;
 }
 .pack-title {
   text-transform: uppercase;
@@ -2591,8 +2610,11 @@ select {
   margin-bottom: 2px;
   color: #fff;
   background: #afafaf;
-  padding: 2px 0;
+  padding: 2px 5px;
   font-size: 1em;
+  display: inline-block;
+  text-align: center;
+  width: auto;
 }
 .pack-player {
   font-family: 'motivaBold', sans-serif;
@@ -2668,11 +2690,18 @@ select {
   text-rendering: optimizeLegibility;
   margin: 13px;
 }
-#field_12_16 .ginput_complex span {
+#field_12_16,
+#field_22_10 {
+  display: block;
+  width: 100%;
+}
+#field_12_16 .ginput_complex span,
+#field_22_10 .ginput_complex span {
   display: block;
   margin: 0;
 }
-#field_12_16 .ginput_complex label {
+#field_12_16 .ginput_complex label,
+#field_22_10 .ginput_complex label {
   font-size: 1em;
   letter-spacing: 0;
   white-space: normal;
@@ -2680,7 +2709,8 @@ select {
   text-align: left;
   margin: 5px 0 15px !important;
 }
-#field_12_16 .ginput_complex input {
+#field_12_16 .ginput_complex input,
+#field_22_10 .ginput_complex input {
   width: 90%;
 }
 .gform_wrapper .bill,
@@ -2700,18 +2730,21 @@ select {
   margin: 10px 0 !important;
 }
 .gform_wrapper .bill ul li .gfield_label {
-  width: 200px;
+  width: 250px;
   padding-right: 40px;
-}
-.gform_wrapper .bill .bill-total li .gfield_label {
-  font-weight: bold !important;
 }
 .gform_wrapper .bill ul.bill-total li {
   font-weight: bold;
   margin: 10px 0 !important;
 }
+.gform_wrapper .bill ul.bill-total li .gfield_label {
+  font-weight: bold !important;
+}
 .gform_wrapper .bill span.ginput_total {
   font-size: 1em;
+}
+#gform_wrapper_20 input[type=submit] {
+  float: right;
 }
 /* PLAYERS */
 .myPlayers {
@@ -2753,6 +2786,13 @@ select {
   display: inline-block;
   vertical-align: middle;
 }
+.nbPlayers .nb.nbBig {
+  display: block;
+  text-align: left;
+}
+.nbPlayers .nb.nbBig + .legend {
+  width: 100%;
+}
 .nbPlayers .invite {
   margin: 0 35px 0 0;
 }
@@ -2762,6 +2802,9 @@ select {
 }
 .nbPlayers .invite .nb {
   color: #ff6300;
+}
+.nbPlayers .invite .nb.nbBig {
+  text-align: right;
 }
 .nbPlayers .invite:after {
   content: '/';
@@ -2817,6 +2860,7 @@ select {
   border: 1px solid #e7e7e7;
   padding: 20px 15px;
   box-sizing: border-box;
+  margin: 0 0 10px;
 }
 .player .numPlayer {
   font-family: 'motivaBold', sans-serif;
@@ -3152,6 +3196,14 @@ select {
   #field_19_13 {
     margin: 0 !important;
   }
+  .gform_wrapper .bill,
+  .gform_wrapper .bill + li {
+    width: 100%;
+    display: block;
+  }
+  .gform_wrapper .bill {
+    margin: 0 0 30px;
+  }
 }
 @media (max-width: 767px) {
   header {
@@ -3250,7 +3302,10 @@ select {
   #field_11_15,
   #field_11_8,
   #field_12_8,
-  #field_12_3 {
+  #field_12_3,
+  #field_22_6,
+  #field_22_7,
+  #field_22_8 {
     margin: 0 0 10px !important;
   }
   .formContainer.gravity .col2 p span,
@@ -3387,7 +3442,7 @@ select {
     margin: 0 15px 0 0;
   }
   .nbPlayers .legend {
-    width: 65px;
+    width: 60px;
   }
 }
 @media (max-width: 375px) {

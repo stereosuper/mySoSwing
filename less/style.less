@@ -18,6 +18,8 @@
 @information: 9;
 @coordonees: 12;
 @addPlayer: 14;
+@renouvellement: 20;
+@coordoneesPlayer: 22;
 
 html,
 button,
@@ -1833,13 +1835,15 @@ body .gform_wrapper span.ginput_total {
 #field_@{information}_18, #field_@{information}_14,
 #field_@{choixAbonnement}_15, #field_@{choixAbonnement}_8,
 #field_@{coordonees}_8, #field_@{coordonees}_3,
-#field_@{modifAbonnement}_17, #field_@{modifAbonnement}_8{
+#field_@{modifAbonnement}_17, #field_@{modifAbonnement}_8,
+#field_@{coordoneesPlayer}_7, #field_@{coordoneesPlayer}_8{
   margin: 0 !important;
 }
 #field_@{information}_18, #field_@{information}_16,
 #field_@{choixAbonnement}_24, #field_@{choixAbonnement}_15,
 #field_@{coordonees}_8, #field_@{coordonees}_18,
-#field_@{modifAbonnement}_17, #field_@{modifAbonnement}_16{
+#field_@{modifAbonnement}_17, #field_@{modifAbonnement}_16,
+#field_@{coordoneesPlayer}_7, #field_@{coordoneesPlayer}_9{
   select{
     width: 229px !important;
   }
@@ -1860,13 +1864,13 @@ body .gform_wrapper span.ginput_total {
   }
 }
 
-#input_@{information}_5, #input_@{choixAbonnement}_14, #input_@{coordonees}_17, #input_@{modifAbonnement}_15{ //tel
+#input_@{information}_5, #input_@{choixAbonnement}_14, #input_@{coordonees}_17, #input_@{modifAbonnement}_15, #input_@{coordoneesPlayer}_4{ //tel
   width: 170px !important;
 }
-#input_@{information}_9, #input_@{choixAbonnement}_3, #input_@{coordonees}_12, #input_@{modifAbonnement}_3{ //nom
+#input_@{information}_9, #input_@{choixAbonnement}_3, #input_@{coordonees}_12, #input_@{modifAbonnement}_3, #input_@{coordoneesPlayer}_1{ //nom
   width: 200px !important;
 }
-#input_@{information}_14, #input_@{choixAbonnement}_8, #input_@{coordonees}_3, #input_@{modifAbonnement}_8{ //cp
+#input_@{information}_14, #input_@{choixAbonnement}_8, #input_@{coordonees}_3, #input_@{modifAbonnement}_8, #input_@{coordoneesPlayer}_8{ //cp
   width: 110px !important;
 }
 
@@ -1987,6 +1991,11 @@ select{
 }
 #field_@{modifAbonnement}_11 {
     width: auto;
+    .gfield_radio{
+      li{
+        margin: 0 18px 25px 0 !important;
+      }
+    }
 }
 .pack{
   padding: 20px 10px 10px;
@@ -2016,6 +2025,12 @@ select{
     .pack-price{
       color: #808080;
       border-color: @orange;
+    }
+    .btn-current{
+      color: gray;
+      &:hover, &:focus{
+        color: gray;
+      }
     }
   }
   &.pack-gris-fonce{
@@ -2053,16 +2068,16 @@ select{
   padding: 10px 17px;
   .motivaIt(1.1em);
 }
-.btn-disabled {
+.btn-disabled{
   color: transparent;
-  &:hover {
+  &:hover, &:focus{
     color: transparent;
   }
 }
-.btn-current {
-  color: gray;
-  &:hover {
-    color: gray;
+.btn-current{
+  color: #fff;
+  &:hover, &:focus{
+    color: #fff;
   }
 }
 .pack-title{
@@ -2080,8 +2095,11 @@ select{
     margin-bottom: 2px;
     color: #fff;
     background: #afafaf;
-    padding: 2px 0;
+    padding: 2px 5px;
     font-size: 1em;
+    display: inline-block;
+    text-align: center;
+    width: auto;
   }
 }
 .pack-player{
@@ -2135,7 +2153,9 @@ select{
   margin: 13px;
 }
 
-#field_@{coordonees}_16{
+#field_@{coordonees}_16, #field_@{coordoneesPlayer}_10{ //mot de passe
+  display: block;
+  width: 100%;
   .ginput_complex{
     span{
       display: block;
@@ -2162,180 +2182,205 @@ select{
 }
 .gform_wrapper .bill{
   margin-right: 7%;
+  ul{
+    &:first-child{
+      border-top: 1px dotted @border;
+      border-bottom: 1px dotted @border;
+      li{
+        margin: 10px 0 !important;
+      }
+    }
+    li .gfield_label{
+      width: 250px;
+      padding-right: 40px;
+    }
+    &.bill-total li{
+      font-weight: bold;
+      margin: 10px 0 !important;
+      .gfield_label{
+        font-weight: bold !important;
+      }
+    }
+  }
+  span.ginput_total{
+    font-size: 1em;
+  }
 }
-.gform_wrapper .bill ul:first-child{
-  border-top: 1px dotted @border;
-  border-bottom: 1px dotted @border;
-}
-.gform_wrapper .bill ul:first-child li{
-  margin: 10px 0 !important;
-}
-.gform_wrapper .bill ul li .gfield_label{
-  width: 200px;
-  padding-right: 40px;
-}
-.gform_wrapper .bill .bill-total li .gfield_label{
-  font-weight: bold !important;
-}
-.gform_wrapper .bill ul.bill-total li{
-  font-weight: bold;
-  margin: 10px 0 !important;
-}
-.gform_wrapper .bill span.ginput_total{
-  font-size: 1em;
+
+#gform_wrapper_@{renouvellement}{
+  input[type=submit]{
+    float: right;
+  }
 }
 
 
 /* PLAYERS */
 .myPlayers {
   text-align: center;
-}
-.myPlayers > div {
-  display: inline-block;
-  vertical-align: top;
+  > div {
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 .nbPlayers {
   position: relative;
   float: left;
   width: 340px;
+  > div {
+    width: 150px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #afafaf;
+    border-radius: 4px;
+    padding: 15px 10px 10px;
+    box-sizing: border-box;
+  }
+  .legend {
+    color: #898989;
+    font-size: 12px;
+    display: inline-block;
+    width: 80px;
+    vertical-align: middle;
+  }
+  .nb {
+    font-family: 'motivaBold', sans-serif;
+    font-weight: normal;
+    font-size: 50px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    &.nbBig{
+      display: block;
+      text-align: left;
+      + .legend{
+        width: 100%;
+      }
+    }
+  }
+  .invite {
+    margin: 0 35px 0 0;
+    .legend {
+      text-align: right;
+      margin: 0 4px 0 0;
+    }
+    .nb {
+      color: #ff6300;
+      &.nbBig{
+        text-align: right;
+      }
+    }
+    &:after {
+      content: '/';
+      color: #b5b5b5;
+      font-size: 30px;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 10px;
+      height: 30px;
+    }
+  }
+  .total{
+    .nb{
+      margin: 0 2px 0 0;
+      color: #afafaf;
+    }
+    .legend{
+      text-align: left;
+    }
+  }
 }
-.nbPlayers > div {
-  width: 150px;
-  display: inline-block;
-  vertical-align: top;
-  border: 1px solid #afafaf;
-  border-radius: 4px;
-  padding: 15px 10px 10px;
-  box-sizing: border-box;
-}
-.nbPlayers .legend {
-  color: #898989;
-  font-size: 12px;
-  display: inline-block;
-  width: 80px;
-  vertical-align: middle;
-}
-.nbPlayers .nb {
-  font-family: 'motivaBold', sans-serif;
-  font-weight: normal;
-  font-size: 50px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  line-height: 40px;
-  display: inline-block;
-  vertical-align: middle;
-}
-.nbPlayers .invite {
-  margin: 0 35px 0 0;
-}
-.nbPlayers .invite .legend {
-  text-align: right;
-  margin: 0 4px 0 0;
-}
-.nbPlayers .invite .nb {
-  color: #ff6300;
-}
-.nbPlayers .invite:after {
-  content: '/';
-  color: #b5b5b5;
-  font-size: 30px;
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 10px;
-  height: 30px;
-}
-.nbPlayers .total .nb {
-  margin: 0 2px 0 0;
-  color: #afafaf;
-}
-.nbPlayers .total .legend {
-  text-align: left;
-}
+
 .abonnementActuel {
   width: 140px;
   text-align: center;
+  span {
+    font-size: 13px;
+    color: #afafaf;
+    &:first-child {
+      font-family: 'motivaIt', sans-serif;
+      font-weight: normal;
+      font-size: 13px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+  }
+  strong {
+    display: block;
+  }
 }
-.abonnementActuel span {
-  font-size: 13px;
-  color: #afafaf;
-}
-.abonnementActuel span:first-child {
-  font-family: 'motivaIt', sans-serif;
-  font-weight: normal;
-  font-size: 13px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-.abonnementActuel strong {
-  display: block;
-}
+
 .sup {
   width: 210px;
   text-align: center;
   float: right;
+  p {
+    margin: 0;
+  }
 }
-.sup p {
-  margin: 0;
-}
+
 .player {
   position: relative;
   background: #f8f8f8;
   border: 1px solid #e7e7e7;
   padding: 20px 15px;
-  box-sizing: border-box;
+  .box-sizing(border-box);
+  margin: 0 0 10px;
+  .numPlayer {
+    font-family: 'motivaBold', sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    display: inline-block;
+    text-transform: uppercase;
+    width: 100px;
+  }
+  .openPlayer {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+  .detail {
+    margin: 40px 0 0 100px;
+    display: none;
+    p {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    span {
+      display: block;
+      font-size: .8em;
+      margin: 5px 0 0;
+    }
+  }
 }
-.player .numPlayer {
-  font-family: 'motivaBold', sans-serif;
-  font-weight: normal;
-  font-size: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  display: inline-block;
-  text-transform: uppercase;
-  width: 100px;
-}
-.player .openPlayer {
-  position: absolute;
-  top: 20px;
-  right: 15px;
-}
-.player .detail {
-  margin: 40px 0 0 100px;
-  display: none;
-}
-.player .detail p {
-  width: 50%;
-  display: inline-block;
-  vertical-align: top;
-}
-.player .detail span {
-  display: block;
-  font-size: .8em;
-  margin: 5px 0 0;
-}
+
 .loginForm {
   max-width: 500px;
-}
-.loginForm .blocError {
-  position: relative;
-  margin: 0 0 40px;
-  top: 0;
-  left: 0;
-}
-.loginForm input {
-  display: block;
-  margin: 0 0 10px;
-}
-.loginForm input[type=submit] {
-  margin: 20px 0 0;
+  .blocError {
+    position: relative;
+    margin: 0 0 40px;
+    top: 0;
+    left: 0;
+  }
+  input {
+    display: block;
+    margin: 0 0 10px;
+    &[type=submit] {
+      margin: 20px 0 0;
+    }
+  }
 }
 
 /* @group Non semantic Boilerplate */
@@ -2708,6 +2753,14 @@ select{
   #field_@{choixAbonnement}_13, #field_@{modifAbonnement}_13{
     margin: 0 !important;
   }
+
+  .gform_wrapper .bill, .gform_wrapper .bill+li{
+    width: 100%;
+    display: block;
+  }
+  .gform_wrapper .bill{
+    margin: 0 0 30px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2820,7 +2873,10 @@ select{
     margin-top: 0 !important;
   }
 
-  #field_@{information}_18, #field_@{information}_14, #field_@{choixAbonnement}_15, #field_@{choixAbonnement}_8, #field_@{coordonees}_8, #field_@{coordonees}_3{
+  #field_@{information}_18, #field_@{information}_14, 
+  #field_@{choixAbonnement}_15, #field_@{choixAbonnement}_8, 
+  #field_@{coordonees}_8, #field_@{coordonees}_3,
+  #field_@{coordoneesPlayer}_6, #field_@{coordoneesPlayer}_7, #field_@{coordoneesPlayer}_8{
     margin: 0 0 10px !important;
   }
 
@@ -2986,7 +3042,7 @@ select{
     margin: 0 15px 0 0;
   }
   .nbPlayers .legend {
-    width: 65px;
+    width: 60px;
   }
 }
 
