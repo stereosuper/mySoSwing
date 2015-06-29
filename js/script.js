@@ -74,9 +74,9 @@ function animContactEn(link){
 }
 
 function replacePlaceholder(){
-	var input = $('#mdp');
+	var input = $('#mdp'), input2 = $('#log');
 
-	input.attr('value', 'Mot de passe');
+	input.attr('value', 'Password');
 	if(!html.hasClass('lt-ie9')){
 		input.attr('type', 'text');
 	}
@@ -86,6 +86,11 @@ function replacePlaceholder(){
 		if(!html.hasClass('lt-ie9')){
 			input.attr('type', 'password');
 		}
+	});
+
+	input2.attr('value', 'Username');
+	input2.on('click', function(){
+		input2.attr('value', '');
 	});
 }
 
@@ -113,12 +118,13 @@ function stickyFooter(){
 
 	if(footer.hasClass('bottom')){
 		docHeight += footer.height();
-		if (docHeight >= windowHeight) {
+		if(docHeight >= windowHeight){
 			footer.removeClass('bottom');
 			html.removeClass('white');
 		}
 	}
-	if(docHeight < windowHeight) { 
+
+	if(docHeight < windowHeight){
 		footer.addClass('bottom');
 		html.addClass('white');
 	}
@@ -200,8 +206,6 @@ $(function(){
 		history.go(-1);
 	});
 
-	stickyFooter();
-
 	$('.fonctionnalites').find('a').on('click', function(){
 		letSlide($(this).attr('href'));
 	});
@@ -214,11 +218,17 @@ $(function(){
 		replacePlaceholder();
 	}
 
-	$('.openPlayer').on('click', openPlayersDetail);
+	$('a.openPlayer').on('click', openPlayersDetail);
+
+    // Soumission du formulaire à la sélection d'un pack
+    $('.product-selection .gform_page_footer').hide();
+    $('.product-list input[type="radio"]').click(function(){
+        $('.product-selection .gform_next_button').click();
+    });
 
 	$(window).load(function() {
-		if(gant.length){ 
-			animHome(); 
+		if(gant.length){
+			animHome();
 		}
 
 		if($('.fonctionnalites').find('#slider').length){
@@ -228,6 +238,8 @@ $(function(){
 		if($('.pagePro').find('#slider').length){
 			letSlide('#probleme');
 		}
+
+		stickyFooter();
 	});
 
 	$(window).resize(function() {
