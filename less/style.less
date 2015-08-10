@@ -138,6 +138,9 @@ input, textarea{
     border-color: @orange;
     .box-shadow(inset 0 2px 3px rgba(182, 81, 18, 0.2));
   }
+  &.small {
+    width: 40px;
+  }
 }
 
 input[type=submit], button{
@@ -270,8 +273,8 @@ strong, b{
   vertical-align: top;
   border-bottom: 1px solid @orangeDark;
   text-decoration: none;
-  padding: 2px 0 0 0;
-  line-height: 0.8em;
+  padding: 2px 0 0;
+  line-height: .8em;
 }
 
 .btnIt{
@@ -343,9 +346,10 @@ header{
   background-repeat: no-repeat;
   background-position: 50% 100%;
   background-size: 100% auto;
-  padding: 0 0 13%;
+  padding: 0 0 12.9%;
   &.pro{
     background-image: url(../layoutImg/bannerPro.png);
+    background-position: 50% 97%;
   }
   .lt-ie9 &{
     .btn{
@@ -376,7 +380,7 @@ header{
   display: inline-block;
   vertical-align: top;
   margin: 0;
-  padding: 7px 0 0 0;
+  padding: 7px 0 0;
   float: left;
   li{
     display: inline-block;
@@ -410,7 +414,7 @@ header{
 
 #bottom-header{
   height: 110px;
-  background-color: @noir;
+  background: @noir;
 }
 
 #btn-connexion,
@@ -421,7 +425,7 @@ header{
   color: @noir;
   display: inline-block;
   text-decoration: none;
-  padding: 11px 0 0 0;
+  padding: 11px 0 0;
   position: relative;
   span:first-child{
     display: block;
@@ -775,14 +779,42 @@ footer{
 }
 
 #lien-app-store{
-  display: none;
+  //display: none;
   width: 135px;
   height: 40px;
-  background: url(../layoutImg/app-store.png) no-repeat 50% 50%;
-  margin: 60px 0 0 0;
+  //background: url(../layoutImg/app-store.png) no-repeat 50% 50%;
+  margin: 30px auto;
   padding: 0;
-  .opacity(0);
-  .transform(translate(0, 20px));
+  //.opacity(0);
+  //.transform(translate(0, 20px));
+  text-indent: -999em;
+  overflow: hidden;
+  background: url(../layoutImg/download-app.png) no-repeat 50% 50%;
+  display: block;
+  margin: 20px auto 25px;
+}
+
+.bloc-pro-home{
+  max-width: 350px;
+  margin: 10vh 0 0 5px;
+  background: #f8f8f8 url(../layoutImg/pro-home.png) no-repeat 30px 35px;
+  .box-sizing(border-box);
+  border: 1px solid #a0a0a0;
+  padding: 20px 65px;
+  text-align: right;
+  h2{
+    margin: 0;
+    font-size: 1.5em;
+  }
+  p{
+    width: 170px;
+    display: inline-block;
+    text-align: center;
+    margin: 20px 0 15px;
+  }
+  .btn{
+    padding: 10px 29px;
+  }
 }
 
 
@@ -1539,7 +1571,20 @@ body .gform_wrapper .gf_page_steps{
 .demandeInfo{
   position: absolute;
   right: 20px;
-  bottom: 80px;
+  bottom: 25px;
+  text-align: center;
+  padding: 10px 20px 15px;
+  border: 1px solid @orange;
+  background: #fff;
+  h3{
+    margin: 0;
+    .motivaBold(1.1em);
+    line-height: 1em;
+  }
+  i{
+    display: block;
+    margin: 0 0 15px;
+  }
   .btn{
     padding-left: 30px;
     padding-right: 30px;
@@ -1829,6 +1874,7 @@ body .gform_wrapper span.ginput_total {
 
 #field_@{choixAbonnement}_27 {
   &:extend(.infoContact.sidebarFormCol2);
+  text-align: center;
 }
 
 #field_@{information}_11, #field_@{information}_12,
@@ -1871,15 +1917,15 @@ body .gform_wrapper span.ginput_total {
   }
 }
 
-#input_@{information}_5, #input_@{choixAbonnement}_14, #input_@{coordonees}_17, 
+#input_@{information}_5, #input_@{choixAbonnement}_14, #input_@{coordonees}_17,
 #input_@{modifAbonnement}_15, #input_@{coordoneesPlayer}_4, #input_@{createPlayer}_4{ //tel
   width: 170px !important;
 }
-#input_@{information}_9, #input_@{choixAbonnement}_3, #input_@{coordonees}_12, 
+#input_@{information}_9, #input_@{choixAbonnement}_3, #input_@{coordonees}_12,
 #input_@{modifAbonnement}_3, #input_@{coordoneesPlayer}_1, #input_@{createPlayer}_1{ //nom
   width: 200px !important;
 }
-#input_@{information}_14, #input_@{choixAbonnement}_8, #input_@{coordonees}_3, 
+#input_@{information}_14, #input_@{choixAbonnement}_8, #input_@{coordonees}_3,
 #input_@{modifAbonnement}_8, #input_@{coordoneesPlayer}_8, #input_@{createPlayer}_8{ //cp
   width: 110px !important;
 }
@@ -1992,6 +2038,32 @@ select{
           }
         }
       }
+      &.gchoice_@{choixAbonnement}_11_0{
+        width: 96.5%;
+        max-width: 637px;
+        display: block;
+        box-shadow: 0 70px 30px -75px #9b9b9b;
+        .pack-top{
+          width: 30%;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .pack-price{
+          width: 18%;
+          margin-left: 6%;
+          margin-right: 6%;
+          display: inline-block;
+        }
+        .pack-bottom{
+          width: 40%;
+          display: inline-block;
+          vertical-align: middle;
+          p{
+            margin: 0px 0 20px;
+            color: #000;
+          }
+        }
+      }
     }
   }
   .btn{
@@ -2009,6 +2081,7 @@ select{
   padding: 20px 10px 10px;
   background: #afafaf;
   cursor: pointer;
+  color: #fff;
   .pack-title{
     color: #afafaf;
   }
@@ -2218,7 +2291,8 @@ select{
 .gform_wrapper .bill ul.bill-total li{
   font-weight: bold;
   margin: 10px 0 !important;
-  .gfield_label{
+  .gfield_label,
+  input {
      font-weight: bold !important;
   }
 }
@@ -2385,7 +2459,7 @@ select{
   margin: 40px 0 0 100px;
   display: none;
 }
-.player .detail p {
+.player .detail > div {
   width: 50%;
   display: inline-block;
   vertical-align: top;
@@ -2410,6 +2484,21 @@ select{
 }
 .loginForm input[type=submit] {
   margin: 20px 0 0;
+}
+
+.block-sidebar-player{
+  text-align: center;
+  border: 1px solid @border;
+  margin-top: -20px;
+  background-color: #f8f8f8;
+  b{
+    color: @orange;
+    font-size: 1.2em;
+  }
+  p{
+    margin: 25px 0 5px;
+    font-size: .9em;
+  }
 }
 
 /* @group Non semantic Boilerplate */
@@ -2790,6 +2879,10 @@ select{
   .gform_wrapper .bill {
     margin: 0 0 30px;
   }
+
+  .bloc-pro-home{
+    padding: 20px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2902,9 +2995,9 @@ select{
     margin-top: 0 !important;
   }
 
-  #field_@{information}_18, #field_@{information}_14, 
-  #field_@{choixAbonnement}_15, #field_@{choixAbonnement}_8, 
-  #field_@{coordonees}_8, #field_@{coordonees}_3, 
+  #field_@{information}_18, #field_@{information}_14,
+  #field_@{choixAbonnement}_15, #field_@{choixAbonnement}_8,
+  #field_@{coordonees}_8, #field_@{coordonees}_3,
   #field_@{coordoneesPlayer}_6, #field_@{coordoneesPlayer}_7, #field_@{coordoneesPlayer}_8,
   #field_@{createPlayer}_6, #field_@{createPlayer}_7, #field_@{createPlayer}_8{
     margin: 0 0 10px !important;
@@ -2950,6 +3043,49 @@ select{
   #gform_fields_14 label {
     padding-right: 5px;
   }
+
+  .bloc-pro-home{
+    .btn{
+      padding: 10px 14px;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .bloc-pro-home{
+    background-position: 10px 20px;
+    background-size: 50px; 
+    .btn{
+      font-size: 1em;
+      line-height: 1.7em;
+    }
+  }
+
+  #field_@{choixAbonnement}_11, #field_@{modifAbonnement}_11{
+    .gfield_radio{
+      li{
+        &.gchoice_@{choixAbonnement}_11_0{
+          width: 200px;
+          display: inline-block;
+          box-shadow: 0 75px 65px -75px #9b9b9b;
+          .pack-top{
+            width: auto;
+            display: block;
+          }
+          .pack-price{
+            width: 95px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+          }
+          .pack-bottom{
+            width: auto;
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 500px){
@@ -2991,9 +3127,23 @@ select{
   }
 
   #field_@{coordonees}_16 .ginput_complex span,
-  #field_@{coordoneesPlayer}_10 .ginput_complex span, 
+  #field_@{coordoneesPlayer}_10 .ginput_complex span,
   #field_@{createPlayer}_10.ginput_complex span{
     width: 225px;
+  }
+
+  .bloc-pro-home{
+    background: #f8f8f8;
+    padding: 10px;
+    width: 195px;
+    position: absolute;
+    right: 0;
+    p{
+      display: none;
+    }
+    h2{
+      margin: 0 0 15px;
+    }
   }
 
 }
@@ -3088,9 +3238,9 @@ select{
     background-size: 100%;
   }
 
-  #lien-app-store{
+  /*#lien-app-store{
     margin-top: 30px;
-  }
+  }*/
 
   .categories ul, .searchform{
     padding-left: 0;
