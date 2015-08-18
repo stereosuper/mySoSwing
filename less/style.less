@@ -21,6 +21,7 @@
 @renouvellement: 20;
 @coordoneesPlayer: 22;
 @createPlayer: 21;
+@ngf: 23;
 
 html,
 button,
@@ -66,8 +67,23 @@ body{
   background: @blanc;
 }
 
-h1, h2, h3, strong, b, em, i{
+h1, h2, h3, strong, b{
   font-weight: normal;
+}
+
+em, i{
+  font-style: normal;
+  .motivaIt(1em);
+  strong, b{
+    .motivaBoldIt(1em);
+  }
+}
+
+strong, b{
+  .motivaBold(1em);
+  em, i{
+    .motivaBoldIt(1em);
+  }
 }
 
 h1, .h1{
@@ -101,6 +117,12 @@ a{
 p{
   margin: 10px 0 35px;
   line-height: 20px;
+}
+
+span{
+  &.orange{
+    color: @orange;
+  }
 }
 
 blockquote{
@@ -161,9 +183,6 @@ button{
   }
 }
 
-strong, b{
-  .motivaBold(1em);
-}
 
 .liste-orange{
   list-style: none;
@@ -264,6 +283,9 @@ strong, b{
   .box-shadow(0 3px 0 darken(@orange, 5%));
   &:hover, &:focus, &:active, &.actif{
     border-color: @orangeDark;
+  }
+  .page-template-pro &{
+    padding: 10px 42px;
   }
 }
 
@@ -1084,47 +1106,48 @@ textarea{
   padding: 0px 45px 0 20px;
   font-size: 1.1em;
   .box-sizing(border-box);
-  img {
+  img{
     margin-bottom: 1em;
+  }
+  .btn{
+    padding: 10px 28px;
   }
 }
 
 #golf-list {
-  display: inline-block;
-  width: 100%;
-  list-style: none;
   margin: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
   li {
-    margin: 1em 4% 1em 0;
+    margin: 1em 3% 1em 0;
     padding: 2em 1em;
     border-top: 1px dotted @border;
     border-bottom: 1px dotted @border;
     display: inline-block;
-    width: 29%;
+    width: 30%;
     vertical-align: top;
     .box-sizing(border-box);
     h2 {
-      margin: 0 0 0.4em 0;
+      margin: 0 0 .4em;
       .motivaBoldIt(1.3em);
+      color: @orange;
     }
     p {
       margin: 0;
-      &.tel-golf {
-        .motivaBold(1em);
-        margin: 0.2em 0;
-      }
+      .motivaIt(1em);
+      color: #454444;
     }
     a {
       font-size: 1em;
-      margin: 0.2em 0 0 0;
+      margin: .2em 0 0;
+    }
+    .tel-golf {
+      .motivaBold(1em);
+      margin: .2em 0;
+      color: #000;
     }
     &#temporary {
-      display: inline-block;
       text-align: center;
-      vertical-align: center;
-      border: 0 none;
+      border: 0;
       color: @gris;
       .motivaIt(1em);
       padding-top: 150px;
@@ -1610,6 +1633,15 @@ body .gform_wrapper .gf_page_steps{
   a{
     &:extend(.categories a all);
   }
+  .big{
+    font-size: 1.3em;
+    a{
+      padding: 0;
+      &:before{
+        display: none;
+      }
+    }
+  }
 }
 .compte{
   width: 74%;
@@ -1716,6 +1748,19 @@ body .gform_wrapper .gf_page_steps{
         .lt-ie9 &{
           margin-left: 0;
         }
+      }
+    }
+    .confirm-ngf{
+      p{
+        width: auto;
+      }
+      h3, p{
+        font-size: 1.15em;
+      }
+      span{
+        font-size: .8em;
+        display: block;
+        margin: 0;
       }
     }
   }
@@ -1896,7 +1941,8 @@ body .gform_wrapper span.ginput_total {
 #field_@{coordonees}_8, #field_@{coordonees}_18,
 #field_@{modifAbonnement}_17, #field_@{modifAbonnement}_16,
 #field_@{coordoneesPlayer}_7, #field_@{coordoneesPlayer}_9,
-#field_@{createPlayer}_7, #field_@{createPlayer}_9{
+#field_@{createPlayer}_7, #field_@{createPlayer}_9,
+#field_@{ngf}_8{
   select{
     width: 229px !important;
   }
@@ -1918,15 +1964,18 @@ body .gform_wrapper span.ginput_total {
 }
 
 #input_@{information}_5, #input_@{choixAbonnement}_14, #input_@{coordonees}_17,
-#input_@{modifAbonnement}_15, #input_@{coordoneesPlayer}_4, #input_@{createPlayer}_4{ //tel
+#input_@{modifAbonnement}_15, #input_@{coordoneesPlayer}_4, #input_@{createPlayer}_4
+#input_@{ngf}_4{ //tel
   width: 170px !important;
 }
 #input_@{information}_9, #input_@{choixAbonnement}_3, #input_@{coordonees}_12,
-#input_@{modifAbonnement}_3, #input_@{coordoneesPlayer}_1, #input_@{createPlayer}_1{ //nom
+#input_@{modifAbonnement}_3, #input_@{coordoneesPlayer}_1, #input_@{createPlayer}_1,
+#input_@{ngf}_1{ //nom
   width: 200px !important;
 }
 #input_@{information}_14, #input_@{choixAbonnement}_8, #input_@{coordonees}_3,
-#input_@{modifAbonnement}_8, #input_@{coordoneesPlayer}_8, #input_@{createPlayer}_8{ //cp
+#input_@{modifAbonnement}_8, #input_@{coordoneesPlayer}_8, #input_@{createPlayer}_8,
+#input_@{ngf}_6{ //cp
   width: 110px !important;
 }
 
@@ -2061,6 +2110,7 @@ select{
           p{
             margin: 0px 0 20px;
             color: #000;
+            display: block;
           }
         }
       }
@@ -2071,6 +2121,13 @@ select{
     .transition(.3s ease-in-out);
   }
 }
+
+.pack-bottom{
+  p{
+    display: none;
+  }
+}
+
 #field_@{modifAbonnement}_11 {
     width: auto;
     .gfield_radio li {
@@ -2238,14 +2295,11 @@ select{
 }
 
 #field_@{coordonees}_16,
-#field_@{coordoneesPlayer}_10, #field_@{createPlayer}_10{ //mot de passe
+#field_@{coordoneesPlayer}_10, #field_@{createPlayer}_10,
+#field_@{ngf}_9{ //mot de passe
   display: block;
   width: 100%;
   .ginput_complex{
-    span{
-      display: block;
-      margin: 0;
-    }
     label{
       font-size: 1em;
       letter-spacing: 0;
@@ -2257,6 +2311,23 @@ select{
     input{
       width: 90%;
     }
+  }
+}
+
+#field_@{coordonees}_16,
+#field_@{coordoneesPlayer}_10, #field_@{createPlayer}_10{
+  .ginput_complex{
+    span{
+      display: block;
+      margin: 0;
+    }
+  }
+}
+
+#field_@{ngf}_9{
+  margin-top: 20px !important;
+  label{
+    text-align: left;
   }
 }
 
@@ -2489,8 +2560,8 @@ select{
 .block-sidebar-player{
   text-align: center;
   border: 1px solid @border;
-  margin-top: -20px;
-  background-color: #f8f8f8;
+  background: #f8f8f8;
+  max-width: 220px;
   b{
     color: @orange;
     font-size: 1.2em;
@@ -3047,6 +3118,16 @@ select{
   .bloc-pro-home{
     .btn{
       padding: 10px 14px;
+    }
+  }
+
+  #field_@{ngf}_9{
+    .ginput_complex{
+      span{
+        display: block;
+        margin: 0;
+        width: auto;
+      }
     }
   }
 }
