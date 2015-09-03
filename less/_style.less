@@ -31,6 +31,7 @@
 @createPlayerFr: 26;
 @ngfEn: 23;
 @ngfFr: 31;
+@ngfModif: 30;
 
 html,
 button,
@@ -350,7 +351,7 @@ button{
   .size(125px);
   background: @blanc;
   display: inline-block;
-  line-height: 130px;
+  line-height: 173px;
   color: #ccc;
   text-decoration: none;
   border: 1px solid #e7e7e7;
@@ -1974,7 +1975,8 @@ body .gform_wrapper span.ginput_total {
 #field_@{modifAbonnementFr}_17, #field_@{modifAbonnementFr}_16,
 #field_@{coordoneesPlayerFr}_7, #field_@{coordoneesPlayerFr}_9,
 #field_@{createPlayerFr}_7, #field_@{createPlayerFr}_9,
-#field_@{ngfFr}_8{
+#field_@{ngfFr}_8,
+#field_@{ngfModif}_11{
   select{
     width: 229px !important;
   }
@@ -2002,7 +2004,8 @@ body .gform_wrapper span.ginput_total {
 #input_@{ngfEn}_4,
 #input_@{informationFr}_5, #input_@{choixAbonnementFr}_14, #input_@{coordoneesFr}_17,
 #input_@{modifAbonnementFr}_15, #input_@{coordoneesPlayerFr}_4, #input_@{createPlayerFr}_4
-#input_@{ngfFr}_4{ //tel
+#input_@{ngfFr}_4,
+#input_@{ngfModif}_4{ //tel
   width: 170px !important;
 }
 #input_@{informationEn}_9, #input_@{choixAbonnementEn}_3, #input_@{coordoneesEn}_12,
@@ -2010,7 +2013,8 @@ body .gform_wrapper span.ginput_total {
 #input_@{ngfEn}_1,
 #input_@{informationFr}_9, #input_@{choixAbonnementFr}_3, #input_@{coordoneesFr}_12,
 #input_@{modifAbonnementFr}_3, #input_@{coordoneesPlayerFr}_1, #input_@{createPlayerFr}_1,
-#input_@{ngfFr}_1{ //nom
+#input_@{ngfFr}_1,
+#input_@{ngfModif}_1{ //nom
   width: 200px !important;
 }
 #input_@{informationEn}_14, #input_@{choixAbonnementEn}_8, #input_@{coordoneesEn}_3,
@@ -2018,7 +2022,8 @@ body .gform_wrapper span.ginput_total {
 #input_@{ngfEn}_6,
 #input_@{informationFr}_14, #input_@{choixAbonnementFr}_8, #input_@{coordoneesFr}_3,
 #input_@{modifAbonnementFr}_8, #input_@{coordoneesPlayerFr}_8, #input_@{createPlayerFr}_8,
-#input_@{ngfFr}_6{ //cp
+#input_@{ngfFr}_6,
+#input_@{ngfModif}_8{ //cp
   width: 110px !important;
 }
 
@@ -2307,29 +2312,18 @@ select{
   display: inline-block;
   margin: 0 -40px;
 }
-
-#gform_wrapper_@{modifAbonnementFr}{
-  .pack-price-price{
-    &.pack-price-custom {
-      font-size: 2.5em;
-    }
-  }
-  .pack-blanc{
-    .pack-price-price{
-      font-size: 2.8em;
-    }
-  }
-}
-
 .pack-price-price{
   font-size: 4em;
   line-height: 1;
   letter-spacing: -4px;
+  .fr &{
+    font-size: 2.5em;
+  }
   span{
     .motivaBold(0.375em);
   }
   &.pack-price-custom {
-    font-size: 3em;
+    font-size: 2.4em;
   }
 }
 .pack-price-subprice{
@@ -2360,7 +2354,8 @@ select{
 #field_@{ngfEn}_9,
 #field_@{coordoneesFr}_16,
 #field_@{coordoneesPlayerFr}_10, #field_@{createPlayerFr}_10,
-#field_@{ngfFr}_9{ //mot de passe
+#field_@{ngfFr}_9,
+#field_@{ngfModif}_10{ //mot de passe
   display: block;
   width: 100%;
   .ginput_complex{
@@ -2378,13 +2373,6 @@ select{
   }
 }
 
-#field_@{createPlayerEn}_10, #field_@{createPlayerFr}_10{
-  margin-top: 20px !important;
-  .gfield_label{
-    text-align: left;
-  }
-}
-
 #field_@{coordoneesEn}_16,
 #field_@{coordoneesPlayerEn}_10, #field_@{createPlayerEn}_10,
 #field_@{coordoneesFr}_16,
@@ -2398,7 +2386,8 @@ select{
 }
 
 #field_@{ngfEn}_9,
-#field_@{ngfFr}_9{
+#field_@{ngfFr}_9,
+#field_@{ngfModif}_10{
   margin-top: 20px !important;
   label{
     text-align: left;
@@ -3209,7 +3198,8 @@ select{
   }
 
   #field_@{ngfEn}_9,
-  #field_@{ngfFr}_9{
+  #field_@{ngfFr}_9,
+  #field_@{ngfModif}_10{
     .ginput_complex{
       span{
         display: block;
