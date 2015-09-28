@@ -405,6 +405,13 @@ header{
       color: @blanc;
     }
   }
+  .rs{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 230px;
+  }
 }
 
 #menu-langues{
@@ -440,6 +447,33 @@ header{
         border-color: @blanc;
       }
     }
+  }
+}
+
+.rs{
+  span{
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 30px;
+  }
+  a{
+    display: inline-block;
+    vertical-align: middle;
+    .size(22px);
+    margin: 0 2px;
+  }
+  .fb{
+    background: url(../layoutImg/fb.png);
+  }
+  .tw{
+    background: url(../layoutImg/tw.png);
+  }
+  .google{
+    background: url(../layoutImg/google.png);
+  }
+  .inst{
+    background: url(../layoutImg/inst.png);
   }
 }
 
@@ -689,6 +723,10 @@ footer{
   height: 10px;
   background: @orange;
   border-top: 1px solid @orangeDark;
+  text-align: center;
+  .rs{
+    display: none;
+  }
 }
 
 /* @end */
@@ -3040,6 +3078,19 @@ select{
   header{
     padding: 0 0 100px;
     background-size: 790px auto;
+  }
+
+  #top-header{
+    .rs{
+      display: none;
+    }
+  }
+
+  #bottom-footer{
+    height: auto;
+    .rs{
+      display: inline-block;
+    }
   }
 
   .homeTemp.home{

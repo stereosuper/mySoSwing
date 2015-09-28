@@ -847,6 +847,13 @@ header.pro {
   text-rendering: optimizeLegibility;
   color: #ffffff;
 }
+#top-header .rs {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 230px;
+}
 #menu-langues {
   display: inline-block;
   vertical-align: top;
@@ -891,6 +898,31 @@ header.pro {
 #menu-langues li a:active {
   color: #ffffff;
   border-color: #ffffff;
+}
+.rs span {
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+  line-height: 30px;
+}
+.rs a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  margin: 0 2px;
+}
+.rs .fb {
+  background: url(../layoutImg/fb.png);
+}
+.rs .tw {
+  background: url(../layoutImg/tw.png);
+}
+.rs .google {
+  background: url(../layoutImg/google.png);
+}
+.rs .inst {
+  background: url(../layoutImg/inst.png);
 }
 #bottom-header {
   height: 110px;
@@ -1168,6 +1200,10 @@ footer.bottom {
   height: 10px;
   background: #ff6300;
   border-top: 1px solid #993b00;
+  text-align: center;
+}
+#bottom-footer .rs {
+  display: none;
 }
 /* @end */
 /* @group Home */
@@ -3626,6 +3662,15 @@ select {
   header {
     padding: 0 0 100px;
     background-size: 790px auto;
+  }
+  #top-header .rs {
+    display: none;
+  }
+  #bottom-footer {
+    height: auto;
+  }
+  #bottom-footer .rs {
+    display: inline-block;
   }
   .homeTemp.home h1 {
     width: 100%;
