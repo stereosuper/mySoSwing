@@ -323,19 +323,19 @@ button,
 input,
 select,
 textarea {
-  color: #000000;
+  color: #000;
 }
 /* @group Mes styles */
 /* @group General */
 /* selection */
 ::-moz-selection {
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
   text-shadow: none;
 }
 /* @end */
@@ -346,10 +346,10 @@ body.home {
   height: 100%;
 }
 html {
-  background: #000000;
+  background: #000;
 }
 html.white {
-  background: #ffffff;
+  background: #fff;
 }
 body {
   font-family: 'motiva', sans-serif;
@@ -358,7 +358,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background: #ffffff;
+  background: #fff;
 }
 h1,
 h2,
@@ -466,9 +466,9 @@ span.orange {
 }
 blockquote {
   position: relative;
-  background: #000000;
+  background: #000;
   margin: 35px 0;
-  color: #ffffff;
+  color: #fff;
   padding: 20px 35px;
   border-radius: 4px;
   font-family: 'motivaIt', sans-serif;
@@ -667,7 +667,7 @@ body .gform_wrapper .gform_footer input[type=submit],
 body .gform_wrapper .gform_page_footer input[type=button],
 body .gform_wrapper .gform_page_footer input[type=submit] {
   background: #ff6300;
-  color: #ffffff;
+  color: #fff;
   box-shadow: 0 3px 0 #993b00;
 }
 .btn:hover,
@@ -691,7 +691,7 @@ body .gform_wrapper .gform_page_footer input[type=submit]:active,
 #field_19_11 .gfield_radio li:hover .btn,
 #field_25_11 .gfield_radio li:hover .btn,
 #field_33_11 .gfield_radio li:hover .btn {
-  color: #ffffff;
+  color: #fff;
   background: #e65900;
 }
 .btnReverse,
@@ -783,7 +783,7 @@ body .gform_wrapper .gform_page_footer input[type=submit]:active,
 .plus {
   width: 125px;
   height: 125px;
-  background: #ffffff;
+  background: #fff;
   display: inline-block;
   line-height: 130px;
   color: #ccc;
@@ -845,7 +845,7 @@ header.pro {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  color: #ffffff;
+  color: #fff;
 }
 #top-header .rs {
   position: absolute;
@@ -870,7 +870,7 @@ header.pro {
   margin: 0;
 }
 #menu-langues li.active a {
-  color: #ffffff;
+  color: #fff;
   font-family: 'motivaLtIt', sans-serif;
   font-weight: normal;
   font-size: 1em;
@@ -887,7 +887,7 @@ header.pro {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   line-height: 0.9em;
-  color: #000000;
+  color: #000;
   display: inline-block;
   border-bottom: 1px solid #993b00;
   text-decoration: none;
@@ -896,8 +896,8 @@ header.pro {
 #menu-langues li a:hover,
 #menu-langues li a:focus,
 #menu-langues li a:active {
-  color: #ffffff;
-  border-color: #ffffff;
+  color: #fff;
+  border-color: #fff;
 }
 .rs span {
   color: #fff;
@@ -926,7 +926,7 @@ header.pro {
 }
 #bottom-header {
   height: 110px;
-  background: #000000;
+  background: #000;
 }
 #btn-connexion,
 #btn-account {
@@ -938,7 +938,7 @@ header.pro {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   line-height: 0.7em;
-  color: #000000;
+  color: #000;
   display: inline-block;
   text-decoration: none;
   padding: 11px 0 0;
@@ -974,7 +974,7 @@ header.pro {
 #btn-account:focus .txt-btn,
 #btn-connexion:active .txt-btn,
 #btn-account:active .txt-btn {
-  color: #ffffff;
+  color: #fff;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
@@ -984,7 +984,7 @@ header.pro {
 #btn-account:focus .txt-btn,
 #btn-connexion:active .txt-btn,
 #btn-account:active .txt-btn {
-  border-color: #ffffff;
+  border-color: #fff;
 }
 #btn-connexion .icon-lock {
   font-size: 11px;
@@ -1038,7 +1038,7 @@ header.pro {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 #menu li a:focus,
@@ -1092,7 +1092,7 @@ header.pro {
   display: block;
   width: 25px;
   height: 3px;
-  background: #ffffff;
+  background: #fff;
   border-radius: 8px;
   position: absolute;
   -webkit-transition: 0.2s ease-in-out;
@@ -1141,7 +1141,7 @@ footer.bottom {
   display: none;
 }
 #top-footer {
-  background: #000000;
+  background: #000;
   color: #9d9d9d;
 }
 #top-footer .align-left {
@@ -1185,7 +1185,7 @@ footer.bottom {
 #menu-footer a:hover,
 #menu-footer a:focus,
 #menu-footer a:active {
-  color: #ffffff;
+  color: #fff;
 }
 .lt-ie9 #menu-footer {
   float: none;
@@ -1218,7 +1218,7 @@ footer.bottom {
 .home h1 {
   font-size: 4.063em;
   line-height: 1em;
-  color: #000000;
+  color: #000;
   margin: 0;
   padding: 0;
   letter-spacing: -2px;
@@ -1830,14 +1830,14 @@ body .gform_wrapper div.validation_error {
   text-rendering: optimizeLegibility;
 }
 .rdvNow {
-  background: #000000;
+  background: #000;
   padding: 30px 20px;
   position: relative;
   margin: 0 0 20px;
 }
 .rdvNow h2,
 .rdvNow p {
-  color: #ffffff;
+  color: #fff;
 }
 .rdvNow h2 {
   margin: 0 0 20px;
@@ -1849,7 +1849,7 @@ body .gform_wrapper div.validation_error {
   position: absolute;
   top: -17px;
   left: 20px;
-  background: #000000;
+  background: #000;
   border-radius: 5px;
   padding: 6px 12px;
 }
@@ -2012,7 +2012,7 @@ body .gform_wrapper .gf_page_steps span.gf_step_number {
   width: 33px;
   height: 33px;
   background: #ff6300;
-  color: #ffffff;
+  color: #fff;
   border-radius: 50px;
   text-align: center;
   line-height: 35px;
