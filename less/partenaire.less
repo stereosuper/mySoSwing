@@ -1,0 +1,232 @@
+html, body.partenaire-coach{
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	background: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/fond.png) center no-repeat;	
+	background-size: cover;
+}
+
+
+#btn-connect {
+	text-decoration: none;
+	color: #d4d4d4;
+	position: absolute;
+	right: 40px;
+	text-indent: -999px;
+	overflow: hidden;
+	width: 40px;
+	background: rgba(0, 0, 0, 0.6);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius:	5px;
+	text-align: center;	
+	span{
+		display: block;
+		text-indent: 0;
+		padding: 10px 0 15px;
+		font-size: 10px;
+	}
+}
+
+#logo1 {
+	border: 0;
+	padding: 0;
+	float: left;
+	text-align: right;
+	line-height: .8em;
+	margin-top: 60px;
+}
+#playing {
+	display : block;
+	width : 361px;
+	height : 40px;
+	overflow : hidden;
+	text-align : left;
+	text-indent : -9999px;
+	background :url(http://staging.mysoswing.com/wp-content/uploads/2015/12/playing.png);
+}
+#mysos {
+	.motivaIt(0.56em);
+	padding: 0 20px 0 0;
+}
+#sos{
+	color: @orange;
+}
+
+
+.accroche {
+	margin-top: 60px;
+	float: right;
+	padding: 0 0 0 12px;
+	letter-spacing: -0.5px;
+}
+h2 {
+	.motivaBold(2.75em);
+	margin-top: 0;
+	letter-spacing: -2px;
+	margin-bottom: 15px;
+}
+
+p {
+	font-size: 1.15em;
+
+}
+
+#coach {
+	margin: 50px 0 35px 0;
+	width: 350px;
+	height: 370px;
+	position: relative;
+	color: #FFF;
+	background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.78));
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	text-align: center;
+	&.no-border-bottom{
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}
+#avatar {
+	display: block;
+	position: absolute;
+	top: -50px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-radius:50%;
+	width:111px;
+	height:111px;
+	border: 2px solid #FFF;
+}
+#presentation {
+	margin-top: 80px;
+	padding: 75px  0 10px;
+}
+
+
+#slider-partner{
+
+	padding: 5px 0 0; 
+	margin: 10px auto;
+	border-top: 1px solid @gris;
+	border-bottom : 1px solid @gris; 
+	width: 150px;
+
+	li{
+		display: none;
+	}
+	.actif{
+		display: block;
+	}
+
+	.offre {
+
+		.motivaBoldIt(1.4em);
+	}
+
+
+	.prix {
+		color: @orange;
+		font-size: 5em;
+		letter-spacing: -3px;
+		line-height: 1em;
+	}
+
+}
+
+.btn {
+		margin-top: 15px;
+	}
+
+.btn-slide{
+	position: absolute;
+	border-radius:50%;
+	width:32px;
+	height:32px;
+	background: #ff6300;
+	color: #fff; 
+	box-shadow: 0 3px 0 #993b00;
+	font-size: 15px;
+	bottom: 155px;
+	line-height: 29px;
+	text-align: center;
+	&.icon-arrow-left{
+		left: 30px;
+		&:before{
+			padding: 0 4px 0 0;
+		}
+	}
+	&.icon-arrow-right{
+		right: 30px;
+	}
+}
+
+#wrapper-zone-gant{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	#zone-gant{
+		bottom: 0;
+
+		#telephone{
+		background-image: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/telephone.png);
+		top: 2px;
+		}
+	}	
+}
+
+/*#gant {
+	background: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/gant.png) no-repeat;
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: 50%;
+    bottom: 0;
+}*/
+
+#footer-partenaire {
+	display: block;
+	width: 100%;
+	background: linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0.5));	
+	height: 35px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	a {
+		color: #FFF;
+		line-height: 35px;
+		font-size: 0.87em;
+	}
+
+	#lien1, #lien2 {
+		margin: 0 15px;
+	}
+
+
+	#lien3 {
+		float: right;
+		margin-right: 9%; 
+	}
+}
+
+
+/* @group Responsive vertical */
+
+@media (max-height: 880px) {
+  #zone-gant{
+    width: 520px;
+    height: 592px;
+    margin: 0 0 0 -567px;
+  }
+}
+
+
+/* @end */

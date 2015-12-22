@@ -22,6 +22,11 @@ function animHome(){
 	tlHome.to($("#lien-app-store"), 0.9, {opacity: "1", y:"0px", ease:Quart.easeOut});
 }
 
+function animParternaireCoach() {
+	var tlPartenaire = new TimelineMax();
+	tlPartenaire.to(gant, 0.8, {x: "0px", y: "0px", rotation:"0deg", delay:0.2, ease:Quart.easeOut});
+}
+
 function openOrCloseMenu(){
 	var d = 250,
 		effect = 'easeOutBack',
@@ -187,8 +192,21 @@ function openPlayersDetail(e){
 	$(this).hasClass('on') ? $(this).html('Close') : $(this).html('Detail');
 }
 
-$(function(){
+function testHeightPartenaire(){
+	var heightWindow = $(window).height();
+	var heightContent = $(".wrapper-content").height();
+	if(heightWindow<heightContent){
+		/*$("#coach").css( "border-bottom-left-radius", "0px" );
+		$("#coach").css( "border-bottom-right-radius", "0px" );*/
+		$("#coach").addClass("no-border-bottom");
+	}else{
+		/*$("#coach").css( "border-bottom-left-radius", "5px" );
+		$("#coach").css( "border-bottom-right-radius", "5px" );*/
+		$("#coach").removeClass("no-border-bottom");
+	}
+}
 
+$(function(){
 	animLinks();
 
 	if($('#btn-contact.contact-en').length){
@@ -226,9 +244,17 @@ $(function(){
         $('.product-selection .gform_next_button').click();
     });
 
+    if($("body").hasClass("partenaire-coach")){
+    	testHeightPartenaire();
+    }
+
 	$(window).load(function() {
-		if(gant.length){
+		if($("body").hasClass("home")){
 			animHome();
+		}
+
+		if($("body").hasClass("partenaire-coach")){
+			animParternaireCoach();
 		}
 
 		if($('.fonctionnalites').find('#slider').length){
@@ -244,6 +270,9 @@ $(function(){
 
 	$(window).resize(function() {
 		stickyFooter();
+		if($("body").hasClass("partenaire-coach")){
+	    	testHeightPartenaire();
+	    }
 	});
 
 });
