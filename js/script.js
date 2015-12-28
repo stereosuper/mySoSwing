@@ -206,6 +206,37 @@ function testHeightPartenaire(){
 	}
 }
 
+function setSliderPartner(container){
+	var slides = container.find('li'), nbSlides = slides.length, 
+		btnPrev = container.find('button').eq(0), btnNext = container.find('button').eq(1);
+
+	function slidePrev(){
+		var prev = container.find('.actif').prev().length ? container.find('.actif').prev() : slides.eq(nbSlides - 1);
+		
+		TweenLite.to(container.find('.actif'), .3, {x: '100%', opacity: 0});
+		TweenLite.fromTo(prev, .3, {x: '-100%', opacity: 0}, {x: '0%', opacity: 1});
+
+		slides.removeClass('actif');
+		prev.addClass('actif');
+	}
+	function slideNext(){
+		var next = container.find('.actif').next().length ? container.find('.actif').next() : slides.eq(0);
+
+		TweenLite.to(container.find('.actif'), .3, {x: '-100%', opacity: 0});
+		TweenLite.fromTo(next, .3, {x: '100%', opacity: 0}, {x: '0%', opacity: 1});
+
+		slides.removeClass('actif');
+		next.addClass('actif');
+	}
+
+	TweenLite.set(slides.not('.actif'), {x: '-100%', opacity: 0});
+	btnPrev.on('click', slidePrev);
+	btnNext.on('click', slideNext);
+
+	container.on('swipeleft', slideNext);
+	container.on('swiperight', slidePrev);
+}
+
 $(function(){
 	animLinks();
 
@@ -246,6 +277,10 @@ $(function(){
 
     if($("body").hasClass("partenaire-coach")){
     	testHeightPartenaire();
+    }
+
+    if($('#slider-partner').length){
+    	setSliderPartner($('#slider-partner'));
     }
 
 	$(window).load(function() {

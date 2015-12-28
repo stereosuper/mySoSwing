@@ -3473,6 +3473,7 @@ body {
   text-align: right;
   line-height: .8em;
   margin-top: 60px;
+  margin-bottom: 0;
 }
 #playing {
   display: block;
@@ -3481,7 +3482,8 @@ body {
   overflow: hidden;
   text-align: left;
   text-indent: -9999px;
-  background: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/playing.png);
+  background: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/logo_pg.png) 50% no-repeat;
+  background-size: 100% 100%;
 }
 #mysos {
   font-family: 'motivaIt', sans-serif;
@@ -3534,8 +3536,7 @@ p {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.pro1,
-.pro2 {
+#cercle {
   display: block;
   position: absolute;
   top: -50px;
@@ -3556,18 +3557,19 @@ p {
   margin-top: 80px;
   padding: 75px  0 10px;
 }
-#slider-partner {
+#slider-partner ul {
   padding: 5px 0 0;
   margin: 10px auto;
   border-top: 1px solid #9d9d9d;
   border-bottom: 1px solid #9d9d9d;
-  width: 150px;
+  width: 180px;
+  height: 103px;
+  position: relative;
+  list-style: none;
+  overflow: hidden;
 }
 #slider-partner li {
-  display: none;
-}
-#slider-partner .actif {
-  display: block;
+  position: absolute;
 }
 #slider-partner .offre {
   font-family: 'motivaBoldIt', sans-serif;
@@ -3594,6 +3596,7 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
   border-radius: 50%;
   width: 32px;
   height: 32px;
+  padding: 0;
   background: #ff6300;
   color: #fff;
   box-shadow: 0 3px 0 #993b00;
@@ -3606,10 +3609,16 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
   left: 30px;
 }
 .btn-slide.icon-arrow-left:before {
-  padding: 0 4px 0 0;
+  margin: 0 0 0 -2px;
 }
 .btn-slide.icon-arrow-right {
   right: 30px;
+}
+.btn-slide.icon-arrow-right:before {
+  margin: 0 -2px 0 0;
+}
+.btn-slide:before {
+  display: block;
 }
 #wrapper-zone-gant {
   display: block;
@@ -3658,11 +3667,155 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
   margin-right: 9%;
 }
 /* @group Responsive vertical */
-@media (max-height: 880px) {
+@media screen and (max-width: 1140px) {
   #zone-gant {
     width: 520px;
     height: 592px;
     margin: 0 0 0 -567px;
+  }
+}
+@media screen and (max-width: 1001px) {
+  #zone-gant {
+    width: 497px;
+    height: 565px;
+    margin: 0 0 0px -488px;
+  }
+}
+@media screen and (max-height: 880px) {
+  #zone-gant {
+    width: 520px;
+    height: 592px;
+    margin: 0 0 0 -567px;
+  }
+}
+@media screen and (max-width: 8px) {
+  .accroche {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 666px) {
+  #zone-gant {
+    display: none;
+  }
+  #logo1 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #playing {
+    margin-top: 20px;
+    width: 330px;
+    height: 36px;
+  }
+  .accroche {
+    padding: 0;
+    float: none;
+    clear: both;
+  }
+  .accroche br {
+    display: none;
+  }
+  .accroche h2 {
+    letter-spacing: 0em;
+    font-size: 2.1em;
+  }
+  #coach {
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pro1 {
+    margin: 0 0 0 58px;
+  }
+  .pro2 {
+    margin: 0 0 0 158px;
+  }
+  #presentation {
+    font-size: 1.3em;
+  }
+  #slider-partner .icon-arrow-left {
+    left: 30px;
+  }
+  #slider-partner .icon-arrow-right {
+    right: 30px;
+  }
+}
+@media screen and (max-width: 463px) {
+  #footer-partenaire #lien1,
+  #footer-partenaire #lien2,
+  #footer-partenaire #lien3 {
+    margin: 0;
+    float: none;
+    margin: 0 3px;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 320px) {
+  #logo1 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #playing {
+    margin-top: 20px;
+    width: 280px;
+    height: 31px;
+  }
+  .accroche {
+    padding: 0;
+    float: none;
+    clear: both;
+    font-size: 0.9em;
+  }
+  .accroche br {
+    display: none;
+  }
+  .accroche h2 {
+    letter-spacing: 0em;
+    font-size: 2.1em;
+  }
+  #coach {
+    width: 280px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pro1 {
+    margin: 0 0 0 30px;
+  }
+  .pro2 {
+    margin: 0 0 0 130px;
+  }
+  #presentation {
+    font-size: 1.2em;
+  }
+  .icon-arrow-left {
+    left: 30px;
+    padding: 0 0 0 2px;
+  }
+  .icon-arrow-left:before {
+    padding: 0;
+    margin: 0;
+  }
+  .icon-arrow-right {
+    right: 30px;
+    padding: 0 0 0 0;
+  }
+  #footer-partenaire {
+    text-align: center;
+    height: 70px;
+  }
+  #footer-partenaire #lien1,
+  #footer-partenaire #lien2 {
+    margin: 0 3px;
+    font-size: 0.8em;
+  }
+  #footer-partenaire #lien3 {
+    text-align: center;
+    display: block;
+    float: none;
+    margin: 0 3px;
+    font-size: 0.8em;
   }
 }
 /* @end */
