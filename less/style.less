@@ -824,11 +824,12 @@ footer{
   a#pastilleNGF {
     position: absolute;
     display: block;
-    width: 278px;
-    height: 270px;
-    background: url(../layoutImg/pastilleNGF.png) no-repeat 0 0;
-    right: 25%;
-    bottom: 0;
+    width: 415px;
+    height: 95px;
+    background: url(../layoutImg/bannerngf.png) no-repeat 0 0;
+    background-size: 93%;
+    right: 11%;
+    bottom: 220px;
     margin: 0;
     padding: 0;
     text-indent: -9000px;
@@ -836,7 +837,32 @@ footer{
     .transition(bottom 0.1s ease-in-out);
     .opacity(0);
     &:hover {
-      bottom: 5px;
+      bottom: 215px;
+    }
+    &:active {
+      margin-bottom: -5px;
+    }
+    &.no-js {
+      .opacity(1);
+    }
+  }
+  a#pastillePG {
+    position: absolute;
+    display: block;
+    width: 415px;
+    height: 95px;
+    background: url(../layoutImg/bannerplayinggolf.png) no-repeat 0 0;
+    background-size: 93%;
+    right: 11%;
+    bottom: 110px;
+    margin: 0;
+    padding: 0;
+    text-indent: -9000px;
+    overflow: hidden;
+    .transition(bottom 0.1s ease-in-out);
+    .opacity(0);
+     &:hover {
+      bottom: 105px;
     }
     &:active {
       margin-bottom: -5px;

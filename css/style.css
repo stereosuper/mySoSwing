@@ -1361,11 +1361,12 @@ footer.bottom {
 #bloc-right-home a#pastilleNGF {
   position: absolute;
   display: block;
-  width: 278px;
-  height: 270px;
-  background: url(../layoutImg/pastilleNGF.png) no-repeat 0 0;
-  right: 25%;
-  bottom: 0;
+  width: 415px;
+  height: 95px;
+  background: url(../layoutImg/bannerngf.png) no-repeat 0 0;
+  background-size: 93%;
+  right: 11%;
+  bottom: 220px;
   margin: 0;
   padding: 0;
   text-indent: -9000px;
@@ -1379,12 +1380,44 @@ footer.bottom {
   opacity: 0;
 }
 #bloc-right-home a#pastilleNGF:hover {
-  bottom: 5px;
+  bottom: 215px;
 }
 #bloc-right-home a#pastilleNGF:active {
   margin-bottom: -5px;
 }
 #bloc-right-home a#pastilleNGF.no-js {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+#bloc-right-home a#pastillePG {
+  position: absolute;
+  display: block;
+  width: 415px;
+  height: 95px;
+  background: url(../layoutImg/bannerplayinggolf.png) no-repeat 0 0;
+  background-size: 93%;
+  right: 11%;
+  bottom: 110px;
+  margin: 0;
+  padding: 0;
+  text-indent: -9000px;
+  overflow: hidden;
+  -webkit-transition: bottom 0.1s ease-in-out;
+  -moz-transition: bottom 0.1s ease-in-out;
+  -o-transition: bottom 0.1s ease-in-out;
+  transition: bottom 0.1s ease-in-out;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+#bloc-right-home a#pastillePG:hover {
+  bottom: 105px;
+}
+#bloc-right-home a#pastillePG:active {
+  margin-bottom: -5px;
+}
+#bloc-right-home a#pastillePG.no-js {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
