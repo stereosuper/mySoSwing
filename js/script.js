@@ -275,7 +275,7 @@ $(function(){
         $('.product-selection .gform_next_button').click();
     });
 
-    if($("body").hasClass("partenaire-coach")){
+    if($("body").hasClass("single-partenaire-coach")){
     	testHeightPartenaire();
     }
 
@@ -288,7 +288,7 @@ $(function(){
 			animHome();
 		}
 
-		if($("body").hasClass("partenaire-coach")){
+		if($("body").hasClass("single-partenaire-coach")){
 			animParternaireCoach();
 		}
 
@@ -305,7 +305,7 @@ $(function(){
 
 	$(window).resize(function() {
 		stickyFooter();
-		if($("body").hasClass("partenaire-coach")){
+		if($("body").hasClass("single-partenaire-coach")){
 	    	testHeightPartenaire();
 	    }
 	});

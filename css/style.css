@@ -3439,8 +3439,7 @@ select {
   font-size: .9em;
 }
 html,
-body.partenaire-coach {
-  position: relative;
+body.single-partenaire-coach {
   min-height: 100%;
 }
 body {
@@ -3482,8 +3481,6 @@ body {
   overflow: hidden;
   text-align: left;
   text-indent: -9999px;
-  background: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/logo_pg.png) 50% no-repeat;
-  background-size: 100% 100%;
 }
 #mysos {
   font-family: 'motivaIt', sans-serif;
@@ -3502,6 +3499,7 @@ body {
   float: right;
   padding: 0 0 0 12px;
   letter-spacing: -0.5px;
+  width: 350px;
 }
 h2,
 body .gform_wrapper .gf_page_steps span,
@@ -3520,8 +3518,7 @@ p {
   font-size: 1.15em;
 }
 #coach {
-  margin: 50px 0 35px 0;
-  width: 350px;
+  margin: 80px 0 35px 0;
   height: 370px;
   position: relative;
   color: #FFF;
@@ -3554,8 +3551,9 @@ p {
   margin: 0 0 0 170px;
 }
 #presentation {
-  margin-top: 80px;
-  padding: 75px  0 10px;
+  margin: 0 auto;
+  padding: 75px 0 10px;
+  width: 260px;
 }
 #slider-partner ul {
   padding: 5px 0 0;
@@ -3706,6 +3704,8 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
   }
   #playing {
     margin-top: 20px;
+    width: 330px;
+    height: 36px;
   }
   .accroche {
     padding: 0;
@@ -3723,6 +3723,7 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
     width: 335px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0;
   }
   .pro1 {
     margin: 0 0 0 58px;
@@ -3731,7 +3732,7 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
     margin: 0 0 0 158px;
   }
   #presentation {
-    font-size: 1.3em;
+    font-size: 1em;
   }
   #slider-partner .icon-arrow-left {
     left: 30px;
@@ -3741,6 +3742,12 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
   }
 }
 @media screen and (max-width: 463px) {
+  #footer-partenaire {
+    position: relative;
+  }
+  .accroche {
+    width: auto;
+  }
   #footer-partenaire #lien1,
   #footer-partenaire #lien2,
   #footer-partenaire #lien3 {
@@ -3766,6 +3773,7 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
     float: none;
     clear: both;
     font-size: 0.9em;
+    width: auto;
   }
   .accroche br {
     display: none;

@@ -1,5 +1,4 @@
-html, body.partenaire-coach{
-	position: relative;
+html, body.single-partenaire-coach{
 	min-height: 100%;
 }
 
@@ -45,8 +44,6 @@ body {
 	overflow : hidden;
 	text-align : left;
 	text-indent : -9999px;
-	background : url(http://staging.mysoswing.com/wp-content/uploads/2015/12/logo_pg.png) 50% no-repeat;
-	background-size: 100% 100%;
 }
 #mysos {
 	.motivaIt(0.56em);
@@ -62,6 +59,7 @@ body {
 	float: right;
 	padding: 0 0 0 12px;
 	letter-spacing: -0.5px;
+	width: 350px;
 }
 h2 {
 	.motivaBold(2.75em);
@@ -76,8 +74,7 @@ p {
 }
 
 #coach {
-	margin: 50px 0 35px 0;
-	width: 350px;
+	margin: 80px 0 35px 0;
 	height: 370px;
 	position: relative;
 	color: #FFF;
@@ -113,8 +110,9 @@ p {
 }
 
 #presentation {
-	margin-top: 80px;
-	padding: 75px  0 10px;
+	margin: 0 auto;
+    padding: 75px 0 10px;
+    width: 260px;
 }
 
 
@@ -286,8 +284,8 @@ p {
   	}
   	#playing {
   		margin-top: 20px; 
-  		//width: 330px;
-  		//height: 36px;
+  		width: 330px;
+  		height: 36px;
   	}
 	.accroche{
 		padding: 0;
@@ -306,6 +304,7 @@ p {
     	width: 335px;
     	margin-left: auto;
     	margin-right: auto;
+    	margin-bottom: 0;
     }
     .pro1 {
 		margin: 0 0 0 58px;
@@ -315,7 +314,7 @@ p {
 		margin: 0 0 0 158px;
 	}
 	#presentation {
-		font-size: 1.3em;
+		font-size: 1em;
 	}
 	#slider-partner{
 		.icon-arrow-left{
@@ -324,9 +323,17 @@ p {
 		.icon-arrow-right{
 			right: 30px;
 		}
-	}	
+	}
 }
 @media screen and (max-width: 463px){ 
+	#footer-partenaire {
+		position: relative;
+	}
+
+	.accroche {
+		width: auto;
+	}
+
 	#footer-partenaire {
 		#lien1, #lien2, #lien3 {
 			margin: 0;
@@ -352,6 +359,7 @@ p {
    	 	float: none;
    	 	clear: both;
    	 	font-size: 0.9em;
+   	 	width: auto;
    	 	br{
    	 		display: none;
    	 	}
