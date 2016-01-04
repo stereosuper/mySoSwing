@@ -3694,9 +3694,6 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
   }
 }
 @media screen and (max-width: 666px) {
-  .content.clearfix {
-    padding: 0 20px;
-  }
   #zone-gant {
     display: none;
   }
@@ -3723,16 +3720,16 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
     font-size: 2.1em;
   }
   #coach {
-    width: 320px;
+    width: 335px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
   }
   .pro1 {
-    margin: 0 0 0 54px;
+    margin: 0 0 0 58px;
   }
   .pro2 {
-    margin: 0 0 0 154px;
+    margin: 0 0 0 158px;
   }
   #presentation {
     font-size: 1em;
