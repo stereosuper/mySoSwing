@@ -3972,6 +3972,10 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
     right: auto;
     left: 50%;
   }
+  #bloc-right-home a#pastillePG {
+    right: auto;
+    left: 50%;
+  }
   #menu-footer {
     float: none;
     display: block;
@@ -4185,6 +4189,22 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
     padding: 20px;
   }
 }
+@media (max-width: 880px) and (max-width: 810px) {
+  #zone-gant {
+    display: none;
+  }
+  #bloc-right-home {
+    padding: 100px 0 280px 18%;
+  }
+  #bloc-right-home a#pastilleNGF {
+    right: auto;
+    left: 18%;
+  }
+  #bloc-right-home a#pastillePG {
+    right: auto;
+    left: 18%;
+  }
+}
 @media (max-width: 767px) {
   header {
     padding: 0 0 100px;
@@ -4351,6 +4371,17 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
   }
 }
 @media (max-width: 600px) {
+  #bloc-right-home {
+    padding: 100px 0 280px 2%;
+  }
+  #bloc-right-home a#pastilleNGF {
+    right: auto;
+    left: 2%;
+  }
+  #bloc-right-home a#pastillePG {
+    right: auto;
+    left: 2%;
+  }
   .bloc-pro-home {
     background-position: 10px 20px;
     background-size: 50px;
@@ -4485,11 +4516,14 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
     padding: 0;
   }
   #bloc-right-home {
-    padding: 50px 0 270px 47%;
+    padding: 50px 0 270px 2%;
     overflow: hidden;
   }
   #bloc-right-home a#pastilleNGF {
-    margin-left: -80px;
+    background-size: 83%;
+  }
+  #bloc-right-home a#pastillePG {
+    background-size: 83%;
   }
   .videoContainer {
     left: 40px;
