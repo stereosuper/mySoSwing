@@ -3733,7 +3733,7 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
   }
 }
 @media screen and (max-width: 666px) {
-  .partenaire-coach #zone-gant {
+  .single-partenaire-coach #zone-gant {
     display: none;
   }
   #logo1 {
