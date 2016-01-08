@@ -197,12 +197,10 @@ function testHeightPartenaire(){
 	var heightWindow = $(window).height();
 	var heightContent = $(".wrapper-content").height();
 	if(heightWindow<heightContent){
-		/*$("#coach").css( "border-bottom-left-radius", "0px" );
-		$("#coach").css( "border-bottom-right-radius", "0px" );*/
+		$("html").addClass("html-partenaire-coach");
 		$("#coach").addClass("no-border-bottom");
 	}else{
-		/*$("#coach").css( "border-bottom-left-radius", "5px" );
-		$("#coach").css( "border-bottom-right-radius", "5px" );*/
+		$("html").removeClass("html-partenaire-coach");
 		$("#coach").removeClass("no-border-bottom");
 	}
 }
