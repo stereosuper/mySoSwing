@@ -3714,11 +3714,11 @@ header {
 	background: url(http://staging.mysoswing.com/wp-content/uploads/2016/01/fond2.png) center no-repeat;	
 	background-size: cover;
 }*/
-html.partenaire-identification {
+html.single-partenaire-coach {
   height: auto;
 }
 html,
-body.partenaire-identification {
+body.single-partenaire-coach {
   min-height: 100%;
 }
 #progression {
@@ -3744,7 +3744,12 @@ body.partenaire-identification {
   right: 16px;
 }
 #progression .etapes strong {
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
   font-size: 1.28em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 #progression .etapes:nth-child(1) {
   padding: 0 50px 0 10px;
@@ -3899,28 +3904,7 @@ body.partenaire-identification {
 #tableau #nouveau .btn {
   margin-left: 10px;
 }
-.partenaire-identification #footer-partenaire-identification {
-  display: block;
-  width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
-  height: 35px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.partenaire-identification #footer-partenaire-identification a {
-  color: #FFF;
-  line-height: 35px;
-  font-size: 0.87em;
-}
-.partenaire-identification #footer-partenaire-identification #lien1,
-.partenaire-identification #footer-partenaire-identification #lien2 {
-  margin: 0 15px;
-}
-.partenaire-identification #footer-partenaire-identification #lien3 {
-  float: right;
-  margin-right: 18%;
-}
+/* STYLE PAGE COMPTE */
 /* @group Responsive vertical */
 @media screen and (max-height: 880px) {
   #zone-gant {
@@ -4146,22 +4130,22 @@ body.partenaire-identification {
   }
 }
 @media screen and (max-width: 568px) {
-  partenaire-identification #footer-partenaire-identification {
+  .single-partenaire-coach #footer-partenaire {
     position: relative;
   }
 }
 @media screen and (max-width: 540px) {
-  .partenaire-identification #footer-partenaire-identification {
+  .single-partenaire-coach #footer-partenaire {
     position: relative;
     text-align: center;
     height: 70px;
   }
-  .partenaire-identification #footer-partenaire-identification #lien1,
-  .partenaire-identification #footer-partenaire-identification #lien2 {
+  .single-partenaire-coach #footer-partenaire #lien1,
+  .single-partenaire-coach #footer-partenaire #lien2 {
     margin: 0 3px;
     font-size: 0.8em;
   }
-  .partenaire-identification #footer-partenaire-identification #lien3 {
+  .single-partenaire-coach #footer-partenaire #lien3 {
     text-align: center;
     display: block;
     float: none;

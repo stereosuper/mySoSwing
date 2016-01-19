@@ -258,11 +258,11 @@ header {
 }*/
 
 html{
-	&.partenaire-identification{
+	&.single-partenaire-coach{
 		height: auto;
 	}
 }
-html, body.partenaire-identification{
+html, body.single-partenaire-coach{
 	min-height: 100%;
 }
 #progression {
@@ -286,7 +286,7 @@ html, body.partenaire-identification{
 		margin: 0;
 		right: 16px;
 		strong{
-		font-size: 1.28em;
+		.motivaBold(1.28em);
 	}
 		&:nth-child(1){
 			padding: 0 50px 0 10px;
@@ -422,30 +422,10 @@ html, body.partenaire-identification{
     	}
 	}
 }
-.partenaire-identification #footer-partenaire-identification {
-	display: block;
-	width: 100%;
-	background: linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0.5));	
-	height: 35px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	a {
-		color: #FFF;
-		line-height: 35px;
-		font-size: 0.87em;
-	}
 
-	#lien1, #lien2 {
-		margin: 0 15px;
-	}
+/* STYLE PAGE COMPTE */
 
 
-	#lien3 {
-		float: right;
-		margin-right: 18%; 
-	}
-}
 
 /* @group Responsive vertical */
 @media screen and (max-height: 880px) {
@@ -699,12 +679,12 @@ html, body.partenaire-identification{
 	}
 }
 @media screen and (max-width: 568px){
-partenaire-identification #footer-partenaire-identification {
+.single-partenaire-coach #footer-partenaire {
 		position: relative;
 	}
 }
 @media screen and (max-width: 540px){
-	.partenaire-identification #footer-partenaire-identification {
+	.single-partenaire-coach #footer-partenaire {
 		position: relative;
 		text-align: center;
 		height: 70px;
