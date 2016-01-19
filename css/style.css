@@ -3471,6 +3471,7 @@ select {
   margin: 25px 0 5px;
   font-size: .9em;
 }
+/* STYLE PAGE HOME PLAYINGGOLF */
 html.html-partenaire-coach {
   height: auto;
 }
@@ -3704,6 +3705,222 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
   float: right;
   margin-right: 9%;
 }
+/* STYLE PAGE IDENTIFICATION */
+header {
+  background-image: none;
+  max-width: 942px;
+}
+body.partenaire-identification {
+  background: url(http://staging.mysoswing.com/wp-content/uploads/2016/01/fond2.png) center no-repeat;
+  background-size: cover;
+}
+html.partenaire-identification {
+  height: auto;
+}
+html,
+body.partenaire-identification {
+  min-height: 100%;
+}
+#progression {
+  height: 77px;
+  width: 404px;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 5px;
+  float: right;
+  margin-top: 60px;
+  position: relative;
+}
+#progression #intitule {
+  padding: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+#progression .etapes {
+  font-size: 0.85em;
+  color: #FFF;
+  display: inline-block;
+  padding: 0 35px;
+  margin: 0;
+  right: 16px;
+}
+#progression .etapes strong {
+  font-size: 1.28em;
+}
+#progression .etapes:nth-child(1) {
+  padding: 0 50px 0 10px;
+}
+#progression .etapes:nth-child(2) {
+  padding-left: 10px;
+}
+#progression .etapes:nth-child(3) {
+  padding: 0 27px 0 47px;
+}
+#etat {
+  padding: 0;
+  margin: 5px 0 0;
+}
+#etat #cercle1 {
+  margin-left: 78px;
+  display: inline-block;
+  padding: 0;
+  background: #ff6600;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #FFF;
+}
+#etat #cercle2,
+#etat #cercle3 {
+  display: inline-block;
+  padding: 0;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #FFF;
+}
+#etat .traits {
+  position: relative;
+  bottom: 6px;
+  display: inline-block;
+  border-top: 2px solid #FFF;
+  width: 105px;
+}
+#tableau {
+  height: 318px;
+  width: 942px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+  border-radius: 5px;
+  float: left;
+  margin-top: 60px;
+  display: inline-block;
+}
+#tableau h1 {
+  font-size: 1.71em;
+  letter-spacing: -1.6px;
+  margin: 10px 0;
+  padding: 0 0 0 50px;
+}
+#tableau p {
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 1.14em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #d6d6d6;
+  padding: 0 0 0 50px;
+  margin: 30px 0 0;
+}
+#tableau .btn {
+  width: 181px;
+  height: 45px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'motivaBoldIt', sans-serif;
+  font-weight: normal;
+  font-size: 1.14em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 0 9px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+#tableau #connexion {
+  color: #FFF;
+  display: inline-block;
+  position: relative;
+  left: 20px;
+}
+#tableau #connexion h1 {
+  border-bottom: 1px dotted #a0a0a0;
+  width: 418px;
+}
+#tableau #connexion .btn {
+  margin-left: 50px;
+}
+#tableau #connexion #champ1 {
+  position: relative;
+  width: 231px;
+  height: 35px;
+  background-color: #FFF;
+  border-radius: 5px;
+  margin: 15px 0 20px 50px;
+}
+#tableau #connexion #champ1 p {
+  padding: 8px 0 0 15px;
+  margin: 0;
+  color: #7e7e7e;
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+#tableau #connexion #champ2 {
+  position: relative;
+  width: 231px;
+  height: 35px;
+  background-color: #FFF;
+  border-radius: 5px;
+  margin: 0px 0 15px 50px;
+}
+#tableau #connexion #champ2 p {
+  padding: 8px 0 0 15px;
+  margin: 0;
+  color: #7e7e7e;
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+#tableau #separateur {
+  border-left: 1px dotted #a0a0a0;
+  height: 243px;
+  position: absolute;
+  left: 550px;
+  top: 239px;
+}
+#tableau #nouveau {
+  color: #FFF;
+  display: inline-block;
+  float: right;
+  position: relative;
+  right: 70px;
+}
+#tableau #nouveau h1 {
+  padding: 0 0 0 10px;
+}
+#tableau #nouveau p {
+  padding: 0 0 0 10px;
+}
+#tableau #nouveau .btn {
+  margin-left: 10px;
+}
+.partenaire-identification #footer-partenaire-identification {
+  display: block;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.partenaire-identification #footer-partenaire-identification a {
+  color: #FFF;
+  line-height: 35px;
+  font-size: 0.87em;
+}
+.partenaire-identification #footer-partenaire-identification #lien1,
+.partenaire-identification #footer-partenaire-identification #lien2 {
+  margin: 0 15px;
+}
+.partenaire-identification #footer-partenaire-identification #lien3 {
+  float: right;
+  margin-right: 18%;
+}
 /* @group Responsive vertical */
 @media screen and (max-height: 880px) {
   #zone-gant {
@@ -3867,6 +4084,102 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
   }
 }
 /* @end */
+/* responsive identification horizontal */
+@media screen and (max-width: 1140px) {
+  #progression {
+    right: 0;
+  }
+}
+@media screen and (max-width: 1001px) {
+  #tableau {
+    max-width: 100%;
+  }
+  #tableau #connexion h1 {
+    width: 300px;
+  }
+  #tableau #separateur {
+    left: 425px;
+    top: 370px;
+  }
+}
+@media screen and (max-width: 885px) {
+  #tableau {
+    clear: both;
+    width: 500px;
+    height: 530px;
+  }
+  #tableau #nouveau {
+    top: 10px;
+    display: block;
+    float: none;
+    right: 0;
+    margin-left: 10px;
+  }
+  #tableau #nouveau h1 {
+    padding-left: 50px;
+    width: 300px;
+  }
+  #tableau #nouveau p {
+    padding-left: 50px;
+  }
+  #tableau #nouveau .btn {
+    margin-left: 50px;
+  }
+  #tableau #separateur {
+    border: none;
+  }
+}
+@media screen and (max-width: 860px) {
+  #progression {
+    width: 350px;
+  }
+  #progression .etapes:nth-child(2) {
+    padding-right: 20px;
+  }
+  #progression #etat #cercle1 {
+    margin-left: 45px;
+  }
+}
+@media screen and (max-width: 790px) {
+  #progression {
+    float: left;
+  }
+}
+@media screen and (max-width: 568px) {
+  partenaire-identification #footer-partenaire-identification {
+    position: relative;
+  }
+}
+@media screen and (max-width: 540px) {
+  .partenaire-identification #footer-partenaire-identification {
+    position: relative;
+    text-align: center;
+    height: 70px;
+  }
+  .partenaire-identification #footer-partenaire-identification #lien1,
+  .partenaire-identification #footer-partenaire-identification #lien2 {
+    margin: 0 3px;
+    font-size: 0.8em;
+  }
+  .partenaire-identification #footer-partenaire-identification #lien3 {
+    text-align: center;
+    display: block;
+    float: none;
+    margin: 0 3px;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #progression {
+    float: left;
+  }
+  #tableau #connexion h1 {
+    width: 270px;
+  }
+  #tableau #nouveau h1 {
+    width: 270px;
+  }
+}
 /* @group Non semantic Boilerplate */
 /* remplacement image */
 .ir {
