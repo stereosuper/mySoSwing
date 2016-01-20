@@ -3475,6 +3475,9 @@ select {
 html {
   min-height: 100%;
 }
+html.html-partenaire-coach {
+  height: auto;
+}
 .single-partenaire-coach {
   min-height: 100%;
   background: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/fond.png) center no-repeat;
@@ -3565,7 +3568,7 @@ html {
   font-size: 1.15em;
 }
 .single-partenaire-coach #coach {
-  margin: 80px 0 35px 0;
+  margin: 80px 0 0 0;
   height: 370px;
   position: relative;
   color: #FFF;
@@ -3968,6 +3971,33 @@ html {
     width: 520px;
     height: 592px;
     margin: 0 0 0 -567px;
+  }
+}
+@media screen and (max-height: 749px) {
+  .partenaire-coach #footer-partenaire {
+    position: relative;
+  }
+  .partner-mon-compte #footer-partenaire {
+    margin-top: 20px;
+    position: relative;
+  }
+}
+@media screen and (max-height: 854px) {
+  .partner-inscription #footer-partenaire {
+    margin-top: 20px;
+    position: relative;
+  }
+}
+@media screen and (max-height: 627px) {
+  .partner-connexion #footer-partenaire {
+    margin-top: 20px;
+    position: relative;
+  }
+}
+@media screen and (max-height: 626px) {
+  .partner-identification #footer-partenaire {
+    margin-top: 20px;
+    position: relative;
   }
 }
 /* end */
