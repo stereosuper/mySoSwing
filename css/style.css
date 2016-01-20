@@ -1353,7 +1353,7 @@ footer.bottom {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 100px 0 280px 52%;
+  padding: 100px 0 355px 52%;
   height: auto;
   position: relative;
   overflow: hidden;
@@ -3492,6 +3492,7 @@ html {
 		background: url(http://staging.mysoswing.com/wp-content/uploads/2016/01/fond2.png) center no-repeat;	
 		background-size: cover;
 	}*/
+  /* STYLE PAGE INSCRIPTION */
   /* STYLE PAGE COMPTE */
 }
 .single-partenaire-coach #btn-connect {
@@ -3890,8 +3891,11 @@ html {
 .single-partenaire-coach #tableau #nouveau .btn {
   margin-left: 10px;
 }
+.single-partenaire-coach h1 {
+  padding: 10px 0 0 0;
+}
 .single-partenaire-coach #tableau2 {
-  height: 500px;
+  height: 600px;
   width: 942px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
   border-radius: 5px;
@@ -3917,7 +3921,46 @@ html {
   color: #FFF;
   margin-left: 20px;
   padding-left: 0px;
-  width: 900px;
+  width: 850px;
+  padding-left: 50px;
+  letter-spacing: -1.6px;
+  font-size: 1.71em;
+}
+.single-partenaire-coach #logo1 {
+  margin-bottom: 65px;
+}
+.single-partenaire-coach #tableau3 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+  border-radius: 5px;
+  width: 943px;
+  clear: both;
+  margin-top: 30px;
+}
+.single-partenaire-coach #tableau3 h1 {
+  color: #FFF;
+  margin: 0 0 10px 20px;
+  width: 850px;
+  padding-left: 50px;
+  letter-spacing: -1.6px;
+  font-size: 1.71em;
+}
+.single-partenaire-coach #tableau3 #info {
+  width: 25%;
+  display: inline-block;
+  position: relative;
+  bottom: 125px;
+  margin-right: 20px;
+}
+.single-partenaire-coach #tableau3 #info p {
+  color: #FFF;
+  margin: 0 0 0 20px;
+}
+.single-partenaire-coach #tableau3 #formulaire {
+  display: inline-block;
+  width: 72%;
+}
+.single-partenaire-coach #tableau3 #formulaire .gform_body .gfield_label {
+  color: #FFF;
 }
 /* @group Responsive vertical */
 @media screen and (max-height: 880px) {
@@ -3996,9 +4039,6 @@ html {
   }
 }
 @media screen and (max-width: 463px) {
-  .single-partenaire-coach #footer-partenaire {
-    position: relative;
-  }
   .single-partenaire-coach .accroche {
     width: auto;
   }
@@ -4142,13 +4182,13 @@ html {
   .single-partenaire-coach #progression {
     float: left;
   }
-  .single-partenaire-coach #footer-partenaire {
+  .partner-inscription #footer-partenaire {
+    margin-top: 20px;
     position: relative;
   }
 }
 @media screen and (max-width: 540px) {
   .single-partenaire-coach #footer-partenaire {
-    position: relative;
     text-align: center;
     height: 70px;
   }
@@ -4213,20 +4253,20 @@ html {
   }
 }
 /* end */
-/* responsive compte horizontal */
+/* responsive inscription horizontal */
 @media screen and (max-width: 980px) {
   .single-partenaire-coach #progression {
     margin-bottom: 30px;
   }
   .single-partenaire-coach #tableau2 {
     width: 700px;
-    height: 700px;
+    height: 715px;
     clear: both;
     margin-top: 30px;
     margin: 0 auto;
   }
   .single-partenaire-coach #tableau2 #inscription {
-    width: 95%;
+    width: 87%;
   }
   .single-partenaire-coach #tableau2 .gform_wrapper .top_label li.gfield.gf_right_half {
     display: block;
@@ -4234,9 +4274,6 @@ html {
   .single-partenaire-coach #tableau2 .gform_body {
     position: relative;
     left: 52px;
-  }
-  .single-partenaire-coach #footer-partenaire {
-    position: absolute;
   }
 }
 @media screen and (max-width: 750px) {
@@ -4246,6 +4283,9 @@ html {
   }
   .single-partenaire-coach #tableau2 {
     width: 100%;
+  }
+  .single-partenaire-coach #tableau2 #inscription {
+    width: 80%;
   }
 }
 @media screen and (max-width: 490px) {
@@ -4284,6 +4324,76 @@ html {
   }
 }
 /* end */
+/* responsive page compte */
+@media screen and (max-width: 979px) {
+  .single-partenaire-coach #tableau3 {
+    width: 100%;
+  }
+  .single-partenaire-coach #tableau3 h1 {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .single-partenaire-coach #tableau3 #info {
+    bottom: 110px;
+  }
+}
+@media screen and (max-width: 975px) {
+  .single-partenaire-coach #tableau3 {
+    width: 100%;
+    height: 700px;
+  }
+  .single-partenaire-coach #tableau3 h1 {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .single-partenaire-coach #tableau3 #info {
+    width: 100%;
+    bottom: 0;
+  }
+  .single-partenaire-coach #tableau3 #formulaire {
+    margin-left: 20px;
+    display: block;
+    width: 100%;
+  }
+  .single-partenaire-coach #tableau3 #formulaire .gform_wrapper .gform_footer .gform_button {
+    margin-top: 0;
+  }
+  .partner-mon-compte #footer-partenaire {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 925px) {
+  .single-partenaire-coach #formulaire {
+    display: block;
+    width: 100%;
+  }
+  .single-partenaire-coach #formulaire .gform_wrapper .gform_footer {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .single-partenaire-coach #tableau3 {
+    width: 100%;
+    height: 1150px;
+  }
+  .single-partenaire-coach #tableau3 h1 {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .single-partenaire-coach #tableau3 #info {
+    width: 100%;
+    bottom: 0;
+  }
+  .single-partenaire-coach #tableau3 #formulaire {
+    display: block;
+  }
+  .single-partenaire-coach .partner-connexion #footer-partenaire {
+    position: relative;
+  }
+  .partner-mon-compte #footer-partenaire {
+    position: relative;
+  }
+}
 /* @group Non semantic Boilerplate */
 /* remplacement image */
 .ir {
