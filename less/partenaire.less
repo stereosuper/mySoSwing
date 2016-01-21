@@ -78,183 +78,239 @@ html{
 	}
 
 	#coach {
-	//margin: 80px 0 35px 0;
-	margin: 80px 0 0 0;
-	height: 370px;
-	position: relative;
-	color: #FFF;
-	background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.78));
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	text-align: center;
-	&.no-border-bottom{
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-}
-
-#cercle {
-	display: block;
-	position: absolute;
-	top: -50px;
-	left: 0;
-	right: 0;
-	border-radius:50%;
-	width:111px;
-	height:111px;
-	border: 2px solid #FFF;
-}
-.pro1 {
-	margin: 0 0 0 70px;
-
-}
-.pro2 {
-	margin: 0 0 0 170px;
-}
-
-#presentation {
-	margin: 0 auto;
-	padding: 60px 0 10px;
-	width: 260px;
-	strong{
-		display: block;
-		margin-bottom: 13px;
-	}
-}
-
-
-#slider-partner{
-	ul{
-		padding: 5px 0 0; 
-		margin: 10px auto;
-		border-top: 1px solid @gris;
-		border-bottom : 1px solid @gris; 
-		width: 180px;
-		height: 103px;
+		margin: 80px 0 35px 0;
+		height: 370px;
 		position: relative;
-		list-style: none;
-		overflow: hidden;
-	}
-	li{
-		position: absolute;
-	}
-	.actif{
-		
-	}
-
-	.offre {
-
-		.motivaBoldIt(1.4em);
-	}
-
-
-	.prix {
-		color: @orange;
-		font-size: 5em;
-		letter-spacing: -3px;
-		line-height: 1em;
-	}
-
-}
-
-.btn {
-	margin-top: 15px;
-}
-
-.btn-slide{
-	position: absolute;
-	border-radius:50%;
-	width:32px;
-	height:32px;
-	padding: 0;
-	background: #ff6300;
-	color: #fff; 
-	box-shadow: 0 3px 0 #993b00;
-	font-size: 15px;
-	bottom: 155px;
-	line-height: 29px;
-	text-align: center;
-	&.icon-arrow-left{
-		left: 30px;
-		&:before{
-			margin: 0 0 0 -2px;
+		color: #FFF;
+		background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.78));
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		text-align: center;
+		&.no-border-bottom{
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
 		}
 	}
-	&.icon-arrow-right{
-		right: 30px;
-		&:before{
-			margin: 0 -2px 0 0;
-		}
-	}
-	&:before{
+
+	#cercle {
 		display: block;
+		position: absolute;
+		top: -50px;
+		left: 0;
+		right: 0;
+		border-radius:50%;
+		width:111px;
+		height:111px;
+		border: 2px solid #FFF;
+	}
+	.pro1 {
+		margin: 0 0 0 70px;
+
+	}
+	.pro2 {
+		margin: 0 0 0 170px;
+	}
+
+	#presentation {
+		margin: 0 auto;
+		padding: 60px 0 10px;
+		width: 260px;
+		strong{
+			display: block;
+			margin-bottom: 13px;
+		}
+	}
+
+
+	#slider-partner{
+		ul{
+			padding: 5px 0 0; 
+			margin: 10px auto;
+			border-top: 1px solid @gris;
+			border-bottom : 1px solid @gris; 
+			width: 180px;
+			height: 103px;
+			position: relative;
+			list-style: none;
+			overflow: hidden;
+		}
+		li{
+			position: absolute;
+		}
+		.actif{
+
+		}
+
+		.offre {
+
+			.motivaBoldIt(1.4em);
+		}
+
+
+		.prix {
+			color: @orange;
+			font-size: 5em;
+			letter-spacing: -3px;
+			line-height: 1em;
+		}
+
+	}
+
+	.btn {
+		margin-top: 15px;
+	}
+
+	.btn-slide{
+		position: absolute;
+		border-radius:50%;
+		width:32px;
+		height:32px;
+		padding: 0;
+		background: #ff6300;
+		color: #fff; 
+		box-shadow: 0 3px 0 #993b00;
+		font-size: 15px;
+		bottom: 155px;
+		line-height: 29px;
+		text-align: center;
+		&.icon-arrow-left{
+			left: 30px;
+			&:before{
+				margin: 0 0 0 -2px;
+			}
+		}
+		&.icon-arrow-right{
+			right: 30px;
+			&:before{
+				margin: 0 -2px 0 0;
+			}
+		}
+		&:before{
+			display: block;
+		}
+	}
+
+	#wrapper-zone-gant{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		#zone-gant{
+			bottom: 0;
+
+			#telephone{
+				background-image: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/telephone.png);
+				top: 2px;
+			}
+		}	
+	}
+
+	#footer-partenaire {
+		display: block;
+		width: 100%;
+		background: linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0.5));	
+		height: 35px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		a {
+			color: #FFF;
+			line-height: 35px;
+			font-size: 0.87em;
+		}
+
+		#lien1, #lien2 {
+			margin: 0 15px;
+		}
+
+
+		#lien3 {
+			float: right;
+			margin-right: 9%; 
+		}
 	}
 }
 
-#wrapper-zone-gant{
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	overflow: hidden;
-	#zone-gant{
-		bottom: 0;
-
-		#telephone{
-			background-image: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/telephone.png);
-			top: 2px;
+/* STYLE PAGE identification */
+.partner-identification{
+	header {
+		background-image:none; 
+		max-width: 942px;
+	}
+	#tableau {
+		height: 318px;
+		width: 942px;
+		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+		border-radius: 5px;
+		float: left;
+		margin-top: 60px;
+		display: inline-block;
+		h1 {
+			font-size: 1.71em;
+			letter-spacing: -1.6px;
+			margin: 10px 0;
+			padding: 0 0 0 50px;
 		}
-	}	
-}
-
-/*#gant {
-	background: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/gant.png) no-repeat;
-	width: 100%;
-    height: 100%;
-    position: absolute;
-    background-size: 50%;
-    bottom: 0;
-    }*/
-
-    #footer-partenaire {
-    	display: block;
-    	width: 100%;
-    	background: linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0.5));	
-    	height: 35px;
-    	position: absolute;
-    	bottom: 0;
-    	left: 0;
-    	a {
-    		color: #FFF;
-    		line-height: 35px;
-    		font-size: 0.87em;
-    	}
-
-    	#lien1, #lien2 {
-    		margin: 0 15px;
-    	}
-
-
-    	#lien3 {
-    		float: right;
-    		margin-right: 9%; 
-    	}
-    }
-
-    /* STYLE PAGE IDENTIFICATION */
-    header {
-    	background-image:none; 
-    	max-width: 942px;
-    }
-/*body.partenaire-identification {
-	background: url(http://staging.mysoswing.com/wp-content/uploads/2016/01/fond2.png) center no-repeat;	
-	background-size: cover;
-	}*/
-
+		p {
+			.motivaBold(1.14em);
+			color: #d6d6d6;
+			padding: 0 0 0 50px;
+			margin: 30px 0 0;
+		}
+		.btn{
+			width: auto;
+			height: 45px;
+			text-align: center;
+			vertical-align: middle;
+			.motivaBoldIt(1.14em);
+			text-shadow: 1px 0 9px rgba(0, 0, 0, 0.5);
+			letter-spacing: 1px;
+		}
+		#connexion {
+			color: #FFF;
+			display: inline-block;
+			position: relative;
+			left: 20px;
+			h1{
+				border-bottom: 1px dotted #a0a0a0;
+				width: 418px;
+			}
+			.btn {
+				margin-left: 0px;
+			}
+			input {
+				margin: 15px 0 20px 0px;
+			}
+		}
+		#separateur {
+			border-left: 1px dotted #a0a0a0;
+			height: 243px;
+			position: absolute;
+			left: 550px;
+			top: 240px;
+		}
+		#nouveau{
+			color: #FFF;
+			display: inline-block;
+			float: right;
+			position: relative;
+			right: 70px;
+			h1 {
+				padding: 0 0 0 10px;
+			}
+			p {
+				padding: 0 0 0 10px;
+			}
+			.btn {
+				margin-left: 10px;
+			}
+		}
+	}
 	#progression {
 		height: 77px;
 		width: 404px;
@@ -318,108 +374,79 @@ html{
 			width : 105px;
 		}
 	}
-	#tableau {
-		height: 318px;
-		width: 942px;
-		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+}
+/* STYLE PAGE INSCRIPTION */
+.partner-inscription{
+	header {
+	background-image: none;
+	}
+	#progression {
+		height: 77px;
+		width: 404px;
+		background-color: rgba(0, 0, 0, 0.55);
 		border-radius: 5px;
-		float: left;
+		float: right;
 		margin-top: 60px;
-		display: inline-block;
-		h1 {
-			font-size: 1.71em;
-			letter-spacing: -1.6px;
-			margin: 10px 0;
-			padding: 0 0 0 50px;
-		}
-		p {
-			.motivaBold(1.14em);
-			color: #d6d6d6;
-			padding: 0 0 0 50px;
-			margin: 30px 0 0;
-		}
-		.btn{
-			width: 181px;
-			height: 45px;
+		position: relative;
+		#intitule{
+			padding: 0;
 			text-align: center;
-			vertical-align: middle;
-			.motivaBoldIt(1.14em);
-			text-shadow: 1px 0 9px rgba(0, 0, 0, 0.5);
-			letter-spacing: 1px;
+			margin-bottom: 0;
 		}
-		#connexion {
+		.etapes{
+			font-size: 0.85em;
 			color: #FFF;
 			display: inline-block;
-			position: relative;
-			left: 20px;
-			h1{
-				border-bottom: 1px dotted #a0a0a0;
-				width: 418px;
+			padding: 0 35px;
+			margin: 0;
+			right: 16px;
+			strong{
+				.motivaBold(1.28em);
 			}
-			.btn {
-				margin-left: 50px;
+			&:nth-child(1){
+				padding: 0 50px 0 10px;
 			}
-			#champ1 {
-				position: relative;
-				width: 231px;
-				height: 35px;
-				background-color: #FFF;
-				border-radius: 5px;
-				margin: 15px 0 20px 50px;
-				p{
-					padding: 8px 0 0 15px;
-					margin: 0;
-					color: #7e7e7e;
-					.motivaIt(1em);
-				}
+			&:nth-child(2){
+				padding-left: 10px;
 			}
-			#champ2 {
-				position: relative;
-				width: 231px;
-				height: 35px;
-				background-color: #FFF;
-				border-radius: 5px;
-				margin: 0px 0 15px 50px;
-				p{
-					padding: 8px 0 0 15px;
-					margin: 0;
-					color: #7e7e7e;
-					.motivaIt(1em);
-				}
-			}
-		}
-		#separateur {
-			border-left: 1px dotted #a0a0a0;
-			height: 243px;
-			position: absolute;
-			left: 550px;
-			top: 239px;
-		}
-		#nouveau{
-			color: #FFF;
-			display: inline-block;
-			float: right;
-			position: relative;
-			right: 70px;
-			h1 {
-				padding: 0 0 0 10px;
-			}
-			p {
-				padding: 0 0 0 10px;
-			}
-			.btn {
-				margin-left: 10px;
+			&:nth-child(3){
+				padding: 0 27px 0 47px;
 			}
 		}
 	}
-
-	/* STYLE PAGE INSCRIPTION */
+	#etat{
+		padding: 0;
+		margin: 5px 0 0;
+		#cercle1{
+			margin-left: 78px;
+			display: inline-block;
+			padding: 0;
+			background:#ff6600;
+			border-radius:50%;
+			width:12px;
+			height:12px;
+			border:1px solid #FFF; 
+		}
+		#cercle2, #cercle3{
+			display: inline-block;
+			padding: 0;
+			border-radius:50%;
+			width:12px;
+			height:12px;
+			border:1px solid #FFF; 
+		}
+		.traits{
+			position: relative;
+			bottom: 6px;
+			display: inline-block;
+			border-top : 2px solid #FFF; 
+			width : 105px;
+		}
+	}
 	h1 {
 		padding: 10px 0 0 0;
 	}
 	#tableau2 {
-		height: 600px;
-		width: 942px;
 		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
 		border-radius: 5px;
 		margin-top: 60px;
@@ -439,7 +466,15 @@ html{
 				margin-left: 155px;
 			}
 		}
+		.gform_wrapper {
+			div.validation_error{
+				background-color: #FFF;
+				width: 98%;
+				margin-left: 10px;
+			}
+		}
 	}
+
 	#inscription {
 		color: #FFF;
 		margin-left: 20px; 
@@ -448,22 +483,20 @@ html{
 		padding-left: 50px;
 		letter-spacing: -1.6px;
 		font-size: 1.71em;
-		.gform_wrapper {
-					div.validation_error{
-						background-color: #FFF;
-					    width: 98%;
-					    margin-left: 10px;
-					}
-				}
 	}
-	/* STYLE PAGE COMPTE */
+	#footer-partenaire{
+		//margin-top: 20px;
+	}
+}
+/* STYLE PAGE COMPTE */
+.partner-mon-compte{
 	#logo1 {
 		margin-bottom: 65px;
 	}
 	#tableau3 {
 		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
 		border-radius: 5px;
-		width: 943px;
+		width: 100%;
 		clear: both;
 		margin-top: 30px;
 		h1 {
@@ -473,6 +506,7 @@ html{
 			padding-left: 50px;
 			letter-spacing: -1.6px;
 			font-size: 1.71em;
+			padding-top: 10px;
 		}
 		#info {
 			width: 25%;
@@ -511,13 +545,18 @@ html{
 
 		}
 	}
-	/* STYLE PAGE CONNEXION */
+}
+/* STYLE PAGE CONNEXION */
+.partner-connexion{
+	header {
+		background-image: none; 
+	}
 	#tableau4 {
-		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.17));
 		border-radius: 5px;
 		width: 400px;
 		clear: both;
-		margin-top: 30px;
+		margin-top: 60px;
 		h1 {
 			color: #FFF;
 			margin: 0 0 10px 20px;
@@ -526,6 +565,7 @@ html{
 			letter-spacing: -1.6px;
 			font-size: 1.71em;
 			padding-left: 50px;
+			padding-top: 10px;
 		}
 		p {
 			color: #FFF;
@@ -536,19 +576,122 @@ html{
 		}
 	}
 }
+/* STYLE PAGE MOTDEPASSE */
+.partner-motdepasse{
+	header {
+		background-image: none;
+	}
+	#tableau {
+		height: auto;
+		width: 100%;
+		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+		border-radius: 5px;
+		float: left;
+		margin-top: 60px;
+		display: inline-block;
+		h1 {
+			color: #FFF;
+			font-size: 1.71em;
+			letter-spacing: -1.6px;
+			margin: 10px 0;
+			padding: 0 0 0 40px;
+			position: relative;
+			left: 20px;
+			width: 87%;
+		}
+		p {
+			color: #d6d6d6;
+			padding: 0 0 0 20px;
+			margin: 30px 0 0;
+		}
+		.input {
+			    margin: 10px 0 10px 20px;
+		}
+		.btn{
+			margin: 10px 0 10px 20px;
+			width: 300px;
+			margin: 20px;
+		}
+	}
+	#footer-partenaire{
+		position: absolute;
+	}
+
+}
 /* STYLE PAGE MERCI */
 .partner-merci {
 	#progression {
-		#etat {
-			#cercle2, #cercle3 {
-				background-color: #F60;
+		height: 77px;
+		width: 404px;
+		background-color: rgba(0, 0, 0, 0.55);
+		border-radius: 5px;
+		float: right;
+		margin-top: 60px;
+		margin-bottom: 60px;
+		position: relative;
+		#intitule{
+			padding: 0;
+			text-align: center;
+			margin-bottom: 0;
+		}
+		.etapes{
+			font-size: 0.85em;
+			color: #FFF;
+			display: inline-block;
+			padding: 0 35px;
+			margin: 0;
+			right: 16px;
+			strong{
+				.motivaBold(1.28em);
+			}
+			&:nth-child(1){
+				padding: 0 50px 0 10px;
+			}
+			&:nth-child(2){
+				padding-left: 10px;
+			}
+			&:nth-child(3){
+				padding: 0 27px 0 47px;
 			}
 		}
 	}
+	#etat{
+		padding: 0;
+		margin: 5px 0 0;
+		#cercle1{
+			margin-left: 78px;
+			display: inline-block;
+			padding: 0;
+			background:#ff6600;
+			border-radius:50%;
+			width:12px;
+			height:12px;
+			border:1px solid #FFF; 
+		}
+		#cercle2, #cercle3{
+			display: inline-block;
+			padding: 0;
+			border-radius:50%;
+			width:12px;
+			height:12px;
+			border:1px solid #FFF;
+			background-color: #F60; 
+		}
+		.traits{
+			position: relative;
+			bottom: 6px;
+			display: inline-block;
+			border-top : 2px solid #FFF; 
+			width : 105px;
+		}
+	}
 	#tableau {
+		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+		border-radius: 5px;
+		clear: both;
+		margin-top: 30px;
 		width: 100%;
 		height: auto;
-		float: none;
 		h1{
 			color: #FFF;
 			text-align: center;
@@ -556,7 +699,7 @@ html{
 			font-size: 2.14em;
 			border-bottom: none;
 			margin: 50px 0 0 0;
-			padding: 0;
+			padding: 10px 0 0 0;
 
 		}
 		p {
@@ -599,15 +742,15 @@ html{
 @media screen and (max-height: 749px) {
 	.partenaire-coach {
 		#footer-partenaire {
-			position: relative;
-		}
+		//position: relative;
 	}
-	.partner-mon-compte {
-		#footer-partenaire{
-			margin-top: 20px;
-			position: relative;
-		}
+}
+.partner-mon-compte {
+	#footer-partenaire{
+		margin-top: 20px;
+		position: relative;
 	}
+}
 }
 @media screen and (max-height: 722px) {
 	.partner-merci {
@@ -693,7 +836,8 @@ html{
 			width: 335px;
 			margin-left: auto;
 			margin-right: auto;
-			margin-bottom: 0;
+			margin-bottom: 70px
+			;
 		}
 		.pro1 {
 			margin: 0 0 0 58px;
@@ -714,7 +858,14 @@ html{
 			}
 		}
 	}
-	
+	.partner-motdepasse {
+		#tableau{
+			h1{
+				width: 80%;
+			}
+		}
+	}
+
 }
 @media screen and (max-width: 463px){ 
 	.single-partenaire-coach{
@@ -826,30 +977,30 @@ html{
 		}
 		#separateur {
 			left: 425px;
-			top: 370px;
 		}
 	}
 }
 @media screen and (max-width: 885px){
 	.single-partenaire-coach #tableau {
+		padding: 10px 0 20px 0;
+		height: auto;
 		clear: both;
 		width: 500px;
-		height: 530px;
 		#nouveau {
-			top: 10px;
+			margin-top: 10px;
 			display: block;
 			float: none;
 			right: 0;
 			margin-left: 10px;
 			h1 {
-				padding-left: 50px;
+				padding-left: 60px;
 				width: 300px;
 			}
 			p{
-				padding-left: 50px;
+				padding-left: 60px;
 			}
 			.btn {
-				margin-left: 50px;
+				margin-left: 10px;
 			}
 		}
 		#separateur {
@@ -859,6 +1010,11 @@ html{
 	.partner-merci {
 		#tableau {
 			width: 100%;
+		}
+	}
+	.partner-connexion {
+		#footer-partenaire{
+			margin-top: 20px;
 		}
 	}
 }
@@ -894,7 +1050,6 @@ html{
 	.partner-merci {
 		#footer-partenaire{
 			margin-top: 20px;
-			position: relative;
 		}
 	}
 }
@@ -946,8 +1101,8 @@ html{
 			padding-left: 0px;
 			width: 250px;
 		}
-		#tableau #connexion #champ1, #tableau #connexion #champ2 {
-			margin-left: 0px;
+		#tableau #connexion .input{
+			margin: 10px 0;
 		}
 	}
 
@@ -983,7 +1138,6 @@ html{
 		}
 		#tableau2 {
 			width: 700px;
-			height: 715px;
 			clear: both;
 			margin-top: 30px;
 			margin: 0 auto;
@@ -994,14 +1148,14 @@ html{
 
 				.top_label li.gfield.gf_right_half {
 					display: block;
-			    //width: 49%;
-			}
-		}
-		.gform_body {
-			position: relative;
-			left: 52px;
+		    //width: 49%;
 		}
 	}
+	.gform_body {
+		position: relative;
+		left: 52px;
+	}
+}
 }
 
 }
@@ -1013,11 +1167,12 @@ html{
 		}
 		#tableau2 {
 			width: 100%;
+			height: 100%;
 			#inscription {
 				width: 80%;
 				.gform_wrapper {
 					div.validation_error{
-					    width: 89%;
+						width: 89%;
 					}
 				}
 			}
@@ -1035,15 +1190,42 @@ html{
 }
 
 @media screen and (max-width: 450px){
-.single-partenaire-coach{
+	.single-partenaire-coach{
 		#tableau2 {
 			#inscription {
 				.gform_wrapper {
 					div.validation_error{
-					    top: 0;
+						top: 0;
 					}
 				}
 			}
+		}
+	}
+	.partner-inscription{
+		#tableau2 {
+			.gform_wrapper {
+				div.validation_error{
+					top: 0;
+					width: 95%;
+				}
+			}
+			.gform_body{
+				.gfield{
+					width: auto;
+					.gfield_label{
+						width: 100%;
+					}
+				}
+			}
+		}
+		.gform_footer {
+			.button {
+    			margin: 0 0 0 70px;
+    			margin-left: 0; 
+    		}
+    	}
+    	.gform_wrapper .top_label li.gfield.gfield_error.gf_left_half, .gform_wrapper .top_label li.gfield.gfield_error.gf_right_half{
+			width: auto!important;
 		}
 	}
 }
