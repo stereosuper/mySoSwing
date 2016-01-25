@@ -47,16 +47,19 @@
 					</h1>
 					
 					<section class='accroche'>	
-						<h2>L’expertise des coachs playing golf à portée de main.</h2>
+						<h2><div>L’expertise</div> <div>des coachs</div> <div>playing golf</div> <div>à portée de main.</div></h2>
 						<p>PlayingGolf vous propose des sessions de coachings personnalisées avec Nicolas Allain et Julien Xanthopoulos pour parfaire votre jeu !</p>
 						<div id='coach'>
 							<img  id="cercle" class='pro1' src="http://staging.mysoswing.com/wp-content/uploads/2015/12/bernard.jpg" class="attachment-thumbnail" alt="Julien" />
 							<img  id="cercle" class='pro2' src="http://staging.mysoswing.com/wp-content/uploads/2015/12/Nicolas-Allain-253x253.jpg" alt="Nicolas"/>
 							<article id='presentation'>
-								<strong>Julien Xanthopoulos &amp; Nicolas Allain</strong> 
-								Co-Fondateur, coach, consultant TV
-							</article>	
-							<div id='slider-partner'>
+								<div><strong>Julien Xanthopoulos &amp; Nicolas Allain</strong></div>
+								<div>Co-Fondateur, coach, consultant</div>
+							</article>
+							<article id="annonce">
+								à partir de <div id="prix">20€</div>
+							</article>
+							<!--<div id='slider-partner'>
 								<ul>
 									<li>
 										<span class='offre'>1 coaching</span>
@@ -73,8 +76,15 @@
 								</ul>
 								<button class='btn-slide icon-arrow-left'></button>
 								<button class='btn-slide  icon-arrow-right'></button>
-							</div>
-							<a href='#' class='btn'>Commander</a>
+							</div>-->
+							<article id="offre">
+								<select name="partner_offer">
+	                                <option value="1"><?php the_field('tarifTitre1') ?> - <?php the_field('tarif1') ?></option>
+	                                <option value="2"><?php the_field('tarifTitre2') ?> - <?php the_field('tarif2') ?></option>
+	                                <option value="3"><?php the_field('tarifTitre3') ?> - <?php the_field('tarif3') ?></option>
+	                            </select>
+	                            <input type="submit" class='btn' value="Commander" />
+                        	</article>
 						</div>
 					</section>
 				</article>
