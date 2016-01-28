@@ -6,6 +6,10 @@ html{
 }
 }
 
+.tableau-partenaire{
+	padding: 30px 0 60px 0;
+}
+
 .single-partenaire-coach{
 	min-height: 100%;
 	background: url(http://staging.mysoswing.com/wp-content/uploads/2016/01/fond.png) center no-repeat;	
@@ -252,7 +256,7 @@ html{
 		background-image:none; 
 		max-width: 942px;
 	}
-	#tableau {
+	.tableau-partenaire {
 		height: auto;
 		width: 100%;
 		background: #323232;
@@ -469,8 +473,9 @@ html{
 	}
 	h1 {
 		padding: 10px 0 0 0;
+		margin: 0 0 45px 0;
 	}
-	#tableau2 {
+	.tableau-partenaire {
 		background: #323232;
 		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
 		border-radius: 5px;
@@ -499,7 +504,7 @@ html{
 			padding-top: 0;
 			#gform_submit_button_36{
 				margin-top: 0;
-				margin-left: 174px;
+				margin-left: 158px;
 			}
 		}
 		.gform_wrapper {
@@ -529,7 +534,7 @@ html{
 	#logo1 {
 		margin-bottom: 65px;
 	}
-	#tableau3 {
+	.tableau-partenaire {
 		background: #323232;
 		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
 		border-radius: 5px;
@@ -549,7 +554,7 @@ html{
 			width: 25%;
 			display: inline-block;
 			position: relative;
-			bottom: 90px;
+			bottom: 70px;
 			margin-right: 20px;
 			p {
 				color: #FFF;
@@ -579,7 +584,11 @@ html{
 					background-color: #FFF;
 				}
 			}
-
+			.gform_wrapper {
+				div.validation_error{
+					top: 0;
+				}
+			}
 		}
 		.gform_body {
 			#field_38_11{
@@ -587,7 +596,7 @@ html{
 				display: inline-block;
 			}
 			#field_38_12{
-				width: 47%;
+				width: 48%;
 			}
 			.ginput_container{
 				#input_38_3{
@@ -610,6 +619,12 @@ html{
 				}
 			}
 		}
+		.gform_footer{
+			margin-top: 0px;
+			.gform_button{
+				margin: 0px 0 0 9%;
+			}
+		}
 	}
 }
 /* STYLE PAGE CONNEXION */
@@ -617,7 +632,7 @@ html{
 	header {
 		background-image: none; 
 	}
-	#tableau4 {
+	.tableau-partenaire {
 		background: #323232;
 		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.17));
 		border-radius: 5px;
@@ -648,7 +663,7 @@ html{
 	header {
 		background-image: none;
 	}
-	#tableau {
+	.tableau-partenaire {
 		height: auto;
 		width: 100%;
 		background: #323232;
@@ -753,7 +768,7 @@ html{
 			width : 105px;
 		}
 	}
-	#tableau {
+	.tableau-partenaire {
 		background: #323232;
 		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
 		border-radius: 5px;
@@ -798,25 +813,13 @@ html{
 			width: 170px;
 			height: 50px;
 			border-radius: 5px;
-			padding-bottom: 50px;
-			margin: 0 auto;
-			bottom: 15px;
-    		position: relative;
+			background-size: 170px;
 		}
 	}
 }
 
 /* @group Responsive vertical */
-@media screen and (max-height: 790px) {
-	.partner-inscription {
-			#footer-partenaire {
-			margin-top: 20px;
-		}
-	#tableau2 .gform_footer #gform_submit_button_36 {
-		margin-bottom: 10px;
-		}
-	}
-}
+
 @media screen and (max-height: 880px) {
 	.single-partenaire-coach #zone-gant{
 		width: 520px;
@@ -824,20 +827,39 @@ html{
 		margin: 0 0 0 -567px;
 	}
 }
-
-@media screen and (max-height: 749px) {
-	.partner-mon-compte {
+@media screen and (max-height: 830px) {
+	.partner-merci {
 		#footer-partenaire{
 			margin-top: 20px;
 			position: relative;
 		}
 	}
 }
-@media screen and (max-height: 722px) {
-	.partner-merci {
+@media screen and (max-height: 790px) {
+	.partner-inscription {
+		.tableau-partenaire .gform_footer #gform_submit_button_36 {
+			margin-bottom: 10px;
+		}
 		#footer-partenaire{
 			margin-top: 20px;
 			position: relative;
+		}
+	}
+}
+@media screen and (max-height: 768px) {
+	.partner-mon-compte {
+		#footer-partenaire{
+			margin-top: 20px;
+			position: relative;
+		}
+		.tableau-partenaire {
+			#formulaire {
+				.gform_body {
+					.gfield_label {
+						width: 30%;
+					}
+				}
+			}
 		}
 	}
 }
@@ -859,38 +881,297 @@ html{
 }
 /* end */ 
 
-/* @group Responsive horizontal */
-
-@media screen and (max-width: 1140px){
-	.single-partenaire-coach #zone-gant{
-		width: 520px;
-		height: 592px;
-		margin: 0 0 0 -567px;
+/* @group Responsive horizontal
+____________________________________________________________________________________*/
+@media screen and (max-width: 1140px){ 
+	.single-partenaire-coach{
+		 #progression{
+			right: 0;
+		}
+	}
+	.single-partenaire-coach{
+		 #zone-gant{
+			width: 520px;
+			height: 592px;
+			margin: 0 0 0 -567px;
+		}
 	}
 }
 @media screen and (max-width: 1120px){
-	.partner-identification #tableau #nouveau {
+	.partner-identification .tableau-partenaire #nouveau {
 		right: 10%;
 		h1 {
 			width: 100%;
 		}
 	}
 }
-@media screen and (max-width: 1001px){
+@media screen and (max-width: 1001px){ 
+	.single-partenaire-coach .tableau-partenaire {
+		max-width: 100%;
+		#connexion h1{
+			width: 300px;
+		}
+		#separateur {
+			left: 425px;
+		}
+	}
 	.single-partenaire-coach #zone-gant{
 		width: 497px;
 		height: 565px;
 	}
-
+}
+@media screen and (max-width: 980px){
+	.single-partenaire-coach{
+		#progression {
+			margin-bottom: 30px;
+		}
+		.tableau-partenaire {
+			width: 100%;
+			clear: both;
+			#inscription{
+				width: 87%;
+			}
+			.gform_wrapper {
+				.top_label li.gfield.gf_right_half {
+					display: block;
+					//width: 97%;
+				}
+				.top_label li.gfield.gf_left_half {
+					//width: 97%;
+				}
+			}
+			.gform_body {
+				position: relative;
+			}
+		}
+	}
+	.partner-inscription{
+		#footer-partenaire{
+			position: relative;
+			margin-top: 20px;
+		}
+		.tableau-partenaire {
+			.gform_body {
+					#field_36_4{
+						label {
+							//width: 14%;
+					}
+				}
+			}
+		}
+	}
+	.partner-mon-compte {
+		#footer-partenaire {
+		    margin-top: 20px;
+		    position: relative;
+		}
+	}
+}
+@media screen and (max-width: 979px){
+	.partner-mon-compte{
+		.tableau-partenaire{
+			width: 100%;
+			h1 {
+				width: 80%;
+				margin-bottom: 20px;
+			}
+			#info {
+				bottom: 110px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 975px){
+	.partner-mon-compte{
+		.tableau-partenaire{
+			#info {
+				width: 100%;
+				bottom: 0;
+			}
+			#formulaire {
+				margin-left: 20px;
+				display: block;
+				width: 100%;
+				.gform_wrapper {
+					.gform_footer .gform_button {
+						margin-top: 0;
+					}
+					div.validation_error{
+						width: 87%;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 925px){
+	.partner-mon-compte{
+		#formulaire {
+			display: block;
+			width: 100%;
+			.gform_wrapper .gform_footer {
+				padding-top: 0;
+			}
+		}
+	}
+}
+@media screen and (max-width: 885px){
+	.single-partenaire-coach .tableau-partenaire {
+		height: auto;
+		clear: both;
+		width: 500px;
+		#nouveau {
+			margin-top: 10px;
+			display: block;
+			float: none;
+			right: 0;
+			margin-left: 10px;
+			h1 {
+				padding-left: 60px;
+				width: 300px;
+			}
+			p{
+				padding-left: 60px;
+			}
+			.btn {
+				margin-left: 60px;
+			}
+		}
+		#separateur {
+			border: none;
+		}
+	}
+	.partner-inscription{
+		.tableau-partenaire{
+			width: 100%;
+		}
+	}
+	.partner-merci {
+		.tableau-partenaire {
+			width: 100%;
+		}
+	}
+	.partner-connexion {
+		#footer-partenaire{
+			margin-top: 20px;
+		}
+	}
+}
+@media screen and (max-width: 860px){
+	.single-partenaire-coach #progression {
+		width: 350px;
+		.etapes {
+			&:nth-child(2) {
+				padding-right: 20px;
+			}
+		}
+		#etat {
+			#cercle1{
+				margin-left: 45px;
+			}
+		}
+	}
 }
 @media screen and (max-width: 805px){
-	.single-partenaire-coach .accroche {
+	.partenaire-coach .accroche {
 		margin-top: 30px;
 	}
-
+}
+@media screen and (max-width: 790px){
+	.single-partenaire-coach{
+		#progression{
+			float: left;
+		}
+	}
+	.partner-merci {
+		#footer-partenaire{
+			margin-top: 20px;
+		}
+	}
+}
+@media screen and (max-height: 780px) and (max-width: 540px){
+	.partner-identification{
+		#footer-partenaire {
+			margin-top: 20px;
+			position: relative;
+		}
+	}
+}
+@media screen and (max-width: 768px){
+	.partner-mon-compte{
+		.tableau-partenaire{
+			width: 100%;
+			h1 {
+				width: 80%;
+				margin-bottom: 20px;
+			}
+			#info {
+				width: 100%;
+				bottom: 0;
+			}
+			#formulaire {
+				display: block;
+				.gform_body{
+					.gfield_label{
+						width: 39%;
+					}
+				}
+			}
+			.gform_wrapper{
+				  .top_label li.gfield.gf_left_half, .top_label li.gfield.gf_right_half{
+				    width: 48%;
+			  	}
+			}
+		}
+	}
+	.partner-inscription{
+		#footer-partenaire{
+			margin-top: 20px;
+		}
+		.tableau-partenaire{
+			.gform_wrapper{
+				.gform_body{
+					#input_36_3{
+						width: 100%;
+					}
+				}
+			}
+			.gform_wrapper{
+				  .top_label li.gfield.gf_left_half, .top_label li.gfield.gf_right_half{
+				    width: 48%;
+			  	}
+			}
+		}
+	}
+}
+@media screen and (max-width: 750px){
+	.single-partenaire-coach{
+		#progression {
+			margin-top: 20px;
+			float: left;
+		}
+		.tableau-partenaire {
+			width: 100%;
+			height: 100%;
+			#inscription {
+				width: 80%;
+				.gform_wrapper {
+					div.validation_error{
+						width: 89%;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 736px){
+	.partner-inscription{
+		.tableau-partenaire .gform_footer #gform_submit_button_36 {
+			margin-left: 207px; 
+		}
+	}
 }
 @media screen and (max-width: 666px){
-
 	.single-partenaire-coach{
 		#zone-gant{
 			display: none;
@@ -944,22 +1225,87 @@ html{
 				right: 30px;
 			}
 		}
-		#tableau2{
+		.tableau-partenaire{
 			h1{
 				width: 80%;
 			}
 		}
 	}
 	.partner-motdepasse {
-		#tableau{
+		.tableau-partenaire{
 			h1{
 				width: 80%;
 			}
 		}
 	}
+	.partner-merci{
+		.tableau-partenaire{
+			h1{
+				margin: 0 auto;
+			}
+		}
+	}
+}
+@media screen and (max-width: 568px){
+	.partner-inscription{
+		.tableau-partenaire .gform_footer #gform_submit_button_36 {
+			margin-left: 160px; 
+		}
+	}
+}
+@media screen and (max-width: 540px){
+	.single-partenaire-coach #footer-partenaire {
+		text-align: center;
+		height: 70px;
+		#lien1, #lien2,{
+			margin: 0 3px;
+			font-size: 0.8em;
+		}
+		#lien3 {
+			text-align: center;
+			display: block;
+			float: none;
+			margin: 0 3px;
+			font-size: 0.8em;
+		}
+	}
+	.partner-inscription{
+		.tableau-partenaire{
+			.gform_wrapper{
+				.gform_body{
+					.ginput_container{
+						#input_36_3{
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-height: 480px){
+	.partenaire-coach{
+		#slider-partner .icon-arrow-left, #slider-partner .icon-arrow-right {
+			top: 250px;
+		}
+		#coach{
+			height: auto;
+
+		}
+	}
+	.partner-connexion{
+		#footer-partenaire{
+			position: relative;
+		}
+	}
+	.partner-inscription{
+		.tableau-partenaire .gform_footer #gform_submit_button_36 {
+			margin-left: 70px; 
+		}
+	}
 }
 @media screen and (max-width: 463px){ 
-	.single-partenaire-coach{
+	.partner-accueil{
 		.accroche {
 			width: auto;
 		}
@@ -973,10 +1319,155 @@ html{
 			}
 		}
 	}
-
 }
-@media screen and (max-width: 320px){ 
+@media screen and (max-width: 450px){
 	.single-partenaire-coach{
+		.tableau-partenaire {
+			#inscription {
+				.gform_wrapper {
+					div.validation_error{
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+	.partner-inscription{
+		.tableau-partenaire {
+			.gform_wrapper {
+				div.validation_error{
+					top: 0;
+					width: 95%;
+				}
+			}
+			.gform_body{
+				.gfield{
+					width: auto;
+					.gfield_label{
+						width: 100%;
+					}
+				}
+				#field_36_4{
+					label {
+						//width: 100%;
+					}
+				}
+			}
+		}
+		.gform_footer {
+			.button {
+    			margin: 0 0 0 70px;
+    			margin-left: 0; 
+    		}
+    	}
+    	.gform_wrapper .top_label li.gfield.gfield_error.gf_left_half, .gform_wrapper .top_label li.gfield.gfield_error.gf_right_half{
+			width: auto!important;
+		}
+	}
+}
+@media screen and (max-width: 440px){
+	.single-partenaire-coach{
+		.tableau-partenaire {
+			.gform_footer #gform_submit_button_36 {
+				margin-left: 35px;
+				position: relative;
+			}
+			.gform_body {
+				position: relative;
+				left: 20px;
+			}
+		}
+		.tableau-partenaire {
+			#footer-partenaire{
+				position: absolute;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 375px){
+	.single-partenaire-coach{
+		.tableau-partenaire {
+			.gform_body {
+				position: relative;
+				left: 5px;
+			}
+		}
+		#progression {
+			width: 335px;
+		}
+		.tableau-partenaire #nouveau h1, .tableau-partenaire #nouveau p {
+			padding-left: 5px;
+			width: 250px;
+		}
+		.tableau-partenaire #connexion h1, .tableau-partenaire #connexion p {
+			padding-left: 0px;
+			width: 250px;
+		}
+		.tableau-partenaire #connexion .input{
+			margin: 10px 0;
+		}
+	}
+	.partner-identification{
+		.tableau-partenaire {
+			#connexion input {
+				margin-left: 0;
+			}
+			#connexion .btn {
+				margin-left: 0px;
+			}
+			#nouveau .btn {
+				margin-left: 10px;
+			}
+		}
+		#footer-partenaire{
+			position: relative;
+		}
+	}
+	.partner-inscription{
+		#footer-partenaire{
+			position: relative;
+		}
+		.tableau-partenaire{
+			.gform_wrapper{
+				  .top_label li.gfield.gf_left_half, .top_label li.gfield.gf_right_half{
+				    width: 100%;
+			  	}
+			}
+		}
+	}
+	.partner-mon-compte{
+		.tableau-partenaire{
+			.gform_wrapper{
+				  .top_label li.gfield.gf_left_half, .top_label li.gfield.gf_right_half{
+				    width: 100%;
+			  	}
+			}
+		}
+	}
+}
+@media screen and (max-width: 400px){
+	.single-partenaire-coach {
+		#progression{
+			float: left;
+		}
+		.tableau-partenaire {
+			#connexion h1{
+				width: 270px;
+			}
+			#nouveau h1{
+				width: 270px;
+			}
+		}
+	}
+	.partner-connexion{
+		#footer-partenaire {
+			position: relative;
+		}
+	}
+}
+@media screen and (max-width: 320px){
+	.partner-accueil{
 		#logo1 {
 			position: relative;	
 			margin-left: auto;
@@ -1049,171 +1540,18 @@ html{
 			}
 		}
 	}
-
-}
-/* @end */
-
-/* responsive identification horizontal */
-@media screen and (max-width: 1140px){ 
-	.single-partenaire-coach #progression{
-		right: 0;
-	}
-
-}
-@media screen and (max-width: 1001px){ 
-	.single-partenaire-coach #tableau {
-		max-width: 100%;
-		#connexion h1{
-			width: 300px;
-		}
-		#separateur {
-			left: 425px;
-		}
-	}
-}
-@media screen and (max-width: 885px){
-	.single-partenaire-coach #tableau {
-		padding: 10px 0 20px 0;
-		height: auto;
-		clear: both;
-		width: 500px;
-		#nouveau {
-			margin-top: 10px;
-			display: block;
-			float: none;
-			right: 0;
-			margin-left: 10px;
-			h1 {
-				padding-left: 60px;
-				width: 300px;
-			}
-			p{
-				padding-left: 60px;
-			}
-			.btn {
-				margin-left: 60px;
-			}
-		}
-		#separateur {
-			border: none;
-		}
-	}
-	.partner-merci {
-		#tableau {
-			width: 100%;
-		}
-	}
-	.partner-connexion {
-		#footer-partenaire{
-			margin-top: 20px;
-		}
-	}
-}
-
-
-@media screen and (max-width: 860px){
-	.single-partenaire-coach #progression {
-		width: 350px;
-		.etapes {
-			&:nth-child(2) {
-				padding-right: 20px;
-			}
-		}
-		#etat {
-			#cercle1{
-				margin-left: 45px;
-			}
-		}
-	}
-}
-@media screen and (max-width: 790px){
 	.single-partenaire-coach{
-		#progression{
-			float: left;
-		}
-	}
-	.partner-merci {
-		#footer-partenaire{
-			margin-top: 20px;
-		}
-	}
-}
-@media screen and (max-height: 780px) and (max-width: 540px){
-	.partner-identification{
-		#footer-partenaire {
-			margin-top: 20px;
-			position: relative;
-		}
-	}
-}
-@media screen and (max-width: 540px){
-	.single-partenaire-coach #footer-partenaire {
-		text-align: center;
-		height: 70px;
-		#lien1, #lien2,{
-			margin: 0 3px;
-			font-size: 0.8em;
-		}
-		#lien3 {
-			text-align: center;
-			display: block;
-			float: none;
-			margin: 0 3px;
-			font-size: 0.8em;
-		}
-	}
-	.partner-inscription{
-		#tableau2{
-			.gform_wrapper{
-				.gform_body{
-					.ginput_container{
-						#input_36_3{
-							width: 100%;
-						}
-					}
-				}
+		.tableau-partenaire {
+			height: 100%;
+			.gform_body {
+				position: relative;
+				left: 25px;
+			}
+			.gform_footer #gform_submit_button_36 {
+				margin-left: 10px;
+				margin-top: 10px;
 			}
 		}
-	}
-}
-
-@media screen and (max-width: 400px){
-	.single-partenaire-coach {
-		#progression{
-			float: left;
-		}
-		#tableau {
-			#connexion h1{
-				width: 270px;
-			}
-			#nouveau h1{
-				width: 270px;
-			}
-		}
-	}
-
-}
-@media screen and (max-width: 375px){
-	.single-partenaire-coach{
-		#progression {
-			width: 335px;
-		}
-		#tableau #nouveau h1, #tableau #nouveau p {
-			padding-left: 5px;
-			width: 250px;
-		}
-		#tableau #connexion h1, #tableau #connexion p {
-			padding-left: 0px;
-			width: 250px;
-		}
-		#tableau #connexion .input{
-			margin: 10px 0;
-		}
-	}
-}
-
-@media screen and (max-width: 320px){
-	.single-partenaire-coach{
 		#progression {
 			width: 280px;
 			.etapes:nth-child(1) {
@@ -1229,170 +1567,10 @@ html{
 		#etat .traits {
 			width: 70px;
 		}
-	}
-}
-/* end */
-
-/* responsive inscription horizontal */
-@media screen and (max-width: 980px){
-	.single-partenaire-coach{
-		#progression {
-			margin-bottom: 30px;
-		}
-		#tableau2 {
-			width: 100%;
-			clear: both;
-			margin-top: 30px;
-			margin: 0 auto;
-			#inscription{
-				width: 87%;
-			}
-			.gform_wrapper {
-
-				.top_label li.gfield.gf_right_half {
-					display: block;
-					width: 97%;
-				}
-				.top_label li.gfield.gf_left_half {
-					width: 97%;
-				}
-			}
-			.gform_body {
-				position: relative;
-			}
-		}
-		.partner-inscription{
-			#footer-partenaire{
-				position: relative;
-				margin-top: 20px;
-			}
-		}
-	}
-}
-@media screen and (max-width: 750px){
-	.single-partenaire-coach{
-		#progression {
-			margin-top: 20px;
-			float: left;
-		}
-		#tableau2 {
-			width: 100%;
-			height: 100%;
-			#inscription {
-				width: 80%;
-				.gform_wrapper {
-					div.validation_error{
-						width: 89%;
-					}
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 450px){
-	.single-partenaire-coach{
-		#tableau2 {
-			#inscription {
-				.gform_wrapper {
-					div.validation_error{
-						top: 0;
-					}
-				}
-			}
-		}
-	}
-	.partner-inscription{
-		#tableau2 {
-			.gform_wrapper {
-				div.validation_error{
-					top: 0;
-					width: 95%;
-				}
-			}
-			.gform_body{
-				.gfield{
-					width: auto;
-					.gfield_label{
-						width: 100%;
-					}
-				}
-			}
-		}
-		.gform_footer {
-			.button {
-    			margin: 0 0 0 70px;
-    			margin-left: 0; 
-    		}
-    	}
-    	.gform_wrapper .top_label li.gfield.gfield_error.gf_left_half, .gform_wrapper .top_label li.gfield.gfield_error.gf_right_half{
-			width: auto!important;
-		}
-	}
-}
-@media screen and (max-width: 440px){
-	.single-partenaire-coach{
-		#tableau2 {
-			.gform_footer #gform_submit_button_36 {
-				margin-left: 35px;
-				position: relative;
-			}
-			.gform_body {
-				position: relative;
-				left: 20px;
-			}
-		}
-		#tableau4 {
-			#footer-partenaire{
-				position: absolute;
-			}
-		}
-	}
-}
-@media screen and (max-width: 375px){
-	.single-partenaire-coach{
-		#tableau2 {
-			.gform_body {
-				position: relative;
-				left: 5px;
-			}
-		}
-	}
-	.partner-identification{
-		#tableau {
-			#connexion input {
-				margin-left: 0;
-			}
-			#connexion .btn {
-				margin-left: 0px;
-			}
-			#nouveau .btn {
-				margin-left: 10px;
-			}
-		}
-	}
-	.partner-identification{
-		#footer-partenaire{
-			position: relative;
-		}
-	}
-	.partner-inscription{
-		#footer-partenaire{
-			position: relative;
-		}
-	}
-}
-@media screen and (max-width: 320px){
-	.single-partenaire-coach{
-		#tableau2 {
-			height: 100%;
-			.gform_body {
-				position: relative;
-				left: 25px;
-			}
-			.gform_footer #gform_submit_button_36 {
-				margin-left: 10px;
-				margin-top: 10px;
+		#logo1 {
+				img {
+			    margin-top: 20px;
+			    width: 290px;
 			}
 		}
 	}
@@ -1401,7 +1579,7 @@ html{
 			position: relative;
 			margin-top: 20px;
 		}
-		#tableau2{
+		.tableau-partenaire{
 			.gform_wrapper{
 				.gform_body{
 					.gform_wrapper {
@@ -1415,132 +1593,6 @@ html{
 					}
 				}
 			}
-		}
-	}
-}
-/* end */
-
-/* responsive page compte */
-
-@media screen and (max-width: 979px){
-	.single-partenaire-coach{
-		#tableau3 {
-			width: 100%;
-			h1 {
-				width: 80%;
-				margin-bottom: 20px;
-			}
-			#info {
-				bottom: 110px;
-			}
-		}
-	}
-}
-@media screen and (max-width: 975px){
-	.single-partenaire-coach{
-		#tableau3 {
-			width: 100%;
-			height: 700px;
-			h1 {
-				width: 80%;
-				margin-bottom: 20px;
-			}
-			#info {
-				width: 100%;
-				bottom: 0;
-			}
-			#formulaire {
-				margin-left: 20px;
-				display: block;
-				width: 100%;
-				.gform_wrapper {
-					.gform_footer .gform_button {
-						margin-top: 0;
-					}
-					div.validation_error{
-						width: 87%;
-					}
-				}
-			}
-		}
-	}
-	.partner-mon-compte {
-		#footer-partenaire{
-			margin-top: 20px;
-			position: relative;
-		}
-	}
-}
-@media screen and (max-width: 925px){
-	.single-partenaire-coach{
-		#formulaire {
-			display: block;
-			width: 100%;
-			.gform_wrapper .gform_footer {
-				padding-top: 0;
-			}
-		}
-	}
-}
-@media screen and (max-width: 768px){
-	.single-partenaire-coach{
-		#tableau3 {
-			width: 100%;
-			height: 1150px;
-			h1 {
-				width: 80%;
-				margin-bottom: 20px;
-			}
-			#info {
-				width: 100%;
-				bottom: 0;
-			}
-			#formulaire {
-				display: block;
-			}
-		}
-		.partner-connexion{
-			#footer-partenaire{
-				position: relative;
-			}
-		}
-	}
-	.partner-mon-compte {
-		#footer-partenaire{
-			position: relative;
-		}
-	}
-	.partner-inscription{
-		#footer-partenaire{
-			position: relative;
-			margin-top: 20px;
-		}
-		.partner-inscription{
-			#tableau2{
-				.gform_wrapper{
-					.gform_body{
-						#input_36_3{
-							width: 100%;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-@media screen and (max-height: 480px){
-	.single-partenaire-coach{
-		#slider-partner .icon-arrow-left, #slider-partner .icon-arrow-right {
-			top: 250px;
-		}
-		#coach{
-			height: auto;
-
-		}
-	}
-	.partner-connexion{
-		#footer-partenaire{
-			position: relative;
 		}
 	}
 }
