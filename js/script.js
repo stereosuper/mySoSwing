@@ -15,7 +15,7 @@ function animHome(){
 	function completeAnimGant(){
 		TweenMax.set(h1, {opacity: "1"});
 		TweenMax.to($('#pastilleNGF'),1, {opacity: "1", delay:1});
-		TweenMax.to($('#pastillePG'),1, {opacity: "1", delay:1});
+		TweenMax.to($('#pastillePG'),1, {opacity: "1", delay:1.5});
 	}
 
 	tlHome.to(gant, 0.8, {x: "0px", y: "0px", rotation:"0deg", delay:0.2, ease:Quart.easeOut, onComplete:completeAnimGant});
@@ -117,8 +117,8 @@ function replacePlaceholder(){
 	});
 }*/
 
-function stickyFooter(){
-	var docHeight = body.height(),
+function stickyFooter(bodyHeight){
+	var docHeight = bodyHeight,
 		windowHeight = $(window).height(),
 		footer = $('footer');
 
@@ -299,13 +299,20 @@ $(function(){
 			letSlide('#probleme');
 		}
 
-		stickyFooter();
+		if(body.hasClass('single-partenaire-coach')){
+			stickyFooter($('#containerCoachPartner').outerHeight());
+		}else{
+			stickyFooter(body.height());
+		}
+		
 	});
 
 	$(window).resize(function() {
-		stickyFooter();
 		if($("body").hasClass("single-partenaire-coach")){
 	    	testHeightPartenaire();
+	    	stickyFooter($('#containerCoachPartner').outerHeight());
+	    }else{
+	    	stickyFooter(body.height());
 	    }
 	});
 

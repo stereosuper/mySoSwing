@@ -350,7 +350,7 @@ textarea {
 html,
 body.home {
   position: relative;
-  min-height: 100%;
+  min-height: 820px;
   height: 100%;
 }
 html {
@@ -444,6 +444,7 @@ body .gform_wrapper .gf_page_steps span.gf_step_number {
   margin: 30px 0;
 }
 a {
+  text-decoration: none;
   font-family: 'motivaBold', sans-serif;
   font-weight: normal;
   font-size: 1em;
@@ -1264,7 +1265,7 @@ footer.bottom {
   margin: -96px 0 0;
 }
 .home h1 {
-  font-size: 4.063em;
+  font-size: 3.8em;
   line-height: 1em;
   color: #000;
   margin: 0;
@@ -1298,6 +1299,67 @@ footer.bottom {
   background-size: cover;
   overflow: hidden;
 }
+#bloc-bg-home + .container {
+  pointer-events: none;
+}
+#reseau {
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  position: absolute;
+  width: 199px;
+  height: 257px;
+  border-radius: 15px;
+  top: 343px;
+  left: 50%;
+  margin-left: -550px;
+}
+#reseau h2 {
+  color: #FFF;
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 1.21em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  bottom: 18px;
+  text-align: center;
+  position: relative;
+}
+#reseau a#pastilleNGF {
+  position: absolute;
+  display: block;
+  width: 158px;
+  height: 190px;
+  background: url(../layoutImg/bannerngf.png) no-repeat 0 0;
+  left: 10%;
+  top: 46px;
+  margin: 0;
+  padding: 0;
+  text-indent: -9000px;
+  overflow: hidden;
+  box-shadow: 0px 7px 10px #000;
+  -webkit-transition: bottom 0.1s ease-in-out;
+  -moz-transition: bottom 0.1s ease-in-out;
+  -o-transition: bottom 0.1s ease-in-out;
+  transition: bottom 0.1s ease-in-out;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+#reseau a#pastilleNGF:hover {
+  top: 52px;
+}
+#reseau a#pastilleNGF:active {
+  margin-bottom: -5px;
+}
+.no-js #reseau a#pastilleNGF {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.lt-ie11 #reseau {
+  z-index: 2;
+}
 #zone-gant {
   width: 607px;
   height: 691px;
@@ -1305,10 +1367,10 @@ footer.bottom {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
-  margin: 0 0 0 -647px;
+  margin: 0 0 0 -580px;
   position: absolute;
-  bottom: 96px;
-  left: 50%;
+  bottom: 48px;
+  left: 53%;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
@@ -1324,19 +1386,20 @@ footer.bottom {
   -o-transform: translate(200px, 600px) rotate(40deg);
   -ms-transform: translate(200px, 600px) rotate(40deg);
   transform: translate(200px, 600px) rotate(40deg);
+  pointer-events: none;
 }
 #zone-gant > div {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: -48;
   left: 0;
-  background-size: 100% 100%;
-  background-position: 50% 50%;
+  background-size: 100% auto;
+  background-position: 50% 0;
   background-repeat: no-repeat;
 }
 #gant {
-  background: url(../layoutImg/home/gant.png);
+  background: url(../layoutImg/home/gant-2.png);
 }
 #telephone {
   background: url(../layoutImg/home/telephone.png);
@@ -1353,20 +1416,76 @@ footer.bottom {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 100px 0 355px 52%;
+  padding: 60px 0 345px 11%;
   height: auto;
   position: relative;
-  overflow: hidden;
 }
-#bloc-right-home a#pastilleNGF {
+#bloc-right-home a {
+  text-decoration: none;
+}
+#coachs {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  position: absolute;
+  width: 414px;
+  height: 257px;
+  border-radius: 15px;
+  bottom: 0px;
+  left: 61.8%;
+  pointer-events: auto;
+}
+#coachs h2 {
+  color: #FFF;
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 1.21em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  bottom: 18px;
+  position: relative;
+  margin-left: 20px;
+}
+#coachs .futur {
+  padding: 17px 0;
+  position: absolute;
+  width: 377px;
+  height: auto;
+  border-radius: 15px;
+  bottom: 25px;
+  left: 4%;
+  border: 2px dashed rgba(255, 255, 255, 0.7);
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1.07em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+#coachs .futur p {
+  text-align: center;
+  color: #FFF;
+  margin: 0;
+}
+#coachs .futur a {
+  text-decoration: underline;
+  color: #ff6300;
+  text-align: center;
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1.07em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+#coachs a#pastillePG {
+  box-shadow: 0px 5px 10px #000;
   position: absolute;
   display: block;
-  width: 415px;
-  height: 95px;
-  background: url(../layoutImg/bannerngf.png) no-repeat 0 0;
-  background-size: 93%;
-  right: 11%;
-  bottom: 235px;
+  width: 377px;
+  height: 80px;
+  background: url(../layoutImg/bannerpg.png) no-repeat 0 0;
+  left: 4%;
+  bottom: 133px;
   margin: 0;
   padding: 0;
   text-indent: -9000px;
@@ -1379,48 +1498,82 @@ footer.bottom {
   -moz-opacity: 0;
   opacity: 0;
 }
-#bloc-right-home a#pastilleNGF:hover {
-  bottom: 230px;
+#coachs a#pastillePG:hover {
+  bottom: 128px;
 }
-#bloc-right-home a#pastilleNGF:active {
+#coachs a#pastillePG:active {
   margin-bottom: -5px;
 }
-#bloc-right-home a#pastilleNGF.no-js {
+#coachs a#pastillePG.no-js {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
 }
-#bloc-right-home a#pastillePG {
+#ashley {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   position: absolute;
+  width: 414px;
+  height: 80px;
+  border-radius: 15px;
+  top: 570px;
+  left: 61.8%;
+  pointer-events: auto;
+}
+#ashley a {
   display: block;
-  width: 415px;
-  height: 95px;
-  background: url(../layoutImg/bannerplayinggolf.png) no-repeat 0 0;
-  background-size: 93%;
-  right: 11%;
-  bottom: 120px;
-  margin: 0;
-  padding: 0;
-  text-indent: -9000px;
-  overflow: hidden;
-  -webkit-transition: bottom 0.1s ease-in-out;
-  -moz-transition: bottom 0.1s ease-in-out;
-  -o-transition: bottom 0.1s ease-in-out;
-  transition: bottom 0.1s ease-in-out;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
+  width: 414px;
+  height: 80px;
   opacity: 0;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
 }
-#bloc-right-home a#pastillePG:hover {
-  bottom: 115px;
+#ashley #img-ashley {
+  display: block;
+  background: url(../layoutImg/ashley.png) no-repeat 0 0;
+  height: 138px;
+  width: 124px;
+  position: relative;
+  bottom: 80px;
+  left: 0px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -moz-transition: -moz-transform 0.3s ease-in-out;
+  -o-transition: -o-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out,-moz-transform 0.3s ease-in-out,-o-transform 0.3s ease-in-out,transform 0.3s ease-in-out;
 }
-#bloc-right-home a#pastillePG:active {
+#ashley #img-ashley:hover {
+  transform: translateY(5px);
+}
+#ashley #img-ashley:active {
   margin-bottom: -5px;
 }
-#bloc-right-home a#pastillePG.no-js {
-  -webkit-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
+#ashley div {
+  position: absolute;
+  bottom: 0px;
+  left: 158px;
+  margin: 20px 40px;
+}
+#ashley div h2 {
+  color: #FFF;
+  margin: 0;
+  font-size: 1.21em;
+}
+#ashley div p {
+  margin: 0;
+  font-family: 'motivaIt', sans-serif;
+  font-weight: normal;
+  font-size: 1.07em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #ff6300;
+  letter-spacing: -0.3px;
+}
+.uk #bloc-home #bloc-right-home {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 60px 0 345px 52%;
 }
 #lien-app-store {
   width: 135px;
@@ -1429,7 +1582,7 @@ footer.bottom {
   padding: 0;
   text-indent: -999em;
   overflow: hidden;
-  background: url(../layoutImg/download-app.png) no-repeat 50% 50%;
+  background: url(../layoutImg/app-store-blanc@2x.png) no-repeat 50% 50%;
   display: block;
   margin: 20px auto 25px;
 }
@@ -3478,6 +3631,12 @@ html {
 html.html-partenaire-coach {
   height: auto;
 }
+#containerCoachPartner {
+  padding-bottom: 65px;
+}
+.wrapper-content #containerCoachPartner {
+  padding-bottom: 0px;
+}
 .tableau-partenaire {
   padding: 30px 0 60px 0;
 }
@@ -3487,16 +3646,16 @@ html.html-partenaire-coach {
   background-size: cover;
   /*#slider-partner{
 		ul{
-			padding: 5px 0 0; 
+			padding: 5px 0 0;
 			margin: 10px auto;
 			border-top: 1px solid @gris;
-			border-bottom : 1px solid @gris; 
+			border-bottom : 1px solid @gris;
 			width: 350px;
 			height: 135px;
 			position: relative;
 			list-style: none;
 			overflow: hidden;
-			
+
 		}
 		li{
 			position: relative;
@@ -3513,7 +3672,7 @@ html.html-partenaire-coach {
 		height:32px;
 		padding: 0;
 		background: #ff6300;
-		color: #fff; 
+		color: #fff;
 		box-shadow: 0 3px 0 #993b00;
 		font-size: 15px;
 		bottom: 155px;
@@ -3591,6 +3750,10 @@ html.html-partenaire-coach {
   letter-spacing: -0.5px;
   width: 350px;
 }
+.single-partenaire-coach .accroche a {
+  color: #000;
+  text-decoration: underline;
+}
 .single-partenaire-coach h2 {
   font-family: 'motivaBold', sans-serif;
   font-weight: normal;
@@ -3606,7 +3769,7 @@ html.html-partenaire-coach {
   font-size: 1.15em;
 }
 .single-partenaire-coach #coach {
-  margin: 80px 0 35px 0;
+  margin: 80px 0 0px 0;
   height: 370px;
   width: 308px;
   position: relative;
@@ -3708,15 +3871,24 @@ html.html-partenaire-coach {
   background-image: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/telephone.png);
   top: 2px;
 }
+.single-partenaire-coach #wrapper-zone-gant #zone-gant #lien-app-store {
+  width: 170px;
+  height: 50px;
+  background-size: 170px;
+  position: absolute;
+  bottom: 70px;
+  left: 330px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 60px 5px rgba(0, 0, 0, 0.5);
+  pointer-events: visible;
+}
 .single-partenaire-coach #footer-partenaire {
+  margin-top: 0;
   display: block;
   width: 100%;
   background: #323232;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
   height: 35px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 .single-partenaire-coach #footer-partenaire a {
   color: #FFF;
@@ -3734,7 +3906,6 @@ html.html-partenaire-coach {
 /* STYLE PAGE identification */
 .partner-identification header {
   background-image: none;
-  max-width: 942px;
 }
 .partner-identification .tableau-partenaire {
   height: auto;
@@ -3847,7 +4018,7 @@ html.html-partenaire-coach {
   font-size: 0.85em;
   color: #FFF;
   display: inline-block;
-  padding: 0 35px;
+  padding: 0 15px;
   margin: 0;
   right: 16px;
 }
@@ -3860,20 +4031,23 @@ html.html-partenaire-coach {
   text-rendering: optimizeLegibility;
 }
 .partner-identification #progression .etapes:nth-child(1) {
-  padding: 0 50px 0 10px;
+  padding: 0px;
 }
 .partner-identification #progression .etapes:nth-child(2) {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 .partner-identification #progression .etapes:nth-child(3) {
-  padding: 0 27px 0 47px;
+  padding: 0 27px 0 10px;
+}
+.partner-identification #progression .etapes:nth-child(4) {
+  padding-right: 25px;
 }
 .partner-identification #etat {
   padding: 0;
   margin: 5px 0 0;
 }
 .partner-identification #etat #cercle1 {
-  margin-left: 78px;
+  margin-left: 63px;
   display: inline-block;
   padding: 0;
   background: #ff6600;
@@ -3883,7 +4057,8 @@ html.html-partenaire-coach {
   border: 1px solid #FFF;
 }
 .partner-identification #etat #cercle2,
-.partner-identification #etat #cercle3 {
+.partner-identification #etat #cercle3,
+.partner-identification #etat #cercle4 {
   display: inline-block;
   padding: 0;
   border-radius: 50%;
@@ -3896,7 +4071,7 @@ html.html-partenaire-coach {
   bottom: 6px;
   display: inline-block;
   border-top: 2px solid #FFF;
-  width: 105px;
+  width: 75px;
 }
 /* STYLE PAGE INSCRIPTION */
 .partner-inscription header {
@@ -3920,7 +4095,7 @@ html.html-partenaire-coach {
   font-size: 0.85em;
   color: #FFF;
   display: inline-block;
-  padding: 0 35px;
+  padding: 0 15px;
   margin: 0;
   right: 16px;
 }
@@ -3933,20 +4108,23 @@ html.html-partenaire-coach {
   text-rendering: optimizeLegibility;
 }
 .partner-inscription #progression .etapes:nth-child(1) {
-  padding: 0 50px 0 10px;
+  padding: 0px;
 }
 .partner-inscription #progression .etapes:nth-child(2) {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 .partner-inscription #progression .etapes:nth-child(3) {
-  padding: 0 27px 0 47px;
+  padding: 0 27px 0 10px;
+}
+.partner-inscription #progression .etapes:nth-child(4) {
+  padding-right: 25px;
 }
 .partner-inscription #etat {
   padding: 0;
   margin: 5px 0 0;
 }
 .partner-inscription #etat #cercle1 {
-  margin-left: 78px;
+  margin-left: 68px;
   display: inline-block;
   padding: 0;
   background: #ff6600;
@@ -3956,7 +4134,8 @@ html.html-partenaire-coach {
   border: 1px solid #FFF;
 }
 .partner-inscription #etat #cercle2,
-.partner-inscription #etat #cercle3 {
+.partner-inscription #etat #cercle3,
+.partner-inscription #etat #cercle4 {
   display: inline-block;
   padding: 0;
   border-radius: 50%;
@@ -3969,7 +4148,7 @@ html.html-partenaire-coach {
   bottom: 6px;
   display: inline-block;
   border-top: 2px solid #FFF;
-  width: 105px;
+  width: 75px;
 }
 .partner-inscription h1 {
   padding: 10px 0 0 0;
@@ -3985,18 +4164,21 @@ html.html-partenaire-coach {
   position: relative;
   left: 20px;
 }
+.partner-inscription .tableau-partenaire .gform_body #field_36_23 {
+  width: 49%;
+}
 .partner-inscription .tableau-partenaire .gform_body .gfield_label {
   color: #FFF;
   width: 29%;
 }
 .partner-inscription .tableau-partenaire .gform_body .ginput_container #input_36_3 {
-  width: 130%;
+  width: 140%;
 }
 .partner-inscription .tableau-partenaire .gform_body .ginput_container #input_36_4 {
-  width: 60%;
+  width: 70%;
 }
 .partner-inscription .tableau-partenaire .gform_body .ginput_container #input_36_8 {
-  width: 28%;
+  width: 44%;
 }
 .partner-inscription .tableau-partenaire .gform_footer {
   margin-top: 0;
@@ -4019,6 +4201,177 @@ html.html-partenaire-coach {
   padding-left: 50px;
   letter-spacing: -1.6px;
   font-size: 1.71em;
+}
+/* STYLE PAGE RECAPITULATIF */
+.partner-recap header {
+  background-image: none;
+}
+.partner-recap .titre1 {
+  color: #FFF;
+  margin-left: 20px;
+  padding-left: 0px;
+  width: 850px;
+  padding-left: 50px;
+  letter-spacing: -1.6px;
+  font-size: 1.71em;
+  border-bottom: 1px dotted #a0a0a0;
+}
+.partner-recap #progression {
+  height: 77px;
+  width: 404px;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 5px;
+  float: right;
+  margin-top: 60px;
+  position: relative;
+}
+.partner-recap #progression #intitule {
+  padding: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+.partner-recap #progression .etapes {
+  font-size: 0.85em;
+  color: #FFF;
+  display: inline-block;
+  padding: 0 15px;
+  margin: 0;
+  right: 16px;
+}
+.partner-recap #progression .etapes strong {
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 1.28em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.partner-recap #progression .etapes:nth-child(1) {
+  padding: 0px;
+}
+.partner-recap #progression .etapes:nth-child(2) {
+  padding-left: 20px;
+}
+.partner-recap #progression .etapes:nth-child(3) {
+  padding: 0 27px 0 10px;
+}
+.partner-recap #progression .etapes:nth-child(4) {
+  padding-right: 25px;
+}
+.partner-recap #etat {
+  padding: 0;
+  margin: 5px 0 0;
+}
+.partner-recap #etat #cercle1 {
+  margin-left: 68px;
+}
+.partner-recap #etat #cercle1,
+.partner-recap #etat #cercle2 {
+  display: inline-block;
+  padding: 0;
+  background: #ff6600;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #FFF;
+}
+.partner-recap #etat #cercle3,
+.partner-recap #etat #cercle4 {
+  display: inline-block;
+  padding: 0;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #FFF;
+}
+.partner-recap #etat .traits {
+  position: relative;
+  bottom: 6px;
+  display: inline-block;
+  border-top: 2px solid #FFF;
+  width: 75px;
+}
+.partner-recap h1 {
+  padding: 10px 0 0 0;
+  margin: 0 0 40px 0;
+}
+.partner-recap .tableau-partenaire {
+  background: #323232;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+  border-radius: 5px;
+  margin-top: 60px;
+}
+.partner-recap .tableau-partenaire .gform_wrapper {
+  box-sizing: content-box;
+}
+.partner-recap .tableau-partenaire .gform_wrapper #commande {
+  float: left;
+  margin-left: 20px;
+}
+.partner-recap .tableau-partenaire .gform_wrapper #commande p {
+  color: #FFF;
+  text-align: right;
+}
+.partner-recap .tableau-partenaire .titre1:nth-child(2) {
+  width: 900px;
+}
+.partner-recap .tableau-partenaire .gform_body {
+  position: relative;
+  left: 20px;
+  font-size: 1.15em;
+}
+.partner-recap .tableau-partenaire .gform_body .gform_fields li {
+  margin-bottom: 0!important;
+}
+.partner-recap .tableau-partenaire .gform_body .gform_fields #label_37_17_1 {
+  text-align: left;
+}
+.partner-recap .tableau-partenaire .gform_body .gform_fields #label_37_17_1 span {
+  color: #ff6300;
+  text-decoration: underline;
+}
+.partner-recap .tableau-partenaire .gform_body #field_36_23 {
+  width: 49%;
+}
+.partner-recap .tableau-partenaire .gform_body .gfield_label {
+  color: #FFF;
+  width: 29%;
+}
+.partner-recap .tableau-partenaire .gform_body .ginput_container #input_36_3 {
+  width: 115%;
+}
+.partner-recap .tableau-partenaire .gform_body .ginput_container #input_36_4 {
+  width: 60%;
+}
+.partner-recap .tableau-partenaire .gform_body .ginput_container #input_36_8 {
+  width: 28%;
+}
+.partner-recap .tableau-partenaire .gform_wrapper .gform_footer #gform_submit_button_37 {
+  margin: 20px 0 0 43%;
+}
+.partner-recap .tableau-partenaire .gform_footer {
+  margin-top: 0;
+  padding-top: 0;
+}
+.partner-recap .tableau-partenaire .gform_footer #gform_submit_button_36 {
+  margin-top: 0;
+  margin-left: 158px;
+}
+.partner-recap .tableau-partenaire .gform_wrapper div.validation_error {
+  background-color: #FFF;
+  width: 98%;
+  margin-left: 10px;
+}
+.partner-recap .recap-id {
+  color: #FFF;
+}
+.partner-recap .recap-id p {
+  margin-left: 75px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.partner-recap .recap-id .titre1 {
+  margin-top: 35px;
 }
 /* STYLE PAGE COMPTE */
 .partner-mon-compte #logo1 {
@@ -4177,6 +4530,9 @@ html.html-partenaire-coach {
   position: absolute;
 }
 /* STYLE PAGE MERCI */
+.partner-merci header {
+  background-image: none;
+}
 .partner-merci #progression {
   height: 77px;
   width: 404px;
@@ -4184,7 +4540,6 @@ html.html-partenaire-coach {
   border-radius: 5px;
   float: right;
   margin-top: 60px;
-  margin-bottom: 60px;
   position: relative;
 }
 .partner-merci #progression #intitule {
@@ -4196,7 +4551,7 @@ html.html-partenaire-coach {
   font-size: 0.85em;
   color: #FFF;
   display: inline-block;
-  padding: 0 35px;
+  padding: 0 15px;
   margin: 0;
   right: 16px;
 }
@@ -4209,20 +4564,23 @@ html.html-partenaire-coach {
   text-rendering: optimizeLegibility;
 }
 .partner-merci #progression .etapes:nth-child(1) {
-  padding: 0 50px 0 10px;
+  padding: 0px;
 }
 .partner-merci #progression .etapes:nth-child(2) {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 .partner-merci #progression .etapes:nth-child(3) {
-  padding: 0 27px 0 47px;
+  padding: 0 27px 0 10px;
+}
+.partner-merci #progression .etapes:nth-child(4) {
+  padding-right: 0px;
 }
 .partner-merci #etat {
   padding: 0;
   margin: 5px 0 0;
 }
 .partner-merci #etat #cercle1 {
-  margin-left: 78px;
+  margin-left: 68px;
   display: inline-block;
   padding: 0;
   background: #ff6600;
@@ -4232,7 +4590,8 @@ html.html-partenaire-coach {
   border: 1px solid #FFF;
 }
 .partner-merci #etat #cercle2,
-.partner-merci #etat #cercle3 {
+.partner-merci #etat #cercle3,
+.partner-merci #etat #cercle4 {
   display: inline-block;
   padding: 0;
   border-radius: 50%;
@@ -4246,14 +4605,14 @@ html.html-partenaire-coach {
   bottom: 6px;
   display: inline-block;
   border-top: 2px solid #FFF;
-  width: 105px;
+  width: 75px;
 }
 .partner-merci .tableau-partenaire {
   background: #323232;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
   border-radius: 5px;
   clear: both;
-  margin-top: 30px;
+  margin-top: 60px;
   width: 100%;
   height: auto;
 }
@@ -4306,60 +4665,42 @@ html.html-partenaire-coach {
   background-size: 170px;
 }
 /* @group Responsive vertical */
-@media screen and (max-height: 880px) {
-  .single-partenaire-coach #zone-gant {
-    width: 520px;
-    height: 592px;
-    margin: 0 0 0 -567px;
-  }
-}
-@media screen and (max-height: 830px) {
-  .partner-merci #footer-partenaire {
-    margin-top: 20px;
-    position: relative;
+@media screen and (max-height: 880px) and (max-width: 1140px) {
+  .single-partenaire-coach #wrapper-zone-gant #zone-gant #lien-app-store {
+    bottom: 50px;
+    left: 270px;
   }
 }
 @media screen and (max-height: 790px) {
   .partner-inscription .tableau-partenaire .gform_footer #gform_submit_button_36 {
     margin-bottom: 10px;
   }
-  .partner-inscription #footer-partenaire {
-    margin-top: 20px;
-    position: relative;
-  }
 }
-@media screen and (max-height: 768px) {
-  .partner-mon-compte #footer-partenaire {
-    margin-top: 20px;
-    position: relative;
-  }
+@media screen and (max-width: 768px) {
   .partner-mon-compte .tableau-partenaire #formulaire .gform_body .gfield_label {
     width: 30%;
   }
-}
-@media screen and (max-height: 555px) {
-  .partner-identification #footer-partenaire {
-    margin-top: 20px;
-    position: relative;
+  .partner-recap .recap-id .gform_wrapper .gform_body {
+    left: 20px;
   }
-}
-@media screen and (max-height: 554px) {
-  .partner-connexion #footer-partenaire {
-    margin-top: 20px;
-    position: relative;
+  .partner-recap .recap-id .gform_wrapper .gform_footer #gform_submit_button_37 {
+    margin-left: 100px;
   }
 }
 /* end */
-/* @group Responsive horizontal
-____________________________________________________________________________________*/
+/* @group Responsive horizontal */
 @media screen and (max-width: 1140px) {
   .single-partenaire-coach #progression {
     right: 0;
   }
-  .single-partenaire-coach #zone-gant {
+  .single-partenaire-coach #wrapper-zone-gant #zone-gant {
     width: 520px;
     height: 592px;
     margin: 0 0 0 -567px;
+  }
+  .single-partenaire-coach #wrapper-zone-gant #zone-gant #lien-app-store {
+    bottom: 50px;
+    left: 270px;
   }
 }
 @media screen and (max-width: 1120px) {
@@ -4368,6 +4709,18 @@ ________________________________________________________________________________
   }
   .partner-identification .tableau-partenaire #nouveau h1 {
     width: 100%;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .partner-recap .tableau-partenaire {
+    width: 100%;
+    height: 100%;
+  }
+  .partner-recap .tableau-partenaire .titre1 {
+    width: 88%;
+  }
+  .partner-recap .tableau-partenaire .titre1:nth-child(2) {
+    width: 94%;
   }
 }
 @media screen and (max-width: 1001px) {
@@ -4380,9 +4733,12 @@ ________________________________________________________________________________
   .single-partenaire-coach .tableau-partenaire #separateur {
     left: 425px;
   }
-  .single-partenaire-coach #zone-gant {
+  .single-partenaire-coach #wrapper-zone-gant #zone-gant {
     width: 497px;
     height: 565px;
+  }
+  .single-partenaire-coach #wrapper-zone-gant #zone-gant #lien-app-store {
+    left: 255px;
   }
 }
 @media screen and (max-width: 980px) {
@@ -4400,14 +4756,6 @@ ________________________________________________________________________________
     display: block;
   }
   .single-partenaire-coach .tableau-partenaire .gform_body {
-    position: relative;
-  }
-  .partner-inscription #footer-partenaire {
-    position: relative;
-    margin-top: 20px;
-  }
-  .partner-mon-compte #footer-partenaire {
-    margin-top: 20px;
     position: relative;
   }
 }
@@ -4450,29 +4798,29 @@ ________________________________________________________________________________
   }
 }
 @media screen and (max-width: 885px) {
-  .single-partenaire-coach .tableau-partenaire {
+  .partner-identification .tableau-partenaire {
     height: auto;
     clear: both;
     width: 500px;
   }
-  .single-partenaire-coach .tableau-partenaire #nouveau {
+  .partner-identification .tableau-partenaire #nouveau {
     margin-top: 10px;
     display: block;
     float: none;
     right: 0;
     margin-left: 10px;
   }
-  .single-partenaire-coach .tableau-partenaire #nouveau h1 {
+  .partner-identification .tableau-partenaire #nouveau h1 {
     padding-left: 60px;
     width: 300px;
   }
-  .single-partenaire-coach .tableau-partenaire #nouveau p {
+  .partner-identification .tableau-partenaire #nouveau p {
     padding-left: 60px;
   }
-  .single-partenaire-coach .tableau-partenaire #nouveau .btn {
+  .partner-identification .tableau-partenaire #nouveau .btn {
     margin-left: 60px;
   }
-  .single-partenaire-coach .tableau-partenaire #separateur {
+  .partner-identification .tableau-partenaire #separateur {
     border: none;
   }
   .partner-inscription .tableau-partenaire {
@@ -4481,19 +4829,10 @@ ________________________________________________________________________________
   .partner-merci .tableau-partenaire {
     width: 100%;
   }
-  .partner-connexion #footer-partenaire {
-    margin-top: 20px;
-  }
 }
 @media screen and (max-width: 860px) {
-  .single-partenaire-coach #progression {
-    width: 350px;
-  }
   .single-partenaire-coach #progression .etapes:nth-child(2) {
     padding-right: 20px;
-  }
-  .single-partenaire-coach #progression #etat #cercle1 {
-    margin-left: 45px;
   }
 }
 @media screen and (max-width: 805px) {
@@ -4504,15 +4843,6 @@ ________________________________________________________________________________
 @media screen and (max-width: 790px) {
   .single-partenaire-coach #progression {
     float: left;
-  }
-  .partner-merci #footer-partenaire {
-    margin-top: 20px;
-  }
-}
-@media screen and (max-height: 780px) and (max-width: 540px) {
-  .partner-identification #footer-partenaire {
-    margin-top: 20px;
-    position: relative;
   }
 }
 @media screen and (max-width: 768px) {
@@ -4537,15 +4867,18 @@ ________________________________________________________________________________
   .partner-mon-compte .tableau-partenaire .gform_wrapper .top_label li.gfield.gf_right_half {
     width: 48%;
   }
-  .partner-inscription #footer-partenaire {
-    margin-top: 20px;
-  }
   .partner-inscription .tableau-partenaire .gform_wrapper .gform_body #input_36_3 {
     width: 100%;
   }
   .partner-inscription .tableau-partenaire .gform_wrapper .top_label li.gfield.gf_left_half,
   .partner-inscription .tableau-partenaire .gform_wrapper .top_label li.gfield.gf_right_half {
     width: 48%;
+  }
+  .partner-recap .tableau-partenaire .titre1 {
+    width: 68%;
+  }
+  .partner-recap .tableau-partenaire .titre1:nth-child(2) {
+    width: 74%;
   }
 }
 @media screen and (max-width: 750px) {
@@ -4567,6 +4900,14 @@ ________________________________________________________________________________
 @media screen and (max-width: 736px) {
   .partner-inscription .tableau-partenaire .gform_footer #gform_submit_button_36 {
     margin-left: 207px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .partner-recap .titre1 {
+    padding-left: 0;
+  }
+  .partner-recap .recap-id p {
+    margin-left: 20px;
   }
 }
 @media screen and (max-width: 666px) {
@@ -4631,6 +4972,9 @@ ________________________________________________________________________________
   .partner-inscription .tableau-partenaire .gform_footer #gform_submit_button_36 {
     margin-left: 160px;
   }
+  .partner-recap .tableau-partenaire .gform_footer #gform_submit_button_36 {
+    margin-left: 20%;
+  }
 }
 @media screen and (max-width: 540px) {
   .single-partenaire-coach #footer-partenaire {
@@ -4661,9 +5005,6 @@ ________________________________________________________________________________
   .partenaire-coach #coach {
     height: auto;
   }
-  .partner-connexion #footer-partenaire {
-    position: relative;
-  }
   .partner-inscription .tableau-partenaire .gform_footer #gform_submit_button_36 {
     margin-left: 70px;
   }
@@ -4682,6 +5023,12 @@ ________________________________________________________________________________
   }
 }
 @media screen and (max-width: 450px) {
+  .single-partenaire-coach #progression {
+    width: 100%;
+  }
+  .single-partenaire-coach #progression #etat #cercle1 {
+    margin-left: 40px;
+  }
   .single-partenaire-coach .tableau-partenaire #inscription .gform_wrapper div.validation_error {
     top: 0;
   }
@@ -4713,11 +5060,30 @@ ________________________________________________________________________________
     position: relative;
     left: 20px;
   }
-  .single-partenaire-coach .tableau-partenaire #footer-partenaire {
-    position: absolute;
+}
+@media screen and (max-width: 414px) {
+  .partner-recap .tableau-partenaire .gform_body .gform_fields #label_37_17_1 {
+    width: 87%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .single-partenaire-coach #progression {
+    float: left;
+  }
+  .single-partenaire-coach .tableau-partenaire #connexion h1 {
+    width: 270px;
+  }
+  .single-partenaire-coach .tableau-partenaire #nouveau h1 {
+    width: 270px;
+  }
+  .partner-recap .tableau-partenaire .gform_body .gfield_label {
+    width: 46%;
   }
 }
 @media screen and (max-width: 375px) {
+  .single-partenaire-coach .tableau-partenaire h1 {
+    padding-left: 0px;
+  }
   .single-partenaire-coach .tableau-partenaire .gform_body {
     position: relative;
     left: 5px;
@@ -4747,33 +5113,25 @@ ________________________________________________________________________________
   .partner-identification .tableau-partenaire #nouveau .btn {
     margin-left: 10px;
   }
-  .partner-identification #footer-partenaire {
-    position: relative;
-  }
-  .partner-inscription #footer-partenaire {
-    position: relative;
-  }
   .partner-inscription .tableau-partenaire .gform_wrapper .top_label li.gfield.gf_left_half,
   .partner-inscription .tableau-partenaire .gform_wrapper .top_label li.gfield.gf_right_half {
     width: 100%;
   }
+  .partner-inscription .tableau-partenaire #inscription {
+    padding-left: 0px;
+  }
+  .single-partenaire-coach #progression .etapes {
+    padding: 0 5px;
+  }
+  .single-partenaire-coach #progression .etapes:nth-child(1) {
+    padding: 0px;
+  }
+  .single-partenaire-coach #progression .etapes:nth-child(4) {
+    padding-right: 0px;
+  }
   .partner-mon-compte .tableau-partenaire .gform_wrapper .top_label li.gfield.gf_left_half,
   .partner-mon-compte .tableau-partenaire .gform_wrapper .top_label li.gfield.gf_right_half {
     width: 100%;
-  }
-}
-@media screen and (max-width: 400px) {
-  .single-partenaire-coach #progression {
-    float: left;
-  }
-  .single-partenaire-coach .tableau-partenaire #connexion h1 {
-    width: 270px;
-  }
-  .single-partenaire-coach .tableau-partenaire #nouveau h1 {
-    width: 270px;
-  }
-  .partner-connexion #footer-partenaire {
-    position: relative;
   }
 }
 @media screen and (max-width: 320px) {
@@ -4803,7 +5161,7 @@ ________________________________________________________________________________
   }
   .partner-accueil #coach {
     width: 280px;
-    margin-bottom: 70px;
+    margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -4829,7 +5187,6 @@ ________________________________________________________________________________
     padding: 0 0 0 0;
   }
   .partner-accueil #footer-partenaire {
-    position: absolute;
     text-align: center;
     height: 70px;
   }
@@ -4850,7 +5207,7 @@ ________________________________________________________________________________
   }
   .single-partenaire-coach .tableau-partenaire .gform_body {
     position: relative;
-    left: 25px;
+    left: 15px;
   }
   .single-partenaire-coach .tableau-partenaire .gform_footer #gform_submit_button_36 {
     margin-left: 10px;
@@ -4875,9 +5232,12 @@ ________________________________________________________________________________
     margin-top: 20px;
     width: 290px;
   }
-  .partner-inscription #footer-partenaire {
+  .partner-recap .tableau-partenaire #gform_36 .gform_body {
+    left: 15px;
+  }
+  .partner-recap .tableau-partenaire .gform_body {
     position: relative;
-    margin-top: 20px;
+    left: 0px;
   }
   .partner-inscription .tableau-partenaire .gform_wrapper .gform_body .gform_wrapper .top_label li.gfield.gf_right_half {
     display: block;
@@ -4886,6 +5246,27 @@ ________________________________________________________________________________
   .partner-inscription .tableau-partenaire .gform_wrapper .gform_body .gform_wrapper .top_label li.gfield.gf_left_half {
     width: 93%;
   }
+  .single-partenaire-coach #progression .etapes {
+    padding: 0 5px;
+  }
+  .single-partenaire-coach #progression .etapes:nth-child(1) {
+    padding: 0px;
+  }
+  .single-partenaire-coach #progression .etapes:nth-child(2) {
+    padding: 0 10px;
+  }
+  .single-partenaire-coach #progression .etapes:nth-child(3) {
+    padding: 0px;
+  }
+  .single-partenaire-coach #progression .etapes:nth-child(4) {
+    padding-right: 0px;
+  }
+  .single-partenaire-coach #progression #etat #cercle1 {
+    margin-left: 8px;
+  }
+}
+.gform_wrapper .top_label li.gfield.gf_full_half {
+  width: 49%;
 }
 /* @group Non semantic Boilerplate */
 /* remplacement image */
@@ -4954,6 +5335,60 @@ ________________________________________________________________________________
     margin: 0;
   }
 }
+@media (max-width: 1130px) {
+  #bloc-home {
+    min-height: 1180px;
+  }
+  .container #bloc-right-home {
+    padding-bottom: 312px;
+    overflow: visible;
+  }
+  .container #coachs {
+    left: 57.8%;
+    top: 250px;
+  }
+  .container #ashley {
+    width: 199px;
+    height: 128px;
+    border-radius: 15px;
+    top: 660px;
+    left: 79.5%;
+  }
+  .container #ashley #img-ashley {
+    bottom: 100px;
+    xleft: 23px;
+  }
+  .container #ashley div {
+    margin: 0 15px;
+    bottom: 30px;
+    left: initial;
+  }
+  .container #ashley div h2 {
+    color: #FFF;
+    margin: 0;
+    font-size: 1.21em;
+  }
+  .container #ashley div p {
+    margin: 0;
+    font-family: 'motivaIt', sans-serif;
+    font-weight: normal;
+    font-size: 1.07em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color: #ff6300;
+  }
+  #bloc-bg-home #reseau {
+    top: 680px;
+    margin-left: 0;
+    left: 57.8%;
+  }
+  #bloc-bg-home #zone-gant {
+    height: 913px;
+    bottom: -22px;
+    left: 51%;
+  }
+}
 @media (max-width: 1120px) {
   .page-template-solution h1 {
     width: 100%;
@@ -4981,15 +5416,15 @@ ________________________________________________________________________________
     margin: 0 0 0 28%;
   }
 }
+@media (max-width: 1090px) {
+  .container #coachs {
+    left: 58%;
+  }
+  #bloc-bg-home #reseau {
+    left: 58%;
+  }
+}
 @media (max-width: 1050px) {
-  #bloc-right-home a#pastilleNGF {
-    right: auto;
-    left: 50%;
-  }
-  #bloc-right-home a#pastillePG {
-    right: auto;
-    left: 50%;
-  }
   #menu-footer {
     float: none;
     display: block;
@@ -5071,6 +5506,18 @@ ________________________________________________________________________________
     margin: 34px 20px 0 0;
   }
 }
+@media (max-width: 1000px) {
+  #bloc-bg-home #reseau {
+    margin-left: 0;
+    left: 56%;
+  }
+  .container #coachs {
+    left: 56%;
+  }
+  .container #ashley {
+    left: 77.5%;
+  }
+}
 @media (max-width: 979px) {
   .page-template-solution header {
     padding: 0 0 300px;
@@ -5103,6 +5550,59 @@ ________________________________________________________________________________
   }
   #golf-list li#temporary {
     display: none;
+  }
+}
+@media (max-width: 960px) {
+  #bloc-home {
+    min-height: 1470px;
+  }
+  .home h1 {
+    font-size: 3em;
+  }
+  .container #coachs {
+    width: 199px;
+    height: 414px;
+    top: 245px;
+  }
+  .container #coachs h2 {
+    margin-left: 20px;
+  }
+  .container #coachs #pastillePG {
+    background: url(../layoutImg/small-playinggolf.png) no-repeat;
+    top: 50px;
+    left: 20px;
+    box-shadow: 0px 5px 10px #000;
+    position: absolute;
+    display: block;
+    width: 158px;
+    height: 190px;
+  }
+  .container #coachs .futur {
+    padding: 17px 0;
+    position: absolute;
+    width: 158px;
+    height: 80px;
+    border-radius: 15px;
+    bottom: 60px;
+    left: 19px;
+    top: 265px;
+  }
+  .container #ashley {
+    width: 199px;
+    height: 128px;
+    border-radius: 15px;
+    top: 1084px;
+    left: 56%;
+  }
+  #bloc-bg-home #reseau {
+    top: 820px;
+  }
+  #bloc-bg-home #zone-gant {
+    height: 913px;
+    bottom: 88px;
+  }
+  .main footer {
+    margin: 190px 0 0;
   }
 }
 @media (max-width: 880px) {
@@ -5139,9 +5639,6 @@ ________________________________________________________________________________
   }
   #btn-contact.contact-en {
     margin: 22px 0 0;
-  }
-  .home h1 {
-    font-size: 3em;
   }
   .homeTemp #menu {
     padding: 0 23px;
@@ -5506,6 +6003,21 @@ ________________________________________________________________________________
   }
 }
 @media (max-width: 450px) {
+  .container #coachs {
+    left: 48%;
+  }
+  .container #ashley {
+    left: 48%;
+  }
+  #bloc-bg-home {
+    padding-left: 0%;
+  }
+  #bloc-bg-home #reseau {
+    left: 48%;
+  }
+  #bloc-bg-home #zone-gant {
+    bottom: 188px;
+  }
   h1 {
     padding-left: 0;
     font-size: 2em;
@@ -5526,7 +6038,7 @@ ________________________________________________________________________________
     padding: 0;
   }
   #bloc-right-home {
-    padding: 50px 0 355px 47%;
+    padding: 60px 0 355px 0%;
     overflow: hidden;
   }
   #bloc-right-home a#pastilleNGF {
@@ -5567,6 +6079,9 @@ ________________________________________________________________________________
   }
 }
 @media (max-width: 400px) {
+  /*#bloc-home {
+    min-height: 1170px;
+  }*/
   .formContainer input[type=text],
   .formContainer input[type=email] {
     width: 100%;
@@ -5600,21 +6115,78 @@ ________________________________________________________________________________
   .devenir .btn {
     padding: 10px 37px;
   }
+  .container #coachs {
+    left: 45%;
+    top: 200px;
+  }
+  .container #ashley {
+    left: 45%;
+    top: 1000px;
+  }
+  #bloc-bg-home #zone-gant {
+    margin: 6px 0 0 -600px;
+  }
+  #bloc-bg-home #reseau {
+    left: 45%;
+    top: 775px;
+  }
+}
+@media (max-width: 320px) {
+  .container #coachs {
+    left: 34%;
+    top: 200px;
+  }
+  .container #ashley {
+    left: 34%;
+    top: 1000px;
+  }
+  #bloc-bg-home #zone-gant {
+    margin: 6px 0 0 -600px;
+  }
+  #bloc-bg-home #reseau {
+    left: 36%;
+    top: 775px;
+  }
 }
 /* @end */
 /* @group Responsive vertical */
-@media (max-height: 950px) {
+@media (max-height: 990px) {
   .home #zone-gant {
     width: 520px;
     height: 592px;
-    margin: 0 0 0 -567px;
+    margin: 0 0 0 -555px;
   }
 }
-@media (max-height: 850px) {
+@media (max-height: 990px) and (max-width: 1130px) {
+  .home #zone-gant {
+    width: 607px;
+    height: 691px;
+    margin: 0 0 0 -580px;
+  }
+}
+@media (max-height: 890px) {
   .home #zone-gant {
     width: 440px;
     height: 501px;
     margin: 0 0 0 -487px;
+  }
+}
+@media (max-height: 890px) and (max-width: 1130px) {
+  .home #zone-gant {
+    width: 607px;
+    height: 691px;
+    margin: 0 0 0 -580px;
+  }
+}
+@media (max-height: 885px) and (min-width: 1130px) {
+  #bloc-bg-home #reseau {
+    top: 295px;
+  }
+  .container #bloc-right-home {
+    padding-bottom: 295px;
+  }
+  .container #ashley {
+    top: 470px;
   }
 }
 /* @end */

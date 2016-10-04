@@ -61,7 +61,7 @@ textarea {
 
 html, body.home{
   position: relative;
-  min-height: 100%;
+  min-height: 820px;
   height: 100%;
 }
 
@@ -111,6 +111,7 @@ h2{
 }
 
 a{
+  text-decoration: none;
   .motivaBold(1em);
   color: @orange;
   .transition(.2s ease-in-out);
@@ -744,7 +745,7 @@ footer{
     margin: -96px 0 0;
   }
   h1{
-    font-size: 4.063em;
+    font-size: 3.8em;
     line-height: 1em;
     color: @noir;
     margin: 0;
@@ -776,33 +777,82 @@ footer{
   background-size: auto 100%;
   background-size: cover;
   overflow: hidden;
+  + .container{
+    pointer-events: none;
+  }
 }
-
+#reseau {
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7), rgba(0,0,0,0.7), rgba(0,0,0,0));
+  position: absolute;
+  width: 199px;
+  height: 257px;
+  border-radius: 15px;
+  top: 343px;
+  left: 50%;
+  margin-left: -550px;
+  h2 {
+    color: #FFF;
+    .motivaBold(1.21em);
+    bottom: 18px;
+    text-align: center;
+    position: relative;
+  }
+   a#pastilleNGF {
+    position: absolute;
+    display: block;
+    width: 158px;
+    height: 190px;
+    background: url(../layoutImg/bannerngf.png) no-repeat 0 0;
+    left: 10%;
+    top: 46px;
+    margin: 0;
+    padding: 0;
+    text-indent: -9000px;
+    overflow: hidden;
+    box-shadow: 0px 7px 10px #000;
+    .transition(bottom 0.1s ease-in-out);
+    .opacity(0);
+     &:hover {
+      top: 52px;
+    }
+    &:active {
+      margin-bottom: -5px;
+  }
+  .no-js &{
+      .opacity(1);
+    }
+  }
+  .lt-ie11 &{
+      z-index: 2;
+  }
+}
 #zone-gant{
   width: 607px;
   height: 691px;
   .box-sizing(border-box);
   padding: 0;
-  margin: 0 0 0 -647px;
+  margin: 0 0 0 -580px;
   position: absolute;
-  bottom: 96px;
-  left: 50%;
+  bottom: 48px;
+  left: 53%;
   .transform-style(preserve-3d);
   .backface-visibility(hidden);
   .transform(translate(200px, 600px), rotate(40deg));
+  pointer-events: none;
   > div{
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: -48;
     left: 0;
-    background-size: 100% 100%;
-    background-position: 50% 50%;
+    background-size: 100% auto;
+    background-position: 50% 0;
     background-repeat: no-repeat;
   }
 }
 #gant{
-  background: url(../layoutImg/home/gant.png);
+  background: url(../layoutImg/home/gant-2.png);
 }
 #telephone{
   background: url(../layoutImg/home/telephone.png);
@@ -817,20 +867,62 @@ footer{
 
 #bloc-right-home{
   width: 100%;
+  a {
+    text-decoration: none;
+  }
   .box-sizing(border-box);
-  padding: 100px 0 355px 52%;
+  padding: 60px 0 345px 11%;
   height: auto;
   position: relative;
-  overflow: hidden;
-   a#pastilleNGF {
+  //overflow: hidden;
+}
+#coachs {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7), rgba(0,0,0,0.7), rgba(0,0,0,0));
+  position: absolute;
+  width: 414px;
+  height: 257px;
+  border-radius: 15px;
+  bottom: 0px;
+  left: 61.8%;
+  pointer-events: auto;
+  h2 {
+    color: #FFF;
+    .motivaBold(1.21em);
+    bottom: 18px;
+    position: relative;
+    margin-left: 20px;
+  }
+  .futur {
+    padding: 17px 0;
+    position: absolute;
+    width: 377px;
+    height: auto;
+    border-radius: 15px;
+    bottom: 25px;
+    left: 4%;
+    border: 2px dashed rgba(255, 255, 255, .7);
+    .motivaIt(1.07em);
+    p {
+      text-align: center;
+      color: #FFF;
+      margin: 0;
+    }
+    a {
+      text-decoration: underline;
+      color: @orange;
+      text-align: center;
+    .motivaIt(1.07em);
+    }
+  }
+  a#pastillePG {
+    box-shadow: 0px 5px 10px #000;
     position: absolute;
     display: block;
-    width: 415px;
-    height: 95px;
-    background: url(../layoutImg/bannerngf.png) no-repeat 0 0;
-    background-size: 93%;
-    right: 11%;
-    bottom: 235px;
+    width: 377px;
+    height: 80px;
+    background: url(../layoutImg/bannerpg.png) no-repeat 0 0;
+    left: 4%;
+    bottom: 133px;
     margin: 0;
     padding: 0;
     text-indent: -9000px;
@@ -838,54 +930,87 @@ footer{
     .transition(bottom 0.1s ease-in-out);
     .opacity(0);
      &:hover {
-      bottom: 230px;
+      bottom: 128px;
     }
-    &:active {
-      margin-bottom: -5px;
-  }
-  &.no-js {
-      .opacity(1);
+      &:active {
+        margin-bottom: -5px;
     }
-  }
-    a#pastillePG {
-    position: absolute;
-    display: block;
-    width: 415px;
-    height: 95px;
-    background: url(../layoutImg/bannerplayinggolf.png) no-repeat 0 0;
-    background-size: 93%;
-    right: 11%;
-    bottom: 120px;
-    margin: 0;
-    padding: 0;
-    text-indent: -9000px;
-    overflow: hidden;
-    .transition(bottom 0.1s ease-in-out);
-    .opacity(0);
-     &:hover {
-      bottom: 115px;
-    }
-    &:active {
-      margin-bottom: -5px;
-  }
-  &.no-js {
-      .opacity(1);
+    &.no-js {
+        .opacity(1);
     }
   }
 }
-
+#ashley{
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7), rgba(0,0,0,0.7), rgba(0,0,0,0));
+  position: absolute;
+  width: 414px;
+  height: 80px;
+  border-radius: 15px;
+  top: 570px;
+  left: 61.8%;
+  pointer-events: auto;
+  a{
+    display: block;
+    width: 414px;
+    height: 80px;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+  }
+  #img-ashley{
+    display: block;
+    background: url(../layoutImg/ashley.png) no-repeat 0 0;
+    height: 138px;
+    width: 124px;
+    position: relative;
+    bottom: 80px;
+    left: 0px;
+    .transition(transform 0.3s ease-in-out);
+     &:hover {
+     transform: translateY(5px);
+    }
+      &:active {
+        margin-bottom: -5px;
+    }
+  }
+  div{
+    position: absolute;
+    bottom: 0px;
+    left: 158px;
+    margin: 20px 40px;
+    h2{
+      color: #FFF;
+      margin: 0;
+      font-size: 1.21em;
+    }
+    p{
+      margin: 0;
+      .motivaIt(1.07em);
+      color: @orange;
+      letter-spacing: -0.3px;
+    }
+  }
+}
+.uk {
+  #bloc-home {
+    #bloc-right-home{
+    .box-sizing(border-box);
+    padding: 60px 0 345px 52%;
+    }
+  }
+}
 #lien-app-store{
   //display: none;
   width: 135px;
   height: 40px;
-  //background: url(../layoutImg/app-store.png) no-repeat 50% 50%;
   margin: 30px auto;
   padding: 0;
   //.opacity(0);
   //.transform(translate(0, 20px));
   text-indent: -999em;
   overflow: hidden;
-  background: url(../layoutImg/download-app.png) no-repeat 50% 50%;
+  background: url(../layoutImg/app-store-blanc@2x.png) no-repeat 50% 50%;
   display: block;
   margin: 20px auto 25px;
 }
@@ -2775,6 +2900,7 @@ select{
 
 /* @group Responsive horizontal */
 
+
 @media (max-width: 1330px){
   .videoContainer{
     iframe, embed{
@@ -2798,7 +2924,59 @@ select{
     margin: 0;
   }
 }
-
+@media (max-width: 1130px){
+  #bloc-home {
+    min-height: 1180px;
+  }
+  .container{
+    #bloc-right-home{
+      padding-bottom: 312px;
+      overflow: visible; 
+    }
+    #coachs{
+      left: 57.8%;
+      top: 250px;
+    }
+    #ashley{
+      width: 199px;
+      height: 128px;
+      border-radius: 15px;
+      top: 660px;
+      left: 79.5%;
+      #img-ashley{
+        bottom: 100px;x
+        left: 23px;
+      }
+      div{
+        margin: 0 15px;
+        bottom: 30px;
+        left: initial;
+        h2{
+          color: #FFF;
+          margin: 0;
+          font-size: 1.21em;
+        }
+        p{
+          margin: 0;
+          .motivaIt(1.07em);
+          color: @orange; 
+        }
+      }
+    }
+  }
+  #bloc-bg-home{
+    #reseau{
+        top: 680px;
+        margin-left: 0;
+        left: 57.8%;
+    }
+    #zone-gant {
+      height: 913px;
+      bottom: -22px;
+      left: 51%;
+    }
+  }
+}
 @media (max-width: 1120px){
   .page-template-solution{
     h1{
@@ -2846,18 +3024,19 @@ select{
   }
 
 }
-
-@media (max-width: 1050px){
-  #bloc-right-home{
-    a#pastilleNGF {
-      right: auto;
-      left: 50%;
-    }
-    a#pastillePG {
-      right: auto;
-      left: 50%;
+@media (max-width: 1090px){
+  .container{
+    #coachs {
+      left: 58%;
     }
   }
+  #bloc-bg-home{
+    #reseau{
+      left: 58%;
+    }
+  }
+}
+@media (max-width: 1050px){
   #menu-footer{
     float: none;
     display: block;
@@ -2955,7 +3134,22 @@ select{
     margin: 34px 20px 0 0;
   }
 }
-
+@media (max-width: 1000px){
+  #bloc-bg-home{
+    #reseau{
+        margin-left: 0;
+        left: 56%;
+    }
+  }
+  .container{
+    #coachs {
+      left: 56%;
+    }
+    #ashley{
+      left: 77.5%;
+    }
+  }
+}
 
 @media (max-width: 979px) {
   .page-template-solution{
@@ -2995,7 +3189,65 @@ select{
     }
   }
 }
-
+@media (max-width: 960px){
+  #bloc-home {
+    min-height: 1470px;
+  }
+  .home{
+    h1{
+      font-size: 3em;
+    }
+  }
+   .container{
+    #coachs {
+      width: 199px;
+      height: 414px;
+      top: 245px;
+      h2{
+        margin-left: 20px;
+      }
+     #pastillePG{
+        background: url(../layoutImg/small-playinggolf.png) no-repeat;
+        top: 50px;
+        left: 20px;
+        box-shadow: 0px 5px 10px #000;
+        position: absolute;
+        display: block;
+        width: 158px;
+        height: 190px;
+      }
+      .futur {
+        padding: 17px 0;
+        position: absolute;
+        width: 158px;
+        height: 80px;
+        border-radius: 15px;
+        bottom: 60px;
+        left: 19px;
+        top: 265px;
+      }
+    }
+    #ashley{
+      width: 199px;
+      height: 128px;
+      border-radius: 15px;
+      top: 1084px;
+      left: 56%;
+    }
+  }
+  #bloc-bg-home{
+    #reseau{
+      top: 820px;
+    }
+    #zone-gant {
+      height: 913px;
+      bottom: 88px;
+    }
+  }
+  .main footer{
+    margin: 190px 0 0;
+  }
+}
 @media (max-width: 880px){
   #top-header{
     p.topMentions span {
@@ -3037,12 +3289,6 @@ select{
 
   #btn-pro{
     &:extend(#btn-contact);
-  }
-
-  .home{
-    h1{
-      font-size: 3em;
-    }
   }
 
   .homeTemp{
@@ -3370,7 +3616,18 @@ select{
     }
   }
 }
-
+// @media (max-width: 530px){
+//   .container{
+//     #coachs {
+//       top: 230px;
+//     }
+//   }
+//   #bloc-bg-home{
+//     #reseau{
+//       top: 800px;
+//     }
+//   }
+// }
 @media (max-width: 500px){
   #demande .slides{
     background: url(../layoutImg/demandeSmall.png) no-repeat;
@@ -3435,6 +3692,26 @@ select{
 }
 
 @media (max-width: 450px){
+  // #bloc-home{
+  //   min-height: 1180px;
+  // }
+  .container{
+    #coachs {
+      left: 48%;
+    }
+    #ashley{
+      left: 48%;
+    }
+  }
+  #bloc-bg-home{
+    padding-left: 0%;
+    #reseau{
+      left: 48%;
+    }
+    #zone-gant {
+      bottom: 188px;
+    }
+  }
   h1{
     padding-left: 0;
     font-size: 2em;
@@ -3458,7 +3735,7 @@ select{
   }
 
   #bloc-right-home{
-    padding: 50px 0 355px 47%;
+    padding: 60px 0 355px 0%;
     overflow: hidden;
      a#pastilleNGF {
       right: auto;
@@ -3504,6 +3781,9 @@ select{
 }
 
 @media (max-width: 400px){
+  /*#bloc-home {
+    min-height: 1170px;
+  }*/
   .formContainer{
     input[type=text], input[type=email]{
       width: 100%;
@@ -3540,23 +3820,72 @@ select{
   .devenir .btn{
     padding: 10px 37px;
   }
+  .container{
+      #coachs {
+        left: 45%;
+        top: 200px;
+      }
+      #ashley {
+        left: 45%;
+        top: 1000px;
+      }
+    }
+  #bloc-bg-home{
+    #zone-gant {
+      margin: 6px 0 0 -600px;
+    }
+    #reseau{
+      left: 45%;
+      top: 775px;
+    }
+  }
+}
+@media (max-width: 320px){
+  .container{
+      #coachs {
+        left: 34%;
+        top: 200px;
+      }
+      #ashley {
+        left: 34%;
+        top: 1000px;
+      }
+    }
+  #bloc-bg-home{
+    #zone-gant {
+      margin: 6px 0 0 -600px;
+    }
+    #reseau{
+      left: 36%;
+      top: 775px;
+    }
+  }
 }
 
 /* @end */
 
 /* @group Responsive vertical */
 
-@media (max-height: 950px) {
+@media (max-height: 990px) {
   .home{
     #zone-gant{
       width: 520px;
       height: 592px;
-      margin: 0 0 0 -567px;
+      margin: 0 0 0 -555px;
+    }
+  }
+  @media (max-width: 1130px){
+    .home{
+      #zone-gant{
+        width: 607px;
+        height: 691px;
+        margin: 0 0 0 -580px;
+      }
     }
   }
 }
 
-@media (max-height: 850px) {
+@media (max-height: 890px) {
   .home{
     #zone-gant{
       width: 440px;
@@ -3564,8 +3893,32 @@ select{
       margin: 0 0 0 -487px;
     }
   }
+  @media (max-width: 1130px){
+    .home{
+      #zone-gant{
+        width: 607px;
+        height: 691px;
+        margin: 0 0 0 -580px;
+      }
+    }
+  }
 }
 
+@media (max-height: 885px) and (min-width: 1130px){
+  #bloc-bg-home{
+      #reseau{
+        top: 295px;
+      }
+    }
+  .container{
+    #bloc-right-home{
+      padding-bottom: 295px; 
+    }
+    #ashley{
+      top: 470px;
+    }
+  }
+}
 /* @end */
 
 /* retina */

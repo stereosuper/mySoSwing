@@ -1,9 +1,18 @@
 /* STYLE PAGE HOME PLAYINGGOLF */
 html{
 	min-height: 100%;
-&.html-partenaire-coach{ // permet au gant de la home de rester bloquer au niveau du footer
-	height: auto;
+	&.html-partenaire-coach{ // permet au gant de la home de rester bloquer au niveau du footer
+		height: auto;
+	}
 }
+
+#containerCoachPartner{
+	padding-bottom: 65px;
+}
+.wrapper-content{
+	#containerCoachPartner{
+		padding-bottom: 0px;
+	}
 }
 
 .tableau-partenaire{
@@ -12,7 +21,7 @@ html{
 
 .single-partenaire-coach{
 	min-height: 100%;
-	background: url(http://staging.mysoswing.com/wp-content/uploads/2016/01/fond.png) center no-repeat;	
+	background: url(http://staging.mysoswing.com/wp-content/uploads/2016/01/fond.png) center no-repeat;
 	background-size: cover;
 
 	#btn-connect {
@@ -26,7 +35,7 @@ html{
 		background: rgba(0, 0, 0, 0.6);
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius:	5px;
-		text-align: center;	
+		text-align: center;
 		span{
 			display: block;
 			text-indent: 0;
@@ -64,6 +73,10 @@ html{
 		padding: 0 0 0 12px;
 		letter-spacing: -0.5px;
 		width: 350px;
+		a{
+			color: #000;
+			text-decoration: underline;
+		}
 	}
 	h2 {
 		.motivaBold(3.14em);
@@ -75,7 +88,7 @@ html{
 		font-size: 1.15em;
 	}
 	#coach {
-		margin: 80px 0 35px 0;
+		margin: 80px 0 0px 0;
 		height: 370px;
 		width: 308px;
 		position: relative;
@@ -110,7 +123,7 @@ html{
 			height: 135px;
 			width: auto;
 			border-top: 1px solid @gris;
-			border-bottom : 1px solid @gris; 
+			border-bottom : 1px solid @gris;
 			select {
 				width: 275px!important;
 				display: block;
@@ -119,7 +132,7 @@ html{
 			}
 			.btn {
 					margin-top: 0px;
-				} 
+				}
 		}
 	}
 	#cercle {
@@ -155,16 +168,16 @@ html{
 	}
 	/*#slider-partner{
 		ul{
-			padding: 5px 0 0; 
+			padding: 5px 0 0;
 			margin: 10px auto;
 			border-top: 1px solid @gris;
-			border-bottom : 1px solid @gris; 
+			border-bottom : 1px solid @gris;
 			width: 350px;
 			height: 135px;
 			position: relative;
 			list-style: none;
 			overflow: hidden;
-			
+
 		}
 		li{
 			position: relative;
@@ -182,7 +195,7 @@ html{
 		height:32px;
 		padding: 0;
 		background: #ff6300;
-		color: #fff; 
+		color: #fff;
 		box-shadow: 0 3px 0 #993b00;
 		font-size: 15px;
 		bottom: 155px;
@@ -215,23 +228,31 @@ html{
 		overflow: hidden;
 		#zone-gant{
 			bottom: 0;
-
 			#telephone{
 				background-image: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/telephone.png);
 				top: 2px;
 			}
-		}	
+			#lien-app-store{
+				width: 170px;
+				height: 50px;
+				background-size: 170px;
+				position: absolute;
+				bottom: 70px;
+				left: 330px;
+				border-radius: 5px;
+				box-shadow: 2px 2px 60px 5px rgba(0, 0, 0, 0.5);
+				pointer-events: visible;
+			}
+		}
 	}
 
 	#footer-partenaire {
+		margin-top: 0;
 		display: block;
 		width: 100%;
 		background: #323232;
-		background: linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0.5));	
+		background: linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
 		height: 35px;
-		position: absolute;
-		bottom: 0;
-		left: 0;
 		a {
 			color: #FFF;
 			line-height: 35px;
@@ -245,7 +266,7 @@ html{
 
 		#lien3 {
 			float: right;
-			margin-right: 9%; 
+			margin-right: 9%;
 		}
 	}
 }
@@ -253,8 +274,8 @@ html{
 /* STYLE PAGE identification */
 .partner-identification{
 	header {
-		background-image:none; 
-		max-width: 942px;
+		background-image:none;
+		//max-width: 942px;
 	}
 	.tableau-partenaire {
 		height: auto;
@@ -356,20 +377,23 @@ html{
 			font-size: 0.85em;
 			color: #FFF;
 			display: inline-block;
-			padding: 0 35px;
+			padding: 0 15px;
 			margin: 0;
 			right: 16px;
 			strong{
 				.motivaBold(1.28em);
 			}
 			&:nth-child(1){
-				padding: 0 50px 0 10px;
+				padding: 0px;
 			}
 			&:nth-child(2){
-				padding-left: 10px;
+				padding-left: 20px;
 			}
 			&:nth-child(3){
-				padding: 0 27px 0 47px;
+				padding: 0 27px 0 10px;
+			}
+			&:nth-child(4){
+				padding-right:25px;
 			}
 		}
 	}
@@ -377,29 +401,29 @@ html{
 		padding: 0;
 		margin: 5px 0 0;
 		#cercle1{
-			margin-left: 78px;
+			margin-left: 63px;
 			display: inline-block;
 			padding: 0;
 			background:#ff6600;
 			border-radius:50%;
 			width:12px;
 			height:12px;
-			border:1px solid #FFF; 
+			border:1px solid #FFF;
 		}
-		#cercle2, #cercle3{
+		#cercle2, #cercle3, #cercle4{
 			display: inline-block;
 			padding: 0;
 			border-radius:50%;
 			width:12px;
 			height:12px;
-			border:1px solid #FFF; 
+			border:1px solid #FFF;
 		}
 		.traits{
 			position: relative;
 			bottom: 6px;
 			display: inline-block;
-			border-top : 2px solid #FFF; 
-			width : 105px;
+			border-top : 2px solid #FFF;
+			width : 75px;
 		}
 	}
 }
@@ -425,20 +449,23 @@ html{
 			font-size: 0.85em;
 			color: #FFF;
 			display: inline-block;
-			padding: 0 35px;
+			padding: 0 15px;
 			margin: 0;
 			right: 16px;
 			strong{
 				.motivaBold(1.28em);
 			}
 			&:nth-child(1){
-				padding: 0 50px 0 10px;
+				padding: 0px;
 			}
 			&:nth-child(2){
-				padding-left: 10px;
+				padding-left: 20px;
 			}
 			&:nth-child(3){
-				padding: 0 27px 0 47px;
+				padding: 0 27px 0 10px;
+			}
+			&:nth-child(4){
+				padding-right:25px;
 			}
 		}
 	}
@@ -446,29 +473,29 @@ html{
 		padding: 0;
 		margin: 5px 0 0;
 		#cercle1{
-			margin-left: 78px;
+			margin-left: 68px;
 			display: inline-block;
 			padding: 0;
 			background:#ff6600;
 			border-radius:50%;
 			width:12px;
 			height:12px;
-			border:1px solid #FFF; 
+			border:1px solid #FFF;
 		}
-		#cercle2, #cercle3{
+		#cercle2, #cercle3, #cercle4{
 			display: inline-block;
 			padding: 0;
 			border-radius:50%;
 			width:12px;
 			height:12px;
-			border:1px solid #FFF; 
+			border:1px solid #FFF;
 		}
 		.traits{
 			position: relative;
 			bottom: 6px;
 			display: inline-block;
-			border-top : 2px solid #FFF; 
-			width : 105px;
+			border-top : 2px solid #FFF;
+			width : 75px;
 		}
 	}
 	h1 {
@@ -483,19 +510,22 @@ html{
 		.gform_body {
 			position: relative;
 			left: 20px;
+			#field_36_23{
+				width: 49%;
+			}
 			.gfield_label {
 				color: #FFF;
 				width: 29%;
 			}
 			.ginput_container{
 				#input_36_3{
-					width: 130%;
+					width: 140%;
 				}
 				#input_36_4{
-					width: 60%;
+					width: 70%;
 				}
 				#input_36_8{
-					width: 28%;
+					width: 44%;
 				}
 			}
 		}
@@ -518,7 +548,7 @@ html{
 
 	#inscription {
 		color: #FFF;
-		margin-left: 20px; 
+		margin-left: 20px;
 		padding-left: 0px;
 		width: 850px;
 		padding-left: 50px;
@@ -527,6 +557,186 @@ html{
 	}
 	#footer-partenaire{
 		//margin-top: 20px;
+	}
+}
+
+/* STYLE PAGE RECAPITULATIF */
+
+.partner-recap{
+	header {
+	background-image: none;
+	}
+	.titre1 {
+		color: #FFF;
+		margin-left: 20px;
+		padding-left: 0px;
+		width: 850px;
+		padding-left: 50px;
+		letter-spacing: -1.6px;
+		font-size: 1.71em;
+		border-bottom: 1px dotted #a0a0a0;
+	}
+	#progression {
+		height: 77px;
+		width: 404px;
+		background-color: rgba(0, 0, 0, 0.55);
+		border-radius: 5px;
+		float: right;
+		margin-top: 60px;
+		position: relative;
+		#intitule{
+			padding: 0;
+			text-align: center;
+			margin-bottom: 0;
+		}
+		.etapes{
+			font-size: 0.85em;
+			color: #FFF;
+			display: inline-block;
+			padding: 0 15px;
+			margin: 0;
+			right: 16px;
+			strong{
+				.motivaBold(1.28em);
+			}
+			&:nth-child(1){
+				padding: 0px;
+			}
+			&:nth-child(2){
+				padding-left: 20px;
+			}
+			&:nth-child(3){
+				padding: 0 27px 0 10px;
+			}
+			&:nth-child(4){
+				padding-right:25px;
+			}
+		}
+	}
+	#etat{
+		padding: 0;
+		margin: 5px 0 0;
+		#cercle1{
+			margin-left: 68px;
+		}
+		#cercle1, #cercle2{
+			display: inline-block;
+			padding: 0;
+			background:#ff6600;
+			border-radius:50%;
+			width:12px;
+			height:12px;
+			border:1px solid #FFF;
+		}
+		#cercle3, #cercle4{
+			display: inline-block;
+			padding: 0;
+			border-radius:50%;
+			width:12px;
+			height:12px;
+			border:1px solid #FFF;
+		}
+		.traits{
+			position: relative;
+			bottom: 6px;
+			display: inline-block;
+			border-top : 2px solid #FFF;
+			width : 75px;
+		}
+	}
+	h1 {
+		padding: 10px 0 0 0;
+		margin: 0 0 40px 0;
+	}
+	.tableau-partenaire {
+		background: #323232;
+		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+		border-radius: 5px;
+		margin-top: 60px;
+		.gform_wrapper{
+			box-sizing: content-box;
+			#commande{
+				float: left;
+				margin-left: 20px;
+				p{
+					color: #FFF;
+					text-align: right;
+				}
+			}
+		}
+		.titre1:nth-child(2){
+				
+				width: 900px;
+			}
+		.gform_body {
+			position: relative;
+			left: 20px;
+			font-size: 1.15em;
+			.gform_fields{
+				li{
+					margin-bottom: 0!important;
+				}
+				#label_37_17_1{
+					text-align: left;
+					span{
+						color:@orange;
+						text-decoration: underline;
+					}
+				}
+			}
+			
+			#field_36_23{
+				width: 49%;
+			}
+			.gfield_label {
+				color: #FFF;
+				width: 29%;
+			}
+			.ginput_container{
+				#input_36_3{
+					width: 115%;
+				}
+				#input_36_4{
+					width: 60%;
+				}
+				#input_36_8{
+					width: 28%;
+				}
+			}
+		}
+		.gform_wrapper {
+			.gform_footer {
+				#gform_submit_button_37 {
+					margin: 20px 0 0 43%;
+				}
+			}
+		}
+		.gform_footer {
+			margin-top: 0;
+			padding-top: 0;
+			#gform_submit_button_36{
+				margin-top: 0;
+				margin-left: 158px;
+			}
+		}
+		.gform_wrapper {
+			div.validation_error{
+				background-color: #FFF;
+				width: 98%;
+				margin-left: 10px;
+			}
+		}
+	}
+	.recap-id{
+		color: #FFF;
+		p{
+			margin-left: 75px;
+			margin-bottom: 0px;
+			margin-top: 0px;
+		}
+		.titre1{
+			margin-top: 35px;
+		}
 	}
 }
 /* STYLE PAGE COMPTE */
@@ -630,7 +840,7 @@ html{
 /* STYLE PAGE CONNEXION */
 .partner-connexion{
 	header {
-		background-image: none; 
+		background-image: none;
 	}
 	.tableau-partenaire {
 		background: #323232;
@@ -703,6 +913,9 @@ html{
 }
 /* STYLE PAGE MERCI */
 .partner-merci {
+	header{
+		background-image: none;
+	}
 	#progression {
 		height: 77px;
 		width: 404px;
@@ -710,7 +923,6 @@ html{
 		border-radius: 5px;
 		float: right;
 		margin-top: 60px;
-		margin-bottom: 60px;
 		position: relative;
 		#intitule{
 			padding: 0;
@@ -721,20 +933,23 @@ html{
 			font-size: 0.85em;
 			color: #FFF;
 			display: inline-block;
-			padding: 0 35px;
+			padding: 0 15px;
 			margin: 0;
 			right: 16px;
 			strong{
 				.motivaBold(1.28em);
 			}
 			&:nth-child(1){
-				padding: 0 50px 0 10px;
+				padding: 0px;
 			}
 			&:nth-child(2){
-				padding-left: 10px;
+				padding-left: 20px;
 			}
 			&:nth-child(3){
-				padding: 0 27px 0 47px;
+				padding: 0 27px 0 10px;
+			}
+			&:nth-child(4){
+				padding-right:0px;
 			}
 		}
 	}
@@ -742,30 +957,30 @@ html{
 		padding: 0;
 		margin: 5px 0 0;
 		#cercle1{
-			margin-left: 78px;
+			margin-left: 68px;
 			display: inline-block;
 			padding: 0;
 			background:#ff6600;
 			border-radius:50%;
 			width:12px;
 			height:12px;
-			border:1px solid #FFF; 
+			border:1px solid #FFF;
 		}
-		#cercle2, #cercle3{
+		#cercle2, #cercle3, #cercle4{
 			display: inline-block;
 			padding: 0;
 			border-radius:50%;
 			width:12px;
 			height:12px;
 			border:1px solid #FFF;
-			background-color: #F60; 
+			background-color: #F60;
 		}
 		.traits{
 			position: relative;
 			bottom: 6px;
 			display: inline-block;
-			border-top : 2px solid #FFF; 
-			width : 105px;
+			border-top : 2px solid #FFF;
+			width : 75px;
 		}
 	}
 	.tableau-partenaire {
@@ -773,7 +988,7 @@ html{
 		background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
 		border-radius: 5px;
 		clear: both;
-		margin-top: 30px;
+		margin-top: 60px;
 		width: 100%;
 		height: auto;
 		h1{
@@ -821,17 +1036,16 @@ html{
 /* @group Responsive vertical */
 
 @media screen and (max-height: 880px) {
-	.single-partenaire-coach #zone-gant{
-		width: 520px;
-		height: 592px;
-		margin: 0 0 0 -567px;
-	}
-}
-@media screen and (max-height: 830px) {
-	.partner-merci {
-		#footer-partenaire{
-			margin-top: 20px;
-			position: relative;
+	@media (max-width: 1140px) {
+		.single-partenaire-coach {
+			#wrapper-zone-gant {
+				#zone-gant {
+					#lien-app-store{
+						bottom: 50px;
+						left: 270px;
+					}
+				}
+			}  	
 		}
 	}
 }
@@ -840,18 +1054,10 @@ html{
 		.tableau-partenaire .gform_footer #gform_submit_button_36 {
 			margin-bottom: 10px;
 		}
-		#footer-partenaire{
-			margin-top: 20px;
-			position: relative;
-		}
 	}
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 768px) {
 	.partner-mon-compte {
-		#footer-partenaire{
-			margin-top: 20px;
-			position: relative;
-		}
 		.tableau-partenaire {
 			#formulaire {
 				.gform_body {
@@ -862,39 +1068,44 @@ html{
 			}
 		}
 	}
-}
-@media screen and (max-height: 555px) {
-	.partner-identification {
-		#footer-partenaire{
-			margin-top: 20px;
-			position: relative;
+	.partner-recap{
+		.recap-id{
+			.gform_wrapper{
+				.gform_body {
+				    left: 20px;
+				}
+				.gform_footer{
+					#gform_submit_button_37{
+						margin-left: 100px;
+					}
+				}
+			}
 		}
 	}
 }
-@media screen and (max-height: 554px) {
-	.partner-connexion {
-		#footer-partenaire{
-			margin-top: 20px;
-			position: relative;
-		}
-	}
-}
-/* end */ 
 
-/* @group Responsive horizontal
-____________________________________________________________________________________*/
-@media screen and (max-width: 1140px){ 
+/* end */
+
+/* @group Responsive horizontal */
+
+@media screen and (max-width: 1140px){
 	.single-partenaire-coach{
 		 #progression{
 			right: 0;
 		}
 	}
-	.single-partenaire-coach{
-		 #zone-gant{
-			width: 520px;
-			height: 592px;
-			margin: 0 0 0 -567px;
-		}
+	.single-partenaire-coach {
+		#wrapper-zone-gant {
+			#zone-gant {
+				width: 520px;
+				height: 592px;
+				margin: 0 0 0 -567px;
+				#lien-app-store{
+					bottom: 50px;
+					left: 270px;
+				}
+			}
+		}  	
 	}
 }
 @media screen and (max-width: 1120px){
@@ -905,7 +1116,23 @@ ________________________________________________________________________________
 		}
 	}
 }
-@media screen and (max-width: 1001px){ 
+
+@media screen and (max-width: 1020px){
+	.partner-recap{
+		.tableau-partenaire{
+			width: 100%;
+			height: 100%;
+			.titre1{
+				width: 88%;
+			}
+			.titre1:nth-child(2){
+				width: 94%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1001px){
 	.single-partenaire-coach .tableau-partenaire {
 		max-width: 100%;
 		#connexion h1{
@@ -915,9 +1142,16 @@ ________________________________________________________________________________
 			left: 425px;
 		}
 	}
-	.single-partenaire-coach #zone-gant{
-		width: 497px;
-		height: 565px;
+	.single-partenaire-coach {
+		#wrapper-zone-gant {
+			#zone-gant {
+				width: 497px;
+				height: 565px;
+				#lien-app-store{
+					left: 255px;
+				}
+			}
+		}  	
 	}
 }
 @media screen and (max-width: 980px){
@@ -946,10 +1180,6 @@ ________________________________________________________________________________
 		}
 	}
 	.partner-inscription{
-		#footer-partenaire{
-			position: relative;
-			margin-top: 20px;
-		}
 		.tableau-partenaire {
 			.gform_body {
 					#field_36_4{
@@ -958,12 +1188,6 @@ ________________________________________________________________________________
 					}
 				}
 			}
-		}
-	}
-	.partner-mon-compte {
-		#footer-partenaire {
-		    margin-top: 20px;
-		    position: relative;
 		}
 	}
 }
@@ -1016,7 +1240,7 @@ ________________________________________________________________________________
 	}
 }
 @media screen and (max-width: 885px){
-	.single-partenaire-coach .tableau-partenaire {
+	.partner-identification .tableau-partenaire {
 		height: auto;
 		clear: both;
 		width: 500px;
@@ -1051,15 +1275,10 @@ ________________________________________________________________________________
 			width: 100%;
 		}
 	}
-	.partner-connexion {
-		#footer-partenaire{
-			margin-top: 20px;
-		}
-	}
 }
 @media screen and (max-width: 860px){
 	.single-partenaire-coach #progression {
-		width: 350px;
+		//width: 350px;
 		.etapes {
 			&:nth-child(2) {
 				padding-right: 20px;
@@ -1067,7 +1286,7 @@ ________________________________________________________________________________
 		}
 		#etat {
 			#cercle1{
-				margin-left: 45px;
+				//margin-left: 45px;
 			}
 		}
 	}
@@ -1083,20 +1302,8 @@ ________________________________________________________________________________
 			float: left;
 		}
 	}
-	.partner-merci {
-		#footer-partenaire{
-			margin-top: 20px;
-		}
-	}
 }
-@media screen and (max-height: 780px) and (max-width: 540px){
-	.partner-identification{
-		#footer-partenaire {
-			margin-top: 20px;
-			position: relative;
-		}
-	}
-}
+
 @media screen and (max-width: 768px){
 	.partner-mon-compte{
 		.tableau-partenaire{
@@ -1125,9 +1332,6 @@ ________________________________________________________________________________
 		}
 	}
 	.partner-inscription{
-		#footer-partenaire{
-			margin-top: 20px;
-		}
 		.tableau-partenaire{
 			.gform_wrapper{
 				.gform_body{
@@ -1140,6 +1344,16 @@ ________________________________________________________________________________
 				  .top_label li.gfield.gf_left_half, .top_label li.gfield.gf_right_half{
 				    width: 48%;
 			  	}
+			}
+		}
+	}
+	.partner-recap{
+		.tableau-partenaire{
+			.titre1{
+				width: 68%;
+			}
+			.titre1:nth-child(2){
+				width: 74%;
 			}
 		}
 	}
@@ -1167,7 +1381,19 @@ ________________________________________________________________________________
 @media screen and (max-width: 736px){
 	.partner-inscription{
 		.tableau-partenaire .gform_footer #gform_submit_button_36 {
-			margin-left: 207px; 
+			margin-left: 207px;
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	.partner-recap{
+		.titre1{
+			padding-left: 0;
+		}
+		.recap-id{
+			p{
+				margin-left: 20px;
+			}
 		}
 	}
 }
@@ -1177,11 +1403,11 @@ ________________________________________________________________________________
 			display: none;
 		}
 		#logo1 {
-			position: relative;	
+			position: relative;
 			margin-left: auto;
 			margin-right: auto;
 			img {
-				margin-top: 20px; 
+				margin-top: 20px;
 				width: 330px;
 				height: 36px;
 			}
@@ -1249,7 +1475,16 @@ ________________________________________________________________________________
 @media screen and (max-width: 568px){
 	.partner-inscription{
 		.tableau-partenaire .gform_footer #gform_submit_button_36 {
-			margin-left: 160px; 
+			margin-left: 160px;
+		}
+	}
+	.partner-recap {
+		.tableau-partenaire {
+			.gform_footer {
+				#gform_submit_button_36 {
+					margin-left: 20%;
+				}
+			}
 		}
 	}
 }
@@ -1293,18 +1528,13 @@ ________________________________________________________________________________
 
 		}
 	}
-	.partner-connexion{
-		#footer-partenaire{
-			position: relative;
-		}
-	}
 	.partner-inscription{
 		.tableau-partenaire .gform_footer #gform_submit_button_36 {
-			margin-left: 70px; 
+			margin-left: 70px;
 		}
 	}
 }
-@media screen and (max-width: 463px){ 
+@media screen and (max-width: 463px){
 	.partner-accueil{
 		.accroche {
 			width: auto;
@@ -1322,6 +1552,14 @@ ________________________________________________________________________________
 }
 @media screen and (max-width: 450px){
 	.single-partenaire-coach{
+		#progression{
+			width: 100%;
+			#etat{
+				#cercle1{
+					margin-left: 40px;
+				}
+			}
+		}
 		.tableau-partenaire {
 			#inscription {
 				.gform_wrapper {
@@ -1357,7 +1595,7 @@ ________________________________________________________________________________
 		.gform_footer {
 			.button {
     			margin: 0 0 0 70px;
-    			margin-left: 0; 
+    			margin-left: 0;
     		}
     	}
     	.gform_wrapper .top_label li.gfield.gfield_error.gf_left_half, .gform_wrapper .top_label li.gfield.gfield_error.gf_right_half{
@@ -1377,9 +1615,41 @@ ________________________________________________________________________________
 				left: 20px;
 			}
 		}
+	}
+}
+@media screen and (max-width: 414px){
+	.partner-recap{
 		.tableau-partenaire {
-			#footer-partenaire{
-				position: absolute;
+			.gform_body {
+				.gform_fields{
+					#label_37_17_1{
+						width: 87%;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 400px){
+	.single-partenaire-coach {
+		#progression{
+			float: left;
+		}
+		.tableau-partenaire {
+			#connexion h1{
+				width: 270px;
+			}
+			#nouveau h1{
+				width: 270px;
+			}
+		}
+	}
+	.partner-recap{
+		.tableau-partenaire{
+			.gform_body{
+				.gfield_label{
+					width: 46%;
+				}
 			}
 		}
 	}
@@ -1388,6 +1658,9 @@ ________________________________________________________________________________
 @media screen and (max-width: 375px){
 	.single-partenaire-coach{
 		.tableau-partenaire {
+			h1{
+				padding-left: 0px;
+			}
 			.gform_body {
 				position: relative;
 				left: 5px;
@@ -1420,19 +1693,35 @@ ________________________________________________________________________________
 				margin-left: 10px;
 			}
 		}
-		#footer-partenaire{
-			position: relative;
-		}
 	}
 	.partner-inscription{
-		#footer-partenaire{
-			position: relative;
-		}
 		.tableau-partenaire{
 			.gform_wrapper{
 				  .top_label li.gfield.gf_left_half, .top_label li.gfield.gf_right_half{
 				    width: 100%;
 			  	}
+			}
+			#inscription{
+				padding-left: 0px;
+			}
+		}
+	}
+	.single-partenaire-coach{
+		#progression{
+			.etapes{
+				padding: 0 5px;
+				&:nth-child(1){
+					padding: 0px;
+				}
+				&:nth-child(2){
+					//padding-left: 0px;
+				}
+				&:nth-child(3){
+					//padding: 0px;
+				}
+				&:nth-child(4){
+					padding-right: 0px;
+				}
 			}
 		}
 	}
@@ -1446,34 +1735,15 @@ ________________________________________________________________________________
 		}
 	}
 }
-@media screen and (max-width: 400px){
-	.single-partenaire-coach {
-		#progression{
-			float: left;
-		}
-		.tableau-partenaire {
-			#connexion h1{
-				width: 270px;
-			}
-			#nouveau h1{
-				width: 270px;
-			}
-		}
-	}
-	.partner-connexion{
-		#footer-partenaire {
-			position: relative;
-		}
-	}
-}
+
 @media screen and (max-width: 320px){
 	.partner-accueil{
 		#logo1 {
-			position: relative;	
+			position: relative;
 			margin-left: auto;
 			margin-right: auto;
 			img {
-				margin-top: 20px; 
+				margin-top: 20px;
 				width: 280px;
 				height: 31px;
 			}
@@ -1497,7 +1767,7 @@ ________________________________________________________________________________
 		}
 		#coach{
 			width: 280px;
-			margin-bottom: 70px;
+			margin-bottom: 0px;
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -1524,7 +1794,6 @@ ________________________________________________________________________________
 			padding: 0 0 0 0;
 		}
 		#footer-partenaire {
-			position: absolute;
 			text-align: center;
 			height: 70px;
 			#lien1, #lien2,{
@@ -1540,12 +1809,13 @@ ________________________________________________________________________________
 			}
 		}
 	}
+	
 	.single-partenaire-coach{
 		.tableau-partenaire {
 			height: 100%;
 			.gform_body {
 				position: relative;
-				left: 25px;
+				left: 15px;
 			}
 			.gform_footer #gform_submit_button_36 {
 				margin-left: 10px;
@@ -1574,11 +1844,20 @@ ________________________________________________________________________________
 			}
 		}
 	}
-	.partner-inscription {
-		#footer-partenaire {
-			position: relative;
-			margin-top: 20px;
+	.partner-recap{
+		.tableau-partenaire {
+			#gform_36{
+				.gform_body{
+					left: 15px;
+				}
+			}
+			.gform_body{
+				position: relative;
+				left: 0px;
+			}
 		}
+	}
+	.partner-inscription {
 		.tableau-partenaire{
 			.gform_wrapper{
 				.gform_body{
@@ -1595,4 +1874,32 @@ ________________________________________________________________________________
 			}
 		}
 	}
+	.single-partenaire-coach{
+		#progression{
+			.etapes{
+				padding: 0 5px;
+				&:nth-child(1){
+					padding: 0px;
+				}
+				&:nth-child(2){
+					padding: 0 10px;
+				}
+				&:nth-child(3){
+					padding: 0px;
+				}
+				&:nth-child(4){
+					padding-right: 0px;
+				}
+			}
+			#etat {
+				#cercle1 {
+				    margin-left: 8px;
+				}
+			}
+		}
+	}
+}
+
+.gform_wrapper .top_label li.gfield.gf_full_half {
+    width: 49%;
 }
