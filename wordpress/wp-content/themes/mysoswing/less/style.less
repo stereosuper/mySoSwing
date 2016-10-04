@@ -11,7 +11,6 @@
 @grisInput: #6d6d6d;
 @error: #da2c13;
 @actif: #898989;
-@grisLight: #d6d6d6;
 
 // ID des formulaires Gravity //
 @choixAbonnementEn: 11;
@@ -818,57 +817,31 @@ footer{
 #bloc-right-home{
   width: 100%;
   .box-sizing(border-box);
-  padding: 100px 0 355px 52%;
+  padding: 100px 0 280px 52%;
   height: auto;
   position: relative;
   overflow: hidden;
-   a#pastilleNGF {
+  a#pastilleNGF {
     position: absolute;
     display: block;
-    width: 415px;
-    height: 95px;
-    background: url(../layoutImg/bannerngf.png) no-repeat 0 0;
-    background-size: 93%;
-    right: 11%;
-    bottom: 235px;
+    width: 278px;
+    height: 270px;
+    background: url(../layoutImg/pastilleNGF.png) no-repeat 0 0;
+    right: 25%;
+    bottom: 0;
     margin: 0;
     padding: 0;
     text-indent: -9000px;
     overflow: hidden;
     .transition(bottom 0.1s ease-in-out);
     .opacity(0);
-     &:hover {
-      bottom: 230px;
+    &:hover {
+      bottom: 5px;
     }
     &:active {
       margin-bottom: -5px;
-  }
-  &.no-js {
-      .opacity(1);
     }
-  }
-    a#pastillePG {
-    position: absolute;
-    display: block;
-    width: 415px;
-    height: 95px;
-    background: url(../layoutImg/bannerplayinggolf.png) no-repeat 0 0;
-    background-size: 93%;
-    right: 11%;
-    bottom: 120px;
-    margin: 0;
-    padding: 0;
-    text-indent: -9000px;
-    overflow: hidden;
-    .transition(bottom 0.1s ease-in-out);
-    .opacity(0);
-     &:hover {
-      bottom: 115px;
-    }
-    &:active {
-      margin-bottom: -5px;
-  }
-  &.no-js {
+    &.no-js {
       .opacity(1);
     }
   }
@@ -2853,10 +2826,6 @@ select{
       right: auto;
       left: 50%;
     }
-    a#pastillePG {
-      right: auto;
-      left: 50%;
-    }
   }
   #menu-footer{
     float: none;
@@ -3106,18 +3075,6 @@ select{
   .bloc-pro-home{
     padding: 20px;
   }
-  #bloc-right-home{
-    a#pastilleNGF {
-      right: auto;
-      left: 50%;
-      background-size: 83%;
-    }
-    a#pastillePG {
-      right: auto;
-      left: 50%;
-      background-size: 83%;
-    }
-  }
 }
 
 @media (max-width: 767px) {
@@ -3316,21 +3273,6 @@ select{
     }
   }
 }
-@media (max-width: 730px) {
-#bloc-right-home{
-    a#pastilleNGF {
-      right: auto;
-      left: 50%;
-      background:url(../layoutImg/ngf.png) no-repeat 0 0;
-    }
-    a#pastillePG {
-      right: auto;
-      left: 50%;
-      background-size: 83%;
-      background:url(../layoutImg/playingGolf.png) no-repeat 0 0;
-    }
-  }
-}
 
 @media (max-width: 600px){
   .bloc-pro-home{
@@ -3458,15 +3400,10 @@ select{
   }
 
   #bloc-right-home{
-    padding: 50px 0 355px 47%;
+    padding: 50px 0 270px 47%;
     overflow: hidden;
      a#pastilleNGF {
-      right: auto;
-      left: 45%;
-     }
-     a#pastillePG {
-      right: auto;
-      left: 45%;
+      margin-left: -80px;
      }
   }
   .videoContainer{

@@ -304,12 +304,6 @@ blockquote:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-arrow-right:before {
-  content: "\e901";
-}
-.icon-arrow-left:before {
-  content: "\e900";
-}
 .icon-account:before {
   content: "\e604";
 }
@@ -1353,7 +1347,7 @@ footer.bottom {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 100px 0 355px 52%;
+  padding: 100px 0 280px 52%;
   height: auto;
   position: relative;
   overflow: hidden;
@@ -1361,12 +1355,11 @@ footer.bottom {
 #bloc-right-home a#pastilleNGF {
   position: absolute;
   display: block;
-  width: 415px;
-  height: 95px;
-  background: url(../layoutImg/bannerngf.png) no-repeat 0 0;
-  background-size: 93%;
-  right: 11%;
-  bottom: 235px;
+  width: 278px;
+  height: 270px;
+  background: url(../layoutImg/pastilleNGF.png) no-repeat 0 0;
+  right: 25%;
+  bottom: 0;
   margin: 0;
   padding: 0;
   text-indent: -9000px;
@@ -1380,44 +1373,12 @@ footer.bottom {
   opacity: 0;
 }
 #bloc-right-home a#pastilleNGF:hover {
-  bottom: 230px;
+  bottom: 5px;
 }
 #bloc-right-home a#pastilleNGF:active {
   margin-bottom: -5px;
 }
 #bloc-right-home a#pastilleNGF.no-js {
-  -webkit-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
-}
-#bloc-right-home a#pastillePG {
-  position: absolute;
-  display: block;
-  width: 415px;
-  height: 95px;
-  background: url(../layoutImg/bannerplayinggolf.png) no-repeat 0 0;
-  background-size: 93%;
-  right: 11%;
-  bottom: 120px;
-  margin: 0;
-  padding: 0;
-  text-indent: -9000px;
-  overflow: hidden;
-  -webkit-transition: bottom 0.1s ease-in-out;
-  -moz-transition: bottom 0.1s ease-in-out;
-  -o-transition: bottom 0.1s ease-in-out;
-  transition: bottom 0.1s ease-in-out;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-}
-#bloc-right-home a#pastillePG:hover {
-  bottom: 115px;
-}
-#bloc-right-home a#pastillePG:active {
-  margin-bottom: -5px;
-}
-#bloc-right-home a#pastillePG.no-js {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
@@ -3471,69 +3432,15 @@ select {
   margin: 25px 0 5px;
   font-size: .9em;
 }
-/* STYLE PAGE HOME PLAYINGGOLF */
-html {
+html,
+body.single-partenaire-coach {
   min-height: 100%;
 }
-html.html-partenaire-coach {
-  height: auto;
-}
-.single-partenaire-coach {
-  min-height: 100%;
-  background: url(http://staging.mysoswing.com/wp-content/uploads/2016/01/fond.png) center no-repeat;
+body {
+  background: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/fond.png) center no-repeat;
   background-size: cover;
-  /*#slider-partner{
-		ul{
-			padding: 5px 0 0; 
-			margin: 10px auto;
-			border-top: 1px solid @gris;
-			border-bottom : 1px solid @gris; 
-			width: 350px;
-			height: 135px;
-			position: relative;
-			list-style: none;
-			overflow: hidden;
-			
-		}
-		li{
-			position: relative;
-			text-align: center;
-			vertical-align: middle;
-		}
-		.actif{
-		}
-	}*/
-  /*.btn-slide{
-		position: absolute;
-		border-radius:50%;
-		width:32px;
-		height:32px;
-		padding: 0;
-		background: #ff6300;
-		color: #fff; 
-		box-shadow: 0 3px 0 #993b00;
-		font-size: 15px;
-		bottom: 155px;
-		line-height: 29px;
-		text-align: center;
-		&.icon-arrow-left{
-			left: 30px;
-			&:before{
-				margin: 0 0 0 -2px;
-			}
-		}
-		&.icon-arrow-right{
-			right: 30px;
-			&:before{
-				margin: 0 -2px 0 0;
-			}
-		}
-		&:before{
-			display: block;
-		}
-	}*/
 }
-.single-partenaire-coach #btn-connect {
+#btn-connect {
   text-decoration: none;
   color: #d4d4d4;
   position: absolute;
@@ -3546,22 +3453,22 @@ html.html-partenaire-coach {
   border-bottom-right-radius: 5px;
   text-align: center;
 }
-.single-partenaire-coach #btn-connect span {
+#btn-connect span {
   display: block;
   text-indent: 0;
   padding: 10px 0 15px;
   font-size: 10px;
 }
-.single-partenaire-coach #logo1 {
+#logo1 {
   border: 0;
   padding: 0;
   float: left;
   text-align: right;
   line-height: .8em;
-  margin-top: 44px;
+  margin-top: 60px;
   margin-bottom: 0;
 }
-.single-partenaire-coach #logo1 img {
+#playing {
   display: block;
   width: 361px;
   height: 40px;
@@ -3569,7 +3476,7 @@ html.html-partenaire-coach {
   text-align: left;
   text-indent: -9999px;
 }
-.single-partenaire-coach #mysos {
+#mysos {
   font-family: 'motivaIt', sans-serif;
   font-weight: normal;
   font-size: 0.56em;
@@ -3578,20 +3485,22 @@ html.html-partenaire-coach {
   text-rendering: optimizeLegibility;
   padding: 0 20px 0 0;
 }
-.single-partenaire-coach #sos {
+#sos {
   color: #ff6300;
 }
-.single-partenaire-coach .accroche {
-  margin-top: 44px;
+.accroche {
+  margin-top: 60px;
   float: right;
   padding: 0 0 0 12px;
   letter-spacing: -0.5px;
   width: 350px;
 }
-.single-partenaire-coach h2 {
+h2,
+body .gform_wrapper .gf_page_steps span,
+body .gform_wrapper .gf_page_steps span.gf_step_number {
   font-family: 'motivaBold', sans-serif;
   font-weight: normal;
-  font-size: 3.14em;
+  font-size: 2.75em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -3599,16 +3508,14 @@ html.html-partenaire-coach {
   letter-spacing: -2px;
   margin-bottom: 15px;
 }
-.single-partenaire-coach p {
+p {
   font-size: 1.15em;
 }
-.single-partenaire-coach #coach {
+#coach {
   margin: 80px 0 35px 0;
   height: 370px;
-  width: 308px;
   position: relative;
   color: #FFF;
-  background: #323232;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.78));
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -3616,51 +3523,11 @@ html.html-partenaire-coach {
   border-bottom-right-radius: 5px;
   text-align: center;
 }
-.single-partenaire-coach #coach.no-border-bottom {
+#coach.no-border-bottom {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.single-partenaire-coach #coach #annonce {
-  font-family: 'motivaBoldIt', sans-serif;
-  font-weight: normal;
-  font-size: 1.07em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  position: relative;
-  bottom: 9px;
-  margin-bottom: 21px;
-}
-.single-partenaire-coach #coach #annonce #prix {
-  color: #ff6300;
-  font-family: 'motiva', sans-serif;
-  font-weight: normal;
-  font-size: 3.92em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  letter-spacing: -3px;
-  line-height: 1em;
-  display: inline-block;
-  position: relative;
-  top: 18px;
-}
-.single-partenaire-coach #coach #offre {
-  height: 135px;
-  width: auto;
-  border-top: 1px solid #9d9d9d;
-  border-bottom: 1px solid #9d9d9d;
-}
-.single-partenaire-coach #coach #offre select {
-  width: 275px!important;
-  display: block;
-  position: relative;
-  margin: 25px auto 15px;
-}
-.single-partenaire-coach #coach #offre .btn {
-  margin-top: 0px;
-}
-.single-partenaire-coach #cercle {
+#cercle {
   display: block;
   position: absolute;
   top: -50px;
@@ -3671,25 +3538,81 @@ html.html-partenaire-coach {
   height: 111px;
   border: 2px solid #FFF;
 }
-.single-partenaire-coach .pro1 {
-  margin: 0 0 0 45px;
+.pro1 {
+  margin: 0 0 0 70px;
 }
-.single-partenaire-coach .pro2 {
-  margin: 0 0 0 145px;
+.pro2 {
+  margin: 0 0 0 170px;
 }
-.single-partenaire-coach #presentation {
-  color: #d6d6d6;
+#presentation {
   margin: 0 auto;
-  padding: 60px 0 0;
+  padding: 75px 0 10px;
   width: 260px;
 }
-.single-partenaire-coach #presentation strong {
-  font-size: 1.07em;
+#slider-partner ul {
+  padding: 5px 0 0;
+  margin: 10px auto;
+  border-top: 1px solid #9d9d9d;
+  border-bottom: 1px solid #9d9d9d;
+  width: 180px;
+  height: 103px;
+  position: relative;
+  list-style: none;
+  overflow: hidden;
 }
-.single-partenaire-coach #presentation div:nth-child(2) {
-  font-size: 0.9em;
+#slider-partner li {
+  position: absolute;
 }
-.single-partenaire-coach #wrapper-zone-gant {
+#slider-partner .offre {
+  font-family: 'motivaBoldIt', sans-serif;
+  font-weight: normal;
+  font-size: 1.4em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+#slider-partner .prix {
+  color: #ff6300;
+  font-size: 5em;
+  letter-spacing: -3px;
+  line-height: 1em;
+}
+.btn,
+body .gform_wrapper .gform_footer input[type=submit],
+body .gform_wrapper .gform_page_footer input[type=button],
+body .gform_wrapper .gform_page_footer input[type=submit] {
+  margin-top: 15px;
+}
+.btn-slide {
+  position: absolute;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: #ff6300;
+  color: #fff;
+  box-shadow: 0 3px 0 #993b00;
+  font-size: 15px;
+  bottom: 155px;
+  line-height: 29px;
+  text-align: center;
+}
+.btn-slide.icon-arrow-left {
+  left: 30px;
+}
+.btn-slide.icon-arrow-left:before {
+  margin: 0 0 0 -2px;
+}
+.btn-slide.icon-arrow-right {
+  right: 30px;
+}
+.btn-slide.icon-arrow-right:before {
+  margin: 0 -2px 0 0;
+}
+.btn-slide:before {
+  display: block;
+}
+#wrapper-zone-gant {
   display: block;
   position: absolute;
   top: 0;
@@ -3698,733 +3621,130 @@ html.html-partenaire-coach {
   bottom: 0;
   overflow: hidden;
 }
-.single-partenaire-coach #wrapper-zone-gant #zone-gant {
+#wrapper-zone-gant #zone-gant {
   bottom: 0;
 }
-.single-partenaire-coach #wrapper-zone-gant #zone-gant #telephone {
+#wrapper-zone-gant #zone-gant #telephone {
   background-image: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/telephone.png);
   top: 2px;
 }
-.single-partenaire-coach #footer-partenaire {
+/*#gant {
+	background: url(http://staging.mysoswing.com/wp-content/uploads/2015/12/gant.png) no-repeat;
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: 50%;
+    bottom: 0;
+}*/
+#footer-partenaire {
   display: block;
   width: 100%;
-  background: #323232;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
   height: 35px;
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.single-partenaire-coach #footer-partenaire a {
+#footer-partenaire a {
   color: #FFF;
   line-height: 35px;
   font-size: 0.87em;
 }
-.single-partenaire-coach #footer-partenaire #lien1,
-.single-partenaire-coach #footer-partenaire #lien2 {
+#footer-partenaire #lien1,
+#footer-partenaire #lien2 {
   margin: 0 15px;
 }
-.single-partenaire-coach #footer-partenaire #lien3 {
+#footer-partenaire #lien3 {
   float: right;
   margin-right: 9%;
 }
-/* STYLE PAGE identification */
-.partner-identification header {
-  background-image: none;
-  max-width: 942px;
-}
-.partner-identification #tableau {
-  height: auto;
-  width: 100%;
-  background: #323232;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-  border-radius: 5px;
-  float: left;
-  margin-top: 60px;
-  display: inline-block;
-}
-.partner-identification #tableau h1 {
-  font-size: 1.71em;
-  letter-spacing: -1.6px;
-  margin: 10px 0;
-  padding: 0 0 0 50px;
-}
-.partner-identification #tableau p {
-  font-family: 'motivaBold', sans-serif;
-  font-weight: normal;
-  font-size: 1.14em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  color: #d6d6d6;
-  padding: 0 0 0 50px;
-  margin: 30px 0 10px;
-}
-.partner-identification #tableau .btn {
-  width: auto;
-  height: 45px;
-  text-align: center;
-  vertical-align: middle;
-  font-family: 'motivaBoldIt', sans-serif;
-  font-weight: normal;
-  font-size: 1.14em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  text-shadow: 1px 0 9px rgba(0, 0, 0, 0.5);
-  letter-spacing: 1px;
-  margin-top: 0;
-}
-.partner-identification #tableau #connexion {
-  color: #FFF;
-  display: inline-block;
-  position: relative;
-  left: 20px;
-}
-.partner-identification #tableau #connexion h1 {
-  border-bottom: 1px dotted #a0a0a0;
-  width: 418px;
-}
-.partner-identification #tableau #connexion .mdp {
-  margin-top: 0;
-}
-.partner-identification #tableau #connexion .btn {
-  margin-left: 50px;
-  margin-bottom: 10px;
-}
-.partner-identification #tableau #connexion input {
-  margin: 10px 0 5px 50px;
-}
-.partner-identification #tableau #connexion input:first-child {
-  margin-top: 5px;
-}
-.partner-identification #tableau #connexion .error {
-  height: 30px;
-  margin: 0;
-}
-.partner-identification #tableau #separateur {
-  border-left: 1px dotted #a0a0a0;
-  height: 243px;
-  position: absolute;
-  left: 550px;
-  top: 240px;
-}
-.partner-identification #tableau #nouveau {
-  color: #FFF;
-  display: inline-block;
-  float: right;
-  position: relative;
-  right: 170px;
-}
-.partner-identification #tableau #nouveau h1 {
-  padding: 0 0 0 10px;
-  width: 130%;
-}
-.partner-identification #tableau #nouveau p {
-  padding: 0 0 0 10px;
-}
-.partner-identification #tableau #nouveau .btn {
-  margin-left: 10px;
-}
-.partner-identification #progression {
-  height: 77px;
-  width: 404px;
-  background-color: rgba(0, 0, 0, 0.55);
-  border-radius: 5px;
-  float: right;
-  margin-top: 60px;
-  position: relative;
-}
-.partner-identification #progression #intitule {
-  padding: 0;
-  text-align: center;
-  margin-bottom: 0;
-}
-.partner-identification #progression .etapes {
-  font-size: 0.85em;
-  color: #FFF;
-  display: inline-block;
-  padding: 0 35px;
-  margin: 0;
-  right: 16px;
-}
-.partner-identification #progression .etapes strong {
-  font-family: 'motivaBold', sans-serif;
-  font-weight: normal;
-  font-size: 1.28em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-.partner-identification #progression .etapes:nth-child(1) {
-  padding: 0 50px 0 10px;
-}
-.partner-identification #progression .etapes:nth-child(2) {
-  padding-left: 10px;
-}
-.partner-identification #progression .etapes:nth-child(3) {
-  padding: 0 27px 0 47px;
-}
-.partner-identification #etat {
-  padding: 0;
-  margin: 5px 0 0;
-}
-.partner-identification #etat #cercle1 {
-  margin-left: 78px;
-  display: inline-block;
-  padding: 0;
-  background: #ff6600;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #FFF;
-}
-.partner-identification #etat #cercle2,
-.partner-identification #etat #cercle3 {
-  display: inline-block;
-  padding: 0;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #FFF;
-}
-.partner-identification #etat .traits {
-  position: relative;
-  bottom: 6px;
-  display: inline-block;
-  border-top: 2px solid #FFF;
-  width: 105px;
-}
-/* STYLE PAGE INSCRIPTION */
-.partner-inscription header {
-  background-image: none;
-}
-.partner-inscription #progression {
-  height: 77px;
-  width: 404px;
-  background-color: rgba(0, 0, 0, 0.55);
-  border-radius: 5px;
-  float: right;
-  margin-top: 60px;
-  position: relative;
-}
-.partner-inscription #progression #intitule {
-  padding: 0;
-  text-align: center;
-  margin-bottom: 0;
-}
-.partner-inscription #progression .etapes {
-  font-size: 0.85em;
-  color: #FFF;
-  display: inline-block;
-  padding: 0 35px;
-  margin: 0;
-  right: 16px;
-}
-.partner-inscription #progression .etapes strong {
-  font-family: 'motivaBold', sans-serif;
-  font-weight: normal;
-  font-size: 1.28em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-.partner-inscription #progression .etapes:nth-child(1) {
-  padding: 0 50px 0 10px;
-}
-.partner-inscription #progression .etapes:nth-child(2) {
-  padding-left: 10px;
-}
-.partner-inscription #progression .etapes:nth-child(3) {
-  padding: 0 27px 0 47px;
-}
-.partner-inscription #etat {
-  padding: 0;
-  margin: 5px 0 0;
-}
-.partner-inscription #etat #cercle1 {
-  margin-left: 78px;
-  display: inline-block;
-  padding: 0;
-  background: #ff6600;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #FFF;
-}
-.partner-inscription #etat #cercle2,
-.partner-inscription #etat #cercle3 {
-  display: inline-block;
-  padding: 0;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #FFF;
-}
-.partner-inscription #etat .traits {
-  position: relative;
-  bottom: 6px;
-  display: inline-block;
-  border-top: 2px solid #FFF;
-  width: 105px;
-}
-.partner-inscription h1 {
-  padding: 10px 0 0 0;
-}
-.partner-inscription #tableau2 {
-  background: #323232;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
-  border-radius: 5px;
-  margin-top: 60px;
-}
-.partner-inscription #tableau2 .gform_body {
-  position: relative;
-  left: 20px;
-}
-.partner-inscription #tableau2 .gform_body .gfield_label {
-  color: #FFF;
-  width: 29%;
-}
-.partner-inscription #tableau2 .gform_body .ginput_container #input_36_3 {
-  width: 130%;
-}
-.partner-inscription #tableau2 .gform_body .ginput_container #input_36_4 {
-  width: 60%;
-}
-.partner-inscription #tableau2 .gform_body .ginput_container #input_36_8 {
-  width: 28%;
-}
-.partner-inscription #tableau2 .gform_footer {
-  margin-top: 0;
-  padding-top: 0;
-}
-.partner-inscription #tableau2 .gform_footer #gform_submit_button_36 {
-  margin-top: 0;
-  margin-left: 174px;
-}
-.partner-inscription #tableau2 .gform_wrapper div.validation_error {
-  background-color: #FFF;
-  width: 98%;
-  margin-left: 10px;
-}
-.partner-inscription #inscription {
-  color: #FFF;
-  margin-left: 20px;
-  padding-left: 0px;
-  width: 850px;
-  padding-left: 50px;
-  letter-spacing: -1.6px;
-  font-size: 1.71em;
-}
-/* STYLE PAGE COMPTE */
-.partner-mon-compte #logo1 {
-  margin-bottom: 65px;
-}
-.partner-mon-compte #tableau3 {
-  background: #323232;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
-  border-radius: 5px;
-  width: 100%;
-  clear: both;
-  margin-top: 30px;
-}
-.partner-mon-compte #tableau3 h1 {
-  color: #FFF;
-  margin: 0 0 10px 20px;
-  width: 850px;
-  padding-left: 50px;
-  letter-spacing: -1.6px;
-  font-size: 1.71em;
-  padding-top: 10px;
-}
-.partner-mon-compte #tableau3 #info {
-  width: 25%;
-  display: inline-block;
-  position: relative;
-  bottom: 90px;
-  margin-right: 20px;
-}
-.partner-mon-compte #tableau3 #info p {
-  color: #FFF;
-  margin: 0 0 0 20px;
-}
-.partner-mon-compte #tableau3 #info p:nth-child(2) {
-  margin-bottom: 15px;
-}
-.partner-mon-compte #tableau3 #info a {
-  background-size: 170px;
-}
-.partner-mon-compte #tableau3 #info #lien-app-store {
-  width: 170px;
-  height: 50px;
-  border-radius: 5px;
-}
-.partner-mon-compte #tableau3 #formulaire {
-  display: inline-block;
-  width: 72%;
-}
-.partner-mon-compte #tableau3 #formulaire .gform_body .gfield_label {
-  color: #FFF;
-}
-.partner-mon-compte #tableau3 #formulaire .gform_wrapper div.validation_error {
-  width: 98%;
-  background-color: #FFF;
-}
-.partner-mon-compte #tableau3 .gform_body #field_38_11 {
-  width: 48%;
-  display: inline-block;
-}
-.partner-mon-compte #tableau3 .gform_body #field_38_12 {
-  width: 47%;
-}
-.partner-mon-compte #tableau3 .gform_body .ginput_container #input_38_3 {
-  width: 130%;
-}
-.partner-mon-compte #tableau3 .gform_body .ginput_container #input_38_4 {
-  width: 60%;
-}
-.partner-mon-compte #tableau3 .gform_body .ginput_container #input_38_8 {
-  width: 28%;
-}
-.partner-mon-compte #tableau3 .gform_body .ginput_container #input_38_11 {
-  width: 97%;
-}
-.partner-mon-compte #tableau3 .gform_body .ginput_container #input_38_11 .gfield_label {
-  width: 23.5%;
-}
-.partner-mon-compte #tableau3 .gform_body .ginput_container #input_38_12 {
-  width: 97%;
-}
-/* STYLE PAGE CONNEXION */
-.partner-connexion header {
-  background-image: none;
-}
-.partner-connexion #tableau4 {
-  background: #323232;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.17));
-  border-radius: 5px;
-  width: 100%;
-  clear: both;
-  margin-top: 60px;
-}
-.partner-connexion #tableau4 h1 {
-  color: #FFF;
-  margin: 0 0 10px 20px;
-  width: 78%;
-  letter-spacing: -1.6px;
-  font-size: 1.71em;
-  padding-left: 50px;
-  padding-top: 10px;
-}
-.partner-connexion #tableau4 p {
-  color: #FFF;
-  margin: 0 0 10px 20px;
-}
-.partner-connexion #tableau4 input {
-  margin: 0 0 10px 20px;
-}
-/* STYLE PAGE MOTDEPASSE */
-.partner-motdepasse header {
-  background-image: none;
-}
-.partner-motdepasse #tableau {
-  height: auto;
-  width: 100%;
-  background: #323232;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-  border-radius: 5px;
-  float: left;
-  margin-top: 60px;
-  display: inline-block;
-}
-.partner-motdepasse #tableau h1 {
-  color: #FFF;
-  font-size: 1.71em;
-  letter-spacing: -1.6px;
-  margin: 10px 0;
-  padding: 0 0 0 40px;
-  position: relative;
-  left: 20px;
-  width: 87%;
-}
-.partner-motdepasse #tableau p {
-  color: #d6d6d6;
-  padding: 0 0 0 20px;
-  margin: 30px 0 0;
-}
-.partner-motdepasse #tableau .input {
-  margin: 10px 0 10px 20px;
-}
-.partner-motdepasse #tableau .btn {
-  margin: 10px 0 10px 20px;
-  width: 300px;
-  margin: 20px;
-}
-.partner-motdepasse #footer-partenaire {
-  position: absolute;
-}
-/* STYLE PAGE MERCI */
-.partner-merci #progression {
-  height: 77px;
-  width: 404px;
-  background-color: rgba(0, 0, 0, 0.55);
-  border-radius: 5px;
-  float: right;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  position: relative;
-}
-.partner-merci #progression #intitule {
-  padding: 0;
-  text-align: center;
-  margin-bottom: 0;
-}
-.partner-merci #progression .etapes {
-  font-size: 0.85em;
-  color: #FFF;
-  display: inline-block;
-  padding: 0 35px;
-  margin: 0;
-  right: 16px;
-}
-.partner-merci #progression .etapes strong {
-  font-family: 'motivaBold', sans-serif;
-  font-weight: normal;
-  font-size: 1.28em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-.partner-merci #progression .etapes:nth-child(1) {
-  padding: 0 50px 0 10px;
-}
-.partner-merci #progression .etapes:nth-child(2) {
-  padding-left: 10px;
-}
-.partner-merci #progression .etapes:nth-child(3) {
-  padding: 0 27px 0 47px;
-}
-.partner-merci #etat {
-  padding: 0;
-  margin: 5px 0 0;
-}
-.partner-merci #etat #cercle1 {
-  margin-left: 78px;
-  display: inline-block;
-  padding: 0;
-  background: #ff6600;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #FFF;
-}
-.partner-merci #etat #cercle2,
-.partner-merci #etat #cercle3 {
-  display: inline-block;
-  padding: 0;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #FFF;
-  background-color: #F60;
-}
-.partner-merci #etat .traits {
-  position: relative;
-  bottom: 6px;
-  display: inline-block;
-  border-top: 2px solid #FFF;
-  width: 105px;
-}
-.partner-merci #tableau {
-  background: #323232;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
-  border-radius: 5px;
-  clear: both;
-  margin-top: 30px;
-  width: 100%;
-  height: auto;
-}
-.partner-merci #tableau h1 {
-  color: #FFF;
-  text-align: center;
-  letter-spacing: -1.6px;
-  font-size: 2.14em;
-  border-bottom: none;
-  margin: 50px 0 0 0;
-  padding: 10px 0 0 0;
-}
-.partner-merci #tableau p {
-  color: #FFF;
-  text-align: center;
-  font-family: 'motivaBold', sans-serif;
-  font-weight: normal;
-  font-size: 1.28em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  margin: 20px 0 50px;
-  padding: 0;
-}
-.partner-merci #tableau p:nth-child(5) {
-  margin-bottom: 0;
-}
-.partner-merci #tableau #thin {
-  font-family: 'motiva', sans-serif;
-  font-weight: normal;
-  font-size: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  margin-bottom: 20px;
-}
-.partner-merci #tableau #border {
-  position: relative;
-  border-bottom: 2px solid #a0a0a0;
-  width: 20%;
-  margin: 0 auto;
-}
-.partner-merci #tableau a {
-  background-size: 170px;
-}
-.partner-merci #tableau #lien-app-store {
-  width: 170px;
-  height: 50px;
-  border-radius: 5px;
-  padding-bottom: 50px;
-  margin: 0 auto;
-  bottom: 15px;
-  position: relative;
-}
 /* @group Responsive vertical */
-@media screen and (max-height: 790px) {
-  .partner-inscription #footer-partenaire {
-    margin-top: 20px;
-  }
-  .partner-inscription #tableau2 .gform_footer #gform_submit_button_36 {
-    margin-bottom: 10px;
-  }
-}
 @media screen and (max-height: 880px) {
-  .single-partenaire-coach #zone-gant {
+  #zone-gant {
     width: 520px;
     height: 592px;
     margin: 0 0 0 -567px;
-  }
-}
-@media screen and (max-height: 749px) {
-  .partner-mon-compte #footer-partenaire {
-    margin-top: 20px;
-    position: relative;
-  }
-}
-@media screen and (max-height: 722px) {
-  .partner-merci #footer-partenaire {
-    margin-top: 20px;
-    position: relative;
-  }
-}
-@media screen and (max-height: 555px) {
-  .partner-identification #footer-partenaire {
-    margin-top: 20px;
-    position: relative;
-  }
-}
-@media screen and (max-height: 554px) {
-  .partner-connexion #footer-partenaire {
-    margin-top: 20px;
-    position: relative;
   }
 }
 /* end */
-/* @group Responsive horizontal */
+/* @group Responsive vertical */
 @media screen and (max-width: 1140px) {
-  .single-partenaire-coach #zone-gant {
+  #zone-gant {
     width: 520px;
     height: 592px;
     margin: 0 0 0 -567px;
   }
 }
-@media screen and (max-width: 1120px) {
-  .partner-identification #tableau #nouveau {
-    right: 10%;
-  }
-  .partner-identification #tableau #nouveau h1 {
-    width: 100%;
-  }
-}
 @media screen and (max-width: 1001px) {
-  .single-partenaire-coach #zone-gant {
+  #zone-gant {
     width: 497px;
     height: 565px;
+    margin: 0 0 0px -488px;
   }
 }
 @media screen and (max-width: 805px) {
-  .single-partenaire-coach .accroche {
+  .accroche {
     margin-top: 30px;
   }
 }
 @media screen and (max-width: 666px) {
-  .single-partenaire-coach #zone-gant {
+  #zone-gant {
     display: none;
   }
-  .single-partenaire-coach #logo1 {
+  #logo1 {
     position: relative;
     margin-left: auto;
     margin-right: auto;
   }
-  .single-partenaire-coach #logo1 img {
+  #playing {
     margin-top: 20px;
     width: 330px;
     height: 36px;
   }
-  .single-partenaire-coach .accroche {
+  .accroche {
     padding: 0;
     float: none;
     clear: both;
   }
-  .single-partenaire-coach .accroche br {
+  .accroche br {
     display: none;
   }
-  .single-partenaire-coach .accroche h2 {
+  .accroche h2 {
     letter-spacing: 0em;
     font-size: 2.1em;
   }
-  .single-partenaire-coach #coach {
+  #coach {
     width: 335px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 70px
-			;
+    margin-bottom: 0;
   }
-  .single-partenaire-coach .pro1 {
+  .pro1 {
     margin: 0 0 0 58px;
   }
-  .single-partenaire-coach .pro2 {
+  .pro2 {
     margin: 0 0 0 158px;
   }
-  .single-partenaire-coach #presentation {
+  #presentation {
     font-size: 1em;
   }
-  .single-partenaire-coach #slider-partner .icon-arrow-left {
+  #slider-partner .icon-arrow-left {
     left: 30px;
   }
-  .single-partenaire-coach #slider-partner .icon-arrow-right {
+  #slider-partner .icon-arrow-right {
     right: 30px;
-  }
-  .single-partenaire-coach #tableau2 h1 {
-    width: 80%;
-  }
-  .partner-motdepasse #tableau h1 {
-    width: 80%;
   }
 }
 @media screen and (max-width: 463px) {
-  .single-partenaire-coach .accroche {
+  #footer-partenaire {
+    position: relative;
+  }
+  .accroche {
     width: auto;
   }
-  .single-partenaire-coach #footer-partenaire #lien1,
-  .single-partenaire-coach #footer-partenaire #lien2,
-  .single-partenaire-coach #footer-partenaire #lien3 {
+  #footer-partenaire #lien1,
+  #footer-partenaire #lien2,
+  #footer-partenaire #lien3 {
     margin: 0;
     float: none;
     margin: 0 3px;
@@ -4432,68 +3752,67 @@ html.html-partenaire-coach {
   }
 }
 @media screen and (max-width: 320px) {
-  .single-partenaire-coach #logo1 {
+  #logo1 {
     position: relative;
     margin-left: auto;
     margin-right: auto;
   }
-  .single-partenaire-coach #logo1 img {
+  #playing {
     margin-top: 20px;
     width: 280px;
     height: 31px;
   }
-  .single-partenaire-coach .accroche {
+  .accroche {
     padding: 0;
     float: none;
     clear: both;
     font-size: 0.9em;
     width: auto;
   }
-  .single-partenaire-coach .accroche br {
+  .accroche br {
     display: none;
   }
-  .single-partenaire-coach .accroche h2 {
+  .accroche h2 {
     letter-spacing: 0em;
     font-size: 2.1em;
   }
-  .single-partenaire-coach #coach {
+  #coach {
     width: 280px;
     margin-bottom: 70px;
     margin-left: auto;
     margin-right: auto;
   }
-  .single-partenaire-coach .pro1 {
+  .pro1 {
     margin: 0 0 0 30px;
   }
-  .single-partenaire-coach .pro2 {
+  .pro2 {
     margin: 0 0 0 130px;
   }
-  .single-partenaire-coach #presentation {
+  #presentation {
     font-size: 1.2em;
   }
-  .single-partenaire-coach .icon-arrow-left {
+  .icon-arrow-left {
     left: 30px;
     padding: 0 0 0 2px;
   }
-  .single-partenaire-coach .icon-arrow-left:before {
+  .icon-arrow-left:before {
     padding: 0;
     margin: 0;
   }
-  .single-partenaire-coach.icon-arrow-right {
+  .icon-arrow-right {
     right: 30px;
     padding: 0 0 0 0;
   }
-  .single-partenaire-coach #footer-partenaire {
-    position: absolute;
+  #footer-partenaire {
     text-align: center;
     height: 70px;
   }
-  .single-partenaire-coach #footer-partenaire #lien1,
-  .single-partenaire-coach #footer-partenaire #lien2 {
+  #footer-partenaire #lien1,
+  #footer-partenaire #lien2 {
     margin: 0 3px;
     font-size: 0.8em;
   }
-  .single-partenaire-coach #footer-partenaire #lien3 {
+  #footer-partenaire #lien3 {
     text-align: center;
     display: block;
     float: none;
@@ -4502,370 +3821,6 @@ html.html-partenaire-coach {
   }
 }
 /* @end */
-/* responsive identification horizontal */
-@media screen and (max-width: 1140px) {
-  .single-partenaire-coach #progression {
-    right: 0;
-  }
-}
-@media screen and (max-width: 1001px) {
-  .single-partenaire-coach #tableau {
-    max-width: 100%;
-  }
-  .single-partenaire-coach #tableau #connexion h1 {
-    width: 300px;
-  }
-  .single-partenaire-coach #tableau #separateur {
-    left: 425px;
-  }
-}
-@media screen and (max-width: 885px) {
-  .single-partenaire-coach #tableau {
-    padding: 10px 0 20px 0;
-    height: auto;
-    clear: both;
-    width: 500px;
-  }
-  .single-partenaire-coach #tableau #nouveau {
-    margin-top: 10px;
-    display: block;
-    float: none;
-    right: 0;
-    margin-left: 10px;
-  }
-  .single-partenaire-coach #tableau #nouveau h1 {
-    padding-left: 60px;
-    width: 300px;
-  }
-  .single-partenaire-coach #tableau #nouveau p {
-    padding-left: 60px;
-  }
-  .single-partenaire-coach #tableau #nouveau .btn {
-    margin-left: 60px;
-  }
-  .single-partenaire-coach #tableau #separateur {
-    border: none;
-  }
-  .partner-merci #tableau {
-    width: 100%;
-  }
-  .partner-connexion #footer-partenaire {
-    margin-top: 20px;
-  }
-}
-@media screen and (max-width: 860px) {
-  .single-partenaire-coach #progression {
-    width: 350px;
-  }
-  .single-partenaire-coach #progression .etapes:nth-child(2) {
-    padding-right: 20px;
-  }
-  .single-partenaire-coach #progression #etat #cercle1 {
-    margin-left: 45px;
-  }
-}
-@media screen and (max-width: 790px) {
-  .single-partenaire-coach #progression {
-    float: left;
-  }
-  .partner-merci #footer-partenaire {
-    margin-top: 20px;
-  }
-}
-@media screen and (max-height: 780px) and (max-width: 540px) {
-  .partner-identification #footer-partenaire {
-    margin-top: 20px;
-    position: relative;
-  }
-}
-@media screen and (max-width: 540px) {
-  .single-partenaire-coach #footer-partenaire {
-    text-align: center;
-    height: 70px;
-  }
-  .single-partenaire-coach #footer-partenaire #lien1,
-  .single-partenaire-coach #footer-partenaire #lien2 {
-    margin: 0 3px;
-    font-size: 0.8em;
-  }
-  .single-partenaire-coach #footer-partenaire #lien3 {
-    text-align: center;
-    display: block;
-    float: none;
-    margin: 0 3px;
-    font-size: 0.8em;
-  }
-  .partner-inscription #tableau2 .gform_wrapper .gform_body .ginput_container #input_36_3 {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 400px) {
-  .single-partenaire-coach #progression {
-    float: left;
-  }
-  .single-partenaire-coach #tableau #connexion h1 {
-    width: 270px;
-  }
-  .single-partenaire-coach #tableau #nouveau h1 {
-    width: 270px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .single-partenaire-coach #progression {
-    width: 335px;
-  }
-  .single-partenaire-coach #tableau #nouveau h1,
-  .single-partenaire-coach #tableau #nouveau p {
-    padding-left: 5px;
-    width: 250px;
-  }
-  .single-partenaire-coach #tableau #connexion h1,
-  .single-partenaire-coach #tableau #connexion p {
-    padding-left: 0px;
-    width: 250px;
-  }
-  .single-partenaire-coach #tableau #connexion .input {
-    margin: 10px 0;
-  }
-}
-@media screen and (max-width: 320px) {
-  .single-partenaire-coach #progression {
-    width: 280px;
-  }
-  .single-partenaire-coach #progression .etapes:nth-child(1) {
-    padding: 0 10px 0 0;
-  }
-  .single-partenaire-coach #progression .etapes:nth-child(2) {
-    padding: 0 40px 0 20px;
-  }
-  .single-partenaire-coach #progression .etapes:nth-child(3) {
-    padding: 0 0px 0 8px;
-  }
-  .single-partenaire-coach #etat .traits {
-    width: 70px;
-  }
-}
-/* end */
-/* responsive inscription horizontal */
-@media screen and (max-width: 980px) {
-  .single-partenaire-coach #progression {
-    margin-bottom: 30px;
-  }
-  .single-partenaire-coach #tableau2 {
-    width: 100%;
-    clear: both;
-    margin-top: 30px;
-    margin: 0 auto;
-  }
-  .single-partenaire-coach #tableau2 #inscription {
-    width: 87%;
-  }
-  .single-partenaire-coach #tableau2 .gform_wrapper .top_label li.gfield.gf_right_half {
-    display: block;
-    width: 97%;
-  }
-  .single-partenaire-coach #tableau2 .gform_wrapper .top_label li.gfield.gf_left_half {
-    width: 97%;
-  }
-  .single-partenaire-coach #tableau2 .gform_body {
-    position: relative;
-  }
-  .single-partenaire-coach .partner-inscription #footer-partenaire {
-    position: relative;
-    margin-top: 20px;
-  }
-}
-@media screen and (max-width: 750px) {
-  .single-partenaire-coach #progression {
-    margin-top: 20px;
-    float: left;
-  }
-  .single-partenaire-coach #tableau2 {
-    width: 100%;
-    height: 100%;
-  }
-  .single-partenaire-coach #tableau2 #inscription {
-    width: 80%;
-  }
-  .single-partenaire-coach #tableau2 #inscription .gform_wrapper div.validation_error {
-    width: 89%;
-  }
-}
-@media screen and (max-width: 450px) {
-  .single-partenaire-coach #tableau2 #inscription .gform_wrapper div.validation_error {
-    top: 0;
-  }
-  .partner-inscription #tableau2 .gform_wrapper div.validation_error {
-    top: 0;
-    width: 95%;
-  }
-  .partner-inscription #tableau2 .gform_body .gfield {
-    width: auto;
-  }
-  .partner-inscription #tableau2 .gform_body .gfield .gfield_label {
-    width: 100%;
-  }
-  .partner-inscription .gform_footer .button {
-    margin: 0 0 0 70px;
-    margin-left: 0;
-  }
-  .partner-inscription .gform_wrapper .top_label li.gfield.gfield_error.gf_left_half,
-  .partner-inscription .gform_wrapper .top_label li.gfield.gfield_error.gf_right_half {
-    width: auto!important;
-  }
-}
-@media screen and (max-width: 440px) {
-  .single-partenaire-coach #tableau2 .gform_footer #gform_submit_button_36 {
-    margin-left: 35px;
-    position: relative;
-  }
-  .single-partenaire-coach #tableau2 .gform_body {
-    position: relative;
-    left: 20px;
-  }
-  .single-partenaire-coach #tableau4 #footer-partenaire {
-    position: absolute;
-  }
-}
-@media screen and (max-width: 375px) {
-  .single-partenaire-coach #tableau2 .gform_body {
-    position: relative;
-    left: 5px;
-  }
-  .partner-identification #tableau #connexion input {
-    margin-left: 0;
-  }
-  .partner-identification #tableau #connexion .btn {
-    margin-left: 0px;
-  }
-  .partner-identification #tableau #nouveau .btn {
-    margin-left: 10px;
-  }
-  .partner-identification #footer-partenaire {
-    position: relative;
-  }
-  .partner-inscription #footer-partenaire {
-    position: relative;
-  }
-}
-@media screen and (max-width: 320px) {
-  .single-partenaire-coach #tableau2 {
-    height: 100%;
-  }
-  .single-partenaire-coach #tableau2 .gform_body {
-    position: relative;
-    left: 25px;
-  }
-  .single-partenaire-coach #tableau2 .gform_footer #gform_submit_button_36 {
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-  .partner-inscription #footer-partenaire {
-    position: relative;
-    margin-top: 20px;
-  }
-  .partner-inscription #tableau2 .gform_wrapper .gform_body .gform_wrapper .top_label li.gfield.gf_right_half {
-    display: block;
-    width: 93%;
-  }
-  .partner-inscription #tableau2 .gform_wrapper .gform_body .gform_wrapper .top_label li.gfield.gf_left_half {
-    width: 93%;
-  }
-}
-/* end */
-/* responsive page compte */
-@media screen and (max-width: 979px) {
-  .single-partenaire-coach #tableau3 {
-    width: 100%;
-  }
-  .single-partenaire-coach #tableau3 h1 {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-  .single-partenaire-coach #tableau3 #info {
-    bottom: 110px;
-  }
-}
-@media screen and (max-width: 975px) {
-  .single-partenaire-coach #tableau3 {
-    width: 100%;
-    height: 700px;
-  }
-  .single-partenaire-coach #tableau3 h1 {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-  .single-partenaire-coach #tableau3 #info {
-    width: 100%;
-    bottom: 0;
-  }
-  .single-partenaire-coach #tableau3 #formulaire {
-    margin-left: 20px;
-    display: block;
-    width: 100%;
-  }
-  .single-partenaire-coach #tableau3 #formulaire .gform_wrapper .gform_footer .gform_button {
-    margin-top: 0;
-  }
-  .single-partenaire-coach #tableau3 #formulaire .gform_wrapper div.validation_error {
-    width: 87%;
-  }
-  .partner-mon-compte #footer-partenaire {
-    margin-top: 20px;
-    position: relative;
-  }
-}
-@media screen and (max-width: 925px) {
-  .single-partenaire-coach #formulaire {
-    display: block;
-    width: 100%;
-  }
-  .single-partenaire-coach #formulaire .gform_wrapper .gform_footer {
-    padding-top: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .single-partenaire-coach #tableau3 {
-    width: 100%;
-    height: 1150px;
-  }
-  .single-partenaire-coach #tableau3 h1 {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-  .single-partenaire-coach #tableau3 #info {
-    width: 100%;
-    bottom: 0;
-  }
-  .single-partenaire-coach #tableau3 #formulaire {
-    display: block;
-  }
-  .single-partenaire-coach .partner-connexion #footer-partenaire {
-    position: relative;
-  }
-  .partner-mon-compte #footer-partenaire {
-    position: relative;
-  }
-  .partner-inscription #footer-partenaire {
-    position: relative;
-    margin-top: 20px;
-  }
-  .partner-inscription .partner-inscription #tableau2 .gform_wrapper .gform_body #input_36_3 {
-    width: 100%;
-  }
-}
-@media screen and (max-height: 480px) {
-  .single-partenaire-coach #slider-partner .icon-arrow-left,
-  .single-partenaire-coach #slider-partner .icon-arrow-right {
-    top: 250px;
-  }
-  .single-partenaire-coach #coach {
-    height: auto;
-  }
-  .partner-connexion #footer-partenaire {
-    position: relative;
-  }
-}
 /* @group Non semantic Boilerplate */
 /* remplacement image */
 .ir {
@@ -4962,10 +3917,6 @@ html.html-partenaire-coach {
 }
 @media (max-width: 1050px) {
   #bloc-right-home a#pastilleNGF {
-    right: auto;
-    left: 50%;
-  }
-  #bloc-right-home a#pastillePG {
     right: auto;
     left: 50%;
   }
@@ -5181,16 +4132,6 @@ html.html-partenaire-coach {
   .bloc-pro-home {
     padding: 20px;
   }
-  #bloc-right-home a#pastilleNGF {
-    right: auto;
-    left: 50%;
-    background-size: 83%;
-  }
-  #bloc-right-home a#pastillePG {
-    right: auto;
-    left: 50%;
-    background-size: 83%;
-  }
 }
 @media (max-width: 767px) {
   header {
@@ -5357,19 +4298,6 @@ html.html-partenaire-coach {
     width: auto;
   }
 }
-@media (max-width: 730px) {
-  #bloc-right-home a#pastilleNGF {
-    right: auto;
-    left: 50%;
-    background: url(../layoutImg/ngf.png) no-repeat 0 0;
-  }
-  #bloc-right-home a#pastillePG {
-    right: auto;
-    left: 50%;
-    background-size: 83%;
-    background: url(../layoutImg/playingGolf.png) no-repeat 0 0;
-  }
-}
 @media (max-width: 600px) {
   .bloc-pro-home {
     background-position: 10px 20px;
@@ -5505,16 +4433,11 @@ html.html-partenaire-coach {
     padding: 0;
   }
   #bloc-right-home {
-    padding: 50px 0 355px 47%;
+    padding: 50px 0 270px 47%;
     overflow: hidden;
   }
   #bloc-right-home a#pastilleNGF {
-    right: auto;
-    left: 45%;
-  }
-  #bloc-right-home a#pastillePG {
-    right: auto;
-    left: 45%;
+    margin-left: -80px;
   }
   .videoContainer {
     left: 40px;
