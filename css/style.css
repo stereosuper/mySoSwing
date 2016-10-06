@@ -366,6 +366,9 @@ body {
   text-rendering: optimizeLegibility;
   background: #fff;
 }
+.overflow {
+  overflow-x: hidden;
+}
 h1,
 h2,
 h3,
@@ -474,6 +477,24 @@ p img {
 }
 span.orange {
   color: #ff6300;
+}
+ol {
+  padding: 0;
+  list-style: none;
+  counter-reset: ol-counter;
+}
+ol > li {
+  counter-increment: ol-counter;
+}
+ol > li:before {
+  content: counter(ol-counter) ' - ';
+  color: #ff6300;
+  font-family: 'motivaBold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 blockquote {
   position: relative;
@@ -1033,7 +1054,7 @@ header.pro {
 .contact-en {
   display: inline-block;
   vertical-align: top;
-  margin: 0 44px 0 0;
+  margin: 0 30px 0 0;
   padding: 0;
 }
 #menu li.current-menu-item a,
@@ -1340,8 +1361,8 @@ z-index: 2;
   background: url(../layoutImg/home/telephone.png);
 }
 .uk #telephone {
-  background: url(../layoutImg/uk/telephone.png);
-  background-size: 100% 100%;
+  background: url(../layoutImg/uk/telephone.png) no-repeat;
+  background-size: 100% auto;
 }
 #sur-gant {
   background: url(../layoutImg/home/sur-gant.png);
@@ -1370,6 +1391,7 @@ z-index: 2;
   position: relative;
   border-radius: 10px;
   color: #000;
+  box-shadow: 0 4px 0 0 #a2a3a1;
 }
 .bloc-content-home > a:before,
 .bloc-content-home > a:after {
@@ -1587,10 +1609,14 @@ letter-spacing: -0.3px;
 }
 }
 }*/
-.uk #bloc-home #bloc-right-home {
-  box-sizing: border-box;
-  padding: 60px 0 345px 52%;
-}
+/*.uk {
+    #bloc-home {
+        #bloc-right-home{
+            .box-sizing(border-box);
+            padding: 60px 0 345px 52%;
+        }
+    }
+}*/
 #lien-app-store {
   width: 135px;
   height: 40px;
@@ -1698,21 +1724,28 @@ max-width: 144px;
 /* @end */
 /* @group Solution */
 .page-template-player header,
-.page-template-solution header {
+.page-template-solution header,
+.page-template-page-pro header {
   background-image: url(../layoutImg/bannerSolution.jpg);
   padding: 0 0 30%;
 }
 .page-template-player header + .container,
-.page-template-solution header + .container {
+.page-template-solution header + .container,
+.page-template-page-pro header + .container {
   margin: 30px auto 0;
 }
 .lt-ie9 .page-template-player header + .container,
-.lt-ie9 .page-template-solution header + .container {
+.lt-ie9 .page-template-solution header + .container,
+.lt-ie9 .page-template-page-pro header + .container {
   text-align: center;
 }
 .lt-ie9 .page-template-player header + .container .clearfix,
-.lt-ie9 .page-template-solution header + .container .clearfix {
+.lt-ie9 .page-template-solution header + .container .clearfix,
+.lt-ie9 .page-template-page-pro header + .container .clearfix {
   margin: 0 0 30px;
+}
+.page-template-page-pro header {
+  background-image: url(../layoutImg/bannerPagePro.png);
 }
 .page-template-solution h1 {
   width: 300px;
@@ -1779,10 +1812,6 @@ max-width: 144px;
   line-height: 17px;
   margin-bottom: 25px;
 }
-.partenaire a,
-.devenir a {
-  text-decoration: underline;
-}
 .partenaire {
   width: 32.8%;
   margin: 0 0.5% 0 0;
@@ -1797,6 +1826,9 @@ max-width: 144px;
   height: 110px;
   margin: 0 auto;
   line-height: 110px;
+}
+.partenaire a {
+  text-decoration: underline;
 }
 .devenir {
   width: 32.9%;
@@ -3624,7 +3656,8 @@ select {
   margin: 25px 0 5px;
   font-size: .9em;
 }
-.page-template-player h1 {
+.page-template-player h1,
+.page-template-page-pro h1 {
   border: 0;
 }
 .player-txt {
@@ -3680,7 +3713,7 @@ select {
   display: inline-block;
   width: 50%;
   vertical-align: top;
-  margin: 130px 0 0;
+  margin: 130px 0 10px;
   text-align: center;
 }
 .player-cta strong {
@@ -3707,6 +3740,42 @@ select {
 .player-cta-right {
   margin-right: -5%;
   margin-left: 5%;
+}
+.page-template-page-pro h1 {
+  margin-bottom: 0;
+}
+.page-template-page-pro .player-txt {
+  width: 50%;
+}
+.page-template-page-pro .player-txt a {
+  color: #000;
+  text-decoration: underline;
+}
+.page-template-page-pro .player-img {
+  width: 40%;
+}
+.full-img {
+  display: inline-block;
+  width: 80%;
+  margin: 0 5% 0 -35%;
+  vertical-align: middle;
+}
+.full-img img {
+  max-width: 100%;
+  height: auto;
+}
+.full-img + div {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+.pro-cta {
+  margin: 40px 0 10px;
+  text-align: center;
+}
+.pro-cta strong {
+  display: block;
+  margin: 0 0 15px;
 }
 /* STYLE PAGE HOME PLAYINGGOLF */
 html {
@@ -5416,6 +5485,10 @@ html.html-partenaire-coach {
     width: 350px;
     height: 200px;
   }
+  .full-img {
+    width: 65%;
+    margin: 0 5% 0 -20%;
+  }
 }
 @media (max-width: 1210px) {
   .bloc-content-home {
@@ -5598,7 +5671,7 @@ html.html-partenaire-coach {
   }
   #menu li,
   .contact-en {
-    margin: 0 20px 0 0;
+    margin: 0 15px 0 0;
   }
   .videoContainer {
     margin: 3% 0 0;
@@ -5653,9 +5726,13 @@ html.html-partenaire-coach {
 }*/
 @media (max-width: 979px) {
   .page-template-solution header,
-  .page-template-player header {
+  .page-template-player header,
+  .page-template-page-pro header {
     padding: 0 0 300px;
     background-size: 979px auto;
+  }
+  .page-template-page-pro h1 {
+    margin-bottom: 45px;
   }
   .videoContainer {
     margin: 30px 0 0;
@@ -5684,6 +5761,10 @@ html.html-partenaire-coach {
   }
   #golf-list li#temporary {
     display: none;
+  }
+  .full-img {
+    width: 55%;
+    margin: 80px 5% 80px -10%;
   }
 }
 @media (max-width: 960px) {
@@ -5760,9 +5841,6 @@ html.html-partenaire-coach {
   .contact-en {
     display: block;
     margin: 0 0 20px;
-  }
-  .uk #menu {
-    padding: 0 50px;
   }
   #menu-header {
     margin-left: -150px;
@@ -5880,7 +5958,8 @@ html.html-partenaire-coach {
     margin: 20px 0 0;
   }
   .page-template-solution header,
-  .page-template-player header {
+  .page-template-player header,
+  .page-template-page-pro header {
     padding: 0 0 265px;
   }
   .categories {
@@ -6013,13 +6092,30 @@ html.html-partenaire-coach {
   }
   .player-txt,
   .player-img {
-    width: 100%;
+    width: 100% !important;
   }
   .player-img {
     margin-top: 60px;
   }
   .player-img img {
     max-width: 110%;
+  }
+  .page-template-page-pro .player-img {
+    margin-top: 40px;
+  }
+  .page-template-page-pro .player-img img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .full-img {
+    width: 100%;
+    margin: 60px 0 20px;
+  }
+  .full-img + div {
+    width: 100%;
+  }
+  .pro-cta {
+    margin-top: 80px;
   }
 }
 @media (max-width: 730px) {
