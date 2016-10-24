@@ -79,6 +79,7 @@ body{
 
 .overflow{
     overflow-x: hidden;
+    height: 100%;
 }
 
 h1, h2, h3, strong, b{
@@ -686,6 +687,8 @@ footer{
     position: relative;
     z-index: 2;
     margin: 65px 0 0;
+    overflow: hidden;
+    background: @noir;
     &.bottom{
         position: fixed;
         width: 100%;
@@ -744,12 +747,44 @@ footer{
     }
 }
 #bottom-footer{
-    height: 10px;
     background: @orange;
     border-top: 1px solid @orangeDark;
-    text-align: center;
+    position: relative;;
+    text-align: right;
     .rs{
         display: none;
+    }
+    p{
+        display: inline-block;
+        width: 50%;
+        padding: 5px 0;
+        margin: 0;
+        font-size: 0.85em;
+    }
+    a{
+        color: #fff;
+        text-decoration: underline;
+    }
+    .img-center{
+        width: 85px;
+        height: 85px;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -15px;
+        margin: auto;
+        border: 5px solid @orange;
+        border-radius: 50%;
+        img{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            bottom: 0;
+            margin: auto;
+            margin-left: -70%;
+        }
     }
 }
 
@@ -903,6 +938,11 @@ z-index: 2;
     width: 48%;
     float: right;
     margin: 0 -30px 0 0;
+    &:hover{
+        > a{
+            filter: grayscale(100%);
+        }
+    }
     > a{
         display: inline-block;
         width: 215px;
@@ -929,6 +969,11 @@ z-index: 2;
         }
         &:after{
             bottom: 0;
+        }
+        &:hover, &:focus{
+            filter: grayscale(0);
+            transform: translateY(3px);
+            box-shadow: 0 0 25px 1px rgba(255,255,255,0.5);
         }
         > span{
             height: 60px;
@@ -1015,9 +1060,15 @@ z-index: 2;
     margin: 80px 0 50px;
     font-size: 1.1em;
     color: #fff;
+    border-radius: 10px;
     background: rgba(0, 0, 0, 0.7);
     p{
         margin: 0 0 15px;
+    }
+    &:hover{
+        + a, + a + a{
+            filter: grayscale(0);
+        }
     }
 }
 
@@ -1157,6 +1208,7 @@ padding: 0;
 text-indent: -999em;
 overflow: hidden;
 background: url(../layoutImg/app-store-blanc@2x.png) no-repeat 50% 50%;
+background-size: cover;
 display: block;
 margin: 20px auto 25px;
 }
@@ -1257,10 +1309,23 @@ max-width: 144px;
 
 /* @group Solution */
 
-.page-template-player, .page-template-solution, .page-template-page-pro{
+.page-template-player, .page-template-solution{
     header{
         background-image: url(../layoutImg/bannerSolution.jpg);
-        padding: 0 0 30%;
+    }
+}
+.page-template-page-pro{
+    header{
+        background-image: url(../layoutImg/bannerPagePro.png);
+    }
+}
+.page-template-player, .page-template-solution, .page-template-page-pro{
+    header{
+        //padding: 0 0 30%;
+        padding: 0;
+        min-height: 420px;
+        max-height: 645px;
+        height: 70vh;
         + .container{
             margin: 30px auto 0;
             .lt-ie9 &{
@@ -1272,9 +1337,13 @@ max-width: 144px;
         }
     }
 }
-.page-template-page-pro{
-    header{
-        background-image: url(../layoutImg/bannerPagePro.png);
+.js{
+    .page-template-player, .page-template-page-pro{
+        .content{
+            img{
+                visibility: hidden;
+            }
+        }
     }
 }
 
@@ -3055,7 +3124,7 @@ select{
     display: inline-block;
     width: 50%;
     vertical-align: top;
-    margin: 130px 0 10px;
+    margin: 130px 0 100px;
     text-align: center;
     strong{
         display: block;
@@ -3111,7 +3180,7 @@ select{
     }
 }
 .pro-cta{
-    margin: 40px 0 10px;
+    margin: 40px 0 100px;
     text-align: center;
     strong{
         display: block;
@@ -3367,6 +3436,19 @@ select{
         text-align: center;
         a{
             margin: 0 15px;
+        }
+    }
+
+    #bottom-footer{
+        margin: 50px 0 0;
+        text-align: center;
+        .img-center{
+            top: -35px;
+            bottom: auto;
+        }
+        p{
+            width: 100%;
+            margin: 50px 0 0;
         }
     }
 

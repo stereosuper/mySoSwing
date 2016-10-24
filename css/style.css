@@ -368,6 +368,7 @@ body {
 }
 .overflow {
   overflow-x: hidden;
+  height: 100%;
 }
 h1,
 h2,
@@ -1161,6 +1162,8 @@ footer {
   position: relative;
   z-index: 2;
   margin: 65px 0 0;
+  overflow: hidden;
+  background: #000;
 }
 footer.bottom {
   position: fixed;
@@ -1227,13 +1230,45 @@ footer.bottom {
   margin: 0 15px;
 }
 #bottom-footer {
-  height: 10px;
   background: #ff6300;
   border-top: 1px solid #993b00;
-  text-align: center;
+  position: relative;
+  text-align: right;
 }
 #bottom-footer .rs {
   display: none;
+}
+#bottom-footer p {
+  display: inline-block;
+  width: 50%;
+  padding: 5px 0;
+  margin: 0;
+  font-size: 0.85em;
+}
+#bottom-footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+#bottom-footer .img-center {
+  width: 85px;
+  height: 85px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+  margin: auto;
+  border: 5px solid #ff6300;
+  border-radius: 50%;
+}
+#bottom-footer .img-center img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  margin: auto;
+  margin-left: -70%;
 }
 /* @end */
 /* @group Home */
@@ -1382,6 +1417,10 @@ z-index: 2;
   float: right;
   margin: 0 -30px 0 0;
 }
+.bloc-content-home:hover > a {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
 .bloc-content-home > a {
   display: inline-block;
   width: 215px;
@@ -1410,6 +1449,14 @@ z-index: 2;
 }
 .bloc-content-home > a:after {
   bottom: 0;
+}
+.bloc-content-home > a:hover,
+.bloc-content-home > a:focus {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  box-shadow: 0 0 25px 1px rgba(255, 255, 255, 0.5);
 }
 .bloc-content-home > a > span {
   height: 60px;
@@ -1488,10 +1535,16 @@ z-index: 2;
   margin: 80px 0 50px;
   font-size: 1.1em;
   color: #fff;
+  border-radius: 10px;
   background: rgba(0, 0, 0, 0.7);
 }
 .bloc-txt-home p {
   margin: 0 0 15px;
+}
+.bloc-txt-home:hover + a,
+.bloc-txt-home:hover + a + a {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 /*#coachs {
 background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7), rgba(0,0,0,0.7), rgba(0,0,0,0));
@@ -1625,6 +1678,7 @@ letter-spacing: -0.3px;
   text-indent: -999em;
   overflow: hidden;
   background: url(../layoutImg/app-store-blanc@2x.png) no-repeat 50% 50%;
+  background-size: cover;
   display: block;
   margin: 20px auto 25px;
 }
@@ -1724,10 +1778,19 @@ max-width: 144px;
 /* @end */
 /* @group Solution */
 .page-template-player header,
+.page-template-solution header {
+  background-image: url(../layoutImg/bannerSolution.jpg);
+}
+.page-template-page-pro header {
+  background-image: url(../layoutImg/bannerPagePro.png);
+}
+.page-template-player header,
 .page-template-solution header,
 .page-template-page-pro header {
-  background-image: url(../layoutImg/bannerSolution.jpg);
-  padding: 0 0 30%;
+  padding: 0;
+  min-height: 420px;
+  max-height: 645px;
+  height: 70vh;
 }
 .page-template-player header + .container,
 .page-template-solution header + .container,
@@ -1744,8 +1807,9 @@ max-width: 144px;
 .lt-ie9 .page-template-page-pro header + .container .clearfix {
   margin: 0 0 30px;
 }
-.page-template-page-pro header {
-  background-image: url(../layoutImg/bannerPagePro.png);
+.js .page-template-player .content img,
+.js .page-template-page-pro .content img {
+  visibility: hidden;
 }
 .page-template-solution h1 {
   width: 300px;
@@ -3713,7 +3777,7 @@ select {
   display: inline-block;
   width: 50%;
   vertical-align: top;
-  margin: 130px 0 10px;
+  margin: 130px 0 100px;
   text-align: center;
 }
 .player-cta strong {
@@ -3770,7 +3834,7 @@ select {
   vertical-align: middle;
 }
 .pro-cta {
-  margin: 40px 0 10px;
+  margin: 40px 0 100px;
   text-align: center;
 }
 .pro-cta strong {
@@ -5626,6 +5690,18 @@ html.html-partenaire-coach {
   }
   #menu-footer a {
     margin: 0 15px;
+  }
+  #bottom-footer {
+    margin: 50px 0 0;
+    text-align: center;
+  }
+  #bottom-footer .img-center {
+    top: -35px;
+    bottom: auto;
+  }
+  #bottom-footer p {
+    width: 100%;
+    margin: 50px 0 0;
   }
   #top-footer .align-left {
     margin-bottom: 15px;

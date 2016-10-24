@@ -206,12 +206,12 @@ function testHeightPartenaire(){
 }
 
 function setSliderPartner(container){
-	var slides = container.find('li'), nbSlides = slides.length, 
+	var slides = container.find('li'), nbSlides = slides.length,
 		btnPrev = container.find('button').eq(0), btnNext = container.find('button').eq(1);
 
 	function slidePrev(){
 		var prev = container.find('.actif').prev().length ? container.find('.actif').prev() : slides.eq(nbSlides - 1);
-		
+
 		TweenLite.to(container.find('.actif'), .3, {x: '100%', opacity: 0});
 		TweenLite.fromTo(prev, .3, {x: '-100%', opacity: 0}, {x: '0%', opacity: 1});
 
@@ -304,7 +304,11 @@ $(function(){
 		}else{
 			stickyFooter(body.height());
 		}
-		
+
+		if(body.hasClass('page-template-page-pro') || body.hasClass('page-template-player')){
+			window.sr = ScrollReveal({reset: true});
+			sr.reveal('.content img');
+		}
 	});
 
 	$(window).resize(function() {
