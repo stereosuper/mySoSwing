@@ -2130,6 +2130,17 @@ body .gform_wrapper div.validation_error {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+.categories .textwidget a {
+  display: block;
+}
+.categories .textwidget a:before {
+  display: none;
+}
+.categories .textwidget img {
+  display: block;
+  max-width: 100%;
+  margin: 30px auto 0;
+}
 .live {
   width: 70%;
 }
