@@ -123,16 +123,21 @@ html{
 			height: 135px;
 			width: auto;
 			border-top: 1px solid @gris;
-			border-bottom : 1px solid @gris;
+			border-bottom: 1px solid @gris;
 			select {
 				width: 275px!important;
 				display: block;
 				position: relative;
 				margin: 25px auto 15px;
-			}
-			.btn {
-					margin-top: 0px;
+				&.hidden{
+					+ .btn{
+						margin: 47px 0 0;
+					}
 				}
+			}
+			.btn{
+				margin-top: 0px;
+			}
 		}
 	}
 	#cercle {
